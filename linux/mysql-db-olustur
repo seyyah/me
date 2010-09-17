@@ -1,4 +1,5 @@
 #!/bin/sh
+# require: $ sudo apt-get install wwwconfig-data
 
 PROGNAME=${0##*/}
 
