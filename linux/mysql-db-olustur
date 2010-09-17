@@ -1,0 +1,68 @@
+#!/bin/sh
+
+PROGNAME=${0##*/}
+
+# Yeni bir mysql db'si oluşturur.
+
+whisper () {
+	local name description value
+
+	name="$1"
+	description="$2"
+
+	printf >&2 "$description "
+
+	stty -echo 2>/dev/null
+	read value
+	stty sane 2>/dev/null
+
+	echo >&2
+
+	eval $(echo "$name=\"$value\"")
+}
+
+ask () {
+	local name description value
+
+	name="$1"
+	description="$2"
+	default="$3"
+
+	printf >&2 "$description"
+	if [ -n "$default" ]; then
+		printf >&2 " [$default]"
+	fi
+	printf >&2 " "
+
+	read value
+	if [ -z "$value" ]; then
+		value="$default"
+	fi
+
+	eval $(echo "$name=\"$value\"")
+}
+
+ask dbname "db ismi (ör. moodle)"
+ask dbuser "'$dbname' db kullanıcısı" "$dbname"
+ask dbserver "db sunucusu" "localhost"
+ask dbadmin "mysql yöneticisi" "root"
+whisper dbadmpass "mysql yönetici parolası"
+whisper dbpass "'$dbname' db kullanıcı parolası"
+
+. /usr/share/wwwconfig-common/mysql-createuser.sh
+if [ "$status" = "error" ]; then
+	err=1
+	echo $error
+fi
+
+case "$PROGNAME" in
+kullanici|user*) exit $err;;
+esac
+
+. /usr/share/wwwconfig-common/mysql-createdb.sh
+if [ "$status" = "error" ]; then
+	err=1
+	echo $error
+fi
+
+exit $err
