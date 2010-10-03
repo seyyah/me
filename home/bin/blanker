@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ -z "$DISPLAY" ] || exit 0
+exec /usr/bin/cmatrix -abfsC green -u 3

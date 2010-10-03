@@ -1,0 +1,106 @@
+#!/usr/bin/perl
+# Let STDIN sorts the input file (by the first field).
+
+use strict;
+use warnings;
+use open qw{:locale};
+
+my $regex_field = qr/^\s*(\w+)/;
+
+# slurp file content
+sub slurp (%) {
+	my (%arg) = @_;
+	
+	$arg{file} = '-'  if !defined $arg{file};
+	$arg{ischomp} = 0 if !defined $arg{ischomp};
+
+	require IO::File;
+	my $in = new IO::File;
+
+	local $/=undef if !wantarray;
+	open $in, "$arg{file}" or die "failed to read $arg{file}: $!";
+	binmode $in, ":encoding($arg{encoding})" if defined $arg{encoding};
+	binmode $in if $arg{is_binary};
+
+	return wantarray && $arg{ischomp} ? map { chomp; $_ } <$in> : <$in>;
+}
+
+# file dirname
+sub dirname ($) {
+	my ($file) = @_;
+
+	$file =~ s/\/*[^\/]+$//;
+	return $file;
+}
+
+# spew content to a file
+sub spew (%) {
+	my (%arg) = @_;
+
+	$arg{file} = '-'      if !defined $arg{file};
+	$arg{directory} = '.' if !defined $arg{directory};
+	$arg{joinexpr} = "\n" if !defined $arg{joinexpr};
+
+	my $test = $arg{file};
+	while (length $test) {
+		if (-l "$arg{directory}/$test") {
+			die "Cannot write to a symlink ($test)";
+		}
+		$test = dirname($test);
+	}
+
+	my $dir = dirname("$arg{directory}/$arg{file}");
+	if (! -d $dir) {
+		my $d = "";
+		foreach my $s (split m!/+!, $dir) {
+			$d .= "$s/";
+			if (! -d $d) {
+				mkdir($d)
+				    or die "failed to create directory $d: $!";
+			}
+		}
+	}
+	
+	require IO::File;
+	my $out = new IO::File;
+
+	open $out, ">$arg{directory}/$arg{file}"
+	    or die "failed to write $arg{directory}/$arg{file}: $!";
+	binmode $out, ":encoding($arg{encoding})" if defined $arg{encoding};
+	binmode $out if $arg{is_binary};
+	print $out (
+		ref $arg{content} eq 'ARRAY' ? join $arg{joinexpr}, @{ $arg{content} } : $arg{content}
+	);
+}
+
+die "Usage: $0 file\n" if !@ARGV;
+
+my $file = $ARGV[0];
+my %lookup;
+
+foreach my $line (slurp(file => $file )) {
+	my $key = $1 if $line =~ m/$regex_field/;
+	next if !defined $key;
+	if (exists $lookup{$key}) {
+		print STDERR "$key\trepetitive record in file '$file'\n";
+	}
+	else {
+		$lookup{$key} = $line;
+	}
+}
+while (<STDIN>) {
+	my $key = $1 if m/$regex_field/;
+	next if !defined $key;
+	if (exists $lookup{$key}) {
+		print "$lookup{$key}";
+		delete $lookup{$key};
+	}
+	else {
+		print "-- $key\n";
+		print STDERR "$key\tmissing record in file '$file'\n";
+	}
+}
+foreach my $key (keys %lookup) {
+	print "++ $key\n";
+	print STDERR "$key\tmissing record in STDIN\n";
+}

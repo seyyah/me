@@ -1,0 +1,101 @@
+#!/bin/sh
+
+DIR=${1:-$HOME/Writing/traps/dosya}
+EXTENSION=${2:-'mdwn'}
+
+EDITOR='/usr/bin/vim'
+
+[ -d "$DIR" ] || {
+	echo "No such directory '$DIR'; aborting."
+	exit 1
+}
+DIR=$(cd $DIR && pwd)
+
+[ -f ~/bin/gitlib.sh ] || exit 1
+
+. ~/bin/gitlib.sh
+
+ACTIONS="
+
+-> Gönder...{s:do commit=%[ChangeLog]s}
+-> Güncelle{s:do update}
+-> Yeni belge...{s:do add=%[Dosya adı (uzantı gerekmiyor)]s}
+-> Gözat{s:do browse}
+-> Çık{s:do quit}"
+
+files () {
+	find ${DIR}/ -type f -name "*.$EXTENSION" | sort -u | \
+	sed -e "s#^\($DIR/\)##g" -e "s#\.$EXTENSION\$##"
+}
+menu () {
+	files
+	echo "$ACTIONS"
+}
+
+pause () {
+	echo
+	echo "Devam etmek için herhangi bir tuşa basınız."
+	read dummy
+}
+
+do_quit () {
+	exit 0
+}
+
+do_browse () {
+	mc $DIR $DIR
+}
+
+do_commit () {
+	echo "Değişiklikler gönderiliyor..."
+	echo
+	( cd $DIR && gap "$*" )
+	pause
+}
+
+do_update () {
+	echo "Güncelleniyor..."
+	echo
+	( cdgit $DIR && git pull origin )
+	pause
+}
+
+do_add () {
+	[ -n "$1" ] || return
+	file=$DIR/$(basename ${1%%.*}.$EXTENSION)
+	if [ -e $file ]; then
+		echo "'$file' dosyası zaten var."
+		pause
+	else
+		touch $file
+		git add $file
+	fi
+}
+
+OLD_IFS=$IFS
+while :; do
+	IFS=$OLD_IFS
+        selected=$(
+		menu | \
+		iselect -n 'eDepot' -m -a -S -p1 -d '{,}' -t "Bir belge seç..."
+	)
+	[ -n "$selected" ] || continue
+	case "$selected" in
+	do\ *)
+		set - $selected
+		shift
+		IFS='='
+		set - $@
+		if [ -n "$1" ] && [ "$1" != "nop" ]; then
+			action="do_$1";	shift
+			$action "$@"
+		fi
+		IFS=$OLD_IFS
+		;;
+	*)
+		file="$DIR/$selected.$EXTENSION"
+		[ -e $file ] || continue
+		$EDITOR $file
+		;;
+	esac
+done

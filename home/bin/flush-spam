@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Flush spam mboxes while training bogofilter.
+#
+# Sample crontab-entry:
+# 
+#   5 0 * * * test -x ~/bin/flush-spam && ~/bin/flush-spam Mail/spam Mail/uncatched
+# 
+# Recai Oktaş <roktas@omu.edu.tr>
+#
+# Last modified: Sat, 13 Dec 2003 21:04:38 +0200
+
+set -e
+
+PATH=$PATH:$HOME/bin:$HOME/local/bin
+
+FLUSHMBOX=$(which flush-mbox)
+if [ -z "$FLUSHMBOX" ]; then
+	echo >&2 "$0: can't locate flush-mbox"
+	exit 1
+fi
+
+BOGOFILTER=$(which bogofilter)
+if [ -z "$BOGOFILTER" ]; then
+	echo >&2 "$0: can't locate bogofilter"
+	exit 1
+fi
+
+
+for mbox; do
+	$FLUSHMBOX $mbox | $BOGOFILTER -s
+done

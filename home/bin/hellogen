@@ -1,0 +1,1808 @@
+#!/bin/bash
+#
+# Create test suites.
+# Copyright © 2003, 2004  Recai Oktaş <roktas.omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file 'http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Sat, 17 Sep 2005 11:39:30 +0300
+
+# XXX: There certainly exist some code horrors in this script.
+# Design should be reworked and sanitized.  So beware!
+
+set -e
+
+# ----------------------------------------------------------------------------
+# Default globals.
+# ----------------------------------------------------------------------------
+
+# Keep this list up-to-date.
+BUILTIN_SUITES="c sh svn deb"
+
+# TODO: Add subsuites.
+#SUBSUITES_c="generic apr glib"
+
+PROGRAM=$(echo $0 | sed -e 's!.*/!!')
+
+# Expanded by svn automatically when this file is checked out.
+VERSION=$(echo '$Rev: 21 $' | cut -f2 -d' ')
+
+# Defaults.
+NAME=hello
+PREFIX=${PREFIX:-/usr/local}
+PROGDIR=${HOME}/.${PROGRAM}
+LOCALCONF=.$PROGRAM
+PROGCONF=${PROGDIR}/conf
+CACHE=.${PROGRAM}-cache
+
+MSG_USAGE="Usage: $PROGRAM [OPTION]... [TEST-SUITE] [TEST-SUBSUITE]"
+
+MSG_TRY="Try '$PROGRAM --help' for more information."
+
+MSG_HELP=\
+"Create a test suite for TEST-SUITE (optionally TEST-SUBSUITE).
+
+  -b, --dirname-base DIRNAME   base DIRNAME which all tests created
+  -c, --clean                  clean all suites under 'clean-dir'
+  -d, --dir-default DIR        fallback DIR if no test directories found in path
+  -e, --edit-last              act on the last suite 
+  -f, --force-clean            force to clean even some errors found
+  -l, --print-last             print last suite location
+  -N, --no-edit-after          do not run EDITOR on main file 
+  -n, --no-previous            clean test suites in path before creating tests
+  -P, --print-wd-file FILE     file to print PWD on exit
+  -p, --path-test PATH         path to look for test suites
+  -q, --quiet                  do not generate much noise
+  -s, --no-substitution        do not make any substitution
+  -V, --version                output version information and exit
+  -h, --help                   display this help and exit
+
+All test suites are located from the '$PROGDIR' directory.
+You can put your options and custom substitutions in the configuration
+file '$PROGCONF'.
+
+Report bugs to <roktas@omu.edu.tr>."
+
+MSG_VERSION=\
+"$PROGRAM $VERSION
+
+Copyright (C) 2002 by Recai Oktas <roktas@omu.edu.tr>.
+There is NO warranty.  You may redistribute this software
+under the terms of the GNU General Public License.
+For more information about these matters, see the files named COPYING."
+
+
+# ----------------------------------------------------------------------------
+# Helper functions.
+# ----------------------------------------------------------------------------
+
+# Primitive to pretty-print messages of arbitrary length.
+message() { echo -e "$*" | fold -s -w ${COLUMNS:-80} >&2; }
+
+msg()  { message "$*"; }
+msgn() { [ echo -n "$*" >&2; }
+
+# Verbose messaging.
+vmsg()  { [ "$OPT_QUIET" = "yes" ] || message "$*"; }
+vmsgn() { [ "$OPT_QUIET" = "yes" ] || echo -n "$*" >&2; }
+
+# Wrapper to 'vmsg' with hilighting.
+hili()  { tput smso; vmsg "$*"; tput rmso; }
+hilin() { tput smso; vmsgn "$*"; tput rmso; }
+
+fatal()
+{
+	# Always print the first argument as a formatted error.
+	message "${PROGRAM:-$(echo $0 | sed -e 's!.*/!!')}: $1"
+	shift
+
+	# Print the remaining arguments as they are.
+	while [ "$#" -gt 0 ]; do
+		message "$1"
+		shift
+	done
+
+	exit 1
+}
+
+# Stolen and modified from somewhere else (I forgot).
+yesno()
+{ 
+	while : ; do
+		echo -n "$1 "
+		read ANS || true
+		if [ "$ANS" = "" ]; then
+			ANS="y"
+		fi
+		ANS=$(LC_ALL=C echo $ANS | tr A-Z a-z)
+		if [ "$ANS" = "y" ] || [ "$ANS" = "n" ]; then
+			break
+		fi
+		echo "Illegal answer"
+	done
+}
+
+# Stolen and modified from 'autoproject'.
+choose_from_list()
+{
+	local query=$1; local choices=" $(echo $2) "; local default=$3; local help=$4;
+	local finished=no;
+
+	ANS=
+	while [ $finished != yes ]; do
+		echo "$query";
+		echo -n "    select from: $choices [$default]: "; read ANS;
+		if [ "$ANS" = "" ]; then ANS="$default"; fi
+		if [ "$ANS" = "?" ]; then 
+			if [ "$help" = "" ]; then
+				echo "    sorry, no help is available"
+			else
+				echo "$help";
+			fi
+		else if echo "$choices" | grep -q -- " $ANS "; then
+			finished=yes;
+		else echo "    unrecognized choice $ANS"; fi; fi
+	done
+}
+
+# Normalize a file name.
+normf() { echo $1 | tr -s '/' | sed -e 's#^\./##' -e 's#/$##'; }
+
+tarball()
+{
+	dir=$(basename $PWD /)
+
+	tarball=${1:-$dir.tar.gz}
+	( cd ../; tar cf - $dir | gzip -f9 > $tarball )
+}
+
+mktestdir()
+{
+	dir=$(basename $PWD)
+	dext_base=""
+	if echo $dir | grep -q '^dir[0-9.]\+$'; then
+		dext_base=${dir#dir*}
+	fi
+	
+	for d in $(seq 0 $1); do
+		dext=$dext_base.$d
+		dir=dir${dext}
+		mkdir -p $dir
+
+		for f in $(seq 0 $2); do
+			file=file${dext}.$f
+			echo "This is '$file' under '$dir'." >$dir/$file
+		done
+	done
+}
+
+
+# ----------------------------------------------------------------------------
+# Built in suites.
+# FIXME: Should use a common dir, but at the moment I want it to be all-in-one
+# ----------------------------------------------------------------------------
+
+file_sh_hello() { echo "Main: #NAME#" >.hello; }
+
+file_sh_main()
+{
+	cat >"#NAME#" <<EOF
+#!/bin/sh
+# Test script.
+
+echo >&2 "Hello World!"
+exit 0
+EOF
+	chmod a+x "#NAME#"
+}
+
+file_c_makefile()
+{
+	cat >Makefile <<EOF
+# Minimal Makefile.
+
+NAME = #NAME#
+
+srcdir = .
+
+CC = gcc
+INSTALL = /usr/bin/install -c
+INSTALLDATA = /usr/bin/install -c -m 644
+MAKEINSTALLDIRS = mkdir -p
+TAGS = ctags-exuberant
+
+DEFS = 
+LIBS =
+CDEBUG = -g
+CFLAGS = \$(CDEBUG) -I. -I\$(srcdir) \$(DEFS)
+LDFLAGS = 
+LDADD = 
+# Math library.
+#LDADD = -lm
+# Uncomment the following for Glib (2.0).
+#CFLAGS += -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include
+#LDADD = -lglib-2.0
+
+DESTDIR =
+prefix = #PREFIX#
+bindir = \$(prefix)/bin
+datadir = \$(prefix)/share
+
+pkg_datadir=\$(datadir)/\$(NAME)
+pkg_docdir=\$(datadir)/doc/\$(NAME)
+
+DATA = 
+DOCS = README
+
+SRCS = *.c *.h
+OBJS = \$(NAME).o xmalloc.o
+AUX = README
+
+all:   \$(NAME)
+
+\$(NAME):  \$(OBJS)
+	\$(CC) \$(CFLAGS) \$(LDFLAGS) -o \$@ \$(OBJS) \$(LDADD) \$(LIBS)
+
+install: all
+	\$(MAKEINSTALLDIRS) \$(DESTDIR)\$(bindir)
+	\$(INSTALL) \$(NAME) \$(DESTDIR)\$(bindir)
+
+	\$(MAKEINSTALLDIRS) \$(DESTDIR)\$(pkg_docdir)
+	\$(INSTALLDATA) \$(srcdir)/\$(DOCS) \$(DESTDIR)\$(pkg_docdir)
+	
+
+tags:   \$(SRCS)
+	\$(TAGS) \$(SRCS)
+
+clean:
+	rm -f *.o \$(NAME) core tags
+
+distclean: clean
+EOF
+}
+
+file_c_makefile_glib()
+{
+	cat >Makefile <<EOF
+# Minimal Makefile.
+
+MAIN = #NAME#
+
+export CFLAGS  += \`pkg-config --cflags gobject-2.0\` -g
+export LDFLAGS += \`pkg-config --libs gobject-2.0\`
+
+\$(MAIN): \$(MAIN).o data.o
+
+clean: 
+	\$(RM) *.o *~ \$(MAIN)
+
+cleanall: clean
+EOF
+}
+
+file_c_hello() { echo "Main: #NAME#.c" >.hello; }
+
+file_c_main()
+{
+	cat >"#NAME#.c" <<EOF
+/* 
+ * Test source.
+ * Copyright © #YEAR#  #AUTHOR# <#EMAIL#>
+ *
+ * #GPL#
+ * #GPL_REFERENCE#
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+
+
+char *xmalloc ();
+char *xrealloc ();
+char *xstrdup ();
+
+
+int
+main(int argc, char **argv)
+{
+	printf("Hello World!\n");
+
+	exit(EXIT_SUCCESS);
+}
+/* vim: set sw=8: */
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 8 -*- */
+EOF
+}
+
+file_all_readme()
+{
+	cat >README <<EOF
+README for #NAME#
+--------------------
+EOF
+}
+
+file_c_xmalloc()
+{
+	cat >xmalloc.c << EOF
+/* xmalloc.c -- malloc with out of memory checking
+   Copyright (C) 1990, 91, 92, 93, 94, 95, 96, 99 Free Software Foundation, Inc.
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2, or (at your option)
+   any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software Foundation,
+   Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  */
+
+#if HAVE_CONFIG_H
+# include <config.h>
+#endif
+
+#if __STDC__
+# define VOID void
+#else
+# define VOID char
+#endif
+
+#include <sys/types.h>
+
+#if STDC_HEADERS
+# include <stdlib.h>
+#else
+VOID *calloc ();
+VOID *malloc ();
+VOID *realloc ();
+void free ();
+#endif
+
+#if ENABLE_NLS
+# include <libintl.h>
+# define _(Text) gettext (Text)
+#else
+# define textdomain(Domain)
+# define _(Text) Text
+#endif
+
+#include "error.h"
+
+#ifndef EXIT_FAILURE
+# define EXIT_FAILURE 1
+#endif
+
+/* Prototypes for functions defined here.  */
+#if defined (__STDC__) && __STDC__
+static VOID *fixup_null_alloc (size_t n);
+VOID *xmalloc (size_t n);
+VOID *xcalloc (size_t n, size_t s);
+VOID *xrealloc (VOID *p, size_t n);
+char *xstrdup (char *p);
+#endif
+
+
+/* Exit value when the requested amount of memory is not available.
+   The caller may set it to some other value.  */
+int xmalloc_exit_failure = EXIT_FAILURE;
+
+#if __STDC__ && (HAVE_VPRINTF || HAVE_DOPRNT)
+void error (int, int, const char *, ...);
+#else
+void error ();
+#endif
+
+static VOID *
+fixup_null_alloc (n)
+     size_t n;
+{
+  VOID *p;
+
+  p = 0;
+  if (n == 0)
+    p = malloc ((size_t) 1);
+  if (p == 0)
+    error (xmalloc_exit_failure, 0, _("Memory exhausted"));
+  return p;
+}
+
+/* Allocate N bytes of memory dynamically, with error checking.  */
+
+VOID *
+xmalloc (n)
+     size_t n;
+{
+  VOID *p;
+
+  p = malloc (n);
+  if (p == 0)
+    p = fixup_null_alloc (n);
+  return p;
+}
+
+/* Allocate memory for N elements of S bytes, with error checking.  */
+
+VOID *
+xcalloc (n, s)
+     size_t n, s;
+{
+  VOID *p;
+
+  p = calloc (n, s);
+  if (p == 0)
+    p = fixup_null_alloc (n);
+  return p;
+}
+
+/* Change the size of an allocated block of memory P to N bytes,
+   with error checking.
+   If P is NULL, run xmalloc.  */
+
+VOID *
+xrealloc (p, n)
+     VOID *p;
+     size_t n;
+{
+  if (p == 0)
+    return xmalloc (n);
+  p = realloc (p, n);
+  if (p == 0)
+    p = fixup_null_alloc (n);
+  return p;
+}
+
+/* Make a copy of a string in a newly allocated block of memory. */
+
+char *
+xstrdup (str)
+     char *str;
+{
+  VOID *p;
+
+  p = xmalloc (strlen (str) + 1);
+  strcpy (p, str);
+  return p;
+}
+EOF
+}
+
+file_c_data_glib()
+{
+	cat >data.c <<EOF
+#include "data.h"
+
+Data *
+fill_data (Data *data, gchar *name, gint value)
+{
+	g_return_val_if_fail (data != NULL, NULL);
+	
+	data->name = name;
+	data->value = value;
+
+	return data;
+}
+
+void
+dump_data (Data *data)
+{
+	g_return_if_fail (data != NULL);
+
+	g_print ("Data->name: %s\nData->value: %d\n\n",
+		 data->name, data->value);
+}
+
+Data *
+new_data (gchar *name, int value)
+{
+	return fill_data (g_new (Data, 1), name, value);
+}
+EOF
+
+	cat >data.h <<EOF
+#include <glib.h>
+
+typedef struct _Data Data;
+
+struct _Data {
+	gchar *name;
+	gint value;
+};
+
+Data *fill_data (Data *data, gchar *name, gint value);
+void dump_data (Data *data);
+Data *new_data (gchar *name, int value);
+EOF
+}
+
+file_c_main_glib()
+{
+	cat >"#NAME#.c" <<EOF
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <glib.h>
+
+#include "data.h"
+
+int
+main (int argc, char **argv)
+{
+	gint i;
+	gchar *string;
+	Data *data;
+
+
+	exit (EXIT_SUCCESS);
+}
+EOF
+}
+
+file_c_main_gobject()
+{
+
+	cat >"#NAME#.c" <<EOF
+#include "maman-subbar.h"
+
+/*#define VIOLATION 1*/
+
+int main (int argc, char **argv)
+{
+	GObject *obj;
+        MamanBar *bar;
+	MamanSubBar *subbar;
+        char *value;
+	gint ival;
+        guchar papa;
+#ifdef VIOLATION
+	MamanBar *baz = g_object_new (MAMAN_TYPE_BAR, NULL);
+#endif
+
+        g_type_init ();
+
+        obj = g_object_new (MAMAN_TYPE_SUBBAR, NULL);
+        maman_bar_do_action_public (MAMAN_BAR (obj), 0);
+        maman_bar_do_action_public_virtual (MAMAN_BAR (obj), 0);
+        maman_bar_do_action_public_pure_virtual (MAMAN_BAR (obj), 0);
+
+        bar = g_object_new (MAMAN_TYPE_SUBBAR, NULL);
+	maman_bar_do_action_public (bar, 0);
+        maman_bar_do_action_public_virtual (bar, 0);
+        maman_bar_do_action_public_pure_virtual (bar, 0);
+
+        /* test properties. */
+        g_object_get (G_OBJECT (bar), "maman-name", &value, NULL);
+        g_assert (strcmp (value, "no-name-set") == 0);
+        /*
+          Cannot change the name of maman since it is a construct-only property.
+          g_object_set (G_OBJECT (bar), "maman-name", "martine");
+        */
+        g_object_set (G_OBJECT (bar), "papa-number", 1, NULL);
+        g_object_get (G_OBJECT (bar), "papa-number", &papa, NULL);
+        g_assert (papa == 1);
+
+	g_print ("Foo: %d\n", bar->foo);
+#ifdef VIOLATION
+	g_object_set (G_OBJECT (bar), "foo", 100, NULL);
+#else
+	g_object_set (G_OBJECT (bar), "foo", 17, NULL);
+#endif
+	g_object_get (G_OBJECT (bar), "foo", &ival, NULL);
+
+	subbar = g_object_new (MAMAN_TYPE_SUBBAR, NULL);
+	g_print ("Foo: %d\n", MAMAN_BAR (subbar)->foo);
+	g_print ("Baz: %d\n", subbar->baz);
+
+	g_object_unref (G_OBJECT (bar));
+        g_object_unref (G_OBJECT (obj));
+        g_object_unref (G_OBJECT (subbar));
+
+        /* Here, we set the maman-name construction property. */
+        bar = g_object_new (MAMAN_TYPE_SUBBAR, "maman-name", "martine", NULL);
+        g_object_get (G_OBJECT (bar), "maman-name", &value, NULL);
+        g_assert (strcmp (value, "martine") == 0);
+
+        g_object_unref (G_OBJECT (bar));
+
+        return 0;
+}
+
+/* vim: set sw=8: */
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*- */
+EOF
+}
+
+file_c_objects_gobject()
+{
+	cat >maman-bar.c <<EOF
+#include "maman-bar.h"
+
+G_DEFINE_ABSTRACT_TYPE (MamanBar, maman_bar, G_TYPE_OBJECT)
+
+/* If you use Pimpls, include the private structure 
+ * definition here. Some people create a maman-bar-private.h header
+ * which is included by the maman-bar.c file and which contains the
+ * definition for this private structure.
+ */
+struct _MamanBarPrivate {
+	guint8 useless;
+	gboolean dispose_has_run;
+	gchar *name;
+	guchar papa_number;
+};
+
+void
+maman_bar_do_action_public_virtual (MamanBar *self, guint8 i)
+{
+	if (self->priv->dispose_has_run)
+		return;
+
+	MAMAN_BAR_GET_CLASS (self)->do_action_public_virtual (self, i);
+}
+
+void
+maman_bar_do_action_public_pure_virtual (MamanBar *self, guint8 i)
+{
+	if (self->priv->dispose_has_run)
+		return;
+
+	MAMAN_BAR_GET_CLASS (self)->do_action_public_pure_virtual (self, i);
+}
+
+static void
+maman_bar_do_action_private_virtual (MamanBar *self, guint8 i)
+{
+	MAMAN_BAR_GET_CLASS (self)->do_action_private_virtual (self, i);
+}
+
+static void
+maman_bar_do_action_private_pure_virtual (MamanBar *self, guint8 i)
+{
+	MAMAN_BAR_GET_CLASS (self)->do_action_private_pure_virtual (self, i);
+}
+
+static void
+real_do_action_public_virtual (MamanBar *self, guint8 i)
+{
+	/* a default implementation for this class method */
+	g_print ("Inside \"%s\"\n", __FUNCTION__);
+}
+
+static void
+real_do_action_private_virtual (MamanBar *self, guint8 i)
+{
+	/* a default implementation for this class method */
+	g_print ("Inside \"%s\"\n", __FUNCTION__);
+}
+
+
+void
+maman_bar_do_action_public (MamanBar *self, guint8 i)
+{
+	if (self->priv->dispose_has_run)
+		return;
+
+	/* Do something useless on MamanBar instance. */
+	self->priv->useless = i;
+
+	/* call helper function implemented by children */
+	maman_bar_do_action_private_virtual (self, 1);
+
+	/* call helper function implemented by children */
+	maman_bar_do_action_private_pure_virtual (self, 2);
+}
+
+enum {
+	MAMAN_BAR_CONSTRUCT_NAME = 1,
+	MAMAN_BAR_PAPA_NUMBER,
+	MAMAN_BAR_FOO,
+};
+
+static void
+maman_bar_init (MamanBar *self)
+{
+	self->foo = -13;
+
+	self->priv = g_new (MamanBarPrivate, 1);
+	self->priv->useless = 0;
+	self->priv->dispose_has_run = FALSE;
+	self->priv->name = NULL;
+	self->priv->papa_number = 0;
+}
+
+
+static void
+maman_bar_set_property (GObject *object, guint property_id,
+			const GValue *value, GParamSpec *pspec)
+{
+	MamanBar *self = (MamanBar *) object;
+
+	switch (property_id) {
+	case MAMAN_BAR_CONSTRUCT_NAME:
+		g_free (self->priv->name);
+		self->priv->name = g_value_dup_string (value);
+		g_print ("maman: %s\n", self->priv->name);
+		break;
+
+	case MAMAN_BAR_PAPA_NUMBER:
+		self->priv->papa_number = g_value_get_uchar (value);
+		g_print ("papa: %u\n", self->priv->papa_number);
+		break;
+
+	case MAMAN_BAR_FOO:
+		self->foo = g_value_get_int (value);
+		g_print ("foo: %d\n", self->foo);
+		break;
+
+	default:
+		/* We don't have any other property... */
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+		break;
+	}
+}
+
+static void
+maman_bar_get_property (GObject *object, guint property_id,
+			GValue *value, GParamSpec *pspec)
+{
+	MamanBar *self = (MamanBar *) object;
+
+	switch (property_id) {
+	case MAMAN_BAR_CONSTRUCT_NAME:
+		g_value_set_string (value, self->priv->name);
+		break;
+
+	case MAMAN_BAR_PAPA_NUMBER:
+		g_value_set_uchar (value, self->priv->papa_number);
+		break;
+
+	case MAMAN_BAR_FOO:
+		g_value_set_int (value, self->foo);
+		break;
+
+	default:
+		/* We don't have any other property... */
+		G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+		break;
+	}
+}
+
+static GObject *
+maman_bar_constructor (GType type, guint n_construct_properties,
+		       GObjectConstructParam *construct_properties)
+{
+	GObject *object;
+
+	{
+		/* Invoke parent constructor. */
+		MamanBarClass *klass;
+		klass = MAMAN_BAR_CLASS (g_type_class_peek (MAMAN_TYPE_BAR));
+		object = G_OBJECT_CLASS (maman_bar_parent_class)->constructor
+				(type, n_construct_properties, construct_properties);
+	}
+
+	/* do stuff. */
+
+	return object;
+}
+
+static void
+maman_bar_dispose (GObject *object)
+{
+	MamanBar *self = (MamanBar *) object;
+
+	if (self->priv->dispose_has_run)
+		/* If dispose did already run, return. */
+		return;
+
+	/* Make sure dispose does not run twice. */
+	self->priv->dispose_has_run = TRUE;
+
+	/* 
+	 * In dispose, you are supposed to free all types referenced from this
+	 * object which might themselves hold a reference to self. Generally,
+	 * the most simple solution is to unref all members on which you own a 
+	 * reference.
+	 */
+
+	/* Chain up to the parent class */
+	G_OBJECT_CLASS (maman_bar_parent_class)->dispose (object);
+}
+
+static void
+maman_bar_finalize (GObject *object)
+{
+	MamanBar *self = (MamanBar *) object;
+
+	/*
+	 * Here, complete object destruction.
+	 * You might not need to do much...
+	 */
+	g_free (self->priv->name);
+
+	g_free (self->priv);
+
+	/* Chain up to the parent class */
+	G_OBJECT_CLASS (maman_bar_parent_class)->finalize (object);
+}
+
+
+static void
+maman_bar_class_init (MamanBarClass *klass)
+{
+	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
+	GParamSpec *pspec;
+
+	gobject_class->set_property = maman_bar_set_property;
+	gobject_class->get_property = maman_bar_get_property;
+	gobject_class->dispose = maman_bar_dispose;
+	gobject_class->finalize = maman_bar_finalize;
+	gobject_class->constructor = maman_bar_constructor;
+
+	klass->do_action_public_pure_virtual = NULL;
+	klass->do_action_public_virtual = real_do_action_public_virtual;
+	klass->do_action_private_pure_virtual = NULL;
+	klass->do_action_private_virtual = real_do_action_private_virtual;
+
+	maman_bar_parent_class = g_type_class_peek_parent (klass);
+
+	pspec = g_param_spec_int ("foo",
+				  "Random foo",
+				  "Set/Get foo", -30 /* minimum value */ ,
+				  30 /* maximum value */ ,
+				  -13 /* default value */ ,
+				  G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class, MAMAN_BAR_FOO, pspec);
+
+	pspec = g_param_spec_string ("maman-name",
+				     "Maman construct prop",
+				     "Set maman's name",
+				     "no-name-set" /* default value */ ,
+				     G_PARAM_CONSTRUCT_ONLY |
+				     G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+					 MAMAN_BAR_CONSTRUCT_NAME, pspec);
+
+	pspec = g_param_spec_uchar ("papa-number",
+				    "Number of current Papa",
+				    "Set/Get papa's number",
+				    0 /* minimum value */ ,
+				    10 /* maximum value */ ,
+				    2 /* default value */ ,
+				    G_PARAM_READWRITE);
+	g_object_class_install_property (gobject_class,
+					 MAMAN_BAR_PAPA_NUMBER, pspec);
+}
+
+/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*- */
+EOF
+
+	cat >maman-bar.h <<EOF
+#ifndef MAMAN_BAR_H
+#define MAMAN_BAR_H
+
+#include <glib-object.h>
+
+G_BEGIN_DECLS
+
+#define MAMAN_TYPE_BAR			(maman_bar_get_type ())
+#define MAMAN_BAR(object)		(G_TYPE_CHECK_INSTANCE_CAST ((object), \
+					 MAMAN_TYPE_BAR, MamanBar))
+#define MAMAN_BAR_CLASS(klass)		(G_TYPE_CHECK_CLASS_CAST ((klass),     \
+					 MAMAN_TYPE_BAR, MamanBarClass))
+#define MAMAN_IS_BAR(object)		(G_TYPE_CHECK_INSTANCE_TYPE ((object), \
+					 MAMAN_TYPE_BAR))
+#define MAMAN_IS_BAR_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE ((klass),     \
+					 MAMAN_TYPE_BAR))
+#define MAMAN_BAR_GET_CLASS(object)	(G_TYPE_INSTANCE_GET_CLASS ((object),  \
+					 MAMAN_TYPE_BAR, MamanBarClass))
+
+typedef struct _MamanBar MamanBar;
+typedef struct _MamanBarClass MamanBarClass;
+typedef struct _MamanBarPrivate MamanBarPrivate;
+
+struct _MamanBar {
+	GObject parent;
+
+	/* instance members */
+	gint foo;
+	MamanBarPrivate *priv;
+};
+
+struct _MamanBarClass {
+	GObjectClass parent;
+
+	/* class members */
+	void (*do_action_public_virtual) (MamanBar * self, guint8 i);
+
+	void (*do_action_public_pure_virtual) (MamanBar * self, guint8 i);
+
+	void (*do_action_private_virtual) (MamanBar * self, guint8 i);
+
+	void (*do_action_private_pure_virtual) (MamanBar * self, guint8 i);
+};
+
+void maman_bar_do_action_public (MamanBar *self, guint8 i);
+
+void maman_bar_do_action_public_virtual (MamanBar *self, guint8 i);
+
+void maman_bar_do_action_public_pure_virtual (MamanBar *self, guint8 i);
+
+G_END_DECLS
+
+#endif /* MAMAN_BAR_H */
+EOF
+
+	cat >maman-subbar.c <<EOF
+#include "maman-subbar.h"
+
+G_DEFINE_TYPE (MamanSubBar, maman_subbar, MAMAN_TYPE_BAR)
+
+static void
+maman_subbar_init (MamanSubBar *self)
+{
+	/* Random assignment.  */
+	self->baz = -67;
+}
+
+static void
+maman_subbar_real_do_action_public_pure_virtual (MamanBar *object, guint8 i)
+{
+	MamanSubBar *self = (MamanSubBar *) object;
+
+	/* Real job is done here. */
+	g_print ("Inside \"%s\"\n", __FUNCTION__);
+}
+
+static void
+maman_subbar_real_do_action_private_pure_virtual (MamanBar *object, guint8 i)
+{
+	MamanSubBar *self = (MamanSubBar *) object;
+
+	/* Real job is done here. */
+	g_print ("Inside \"%s\"\n", __FUNCTION__);
+}
+
+static void
+maman_subbar_class_init (MamanSubBarClass *klass)
+{
+	MamanBarClass *parent_klass = MAMAN_BAR_CLASS (klass);
+
+	parent_klass->do_action_public_pure_virtual =
+		maman_subbar_real_do_action_public_pure_virtual;
+	parent_klass->do_action_private_pure_virtual =
+		maman_subbar_real_do_action_private_pure_virtual;
+}
+EOF
+	cat >maman-subbar.h <<EOF
+#ifndef MAMAN_SUBBAR_H
+#define MAMAN_SUBBAR_H
+
+#include <glib-object.h>
+#include "maman-bar.h"
+
+G_BEGIN_DECLS
+
+#define MAMAN_TYPE_SUBBAR		(maman_subbar_get_type ())
+#define MAMAN_SUBBAR(object)		(G_TYPE_CHECK_INSTANCE_CAST ((object), \
+					 MAMAN_TYPE_SUBBAR, MamanSubbar))
+#define MAMAN_SUBBAR_CLASS(klass)	(G_TYPE_CHECK_CLASS_CAST ((klass),     \
+					 MAMAN_TYPE_SUBBAR, MamanSubbarClass))
+#define MAMAN_IS_SUBBAR(object)		(G_TYPE_CHECK_INSTANCE_TYPE ((object), \
+					 MAMAN_TYPE_SUBBAR))
+#define MAMAN_IS_SUBBAR_CLASS(klass)	(G_TYPE_CHECK_CLASS_TYPE ((klass),     \
+					 MAMAN_TYPE_SUBBAR))
+#define MAMAN_SUBBAR_GET_CLASS(object)	(G_TYPE_INSTANCE_GET_CLASS ((object),  \
+					 MAMAN_TYPE_SUBBAR, MamanSubbarClass))
+
+typedef struct _MamanSubBar MamanSubBar;
+typedef struct _MamanSubBarClass MamanSubBarClass;
+
+struct _MamanSubBar {
+	MamanBar parent;
+
+	/* Inheritence with an extension.  */
+	gint baz;
+};
+
+struct _MamanSubBarClass {
+	MamanBarClass parent;
+};
+
+G_END_DECLS
+
+#endif /* MAMAN_SUBBAR_H */
+EOF
+}
+
+file_c_makefile_gobject()
+{
+	cat >Makefile <<EOF
+# Minimal Makefile.
+
+MAIN = #NAME#
+
+export CFLAGS  += \`pkg-config --cflags gobject-2.0\` -g
+export LDFLAGS += \`pkg-config --libs gobject-2.0\`
+
+\$(MAIN): \$(MAIN).o
+
+clean: 
+	\$(RM) *.o *~ \$(MAIN)
+
+cleanall: clean
+EOF
+}
+
+create_c()
+{
+	file_c_main
+	file_c_hello
+	file_c_makefile
+	file_c_xmalloc
+	file_all_readme
+}
+
+create_c_glib()
+{
+	file_c_main_glib
+	file_c_data_glib
+	file_c_hello
+	file_c_makefile_glib
+}
+
+create_c_gobject()
+{
+	file_c_main_gobject
+	file_c_hello
+	file_c_objects_gobject
+	file_c_makefile_gobject
+}
+
+create_sh()
+{
+	file_sh_main
+	file_sh_hello
+}
+
+create_svn()
+{
+	cat >.hellogen <<EOF
+svn_temp=\${TMPDIR-/tmp}/${PROGRAM}.\$\$
+trap "rm -rf \$svn_temp" 0 INT
+
+repos=\$PWD/repos
+
+echo >&2 "Creating repository in $repos..."
+mkdir -p \$repos
+svnadmin create \$repos
+
+echo >&2 "Creating test project layout..."
+mkdir -p \$svn_temp
+(
+	cd \$svn_temp
+	mkdir branches tags vendor
+
+	# Create a little deeper directory structure to test some svn features.
+	mkdir -p trunk/src
+	cd trunk/src
+
+	# Wrapper for tha real Makefile.
+	echo -e 'all:\n\t\$(MAKE) -C src' >../Makefile
+	hellogen --dirname-base "." c generic
+)
+
+vmsg "Importing test project..."
+svn import -m "Initial import." \$svn_temp file:///\$repos
+
+vmsg "Checking out test project..."
+svn checkout file:///\$repos $NAME
+rm -rf \$svn_temp
+EOF
+}
+
+file_deb_hello() { echo "Main: hello-1/debian/rules" >.hello; }
+
+create_deb()
+{
+	file_deb_hello
+	cat >.hellogen <<EOF
+# First create a test C project.
+# We change the PREFIX here to not touch debhelper files.
+PREFIX=/usr hellogen --quiet --no-edit-after --no-previous --dirname-base "." c generic
+cd $NAME-1
+dh_make -s
+EOF
+}
+
+
+# ----------------------------------------------------------------------------
+# Dangerous stuff from here.
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+# The most critical functions.
+#
+#		     (var_to_nam)
+# (var_to_mod)	_MOD_NAM  -->  VAL ('nam_to_val' or 'var_to_val')
+#		    ^
+#		    |
+#		    |
+#		   VAR ('nam_to_var')
+#		
+# Example:	_all_AUTHOR  -->  "Joe Doe"
+#
+# 		nam_to_var "AUTHOR"      --> _all_AUTHOR
+# 		nam_to_val "AUTHOR"      --> John Doe
+# 		var_to_val "_all_AUTHOR" --> John Doe
+# 		var_to_nam "_all_AUTHOR" --> AUTHOR
+# 		var_to_mod "_all_AUTHOR" --> all
+#
+# ----------------------------------------------------------------------------
+
+getvar()     { eval echo \$$1 | grep -v '\$'; }
+setvar()     { eval "$1=\"\$2\""; }
+nam_to_var() { echo "_${2:-"all"}_$1"; }
+nam_to_val() { getvar "$(nam_to_var $1)"; }
+var_to_val() { getvar "$1"; }
+var_to_nam() { echo "$1" | cut -d'_' -f3-; }
+var_to_mod() { echo "$1" | cut -d'_' -f2; }
+
+generate_substitutions()
+{
+	SUBST_FILE=${TMPDIR-/tmp}/subst.$$
+	trap "rm -f $SUBST_FILE" 0 INT
+
+	if [ "$OPT_SUBSTITUTE_CUSTOM" = "no" ]; then
+		vmsg "No substitution will be made."
+		# Just touch the file.
+		touch $SUBST_FILE
+		return
+	fi
+
+#        vmsg "SUBST_VARS: $SUBST_VARS"
+	set -- $SUBST_VARS
+
+	while [ ! -z "$1" ]; do
+		subst_nam=$(var_to_nam $1)
+#                vmsg "subst_nam: $subst_nam"
+		subst_val=$(var_to_val $1)
+#                vmsg "subst_val: $subst_val"
+		
+		if [ ! -z "$subst_val" ]; then
+			echo "s!#${subst_nam}#!${subst_val}!g" >>$SUBST_FILE
+		fi
+		shift
+	done
+}
+
+add_subst()
+{
+	local var="$(nam_to_var $1 $3)"
+#        vmsg "add_subst args --> 1: $1 2:$2 3:$3"
+
+	setvar "$var" "$2"
+	SUBST_VARS="$SUBST_VARS $var"
+}
+
+subst()
+{
+	if [ "$#" -lt 2 ]; then
+		fatal "not enough argument for 'subst VAR VALUE [SUITE]'"
+	fi
+
+#        vmsg "subst --> 1: $1 2:$2 3:$3"
+	add_subst "$@"
+}
+
+process_file()
+{
+	# Process filename first.
+	file=$1
+	if echo "$1" | grep -q '#.*#'; then
+		name=$(echo $1 | sed -f $SUBST_FILE)
+		if [ ! -z "$name" -a ! -e "$name" ]; then
+			file="$name"
+			mv -f $1 $file
+		fi
+	fi
+
+	# Skip non-text files.
+	if ! file $file | grep -q '\<text\>'; then
+		return
+	fi
+
+	temp_file=${TMPDIR-/tmp}/$(basename $file).$$
+	trap "rm -f $temp_file" 0 INT
+	mv -f $file $temp_file
+
+	sed -f $SUBST_FILE $temp_file >$file
+	rm -f $temp_file
+}
+
+generate_files()
+{
+	hellodir=$PROGDIR/$1/$2
+	
+	if [ -f $hellodir/.hellogen-pre ]; then
+		( . $hellodir/.hellogen-pre )
+	fi
+
+	dest=$PWD
+	(
+		cd $hellodir;
+		find . -mindepth 1 \
+			\( -type f -a ! -name '.hellogen*' \) -exec cp --parents {} $dest \;
+	)
+
+	(
+		if [ -f $hellodir/.hellogen ]; then
+			. $hellodir/.hellogen
+		fi
+		find . -type f 2>/dev/null |
+		while read f; do
+			process_file $f
+		done
+	)
+	
+	if [ -f $hellodir/.hellogen-post ]; then
+		( . $hellodir/.hellogen-post )
+	fi
+}
+
+set_option()
+{
+	local name; local option_name; local conf_val; local opt_val
+	
+	name=$(LC_ALL=C echo $1 | tr A-Z a-z)
+	option_name="OPT_$(LC_ALL=C echo $name | tr a-z A-Z)"
+	conf_val=$(getvar "conf_$name")
+	opt_val=$(getvar "opt_$name")
+
+#        vmsg "--> name:$name option_name:$option_name conf_val:$conf_val opt_val: $opt_val"
+
+	if [ -n "$opt_val" ]; then
+		setvar $option_name "$opt_val"
+	elif [ -n "$conf_val" ]; then
+		setvar $option_name "$conf_val"
+	else
+		setvar $option_name "$2"
+	fi
+}
+
+init_builtin_subst()
+{
+	add_subst "NAME" "$NAME"
+	add_subst "PREFIX" "$PREFIX"
+
+	# Accept zero padding only if the GNU extension is not available.
+	if [ $(date +%-d) = %-d ]; then 
+		# Prevent user's locale settings from affecting %B.
+		DATE=$(LC_ALL=POSIX date "+%B %d, %Y")
+	else
+		DATE=$(LC_ALL=POSIX date "+%B %-d, %Y")
+	fi
+	YEAR=$(date "+%Y")
+	ISO_DATE=$(date "+%Y-%m-%d")
+	RFC_DATE=$(date -R)
+
+	add_subst "DATE" "$DATE"
+	add_subst "YEAR" "$YEAR"
+	add_subst "ISO_DATE" "$ISO_DATE"
+	add_subst "RFC_DATE" "$RFC_DATE"
+
+	# Probably stolen and modified from 'autoproject'.
+	if [ "$AUTHOR" = "" ]; then
+		if [ ! -z "$DEBFULLNAME" ]; then
+			AUTHOR=$DEBFULLNAME
+		else
+			AUTHOR=$(awk -F: -vUSER=$USER '$1 == USER { print $5; }' /etc/passwd)
+
+			if [ "$AUTHOR" = "" -a -x /usr/bin/ypmatch ]; then
+				# Give NIS a try.
+				AUTHOR=$(ypmatch $USER passwd.byname | $AWK -F: '{ print $5; }')
+			fi
+			if echo $AUTHOR | grep -q -- "\,"; then
+				X=$(expr index "$AUTHOR" ",")
+				X=$(expr $X - 1)
+				AUTHOR=$(expr substr "$AUTHOR" 1 $X)
+			fi
+		fi
+	fi
+	add_subst "AUTHOR" "$AUTHOR"
+
+	if [ "$EMAIL" = "" ]; then
+		if [ ! -z "$DEBEMAIL" ]; then
+			EMAIL="$DEBEMAIL"
+		elif [ -s /etc/mailname ]; then
+			EMAIL="$USER@$(cat /etc/mailname)"
+		elif [ -s /etc/news/whoami ]; then
+			EMAIL="$USER@$(cat /etc/news/whoami)"
+		else
+			EMAIL="$(whoami)@$(hostname)"
+		fi
+	fi
+	# '@' must be escaped in a .texinfo file
+	EEMAIL=$(echo $EMAIL | sed s/@/@@/)
+	add_subst "EMAIL" "$EMAIL"
+	add_subst "EEMAIL" "$EEMAIL"
+
+	GPL="Licensed under the GNU General Public License, version 2."
+	add_subst "GPL" "$GPL"
+	
+	GPL_REFERENCE="See the file 'http://www.gnu.org/copyleft/gpl.txt'."
+	add_subst "GPL_REFERENCE" "$GPL_REFERENCE"
+}
+
+
+# ----------------------------------------------------------------------------
+# Cache operations.
+# ----------------------------------------------------------------------------
+
+cachep() { if is_cache_exist; then $(sed -n '$=' $CACHE); fi; }
+
+is_cache_exist() { dir=${1:-.}; test -s $dir/$CACHE; }
+
+remove_this()
+{
+	vmsgn "  removing '$1'... "
+	if [ -f $1/.hello ]; then
+		rm -rf $1 && vmsg "done"
+	else
+		vmsgn "no stamp found; "
+		if [ "$OPT_FORCE_CLEAN" = "no" ]; then
+			vmsg "skipping"
+			return 1
+		fi
+		rm -rf $1 && vmsg "removed anyway"
+	fi
+
+	return 0
+}
+
+last_this() { if is_cache_exist; then tail -1 $CACHE; fi; }
+
+# Look for an available slot in name space (max 10 attempts).
+new_this()
+{
+	last_avail=$((cachep + 1)); this=
+	for postfix in $(seq $last_avail $((last_avail + 10))); do
+		d=$NAME-$postfix
+		if [ ! -d $d ]; then
+			this=$d
+			break;
+		fi
+	done
+	
+	if [ -z "$this" ]; then
+		fatal "couldn't grab a name in cache"
+	fi
+
+	echo $this
+}
+
+cache_this() { echo $1 >>$CACHE; }
+
+edit_this()
+{
+	if [ -z "$EDITOR" ]; then
+		fatal "please set the EDITOR to edit the main file if applicable."
+	fi
+	
+	cd $1
+
+	main=$(sed -ne 's/^Main: \(.*\)$/\1/p' .hello)
+	if [ -n "$main" ] && [ -f $main ] && cd $(dirname $main) 2>/dev/null; then
+		$EDITOR $(basename $main)
+	fi
+}
+
+stamp_this()
+{
+	(
+		echo "Suite: $2"
+		echo "Subsuite: $3"
+		echo "Creation: $(date +"%s")"
+		if [ -r $1/.hello ]; then
+			cat $1/.hello
+		fi
+	) >>$1/.hello.tmp
+	mv -f $1/.hello.tmp $1/.hello
+}
+
+sanitize_this()
+{
+	vmsgn "  checking $1... "
+	if [ ! -d "$1" ]; then
+		vmsg "failed: no such suite found."
+		return 1
+	fi
+	
+	if [ ! -f "$1/.hello" ]; then
+		vmsg "failed: no stamp found in suite."
+		return 1
+	fi
+	vmsg "done"
+
+	return 0
+}
+
+sanitize_cache()
+{
+	if is_cache_exist; then
+		while read d; do
+			if ! sanitize_this $d; then
+				return 1
+			fi
+		done <$CACHE
+	fi
+}
+
+# Flush the given cache entries
+# Accepts a series of integer ('$' as an exception).
+# 	No arg: clean all test suites.
+# 	0     : do not clean any test suites
+# 	n > 0 : clean nth suite
+# 	$     : clean last suite
+flush_cache()
+{
+	if ! is_cache_exist; then
+		return
+	fi
+	
+	nums="$@"
+	if echo "$@" | grep -q '\<\$\>'; then
+		last=$(cachep)
+		nums=$(echo $nums | sed -e "s/\\$/$last/g")
+	fi
+
+	mv -f $CACHE $CACHE.tmp
+
+	i=1
+	while read d; do
+		if [ -n "$nums" ] && ! echo "$nums" | grep -q "\<$i\>"; then
+			echo $d
+		else	
+			if ! remove_this $d; then
+				echo $d
+			fi
+		fi
+		i=$((i + 1))
+	done <$CACHE.tmp >>$CACHE
+
+	if ! is_cache_exist; then
+		rm -f $CACHE
+	fi
+
+	rm -f $CACHE.tmp
+}
+
+
+# ----------------------------------------------------------------------------
+# Here we go.
+# ----------------------------------------------------------------------------
+
+GETOPT=$(getopt \
+--options     b:cd:eflNnP:p:qsVh \
+--longoptions dirname-base:,clean,dir-default:,edit-last,force-clean,\
+print-last,no-edit-after,no-previous,print-wd-file:,path-test:,quiet,\
+no-substitution,version,help \
+--name "$PROGRAM" -- $@)
+
+eval set -- "$GETOPT"
+
+while true; do
+	case "$1" in
+		-b|--dirname-base)	opt_dirname_base="$2"; shift 2 ;;
+		-c|--clean)		opt_clean=yes; shift ;;
+		-d|--dir-default)	opt_dir_default="$2"; shift 2 ;;
+		-e|--edit-last)		opt_edit_last=yes; shift ;;
+		-f|--force-clean)	opt_force_clean=yes; shift ;;
+		-l|--print-last)	opt_print_last=yes; shift ;;
+		-N|--no-edit-after)	opt_no_edit_after=yes; shift ;;
+		-n|--no-previous)	opt_no_previous=yes; shift ;;
+		-P|--print-wd-file)	opt_print_wd_file="$2"; shift 2 ;;
+		-p|--path-test)		opt_path_test="$2"; shift 2 ;;
+		-q|--quiet)		opt_quiet=yes; shift ;;
+		-s|--no-substitution)	opt_substitute_custom=no; shift ;;
+		-V|--version)		msg "$MSG_VERSION"; exit 0 ;;
+		-h|--help)		msg "$MSG_USAGE"; msg "$MSG_HELP"; exit 0 ;;
+		--)			shift; break ;;
+		*)			msg "$MSG_TRY"; exit 1 ;;
+	esac
+done
+
+# Check for a local conf file.
+orig=$PWD; has_localconf=
+while :; do
+	if [ "$PWD" = "${PWD##$HOME}" ] || [ "$PWD" = "$HOME" ]; then
+		break
+	fi
+	if [ -f $LOCALCONF ]; then
+		trap "fatal \"error in local configuration file $LOCALCONF\"" 0 INT
+		. $LOCALCONF
+		trap - 0 INT
+		has_localconf=1
+		break
+	fi
+	cd ..
+done
+cd $orig
+
+# ... Then for the global conf file.
+if [ -z "$has_localconf" ] && [ -f $PROGCONF ]; then
+	# TODO: Add weak control.
+	
+	trap "fatal \"error in configuration file $PROGCONF\"" 0 INT
+        . $PROGCONF
+	trap - 0 INT
+fi
+
+set_option SUBSTITUTE_CUSTOM "yes"
+set_option QUIET "no"
+set_option EDIT_LAST "no"
+set_option PRINT_LAST "no"
+set_option NO_PREVIOUS "no"
+set_option CLEAN "no"
+set_option FORCE_CLEAN "no"
+set_option NO_EDIT_AFTER "no"
+set_option DIRNAME_BASE "tests"; OPT_DIRNAME_BASE=$(basename $OPT_DIRNAME_BASE)
+set_option DIR_DEFAULT "$HOME/tmp"
+set_option PATH_TEST ".:$OPT_DIR_DEFAULT:$HOME"
+set_option PRINT_WD_FILE ""
+if [ -n "$OPT_PRINT_WD_FILE" ] && echo $OPT_PRINT_WD_FILE | grep -q '/^\//'; then
+	OPT_PRINT_WD_FILE=$PWD/$OPT_PRINT_WD_FILE
+fi
+
+if [ "$OPT_CLEAN" = "yes" ] || [ "$OPT_PRINT_LAST" = "yes" ]; then
+	NO_ACTION=yes
+fi
+
+# FIXME: Remove this code in future.
+if [ ! -d $PROGDIR ]; then
+	msg "It seems that this is the first time running of '$PROGRAM'."
+
+	save_args="$@"
+	eval set -- "$BUILTIN_SUITES"
+
+	while [ ! -z "$1" ]; do
+		msg "  Creating default test suites for '$1' in '$PROGDIR'..."
+		
+		d=$PROGDIR/$1/generic
+		mkdir -p $d
+		(
+			cd $d; eval create_$1
+		)
+		shift
+	done
+	
+	# FIXME: Simple hack for glib.
+	d=$PROGDIR/c/glib
+	mkdir -p $d
+	(
+		cd $d; eval create_c_glib
+	)
+
+	# FIXME: Simple hack for gobject.
+	d=$PROGDIR/c/gobject
+	mkdir -p $d
+	(
+		cd $d; eval create_c_gobject
+	)
+
+	eval set -- "$save_args"
+fi
+
+if [ "$OPT_DIRNAME_BASE" != "." -a $(basename $PWD) != "$OPT_DIRNAME_BASE"  ]; then
+	vmsg "Looking for the test directory... "
+
+	i=1
+	while [ $i -le $(echo $OPT_PATH_TEST | awk -F ':' '{ print NF }') ]; do
+		path=$(echo $OPT_PATH_TEST | awk -F ':' '{ print $'"$i"' }')/$OPT_DIRNAME_BASE
+		if [ -d "$path" ]; then
+			workdir=$path
+			# FIXME: Rely on .helloignore cruft?  Ugly hack.
+			if  [ -f $workdir/.helloignore ]; then
+				msg "Test candidate '$workdir' ignored"
+				workdir=
+			else
+				if  ! is_cache_exist $workdir; then
+					if [ "$NO_ACTION" = "yes" ]; then
+						msg "Test candidate '$workdir' skipped"
+						workdir=
+					else
+						yesno "Use $workdir for test suites? [Y/n]"
+						if [ "$ANS" = "n" ]; then
+							workdir=
+						fi
+					fi
+				fi
+			fi
+			
+			if [ -n "$workdir" ]; then
+				break
+			fi
+		fi
+		
+		i=$((i + 1))
+	done
+
+	if [ -n "$workdir" ]; then
+		vmsg "Found '$(normf $workdir)'"
+	else
+		d=$OPT_DIR_DEFAULT/$OPT_DIRNAME_BASE
+		vmsg "No test suite found; falling back to '$(normf $d)'"
+		if [ ! -d $d ]; then
+			yesno "Default directory '$d' does no exist, create it? [Y/n]"
+			if [ "$ANS" = "y" ]; then
+				mkdir -p $d
+			else
+				msg "Please create it first."
+				exit 0
+			fi
+		fi
+		workdir=$d
+	fi
+else
+	vmsg "Already in the test directory, good!"
+	workdir="."
+fi
+
+# Everything from here will be performed in ORIG dir.
+cd $workdir; ORIG=$(pwd)
+
+# Print last suite location.
+if [ "$OPT_PRINT_LAST" = "yes" ]; then
+	THIS=$(last_this)
+
+	if [ -z "$THIS" ]; then
+		msg "No suite found!"
+		exit 0
+	fi
+
+	if ! sanitize_this $THIS; then
+		fatal "couldn't validating the last test suite; aborting"
+	fi
+
+	if [ -n "$OPT_PRINT_WD_FILE" ]; then
+		echo "$PWD/$THIS" >$OPT_PRINT_WD_FILE
+	else
+		# Only sane thing to do, print THIS directory to STDOUT.
+		echo "$PWD/$THIS"
+	fi
+
+	exit 0
+fi
+
+# Clean suites.
+if [ "$OPT_CLEAN" = "yes" ]; then
+	if is_cache_exist; then
+		vmsg "Cleaning all test suites..."
+		flush_cache
+	else
+		vmsg "No test suites found to clean."
+	fi
+
+	exit 0
+fi
+
+# Edit last suite.
+if [ "$OPT_EDIT_LAST" = "yes" ] && is_cache_exist; then
+	THIS=$(last_this)
+	if ! sanitize_this $THIS; then
+		fatal "couldn't validating the last test suite; aborting"
+	fi
+	
+	if [ "$OPT_NO_EDIT_AFTER" = "no" ]; then
+		vmsg "No suite given; will edit last suite if applicable."
+		edit_this $THIS
+	fi
+
+	# XXX: Something nasty happens here, e.g. '-P blah -qeN' vs '-l'
+	if [ -n "$OPT_PRINT_WD_FILE" ]; then
+		echo "$PWD" >$OPT_PRINT_WD_FILE
+	else
+		if [ ! "$OPT_NO_EDIT_AFTER" = "no" ]; then
+			# Only sane thing to do, print THIS directory to STDOUT.
+			echo "$PWD/$THIS"
+		fi
+	fi
+
+	exit 0
+fi
+
+
+# ----------------------------------------------------------------------------
+# Ask for the test suite.
+# ----------------------------------------------------------------------------
+
+SUITES=`find $PROGDIR -type d -not -regex ".*/\.[^/]*$" \
+	-maxdepth 1 -mindepth 1 -printf " %f " 2>/dev/null || true`
+
+if [ ! -z "$1" ]; then
+	if ! echo " $SUITES " | grep -q -- " $1 "; then
+		fatal "no such suite '$1' exists"
+	fi
+
+	TEST_MODE=$1
+else
+	choose_from_list "Which test suite will be generated?" "$SUITES" "c" ""
+	TEST_MODE=$ANS
+fi
+
+SUBSUITES=`find $PROGDIR/$TEST_MODE -type d -not -regex ".*/\.[^/]*$" \
+	-maxdepth 1 -mindepth 1 -printf " %f " 2>/dev/null || true`
+
+if ! echo " $SUBSUITES " | grep -q -- " generic "; then
+	fatal "no 'generic' subsuite exists"
+else
+	if [ ! "$SUBSUITES" = " generic " ]; then
+		if [ ! -z "$2" ]; then
+			if ! echo " $SUBSUITES " | grep -q -- " $2 "; then
+				fatal "no such subsuite '$2' exists for '$TEST_MODE'"
+			fi
+
+			TEST_SUBMODE=$2
+		else
+			choose_from_list \
+				"Which subsuite will be generated?" "$SUBSUITES" "generic" ""
+			TEST_SUBMODE=$ANS
+		fi
+	else
+		TEST_SUBMODE="generic"
+	fi
+fi
+
+
+# ----------------------------------------------------------------------------
+# Generate test suite.
+# ----------------------------------------------------------------------------
+
+if [ "$OPT_NO_PREVIOUS" = "yes" ]; then
+	vmsg "Looking for previous test suites under '$ORIG'..."
+	if is_cache_exist; then
+		flush_cache '$'
+	fi
+fi
+
+if is_cache_exist; then
+	vmsg "Sanitizing the previous suite cache..."
+	if ! sanitize_cache; then
+		fatal "errors found; please fix them first!"
+	fi
+fi
+
+THIS=$(new_this)
+
+vmsg "Generating test suite under '$ORIG/$THIS'..."
+if mkdir $THIS; then
+	(
+		cd $THIS
+		init_builtin_subst
+		generate_substitutions
+		generate_files $TEST_MODE $TEST_SUBMODE
+	)
+fi || { rm -rf $THIS; fatal "test suite generation failed; aborting"; }
+
+# Stamp the current suite for later usage.
+stamp_this $THIS $TEST_MODE $TEST_SUBMODE
+
+# Save the current suite in cache.
+cache_this $THIS
+
+if [ "$OPT_NO_EDIT_AFTER" = "no" ]; then
+	edit_this $THIS
+else
+	vmsgn "Test suite created in '"; hilin "$ORIG/$THIS"; vmsg "'."
+fi
+
+if [ -n "$OPT_PRINT_WD_FILE" ]; then
+	echo "$PWD" >$OPT_PRINT_WD_FILE
+fi

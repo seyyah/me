@@ -1,0 +1,115 @@
+#!/bin/sh
+#
+# Copy a CD image.
+# Copyright © 2005  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Mon, 21 Feb 2005 05:30:19 +0200
+
+set -e
+
+CDRDAO="$(which cdrdao)"
+if [ -z "$CDRDAO" ]; then
+	echo >&2 "Couldn't locate $CDRDAO!"
+	exit 1
+fi
+EJECT="$(which eject)"
+
+# Default settings.
+INVENTORY=.
+DEVICE=/dev/cdrom
+DESCRIPTION="cd-$(date +%m%d-%H%M)"
+DATAFILE='cd'
+TOCFILE='toc'
+MAXCD=2
+
+# Stolen and modified from somewhere else (forgotten).
+yesno()
+{
+	default=${2:-'y'}; upper_default=$(echo $default | tr a-z A-Z)
+
+	prompt=$(echo "[y/n]" | sed -e "s/[$default]/$upper_default/")
+        while true; do
+                echo -n "$1 $prompt "
+                read answer
+		
+		case "${answer:-$default}" in
+			[yY] | [yY][eE][sS])
+				return 0
+				;;
+			[nN] | [nN][oO])
+				return 1
+				;;
+			*)
+				echo "Type '[y]es' or '[n]o'"
+				;;
+		esac
+        done
+}
+
+
+# Source user's options.
+PROG="$(echo $0 | sed -e 's!.*/!!')"
+RCFILE=${HOME}/.${PROG}rc
+if [ -f $RCFILE ]; then
+	. $RCFILE
+fi
+
+name="$DESCRIPTION"
+echo -n "Enter a description [$DESCRIPTION]: "; read desc
+if [ "$desc" != "" ]; then
+	# No space or non-alnum character is allowed, 
+	# since this will be a directory name.
+	name=$(echo -n "$desc" | tr -c '[:alnum:]' '_')
+fi
+
+if [ ! -d "$INVENTORY" ]; then
+	echo >&2 "No such CD inventory '$INVENTORY'; aborting"
+	exit 1
+fi
+
+# Prepare the CD inventory.
+name="$INVENTORY/$name"
+if [ -d "$name" ]; then
+	echo >&2 \
+	"$name directory already exists; please resolve this to continue."
+	exit 1
+fi
+mkdir $name; cd $name
+
+i=1
+while true; do
+	# Open tray.
+	if [ -n "$EJECT" ]; then
+		$EJECT $DEVICE
+	fi
+
+	# Interact with the user.
+	if [ $i -gt $MAXCD ]; then
+		echo "Reached to maximum CD count to copy!"
+		if yesno "CD #${i} ===> Stop copying?" "y"; then
+			finished=yes
+		fi
+	else
+		if ! yesno "CD #${i} ===> Copy? (put the CD, if so)" "y"; then
+			finished=yes
+		fi
+	fi
+	
+	# Close tray.
+	if [ -n "$EJECT" ]; then
+		$EJECT -t $DEVICE
+		#sleep 1
+	fi
+
+	# Now, do something...
+	if [ -n "$finished" ]; then
+		break
+	fi
+	
+	$CDRDAO read-cd --read-raw --device $DEVICE --datafile ${DATAFILE}.${i} ${TOCFILE}.${i}
+	echo ""
+	i=$(($i + 1))
+done

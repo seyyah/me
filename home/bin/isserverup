@@ -1,0 +1,35 @@
+#!/bin/sh -e
+#
+# Check if my server is up.
+# Recai Oktaş <roktas@omu.edu.tr>
+#
+# Last modified: Fri, 27 Aug 2004 04:22:27 +0300
+
+[ -x /sbin/ifconfig ] || { echo >&2 "ifconfig not executable"; exit 1; }
+[ -x /usr/bin/nmap ] || { echo >&2 "nmap not executable"; exit 1; }
+
+HOST=${1:-$SERVER}
+
+# Default to SSH port.
+PORT=${2:-22}
+
+
+[ -n "$HOST" ] || { echo >&2 "no host given"; exit 1; }
+
+found=
+for iface in wlan0 ppp0 eth0; do
+	if /sbin/ifconfig $iface 2>/dev/null | grep -q UP; then
+		found=$iface
+		break
+	fi
+done
+
+if [ -z "$found" ]; then
+	exit 11
+fi
+
+if ! nmap -p $PORT $HOST | grep -q "^$PORT/.* open"; then
+	exit 22
+fi
+
+exit 0

@@ -1,0 +1,276 @@
+#!/bin/sh -e
+
+# See http://iaudiophile.net/forums/showthread.php?t=6932
+
+IAUDIO_DIR=/media/IAUDIO
+
+if [ -z "$1" ]; then
+	echo >&2 "Usage: $0 input-video [output-avi"]
+	exit 1
+fi
+
+infile=$1
+
+[ -r "$infile" ] || {
+	echo >&2 "Couldn't read '$infile'"
+	exit 1
+}
+
+# Stolen and modified from somewhere else (forgotten).
+yesno () {
+	default=${2:-'y'}; upper_default=$(echo $default | tr a-z A-Z)
+
+	prompt=$(echo "[y/n]" | sed -e "s/[$default]/$upper_default/")
+        while true; do
+                echo -n "$1 $prompt "
+                read answer
+		
+		case "${answer:-$default}" in
+		[yY] | [yY][eE][sS])
+			return 0
+			;;
+		[nN] | [nN][oO])
+			return 1
+			;;
+		*)
+			echo "Type '[y]es' or '[n]o'"
+			;;
+		esac
+        done
+}
+
+base=${infile##*/}
+base=${base%.*}
+
+outfile=${2:-"U3-$base"}
+outfile=${outfile%.*}.avi
+
+mencoder $infile -quiet -oac mp3lame -lameopts cbr:preset=128 \
+	-ovc xvid -ofps 12.5 -vf scale=160:128 -xvidencopts \
+	bitrate=256:vhq=4:me_quality=4:max_bframes=0:max_key_interval=8 \
+	-audio-preload 0 -o $outfile
+
+if [ -n "$(which U3fix)" ]; then
+	U3fix $outfile
+else
+	cat >U3fix <<'EOF'
+// AVI fix for iAudio U3 player
+//------------------------------
+// Author: MaxSt
+
+#include <stdio.h>
+#include <malloc.h>
+
+struct  _CHUNKHEADER { unsigned int id; unsigned int len; };
+
+struct  _MAINAVIHEADER 
+{
+    unsigned int  dwMicroSecPerFrame;
+    unsigned int  dwMaxBytesPerSec;
+    unsigned int  dwReserved1;
+    unsigned int  dwFlags;
+    unsigned int  dwTotalFrames;
+    unsigned int  dwInitialFrames;
+    unsigned int  dwStreams;
+    unsigned int  dwSuggestedBufferSize;
+    unsigned int  dwWidth;
+    unsigned int  dwHeight;
+    unsigned int  dwScale;
+    unsigned int  dwRate;
+    unsigned int  dwStart;
+    unsigned int  dwLength;
+};
+
+int main(int argc, char* argv[])
+{
+  FILE          * f;
+  int             i;
+  int             c = 0;
+  int             d = 0;
+  int             aviflag = 0;
+  _MAINAVIHEADER  mhAVI;
+  int             nNumOfChunks = 0;
+  unsigned int *  pChunkPos = NULL;
+
+  if ((f = fopen(argv[1], "rb+")) != 0)
+  {
+    _CHUNKHEADER  chMain;
+    if (fread(&chMain, sizeof(chMain), 1, f) == 1)
+    {
+      long posMain = ftell(f);
+      if (chMain.id==0x46464952) // RIFF
+      {
+        printf("RIFF");
+
+        unsigned int  nRiffID;
+        if (fread(&nRiffID, sizeof(nRiffID), 1, f) != 1)
+          return 1;
+
+        if (nRiffID==0x20495641) //AVI
+        {
+          printf(":AVI    [len=%d]\n", chMain.len);
+
+          while ( !feof(f) && (ftell(f)<posMain+(long)chMain.len))
+          {
+            _CHUNKHEADER  chSecond;
+            if (fread(&chSecond, sizeof(chSecond), 1, f) != 1)
+              return 1;
+
+            long posSecond = ftell(f);
+            if (chSecond.id==0x5453494C) //LIST
+            {
+              printf("  LIST");
+              unsigned int  nListID;
+              if (fread(&nListID, sizeof(nListID), 1, f) != 1)
+                return 1;
+
+              if (nListID==0x6C726468) //hdrl
+              {
+                printf(":hdrl");
+                while ( !feof(f) && (ftell(f)<posSecond+(long)chSecond.len))
+                {
+                  _CHUNKHEADER  chThird;
+                  if (fread(&chThird, sizeof(chThird), 1, f) != 1)
+                    break;
+
+                  long posThird = ftell(f);
+                  long posThirdNext = posThird + chThird.len;
+                  if (posThirdNext & 1) posThirdNext++;
+
+                  if (chThird.id==0x68697661) //avih
+                  {
+                    if (fread(&mhAVI, sizeof(mhAVI), 1, f) == 1)
+                      aviflag = 1;
+                  }
+                  fseek( f, posThirdNext, SEEK_SET );
+                }
+
+                printf(" [res=%dx%d]", mhAVI.dwWidth, mhAVI.dwHeight);
+                printf(" [%d frames]", mhAVI.dwTotalFrames);
+
+                float FPS = (float)1000000/mhAVI.dwMicroSecPerFrame;
+                printf(" [%.1f fps]", FPS);
+
+                nNumOfChunks = mhAVI.dwTotalFrames * mhAVI.dwStreams * 2; // *2 just in case
+              }
+              else
+              if (nListID==0x69766F6D) //movi
+              {
+                printf(":movi");
+
+                pChunkPos = (unsigned int *)malloc(nNumOfChunks * 4);
+
+                while ( !feof(f) && (ftell(f)<posSecond+(long)chSecond.len))
+                {
+                  _CHUNKHEADER  chThird;
+                  if (fread(&chThird, sizeof(chThird), 1, f) != 1)
+                    break;
+
+                  long posThird = ftell(f);
+                  long posThirdNext = posThird + chThird.len;
+                  if (posThirdNext & 1) posThirdNext++;
+
+                  char cDW = (chThird.id >> 16) & 0xFF;
+                  char cBC = (chThird.id >> 24);
+
+                  if (((cDW=='d' || cDW=='D') && (cBC=='b' || cBC=='B' || cBC=='c' || cBC=='C')) ||
+                      ((cDW=='w' || cDW=='W') && (cBC=='b' || cBC=='B')))
+                  {
+                    if (c<nNumOfChunks)
+                    {
+                      *(pChunkPos+c)= posThird - 8;
+                      c++;
+                    }
+                  }
+                  fseek( f, posThirdNext, SEEK_SET );
+                }
+                printf(" [%d chunks]", c);
+              }
+              else
+              if (nListID==0x4F464E49) //INFO
+                printf(":INFO");
+            }
+            else
+            if (chSecond.id==0x31786469) //idx1
+            {
+              printf("  idx1     ");
+
+              if ((mhAVI.dwWidth<=160) && (mhAVI.dwHeight<=128)) // iAudio U3 screen size
+              for(i=0; i<c; i++)
+              {
+                fseek( f, posSecond+8+i*16, SEEK_SET );
+                if ( !feof(f) && (ftell(f)<posMain+(long)chMain.len))
+                {
+                  fwrite(pChunkPos+i, 4, 1, f);
+                  d++;
+                }
+              }
+            }
+            else
+            if (chSecond.id==0x4B4E554A) //JUNK
+              printf("  JUNK     ");
+            else
+              printf("  ????     ");
+
+            printf(" [len=%d]\n", chSecond.len);
+            fseek( f, posSecond + chSecond.len, SEEK_SET );
+          }
+        }
+      }
+    }
+    if (pChunkPos != NULL)
+      free(pChunkPos);
+
+    fclose(f);
+
+    if (aviflag == 0)
+    {
+      printf( "ERROR: not AVI format\n" );
+      return 1;
+    }
+
+    printf("\n  %d chunks fixed.\n", d);
+  }
+  else
+  {
+    printf( "ERROR: file not found" );
+    return 1;
+  }
+
+  return 0;
+}
+EOF
+	echo >&2 "Please compile U3fix.cpp with g++ and install it."
+fi
+
+
+# An alternative method involving transcode.
+
+#DELAY=0.0
+#ONEPASS=
+#trap "status=$?; rm -rf $outfile.tmp; exit $status" 0 INT
+
+#if [ -n "$ONEPASS" ]; then
+#        mencoder $infile -quiet -oac pcm -ovc xvid -ofps 15 -vf scale=160:-2 \
+#                -xvidencopts bitrate=256:vhq=4:me_quality=4:max_bframes=0 \
+#                -delay $DELAY -o $outfile.tmp
+#else
+#        mencoder $infile -quiet -oac pcm -ovc xvid -ofps 15 -vf scale=160:-2 \
+#                -xvidencopts pass=1:vhq=4:me_quality=4:max_bframes=0 \
+#                -delay $DELAY -o /dev/null && \
+#        mencoder $infile -quiet -oac pcm -ovc xvid -ofps 15 -vf scale=160:-2 \
+#                -xvidencopts pass=2:bitrate=256:vhq=4:me_quality=4:max_bframes=0 \
+#                -delay $DELAY -o $outfile.tmp
+#fi
+
+#transcode -i $outfile.tmp -P1 -b 0,1 -o $outfile
+
+if [ -d $IAUDIO_DIR ] && [ -w $IAUDIO_DIR ]; then
+	echo
+	echo
+	if yesno "Move '$outfile' to $IAUDIO_DIR/MOVIE?" "y"; then
+		cp $outfile $IAUDIO_DIR/MOVIE/ && \
+		rm -f $outfile
+		sync; sync; sync
+	fi
+fi

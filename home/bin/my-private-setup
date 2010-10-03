@@ -1,0 +1,88 @@
+#!/bin/sh
+#
+# My private home setup.
+# Recai Oktaş <roktas@omu.edu.tr>
+# 
+# Last modified: Mon, 25 Oct 2004 05:07:48 +0300
+
+# XXX Keep this script idempotent.
+
+[ -n "$MNT_SCRATCH" ] || MNT_SCRATCH=/mnt/scratch
+[ -n "$VAR_SCRATCH" ] || VAR_SCRATCH=/var/local
+[ -n "$TMPDIR" ] || TMPDIR=$HOME/tmp
+
+cd $HOME
+
+if [ ! -d $TMPDIR ]; then
+	mkdir $TMPDIR
+fi
+chmod 700 $TMPDIR
+
+if [ ! -d .ssh ]; then
+	mkdir .ssh
+fi
+chmod 700 .ssh
+[ -s .ssh ] && chmod 600 .ssh/*
+
+if [ -d .gnupg ]; then
+	chmod 700 .gnupg
+	chmod 600 .gnupg/*
+fi
+
+if [ ! -d works ]; then
+	mkdir works
+fi
+
+for d in personal family business education unfiled works; do
+	if [ -d $d ]; then
+		chmod 700 $d
+	fi
+done
+
+for d in downloads music src; do
+	if [ -d $HOME/$d ]; then
+		continue
+	fi
+
+	t=
+	if [ -d $MNT_SCRATCH/$d ]; then
+		t=$MNT_SCRATCH/$d
+	elif [ -d $VAR_SCRATCH/$d ]; then
+		t=$VAR_SCRATCH/$d
+	fi
+	
+	if [ -n "$t" ]; then
+		ln -s $t $HOME/$d
+	fi
+done
+
+if which cdargs >/dev/null && [ ! -f .cdargs ]; then
+	echo "\
+	Downloads  $HOME/downloads
+	Sources  $HOME/src
+	Temp  $TMPDIR
+	Works  $HOME/works
+	Desktop  $HOME/Desktop
+	Cdrom /cdrom
+	Mnt /mnt" | 
+	while read line; do
+		if [ -d "$(echo $line | cut -d ' ' -f 2)" ]; then
+			echo $line
+		fi
+	done >.cdargs
+fi
+
+if [ -d .t-prot ]; then
+	ext="new"
+	if [ -x /usr/bin/t-prot ]; then
+		v=$(t-prot --version | head -1 | awk '{ print substr($2, 2) }')
+		ext=$(perl -e "print(($v > 0.54) ? 'new' : '054');")
+	fi
+
+	(
+		cd .t-prot
+		if [ -f t-prot.$ext.muttrc ]; then
+			ln -sf t-prot.$ext.muttrc t-prot.muttrc
+		fi
+	)
+fi

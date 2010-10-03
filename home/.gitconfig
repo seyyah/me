@@ -1,0 +1,6 @@
+[user]
+	name = Nurettin Senyer
+	email = nurettin.senyer@bil.omu.edu.tr
+
+[core]
+	excludesfile = $HOME/.gitignore

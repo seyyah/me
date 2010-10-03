@@ -1,0 +1,20 @@
+# Local Screen configuration.
+# Recai Oktaş <roktas@debian.org>
+
+source .screenrc-common
+
+escape ^Tt
+
+# Use this for the hard status string
+#hardstatus string "%h%? users: %u%?"
+#hardstatus alwayslastline "%{= kY}%w%=%{kB}%c %d %D %M [%H]"
+
+# An alternative hardstatus to display a bar at the bottom listing the
+# windownames and highlighting the current windowname in blue. (This is only
+# enabled if there is no hardstatus setting for your terminal)
+hardstatus lastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+# ----------------------------------------------------------------------------
+# Scratch
+# ----------------------------------------------------------------------------
+

@@ -1,0 +1,17 @@
+#!/bin/sh
+where=`pwd`
+
+cd $HOME
+mkdir belge\depot\ayarlarim\
+cd belge\depot\ayarlarim\
+git clone git://gitorious.org/nsprivate/ayarlarim.git
+
+cd $HOME\belge\depot\
+mkdir 19dip\
+cd 19dip\
+git clone git://gitorious.org/19dip/steg.git
+
+cd $HOME\belge\
+git clone git://gitorious.org/nsprivate/omu.git
+
+cd $where

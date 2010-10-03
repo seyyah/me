@@ -1,0 +1,22 @@
+#!/bin/bash
+
+KEY_PRIVATE="$HOME/.ssh/id_dsa"
+KEY_PUBLIC="${KEY_PRIVATE}.pub"
+
+if [ "$1" == "" ] ; then
+   echo "Kullanım: $0 <[kullanıcı@]sunucu>"
+   exit
+fi
+
+if [ ! -f "${KEY_PRIVATE}" ] ; then
+   echo Genel ve özel anahtarlar oluşturuldu...
+   ssh-keygen -t dsa -f "${KEY_PRIVATE}" -N ''
+fi
+
+if [ -f "${KEY_PUBLIC}" ] ; then
+   cat "${KEY_PUBLIC}" |
+   ssh "${1}" "mkdir -p ~/.ssh ; cat>> .ssh/authorized_keys2 ; chmod -R go-rwx ~/.ssh"
+else
+   echo "${KEY_PUBLIC}" dosyasına erişimeledi veya bulunamadı...
+fi
+

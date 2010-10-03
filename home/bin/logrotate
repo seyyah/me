@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# Wrapper for logrotate.
+# Copyright © 2005  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+
+LOGROTATE_BIN=/usr/sbin/logrotate
+
+[ -x $LOGROTATE_BIN ] || exit 0
+
+if [ -z "$1" ]; then
+	echo >&2 "$0: conf file must be supplied"
+	exit 1
+fi
+
+LOGROTATE_CONF=$1
+if [ ! -r $1 ]; then
+	echo >&2 "$0: no such conf file '$LOGROTATE_CONF'"
+	exit 1
+fi
+
+LOGROTATE_STAT=$2
+if ! touch $LOGROTATE_STAT; then
+	echo >&2 "$0: can't touch stat file '$LOGROTATE_STAT'"
+	exit 1
+fi
+
+$LOGROTATE_BIN --state $LOGROTATE_STAT $LOGROTATE_CONF

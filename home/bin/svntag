@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Wrapper to 'svncopy' to create tags.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Tue, 24 Aug 2004 10:03:16 +0300
+
+
+if [ $# -eq 0 ]; then
+	echo 2>&1 "Usage: $0 TAG [LOG]"
+	exit 1
+fi
+
+tag=$1; shift; log="$@"
+
+if [ -z "$log" ]; then
+	log="Release of $tag."
+fi	
+
+svncopy tags $tag -m "$log"

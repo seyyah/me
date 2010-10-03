@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# Tar, (g)zip and encrypt (with blowfish) a directory.
+
+META=${1:-'.meta'}
+
+[ -n "`which bcrypt`" ] || {
+	echo >&2 "You need bcrypt!"
+	exit 1
+}
+
+pack () {
+	if tar -cf -             \
+		--exclude CVS    \
+		--exclude .svn   \
+		--exclude .git   \
+		--exclude *.*~   \
+		--exclude *.bak  \
+		--exclude *.old  \
+		--exclude *.swp  \
+		--exclude *.orig \
+		--exclude *.work $1 | gzip -9 >$1.tar.gz; then
+		rm -rf $1 && mv $1.tar.gz $1 && bcrypt $1 || rm -f $1.tar.gz
+	fi
+}
+
+unpack () {
+	bcrypt $1.bfe && tar zxvf $1
+}
+
+if [ -f $META.bfe ]; then
+	unpack $META
+else
+	if [ ! -d $META ]; then
+		if [ "$(basename $PWD)" = "$META" ]; then
+			cd ..
+		else
+			echo >&2 "No $META directory found."
+			exit 1
+		fi
+	fi
+	pack $META
+fi

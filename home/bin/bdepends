@@ -1,0 +1,31 @@
+#!/bin/sh
+
+LISTDIR=/var/lib/apt/lists
+
+if [ -z "$1" ]; then
+	echo >&2 "Usage: $0 PACKAGE [DISTRIBUTION]"
+	exit 1
+fi
+
+if [ ! -x /usr/bin/grep-dctrl ]; then
+	echo >&2 "You need grep-dctrl installed."
+	exit 1
+fi
+
+DEP="$1"
+DIST=${2:-unstable}
+
+for source in $LISTDIR/*$DIST*Sources; do
+	if [ ! -e "$source" ]; then
+		echo >&2 \
+		"No source list found in $LISTDIR.  Please define the relevant "
+		echo >&2 \
+		"deb-src line in the sources.list and make an 'apt-get update'."
+		exit 1
+	fi
+	echo "=== $source"
+#        grep-dctrl -n -s Package -F Build-Depends "$DEP" $source
+#        grep-dctrl -n -s Package -F Build-Depends-Indep "$DEP" $source
+	grep-dctrl -n -s Package -F Depends "$DEP" $source
+	echo
+done

@@ -1,0 +1,108 @@
+#!/bin/sh
+#
+# Try to keep ppp connection (and related stuff) alive.
+# Invoke this script from a cronjob.
+# Copyright (C) 2004  Recai Oktas <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Wed, 19 May 2004 19:09:53 +0300
+
+PPP=ppp0
+PROVIDER=
+
+PATH=/sbin:/usr/local/sbin:/usr/sbin:/bin:/usr/local/bin:/usr/bin
+export PATH
+
+STATFILE=/tmp/ppp_alive
+CTRLFILE=/etc/ppp/no_ppp_alive
+REBOOTFILE=/var/state/ppp_alive
+MAXREBOOT=3
+
+if [ -f $CTRLFILE ]; then
+	exit 0
+fi
+
+if [ -f $STATFILE ]; then
+	# Exit if already running.
+	if grep -q "running" $STATFILE; then
+		exit 0
+	elif grep -q "failed" $STATFILE; then
+		need_reboot_onfail=yes
+	fi
+fi
+
+echo "running" >$STATFILE
+
+# If $PPP is up, just return.
+if route | grep -q $PPP; then
+	rm -f $STATFILE
+	exit 0
+fi
+
+# Start logging from here.
+echo >&2 "$0 -- $(date)"
+echo >&2 ""
+
+# If $PPP is down, first try to reconnect.
+echo >&2 "Interface seems to be down."
+if [ -n "$(pidof pppd)" ]; then
+	echo >&2 "Killing the previous ppp daemons..."
+	poff $PROVIDER; sleep 10
+fi
+
+echo >&2 "Attempting to start ppp interface..."
+pon $PROVIDER; sleep 10
+
+echo >&2 "Rechecking ppp interface..."
+# Now try brute force, if still down.
+if route | grep -q $PPP; then
+	echo >&2 "Interface is up; good!"
+	rm -f $STATFILE
+	exit 0
+fi
+
+echo >&2 "Interface still seems to be down."
+
+echo >&2 "Killing the modem firmware loader..."
+killall modem_run; sleep 10
+
+if [ -n "$(pidof pppd)" ]; then
+	echo >&2 "Killing the previous ppp daemons..."
+	poff $PROVIDER; sleep 10
+fi
+echo >&2 "Attempting to restart whole system..."
+/etc/init.d/hotplug stop; sleep 10;
+/etc/init.d/hotplug start; sleep 10
+pon $PROVIDER; sleep 10
+
+echo >&2 "Checking again the ppp interface..."
+# Still down?  Reboot the machine if this is the second attempt.
+if route | grep -q $PPP; then
+	echo >&2 "Interface is up; good!"
+	rm -f $STATFILE
+	exit 0
+fi
+
+echo >&2 "Interface seems to be down."
+echo >&2 "Failed on this turn!"
+echo "failed" >$STATFILE
+
+if [ "$need_reboot_onfail" = yes ]; then
+	n=0
+	if [ -e $REBOOTFILE ]; then
+		n=$(cat $REBOOTFILE)
+	fi
+	if [ $n -lt $MAXREBOOT ]; then
+		echo $(($n + 1)) >$REBOOTFILE
+		echo >&2 "Unfortunately rebooting..."
+		rm -f $STATFILE
+		/sbin/reboot
+	else
+		echo >&2 "Maximum reboot count reached!"
+		echo >&2 "Nothing can be done; sorry!"
+	fi
+fi
+
+exit 1

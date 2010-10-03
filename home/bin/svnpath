@@ -1,0 +1,58 @@
+#!/usr/bin/perl
+#
+# Work out paths in a subversion repository for branches or tags of the given
+# directory. Works on current directory by default, or it can be given a path.
+# Based on the original work by Joey Hess <joey@kitenet.net>
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Mon, 23 Aug 2004 03:08:57 +0300
+
+use Getopt::Long;
+
+sub usage {
+print "Usage: svn-path [ OPTIONS ]... [PATH]
+Work out paths in a subversion repository for branches or tags of the
+given directory. Works on current directory by default, or it can be
+given a path.
+
+  -h, --help            Show the help message
+  -p, --path            Return as path
+
+"; exit 1;
+}
+
+my $opt_help;
+my $opt_path;
+
+if (! -d ".svn") {
+	die "You must be in a working svn directory.";
+}
+
+GetOptions(
+	"h|help"	=> \$opt_help,
+	"p|path"	=> \$opt_path,
+) || usage();
+
+&usage if ($opt_help);
+
+my $url;
+my $wanted = shift;
+
+if (! $opt_path) {
+	# Get the svn url of the current directory.
+	$url = `svn info @ARGV| grep ^URL: | cut -d ' ' -f 2`;
+
+	if (! length $url) {
+		die "cannot get url";
+	}
+} else {
+	# Get the current directory.
+	$url = `pwd`;
+}
+
+if (length $wanted) {
+	# Now just substitute into it.
+	$url=~s!/(?:trunk|branches|tags|vendor)($|/)!/$wanted$1!;
+}
+
+print $url;

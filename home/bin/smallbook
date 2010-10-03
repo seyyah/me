@@ -1,0 +1,282 @@
+#!/usr/bin/perl -s
+
+$usage="
+  smallbook f.tex f.ps
+  smallbook f.dvi f.ps
+  smallbook f.pdf f.ps
+  smallbook -a6 f.ps out.ps
+
+  options
+    -np=20      set the number of pages
+    -ppu=16     defines the number of pages by book unit
+    -a3         output in 2 pages per A3 page 
+    -a5         output in 2 pages per page (default)
+    -a6         output in 4 pages per page (a5 by default)
+    -ag         output in 2 vertical pages per page (agenda 10.5x22cm)
+    -flyer      single booklet with 6 pages / 3pages in front,3 pages back)
+    -q          make latex work in batch mode
+    -small      already small; don't scale it...
+    -ishtml     force html input
+    -istxt      force txt input
+    -isa42up    input is A4 2UP pages
+    -scale=2.1  scale factor
+    -even=3cm,1cm  move even pages
+    -odd=3cm,1cm   move odd pages                    ";
+
+my $filename=shift;
+my $w=shift;
+die($usage) unless $w;
+die($usage) if $help;
+
+my $t="latex"; # by default argument is a LaTeX file
+my $prefixo="/tmp/_smallbook$$";
+my $psfile="$prefixo.ps";
+my $op=($a3)? " -pa3 ": ($small)?"-s1 -pa4 ":" -pa4 ";
+my $a5 = not $a6 || $ag || $a3 ; # output is a A5 book unless -a6
+#my $htmlop="--textcolor black --bodycolor white ";
+my $htmlop="";
+
+if($a5){$htmlop .= "--fontsize 12pt ";
+       }
+if($ag){$htmlop.="--header '' --footer ' C ' --headfootsize 10.0 --left 1.5cm --size 10.7x21.9cm --fontsize 8.0 ";
+       }
+if($a6){$htmlop .= "--left 1.5cm --fontsize 14pt ";
+       }
+
+if($a3){$scale = ($scale || 1) * 1.414 }
+
+if($scale || $even || $odd){
+  $pstopsfmt='2:0@_scale__oddmv_,1@_scale__evenmv_';
+  $pstopsfmt =~ s/_scale_/$scale/g if $scale;
+  $pstopsfmt =~ s/_evenmv_/($even)/g if $even;
+  $pstopsfmt =~ s/_oddmv_/($odd)/g if $odd;
+  $pstopsfmt =~ s/_(oddmv|evenmv|scale)_//g;
+  $scaleit = "pstops -pa4'$pstopsfmt' |"; }
+elsif($isa42up){
+  $scaleit = "pstops '1:0R\@1.414(0,29.3cm),0R\@1.414(-20.9cm,29.3cm)' |"; }
+else { $scaleit = ""; }
+
+if($q) {$latopt = " --interaction  batchmode " }
+else   {$latopt = "" }
+
+if($filename =~ m/\.ps$/)               { $t="ps"; $psfile=$filename};
+if($filename =~ m/\.pdf$/)              { $t="pdf"};
+if($filename =~ s/\.dvi$//)             { $t="dvi"};
+if($ishtml || $filename =~ m/\.html?$/) { $t="html"};
+if($istxt  || $filename =~ m/\.txt$/)   { $t="txt"};
+if($filename =~ s!((.*/)?(.*))\.tex$!$1!) {$dir=$2 || "./"; $name=$3; $t="latex"}; 
+
+## execute laTeX  in directory where the file is...
+
+system("cd $dir; latex $latopt '$name'; latex $latopt '$name'") 
+                                             if ($t eq "latex"); 
+
+if ($t eq "pdf") {
+  system_check("pdftops");
+  executa("pdftops -paper A4 $filename  $psfile");
+}
+
+if ($t eq "txt") {
+  system_check("a2ps");
+  executa("a2ps --border 0 --pretty-print=plain -M A4 -o $psfile -1  $filename");
+}
+
+if ($t eq "html") {
+  system_check("htmldoc");
+  if ($ENV{http_proxy} && $filename=~/^http/) {
+	$htmlop.="   --proxy $ENV{http_proxy} ";
+  }
+  executa("htmldoc --duplex $htmlop -f $psfile --webpage '$filename'")
+}
+
+executa("dvips -V -o $psfile $filename")      if ($t eq "latex" || $t eq "dvi");
+
+## get the number of pages if you dont know it...
+($np) = $np || (`grep '%%Pages' $psfile` =~ m/\%\%Pages:\s*(\d+)/g );
+
+## ppu - number of pages per unit... (by default = next mult. of 8 after np)
+if ($ppu) { $si="-s$ppu";}
+else      { $si = "" ; $ppu = (int(($np-1)/8) + 1 ) * 8 ;}
+
+my $Uodd = "$op '2:0,1U(1w,1h)'"; # turn odd pages upsidedown for duplex print.
+
+
+
+if($a3){
+  system_check("pstops", "psbook", "psnup");
+  executa("cat $psfile| $scaleit psbook $si | psnup $op -Pa3 -2 | pstops $Uodd >$w");
+}
+
+if($a5){
+  system_check("pstops", "psbook", "psnup");
+  executa("cat $psfile| $scaleit psbook $si | psnup $op -Pa4 -2 | pstops $Uodd >$w")
+}
+if($ag){
+  system_check("pstops", "psbook", "psnup");
+  executa("cat $psfile| $scaleit psbook $si | psnup $op -W10.5cm -H29cm -2 >$w")
+}
+if($a6){
+  system_check("pstops", "psbook", "psnup");
+  executa("cat $psfile| $scaleit pstops -pa4 " . a6duplex() . " | psnup $op -4 >$w")
+}
+if($flyer){
+  system_check("pstops");
+  executa("cat $psfile| pstops '6:1L(21cm,0)+2L(21cm,9.9cm)+3L(21cm,19.8cm),0R(0cm,9.90cm)+5R(0cm,19.8cm)+4R(0,29.7cm)' > $w");
+}
+
+unlink("$psfile") unless ($t eq "ps");
+
+sub a6duplex{ # uses $ppu and $np
+  my $nc  = $ppu/8;
+  my $delta = ($ppu - $np >= 4 )? 2:0;
+  my @fmt = map {(mkcad($_*2-1, ($nc+$_)*2-1)) } reverse(1..$nc);
+  @fmt = map {$q = $_ - $delta;  ($q < 0 )? $ppu + $q : $q } @fmt ;
+  "$ppu:". join("," , @fmt);}
+
+sub mkcad { my ($a,$b)=@_; ($a ,-$a-1, $b, -$b-1, -$a, $a-1, -$b , $b-1) }
+
+sub system_check {
+  my %known_programs
+    = (
+       'pdftops' => "I need pdftops, part of Xpdf. Get it from http://www.foolabs.com/xpdf",
+       'a2ps' => "I need a2ps. Get it from http://www.inf.enst.fr/~demaille/a2ps/",
+       'htmldoc' => "I need <html>doc. Get it from http://www.easysw.com/htmldoc/",
+       'pstops' => "I need psutils. Get them from http://www.tardis.ed.ac.uk/~ajcd/psutils/",
+       'psbook' => "I need psutils. Get them from http://www.tardis.ed.ac.uk/~ajcd/psutils/",
+       'psnup' => "I need psutils. Get them from http://www.tardis.ed.ac.uk/~ajcd/psutils/",
+      );
+  while (my $program = shift) {
+    my $which = `which $program 2>&1`;
+    if ($which =~ /^which:/) {
+      die ($known_programs{$program} || "I need $program");
+    }
+  }
+}
+
+sub executa {
+  my $cmd = shift;
+  print $cmd;
+  system $cmd;
+}
+
+=head1 NAME
+
+smallbook - a perl script to make a duplex book in A5, A6 or agenda format
+
+=head1 SYNOPSIS
+
+  smallbook f.tex f.ps
+  smallbook f.dvi f.ps
+  smallbook f.pdf f.ps
+  smallbook -a6 f.ps out.ps
+
+  options
+    -np=20            set the number of pages
+    -ppu=16           defines the number of pages by book unit
+    -a3               output in 2 pages per A3 page 
+    -a5               output in 2 pages per page (default)
+    -a6               output in 4 pages per page (a5 by default)
+    -ag               output in 2 vertical pages per page (agenda)
+    -flyer     single bookleat with 6 pages / 3pages in front,3 pages back)
+    -q                make latex work in batch mode
+    -small            already small; don't scale it...
+    -ishtml           force html input
+    -istxt            force txt input
+    -isa42up          input is A4 2UP pages
+    -scale=2.1        scale factor
+    -even=3cm,1cm     move even pages
+    -odd=3cm,1cm      move odd pages
+
+=head1 DESCRIPTION
+
+This command was created to make small domestic books...
+
+This script takes a LaTeX, DVI, PDF or PostScript file and makes multipage 
+per page PostScript file forming a smallbook ready print (if possible in a 
+duplex printer) and cut.
+
+Available options permits to select :
+
+=over
+
+=item *
+
+a 4 pages/page A6 book (-a6) (seealso a6.sty in the distribution directory)
+
+=item *
+
+a 2 pages/page A5 book ( default) (seealso a5.sty and b5.sty)
+
+=item *
+
+a 2 pages/page agenda (10.5 x 22cm each page) (-ag) (seealso agenda.sty)
+
+=back
+
+You need to install PSUTILS.
+
+If you use a5.sty, b5.sty, a6.sty or agenda.sty you need the package
+geometry.sty installed (it comes with some distributions but if you
+get many errors upgrade geometry from CTAN or do
+
+  make updategeometry
+
+To make agenda: C<\usepackage{agenda}> in the LaTeX source.
+
+We provide a set of LaTeX formats (C<\usepackage{a5}> or
+C<\usepackage{a6}>) to make the characters look readable. They make a4
+pages, and smallbook scales them. If you want, You can use any format
+that makes a4 pages (LateX seminar makes good a6 books).
+
+In order to use PDF input you need to intall pdftops (provided by xdpf package)
+
+=head1 HTML Support
+
+Using <HTML>Doc it is possible do download pages directly from the
+Internet. If you need proxy support, export the C<http_proxy> variable
+
+  export http_proxy=http://proxy.from.server.com:8080
+
+=head1 Input en A4 2 Up pages
+
+Use the C<-isa42up> option.
+
+Internally, first is built a normal A4 postscript file and then it is piped to
+smallbook.
+
+
+=head1 Some tips...
+
+If you want do make a A5 booklet from a LaTeX file, it is usefull to scale
+it. Try this (and change the move-parameters).
+
+  smallbook -scale=1.19 -even=-3cm,-2.5cm -odd=-3cm,-2.5cm in.ps out.ps
+
+=head1 REQUIREMENTS
+
+You need PSUtils, from http://www.tardis.ed.ac.uk/~ajcd/psutils/.
+
+To use pdf, you need pdftops, part of Xpdf. Get it from http://www.foolabs.com/xpdf.
+
+To use html and URL's, you need E<lt>htmlE<gt>doc. Get it from http://www.easysw.com/htmldoc/",
+
+=head1 SEE ALSO
+
+ psutils
+ pdftops
+ perl(1)
+ LaTeX(1)
+ CTAN
+ psbook(1)
+ a6.sty
+ a5.sty
+ b5.sty
+ flyer.sty
+ agenda.sty
+ a2ps
+
+=head1 AUTHOR
+
+José João Almeida  (jj@di.uminho.pt) Natura project
+
+Source available in http://natura.di.uminho.pt/~jj/text/smallbook

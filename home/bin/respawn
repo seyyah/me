@@ -1,0 +1,50 @@
+#!/bin/sh
+#
+# Respawn a command (process) when it dies.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Sat, 21 Aug 2004 15:09:51 +0300
+
+PATH=$HOME/bin:$PATH
+
+# Stolen and modified from somewhere else (I forgot).
+yesno()
+{
+	default=${2:-'y'}; upper_default=$(echo $default | tr a-z A-Z)
+
+	prompt=$(echo "[y/n]" | sed -e "s/[$default]/$upper_default/")
+        while true; do
+                echo -n "$1 $prompt "
+                read answer
+		
+		case "${answer:-$default}" in
+			[yY] | [yY][eE][sS])
+				return 0
+				;;
+			[nN] | [nN][oO])
+				return 1
+				;;
+			*)
+				echo "Type '[y]es' or '[n]o'"
+				;;
+		esac
+        done
+}
+
+
+CMD=$1; shift
+if ! which $CMD >/dev/null; then
+	echo >&2 "Could not locate '$CMD' in $PATH"
+	exit 1
+fi
+
+while : ; do
+	$CMD $@; reset
+
+	if ! yesno "Respawn '$CMD'?" "n"; then
+		break
+	fi
+done

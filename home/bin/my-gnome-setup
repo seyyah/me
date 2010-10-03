@@ -1,0 +1,291 @@
+#!/bin/sh
+#
+# My GNOME configuration.
+# Recai Oktaş <roktas@omu.edu.tr>
+# 
+# Last modified: Sun, 25 Sep 2005 05:05:46 +0300
+
+# XXX Keep this script idempotent.
+
+if [ ! -d $HOME/.gconf ]; then
+	echo >&2 "GNOME2 seems to be not installed or has not been used yet!"
+	exit 0
+fi
+
+GNOME_SESSION_MANUAL_FILE=$HOME/.gnome2/session-manual
+
+# ----------------------------------------------------------------------------
+# Create the standart directories.
+# ----------------------------------------------------------------------------
+
+cd $HOME
+
+if [ ! -d Desktop ]; then
+	mkdir Desktop
+fi
+
+cd Desktop
+
+if [ ! -d Documents ] &&  [ -d $HOME/works ]; then
+	ln -s $HOME/works Documents
+fi
+
+if [ ! -d Music ] && [ -d $HOME/music ]; then
+	ln -s $HOME/music Music
+fi
+
+if [ ! -d Downloads ] && [ -d $HOME/downloads ]; then
+	ln -s $HOME/downloads Downloads
+fi
+
+
+# ----------------------------------------------------------------------------
+# Add my big screen to startup.
+# ----------------------------------------------------------------------------
+
+if [ ! -f $GNOME_SESSION_MANUAL_FILE ]; then
+	cat >$GNOME_SESSION_MANUAL_FILE <<EOF
+[Default]
+num_clients=1
+0,RestartStyleHint=3
+0,Priority=60
+0,RestartCommand=x-terminal-emulator -e screen 
+EOF
+fi
+
+
+# ----------------------------------------------------------------------------
+# GNOME registery.
+# ----------------------------------------------------------------------------
+
+# Desktop settings.
+gconftool-2 -t int -s \
+	/desktop/gnome/peripherals/keyboard/delay \
+	220
+
+gconftool-2 -t int -s \
+	/desktop/gnome/peripherals/keyboard/rate \
+	80
+
+gconftool-2 -t bool -s \
+	/desktop/gnome/peripherals/keyboard/repeat \
+	true
+
+# Metacity.
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/show_desktop \
+	"<Ctrl>space"
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/switch_to_workspace_left \
+	"<Alt>Left"
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/switch_to_workspace_right \
+	"<Alt>Right"
+#gconftool-2 -t string -s \
+#        /apps/metacity/global_keybindings/switch_to_workspace_up \
+#        "<Mod4>Up"
+#gconftool-2 -t string -s \
+#        /apps/metacity/global_keybindings/switch_to_workspace_down \
+#        "<Mod4>Down"
+#gconftool-2 -t string -s \
+#        /apps/metacity/window_keybindings/maximized \
+#        "<Alt>Page_Up"
+#gconftool-2 -t string -s \
+#        /apps/metacity/window_keybindings/minimized \
+#        "<Alt>Page_Down"
+gconftool-2 -t string -s \
+	/apps/metacity/window_keybindings/toggle_fullscreen \
+	"<Alt>Return"
+
+# Custom mappings.
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_1 \
+	"<Ctrl><Alt>Delete"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_1 \
+	"sudo /etc/acpi/powerbtn.sh"
+#        "gnome-session-save --kill"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_2 \
+	"<Ctrl><Alt>Up"
+# FIXME Ugly approach.
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_2 \
+	"true"
+#        "sudo /etc/acpi/powerbtn.sh"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_3 \
+	"<Mod4>t"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_3 \
+	"tvtime"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_4 \
+	"<Mod4>b"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_4 \
+	"x-www-browser"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_5 \
+	"F12"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_5 \
+	"x-terminal-emulator"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_6 \
+	"<Mod4>s"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_6 \
+	"x-terminal-emulator -T \"ssh\" -e ssh -t 193.140.28.3 screen -D -R"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_7 \
+	"<Mod4>x"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_7 \
+	"xscreensaver-command -lock"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_8 \
+	"<Mod4>c"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_8 \
+	"x-terminal-emulator -e mc"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_9 \
+	"<Mod4>r"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_9 \
+	"rhythmbox"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_10 \
+	"<Mod4>F11"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_10 \
+	"$HOME/bin/noteit -a"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_11 \
+	"<Mod4>F12"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_11 \
+	"$HOME/bin/noteit"
+
+gconftool-2 -t string -s \
+	/apps/metacity/global_keybindings/run_command_12 \
+	"<Mod4>e"
+gconftool-2 -t string -s \
+	/apps/metacity/keybinding_commands/command_12 \
+	"nautilus"
+
+# Gnome-terminal.
+gconftool-2 -t bool -s \
+	/apps/gnome-terminal/global/use_menu_accelerators \
+	false
+gconftool-2 -t bool -s \
+	/apps/gnome-terminal/global/use_mnemonics \
+	false
+gconftool-2 -t string -s \
+	/apps/gnome-terminal/key_bindings/help \
+	"disabled"
+gconftool-2 -t bool -s \
+	/apps/gnome-terminal/profiles/Default/default_show_menubar \
+	false
+gconftool-2 -t string -s \
+	/apps/gnome-terminal/profiles/Default/scroll_position \
+	"hidden"
+gconftool-2 -t string -s \
+	/apps/gnome-terminal/profiles/Default/font \
+	"Terminus Bold 14"
+gconftool-2 -t bool -s \
+	/apps/gnome-terminal/profiles/Default/allow_bold \
+	false
+
+# Epiphany.
+gconftool-2 -t bool -s \
+	/apps/epiphany/web/allow_popups \
+	false
+gconftool-2 -t bool -s \
+	/apps/epiphany/web/allow_popups \
+	false
+gconftool-2 -t bool -s \
+	/apps/epiphany/general/open_in_tab \
+	true
+gconftool-2 -t string -s \
+	/apps/epiphany/web/default_encoding \
+	UTF-8
+gconftool-2 -t int -s \
+	/apps/epiphany/web/font_fixed_size_tr \
+	14
+gconftool-2 -t int -s \
+	/apps/epiphany/web/font_fixed_size_x-western \
+	14
+gconftool-2 -t int -s \
+	/apps/epiphany/web/font_min_size_tr \
+	14
+gconftool-2 -t int -s \
+	/apps/epiphany/web/font_min_size_x-western \
+	14
+gconftool-2 -t int -s \
+	/apps/epiphany/web/font_var_size_tr \
+	15
+gconftool-2 -t int -s \
+	/apps/epiphany/web/font_var_size_x-western \
+	15
+gconftool-2 -t string -s \
+	/apps/epiphany/web/default_font_type \
+	sans-serif
+
+
+# Acme
+gconftool-2 -t int -s \
+	/apps/acme/mute_key \
+	78
+gconftool-2 -t int -s \
+	/apps/acme/pause_key \
+	110
+
+# Misc.
+#gconftool-2 -t string -s \
+#	/desktop/gnome/url-handlers/unknown/command \
+#	'epiphany-browser --new-tab "%s"'
+#gconftool-2 -t bool -s \
+#	/apps/magicdev/do_fileman_window \
+#	false
+
+
+# Some Nautilus scripts.
+mkdir -p ~/.gnome2/nautilus-scripts
+
+cat >~/.gnome2/nautilus-scripts/Send-to-OMU <<EOF
+#!/bin/sh
+
+x-terminal-emulator -t 'Copying file..' \
+  -x scp \$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS 193.140.28.3:incoming
+EOF
+chmod 755 ~/.gnome2/nautilus-scripts/Send-to-OMU
+
+cat >~/.gnome2/nautilus-scripts/Send-to-Any <<EOF
+#!/bin/sh
+#
+# This script scp's file/s to a given url.
+#
+# Distributed under the terms of GNU GPL version 2 or later
+#
+# Copyright © Keith Conger <acid@twcny.rr.com>
+#
+# Install in your Nautilus scripts directory.
+
+URL=\
+\$(gdialog --title 'scp file(s) to?' --inputbox 'url for host(ie.user@myhost.com:/tmp)' 200 550 2>&1)
+
+x-terminal-emulator -t 'Copying file..' -x scp \$NAUTILUS_SCRIPT_SELECTED_FILE_PATHS \$URL
+EOF
+chmod 755 ~/.gnome2/nautilus-scripts/Send-to-Any

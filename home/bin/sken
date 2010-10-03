@@ -1,0 +1,79 @@
+#!/bin/sh -e
+
+# Portable which(1).
+pathfind () {
+	oldifs="$IFS"; IFS=':'
+	for _p in $PATH; do
+		if [ -x "$_p/$*" ] && [ -f "$_p/$*" ]; then
+			IFS="$oldifs"
+			return 0
+		fi
+	done
+	IFS="$oldifs"
+	return 1
+}
+
+for p in scanimage convert pngnq; do
+	pathfind $p || {
+		echo >&2 "You need '$p' to use this program!"
+		exit 1
+	}
+done
+
+MODE=${MODE:-Lineart}
+RESOLUTION=${RESOLUTION:-150}
+THRESHOLD=${THRESHOLD:-200}
+
+PAGE_WIDTH=210
+PAGE_HEIGHT=297
+
+CROP='1040x691+100+140'
+BLUR=1
+SHARPEN=2
+COLORS=8
+
+wanted_guide=
+while getopts g opt; do
+    case $opt in
+    g) wanted_guide=1;;
+    ?) printf "Usage: %s: [-g] image-file\n" $0
+       echo "  -g   dump a guide in SVG format"
+       echo "  (use 'inkscape' for printing)"
+       exit 2;;
+    esac
+done
+shift $(($OPTIND - 1))
+
+if [ -n "$wanted_guide" ]; then
+	uudecode -o- <<'EOF' | gunzip -c
+begin 644 guide.uue
+M'XL(`````````-64P7*;,!"&[WX*5;TD,T9(("&L&.?0F<YTIKVU#T",#&JP
+M\`C%V&_?!1M,#DDON80#2-^_6FE_":T?3_L:';5K36,SS`C%2-MM4QA;9OC/
+M[^]!BE'K<UOD=6-UAFV#'S>+]9<@0-^<SKTN4&=\A7[8YW:;'S2ZJ[P_J##L
+MNHZ8*R2-*\-[%`0PLCV6"X003&M;!9T,SP9T\1`:44I#T/`4^=^H5R7TH#.%
+MKS(L.2=TQ7DZP$J;LO(01$5$XB2*!FJ*#$.>"&^@MR[TKNWIA?<]CE$X2.6-
+MU_E9.S:,`,'IK;]HT\1)G!#).)-X%,;)><0)8R)93<H)8$Q6DL4RG>`9%K\B
+M(F6,WF#KSS7LPL[4M;*P(0]]*V@.^=;XLV(/K7?-LU9?Z?!<N\&P)`7.0#(1
+MBS$LV!NO76W@H_C(BKRM<N?R\R7_C#:[7:N]FK).LTZKZXWIK8B9%%?//L0<
+M00GC22KEW!R1@&51$J\^FSD1YS=SRE'V+K?MKG'[#`_-&OZMNY1R(I8IO.Y?
+MY2GCF/+KX8,DA]Q7HXP0Z+]0P&.Z#(0D"9PI)M'/*XE&@F\#WO>-$BDNQ+W4
+M6NFCMDU1O&_FX32"VE@-5X!Z>O%^SOXVQJK!XK<=N]3:%P?ETLFSMPIF8AGP
+?:%XPGY//5G!T.R1A.5P__6?=WWB;Q3^$!7=?N`4`````
+`
+end
+EOF
+	exit 0
+fi
+
+outfile="$1"
+if [ -z "$outfile" ]; then
+	echo >&2 "Usage: $0 image-file"
+	exit 1
+fi
+
+echo >&2 "Scanning to '$outfile' at $RESOLUTION dpi..."
+scanimage --mode $MODE \
+	  --threshold $THRESHOLD \
+	  --resolution $RESOLUTION \
+	  -x $PAGE_WIDTH -y $PAGE_HEIGHT |
+convert -crop $CROP -blur $BLUR -sharpen 2 - PNG:- | pngnq -n$COLORS >$outfile

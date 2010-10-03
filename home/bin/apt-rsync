@@ -1,0 +1,107 @@
+#! /usr/bin/python
+#  GPL v2 code. Radim Kolar <hsn / at / cybermail.net>
+#  http://home.tiscali.cz/~cz210552/
+#
+#  APT-RSYNC
+#
+#   This little boy makes `apt-get update` but using rsync protocol
+#     which is a very much bandwidth friendly, so you can get latest
+#      unstable distribution faster...
+#
+# Changelog:
+#    VERSION 8 by hsn 2 Oct 2002
+#      Do not download Releases files. It is faster to get them via
+#      apt-get update than via rsync
+#    VERSION 7 (by http://paulm.com/ 12 Jul 2002)
+#      Retrieve both Packages & Releases files. Unfortunately Debian do
+#      not provide a Sources file (only Sources.gz). I had to add
+#      debian-security to my security.debian.org URL for rsync to find
+#      the right module (this doesn't break normal apt-get update operation).
+#    VERSION 6
+#      Applied patches from tim@fungible.com 24 Mar 2002. 
+#        continue after rsync errors
+#        use apt-get update after all rsync
+#        slash on end of URL is now optional
+#    VERSION 5
+#      removed crash when is not executed by root
+#    VERSION 4
+#      removed hard-coded i386 architecture, use dpkg to test it
+#      added apt list lock file support
+#    VERSION 3
+#      stop after first rsync failure
+#    VERSION 2
+#      Andrew McGuinness <a.mcguinness@ntlworld.com> fix to run on Python 1.5
+
+import string
+import os
+import sys
+import fcntl
+
+SOURCES='/etc/apt/sources.list'
+LISTS='/var/lib/apt/lists/'
+#remove -b option if you do not wants backups
+RSYNCOPT='-ztvb --progress'
+BASE_COMMAND='rsync '+RSYNCOPT+' rsync://'
+
+#no user serviceable parts inside. 
+
+#determine run-time architecture
+f=os.popen('dpkg --print-architecture','r',80)
+ARCH=f.read()
+ARCH=string.strip(ARCH)
+f.close()
+if ARCH=='':
+    print "Are you running Debian Linux?? dpkg not found!"
+    sys.exit(1)
+
+#read sources.list
+f=open(SOURCES)
+lines=f.readlines()
+f.close()
+
+#get lock in apt area
+try:
+    f=open(LISTS+'lock','w')
+    fcntl.flock(f.fileno(),fcntl.LOCK_EX|fcntl.LOCK_NB)
+except IOError:
+    print "Can not open lockfile for apt lists. Are you root?"
+    sys.exit(1)
+    
+for line in lines:
+    data=string.split(line)
+    if len(data)==0:
+	continue # skip empty lines
+    if data[0][0:0]=='#':
+        continue # and comments
+    if data[0]!='deb':
+	continue # we are not interrested in them also
+    if data[1][0:5]=='cdrom':
+	continue # no CD
+    i=string.find(data[1],"://")
+    if i==-1: continue
+
+    basefn=data[1][i+3:]
+    # basefn may or may not have a trailing slash.  Check for zero
+    # length of basefn to cope with the pathological case where it's empty.
+    # tim@fungible.com 24 Mar 2002. 
+    if len (basefn) == 0 or basefn [-1] != '/':
+	basefn += "/"
+    basefn=basefn+'dists/'+data[2]+'/'
+
+    for part in data[3:]:
+        #for file in ('Packages', 'Release'):
+        for file in ['Packages']:
+            fn=basefn+part+'/binary-'+ARCH+'/'+file
+            COMMAND=BASE_COMMAND+fn+' '+LISTS+string.replace(fn,'/','_')
+            print COMMAND
+            # Ignore errors when running the command because lots of
+	    # things can cause rsync to fail.  Some servers don't support it;
+	    # sometimes the server isn't willing to give us another
+	    # connection.  tim@fungible.com 24 Mar 2002. 
+	    os.system(COMMAND)
+
+f.close()
+# Get anything we missed due to failed rsync's.  tim@fungible.com 24 Mar 2002.
+os.system('apt-get update') 
+# Used to have a call to apt-cache gencaches here, but I think that's
+# redundant with the apt-get update above. tim@fungible.com 24 Mar 2002.

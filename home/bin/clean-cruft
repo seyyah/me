@@ -1,0 +1,22 @@
+#!/bin/sh -e
+
+DIR=tests/old
+JUNKDIR=${TMPDIR:-$HOME/tmp}/$DIR
+AGE=7
+
+rm -rf $JUNKDIR
+mkdir -p $JUNKDIR
+
+cd $HOME
+for f in $(find . -type f -name '.hellogen-cache'); do
+	d=$(dirname $f)
+	find $d -type d -regex '.*hello-[0-9]' -used $AGE \
+		-not -regex ".*$DIR.*" -exec sh -c '
+		cp --parents -a $1 $2 && rm -rf $1;
+		' sh '{}' $JUNKDIR/ \;
+	# FIXME: Ugly hack alert!  Update cache file.
+	find $d -type d -regex '.*hello-[0-9]' -printf "%f\n" >$f
+	if [ ! -s $f ]; then
+		rm -f $f
+	fi
+done 2>/dev/null

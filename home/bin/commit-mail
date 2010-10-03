@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# Simple commit mail.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+
+REPOS="$1"
+REV="$2"
+NAME="$3"
+RECEPIENT="$4"
+
+MAIL_COMMAND=${MAIL_COMMAND:-"mail"}
+CTLFILE=$REPOS/no-commit-mail
+
+if [ -e $CTLFILE ]; then
+	echo >&2 "$0: $CTLFILE file encountered; aborting."
+	exit 0
+fi
+
+# Yes, absolutely brain damage.
+HOME=${HOME:-$(whoami)}
+
+# All these fuzz required for Gibraltar like read-only environments.
+tmpdir=
+if [ -d $HOME/tmp ] && [ -w $HOME/tmp ]; then
+	tmpdir=$HOME/tmp
+elif [ -d /tmp ] && [ -w /tmp ]; then
+	tmpdir=/tmp
+elif [ -d /var/tmp ] && [ -w /var/tmp ]; then
+	tmpdir=/var/tmp
+else
+	if mkdir -p $HOME/tmp; then
+		tmpdir=$HOME/tmp
+	fi
+fi
+
+if [ -z "$tmpdir" ]; then
+	echo >&2 "No way to create temporary files; aborting"
+	exit 1
+fi
+
+TMPDIR=$tmpdir; export TMPDIR
+TMP=$tmpdir; export TMP
+
+svnlook info -r $REV $REPOS | \
+sed -e '1s/^/Author: /; 2s/^/Date: /; 3s/^.*$//' | \
+$MAIL_COMMAND -s "[svn commit] r${REV} -- $NAME" $RECEPIENT

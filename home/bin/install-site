@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# Install checked out site to the given destination.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Wed, 20 Oct 2004 23:03:42 +0300
+
+set -e
+
+LOGDIR=../logs
+ORIGDIR=$(pwd)
+
+find . -maxdepth 1 -type d -not -name '.*' |
+while read site; do
+	if [ ! -d $site/main ]; then
+		echo >&2 "Couldn't find a main directory in site '$site'; skipping."
+		continue
+	fi
+
+	echo >&2 "Creating symlinks for '$site' modules..."
+	(
+		cd $site/main
+		find .. -maxdepth 1 -type d -not -name '.*' -not -name 'main' |
+		while read m; do
+			if [ ! -e $(basename $m) ]; then
+				ln -s $m
+			fi
+		done
+	)
+	echo >&2 "Creating log directory for $site..."
+	mkdir -p $LOGDIR/$site && ( cd $LOGDIR/$site; touch error.log access.log )
+
+	(
+		cd $site
+		if [ -r install-local ]; then
+			echo >&2 "Running install hook for $site..."
+			. install-local
+		fi
+	)
+done
+
+# Create log directory for svn actions.
+mkdir -p $LOGDIR/svn
+
+echo >&2 "Installation succesfully finished."
+echo >&2 "See README for other configuration items."

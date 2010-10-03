@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# rc.inet1 This shell script boots up the base INET system.
+#
+# Version: @(#)/etc/rc.d/rc.inet1 1.01 05/27/93
+#
+
+HOSTNAME=`cat /etc/hostname`
+
+# Attach the loopback device.
+/sbin/ifconfig lo 127.0.0.1
+/sbin/route add -net 127.0.0.0
+
+# IF YOU HAVE AN ETHERNET CONNECTION, use these lines below to configure the
+# eth0 interface. If you're only using loopback or SLIP, don't include the
+# rest of the lines in this file.
+
+# Edit for your setup.
+IPADDR="10.0.0.150" # REPLACE with YOUR IP address!
+IPADDR1="192.168.140.212" # alias 1
+NETMASK="255.255.255.0" # REPLACE with YOUR netmask!
+NETWORK="192.168.111.5" # REPLACE with YOUR network address!
+BROADCAST="10.0.0.255" # REPLACE with YOUR broadcast address, if you
+# have one. If not, leave blank and edit below.
+GATEWAY="10.0.0.1" # REPLACE with YOUR gateway address!
+
+# Uncomment ONLY ONE of the three lines below. If one doesn't work, try again.
+# /sbin/ifconfig eth0 ${IPADDR} netmask ${NETMASK} broadcast ${BROADCAST}
+# /sbin/ifconfig eth0 ${IPADDR} broadcast ${BROADCAST} netmask ${NETMASK}
+/sbin/ifconfig eth0 ${IPADDR} netmask ${NETMASK}
+#
+# These are the alias ip's
+#
+/sbin/ifconfig eth0:0 ${IPADDR1} netmask ${NETMASK}
+#/sbin/ifconfig eth0:1 ${IPADDR2} netmask ${NETMASK}
+#/sbin/ifconfig eth0:2 ${IPADDR1} netmask ${NETMASK}
+
+# Uncomment these to set up your IP routing table.
+#/sbin/route add -net ${NETWORK} netmask ${NETMASK}
+#/sbin/route add default gw ${GATEWAY} metric 1
+
+# End of rc.inet1

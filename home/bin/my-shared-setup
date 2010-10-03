@@ -1,0 +1,53 @@
+#!/bin/sh
+#
+# Setup for shared folders.
+# Recai Oktaş <roktas@omu.edu.tr>
+# 
+# Last modified: Wed, 20 Oct 2004 22:45:27 +0300
+
+# XXX Keep this script idempotent.
+
+[ -n "$MNT_SCRATCH" ] || MNT_SCRATCH=/mnt/scratch
+[ -n "$VAR_SCRATCH" ] || VAR_SCRATCH=/var/local
+
+if [ "$(id -u)" != 0 ]; then
+	echo >&2 "You must be root to run this script!"
+	exit 1
+fi
+
+create_group_dir()
+{
+	dir=$1; grp=$2
+
+	if grep -q $MNT_SCRATCH /etc/fstab 2>/dev/null; then
+		scratch=$MNT_SCRATCH
+		if ! grep -q $scratch /proc/mounts 2>/dev/null; then
+			echo >&2 "'$scratch' seems to be unmounted."
+			return
+		fi
+	else
+		scratch=$VAR_SCRATCH
+		if [ ! -d $scratch ]; then
+			echo >&2 "Scratch directory '$scratch' does not exist."
+			return
+		fi
+	fi
+
+	dir=$scratch/$dir
+
+	if [ ! -d $dir ]; then
+		(
+			set +e
+
+			sudo mkdir -p $dir
+			sudo chown :$grp $dir
+			sudo chmod g+rwx $dir
+			
+		)  || echo >&2 "Failure to setup '$dir'!"
+	fi
+}
+
+
+create_group_dir downloads staff
+create_group_dir music staff
+create_group_dir src src

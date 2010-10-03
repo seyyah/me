@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# Helpers for message handling.
+
+INTERNAL_ERROR_=86
+THROWN_ERROR_=74
+
+# Query the terminal to establish a default number of columns to use for
+# displaying messages to the user.  This is used only as a fallback in the
+# event the COLUMNS variable is not set.  ($COLUMNS can react to SIGWINCH
+# while the script is running, and this cannot, only being calculated once.)
+DEFCOLUMNS=$(stty size 2>/dev/null | awk '{ print $2 }') ||:
+if ! expr "$DEFCOLUMNS" : "[[:digit:]]\+$" >/dev/null 2>&1; then
+	DEFCOLUMNS=80
+fi
+
+message () {
+	# pretty-print messages of arbitrary length
+	echo "$*" | fmt -t -w ${COLUMNS:-$DEFCOLUMNS} >&2
+}
+
+warn () {
+	message "$PROGRAM warning: $*"
+}
+
+die () {
+	message "$PROGRAM error: $*"
+	exit $THROWN_ERROR_
+}
+
+internal_error () {
+	# exit script with error; essentially a "THIS SHOULD NEVER HAPPEN"
+	# message
+	message "internal error: $*"
+	exit $INTERNAL_ERROR_
+}
+
+# portable which(1)
+pathfind () { #{{{
+	oldifs="$IFS"; IFS=':'
+	for _p in $PATH; do
+		if [ -x "$_p/$*" ] && [ -f "$_p/$*" ]; then
+			IFS="$oldifs"
+			return 0
+		fi
+	done
+	IFS="$oldifs"
+	return 1
+} #}}}
+
+# ensure that the given commands are in path
+ensurecmd () { #{{{
+	for cmd; do
+		if {
+			expr $cmd : '/.*' >/dev/null 2>&1 && ! [ -x $cmd ]
+		} || ! pathfind $cmd; then
+			die "'$cmd' is not available"
+		fi
+	done
+} #}}}
+
+ensurecmd oidb stdsort
+
+[ $# -gt 0 ] || { message "Usage: $0 UNSORTEDFILE [OIDBFILE or STDIN]"; exit 1; }
+
+unsortedfile="$1"
+shift
+cat "$@" | oidb --col no | stdsort "$unsortedfile"

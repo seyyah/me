@@ -1,0 +1,308 @@
+#!/bin/sh
+#
+# Create a project from templates.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# This code was adapted from autoproject.
+# 
+#   Jim Van Zandt <jrv@vanzandt.mv.com> 1999-06-09, based on dh_make by:
+#   Craig Small, <csmall@debian.org> 5 March 1998, based on deb-make by:
+#   Christoph Lameter, <clameter@debian.org> October 10, 1996
+#
+# Last modified: Mon, 22 Nov 2004 08:57:25 +0200
+
+set -e
+
+DEFAULT_TEMPLATEDIR=${4:-$HOME/devel/frobozz}
+AUTOGEN=autogen.sh
+AUTOGEN_ARGS='--enable-test --enable-debug'
+AWK=awk
+SUBST_MARK='#'
+
+# Prompt user for a string.
+type_string()
+{
+	query=$1; default=$2; help=$3; finished=no
+
+	while [ $finished != yes ]; do
+		echo -n "$query [$default]: "; read ANS;
+		if [ "$ANS" = "" ]; then ANS="$default"; fi
+		if [ "$ANS" = "?" ]; then
+			if [ "$help" = "" ]; then
+				echo "sorry, no help is available"
+			else
+				echo "$help";
+			fi
+		else 
+			finished=yes;
+		fi
+	done
+}
+
+# Prompt user to select from a list.
+choose_from_list()
+{
+	query=$1; choices=" $(echo $2) "; default=$3; help=$4; finished=no;
+
+	ANS=
+	while [ $finished != yes ]; do
+		echo "$query";
+		echo -n "    select from: $choices [$default]: "; read ANS;
+		if [ "$ANS" = "" ]; then ANS="$default"; fi
+		if [ "$ANS" = "?" ]; then 
+			if [ "$help" = "" ]; then
+				echo "    sorry, no help is available"
+			else
+				echo "$help";
+			fi
+		else if echo "$choices" | grep -q -- " $ANS "; then
+			finished=yes;
+		else echo "    unrecognized choice $ANS"; fi; fi
+	done
+}
+
+# Make substitutions.
+substitute()
+{
+	mark=${1:-"$SUBST_MARK"}
+
+	sed -e "s/${mark}NAME${mark}/$NAME/g"                 \
+	    -e "s/${mark}CAPNAME${mark}/$CAPNAME/g"           \
+	    -e "s/${mark}VERSION${mark}/$VERSION/g"           \
+	    -e "s/${mark}EMAIL${mark}/$EMAIL/g"               \
+	    -e "s/${mark}EEMAIL${mark}/$EEMAIL/g"             \
+	    -e "s/${mark}INITIALS${mark}/$INITIALS/g"         \
+	    -e "s/${mark}DATE${mark}/$DATE/g"                 \
+	    -e "s/${mark}LCDATE${mark}/$LCDATE/g"             \
+	    -e "s/${mark}ISODATE${mark}/$ISODATE/g"           \
+	    -e "s/${mark}RFCDATE${mark}/$ISODATE/g"           \
+	    -e "s/${mark}PROJECT${mark}/$PROJECT/g"           \
+	    -e "s/${mark}YEAR${mark}/$YEAR/g"                 \
+	    -e "s/${mark}AUTHOR${mark}/$AUTHOR/g"             \
+	    -e "s/${mark}FIRSTNAME${mark}/$FIRSTNAME/g"       \
+	    -e "s/${mark}SURNAME${mark}/$SURNAME/g"           \
+	    -e "s/${mark}DESCRIPTION${mark}/$DESCRIPTION/g"   \
+	    -e "s/${mark}DESCRIPTIONC${mark}/$DESCRIPTIONC/g" \
+	    -e "s/${mark}AUTOMAKE${mark}/$AUTOMAKE/g"         \
+	    -e "s/${mark}ACLOCAL${mark}/$ACLOCAL/g"           \
+	    -e "s/${mark}AUTOCONF${mark}/$AUTOCONF/g"         \
+	    -e "s/${mark}AUTOHEADER${mark}/$AUTOHEADER/g"     \
+	    -e "s/${mark}INTLTOOLIZE${mark}/$INTLTOOLIZE/g"
+}
+
+
+# Set essentials from command line.
+NAME=$1; MODE=$2; TMPL=$3; TEMPLATEDIR=$4
+
+
+# Set the templates base directory. 
+t=${TEMPLATEDIR:-$DEFAULT_TEMPLATEDIR}
+if [ ! -d $t ]; then
+	echo >&2 "Couldn't find the template directory '$t'."
+	if [ -z "$TEMPLATEDIR" ]; then
+		echo >&2 \
+		"You may want to define a TEMPLATEDIR environment variable."
+	fi
+	exit 1
+fi
+TEMPLATEDIR=$t
+
+
+# Set the template mode.
+choices=`find $TEMPLATEDIR -type d -not -regex ".*/\.[^/]*$" \
+		-maxdepth 1 -mindepth 1 -printf " %f " 2>/dev/null || true`
+
+if [ -n "$MODE" ]; then
+	if ! echo " $choices " | grep -q -- " $MODE "; then
+		echo >&2 "no such template suite '$MODE' exists"
+		exit 1
+	fi
+else
+	choose_from_list \
+		"Which template suite will be generated?" "$choices" "c" ""
+	MODE=$ANS
+fi
+
+
+# Set the template.
+choices=`find $TEMPLATEDIR/$MODE -type d -not -regex ".*/\.[^/]*$" \
+		-maxdepth 1 -mindepth 1 -printf " %f " 2>/dev/null || true`
+
+if ! echo " $choices " | grep -q -- " generic "; then
+	echo >&2 "no 'generic' template exists"
+	exit 1
+else
+	if [ ! "$choices" = " generic " ]; then
+		if [ -n "$TMPL" ]; then
+			if ! echo " $choices " | grep -q -- " $TMPL "; then
+				echo >&2 "no such template '$TMPL' exists for '$MODE'"
+				exit 1
+			fi
+		else
+			choose_from_list \
+				"Which template will be generated?" "$choices" "generic" ""
+			TMPL=$ANS
+		fi
+	else
+		TMPL="generic"
+	fi
+fi
+
+
+# Get all the values we need.
+
+# Prefer some versions over others for automake.
+for v in 1.7 1.8 1.9 1.6 1.5; do
+	if which automake-$v >/dev/null; then
+		postfix="-$v"
+		break
+	fi
+done
+
+if [ -z "$postfix" ]; then
+	v=$(automake --version | head -1 | $AWK '{ print $NF }')
+	case "$v" in
+		2*|1.[4-9]*)
+			;;
+		*)
+			echo >&2 
+		"Couldn't find a suitable version for automake (>= 1.5); aborting."
+			exit 1
+			;;
+	esac
+fi
+
+AUTOMAKE=automake${postfix}
+ACLOCAL=aclocal${postfix}
+AUTOCONF=autoconf
+AUTOHEADER=autoheader
+INTLTOOLIZE=intltoolize
+
+for prog in $ACLOCAL $AUTOCONF $AUTOHEADER $INTLTOOLIZE; do
+	if ! which $prog >/dev/null; then
+		echo >&2 "Couldn't find the required tool '$prog'; aborting."
+		exit 1
+	fi
+done
+
+
+VERSION=0.1.0
+
+is_legalname=no
+while [ $is_legalname = no ]; do
+	if [ "$NAME" = "" ]; then
+		echo -n "What is the program name? "; read NAME;
+	fi
+	if expr "$NAME" : '[a-z][_a-z0-9-]*$' >/dev/null = 0; then
+		echo "    Illegal program name $NAME. Must be lowercase letters and digits or \`_'."
+		NAME=""
+	else
+		is_legalname=yes
+	fi
+done
+
+if [ -f $NAME ]; then
+	echo >&2 "A file with the name '$NAME' exists; remove it first."
+	exit 1
+fi
+
+CAPNAME=$(echo "$NAME"|tr '[a-z]' '[A-Z]')
+
+if [ "$DESCRIPTION" = "" ]; then
+	echo ""
+	echo "Please describe in one line what $NAME will do:"
+	read DESCRIPTION
+fi
+
+DESCRIPTION=$(echo $DESCRIPTION | sed 's,/,\\\\/,g')
+DESCRIPTIONC=$(echo $DESCRIPTION | sed 's,",\\\\\\\\",g')
+
+# accept zero padding only if the GNU extension is not available
+if [ $(date +%-d) = %-d ]; then 
+	# prevent user's locale settings from affecting %B
+	DATE=$(LC_ALL=POSIX date "+%B %d, %Y")
+	LCDATE=$(LC_ALL=$LANG date "+%B %d, %Y")
+else
+	DATE=$(LC_ALL=POSIX date "+%B %-d, %Y")
+	LCDATE=$(LC_ALL=$LANG date "+%B %-d, %Y")
+fi
+YEAR=$(date "+%Y")
+ISODATE=$(date "+%Y-%m-%d")
+RFCDATE=$(date -R)
+
+
+if [ "$AUTHOR" = "" ]; then
+	if [ -n "$DEBFULLNAME" ]; then
+		AUTHOR="$DEBFULLNAME"
+	else
+		AUTHOR=$($AWK -F: -vUSER=$USER '$1 == USER { print $5; }' /etc/passwd)
+
+		if [ "$AUTHOR" = "" -a -x /usr/bin/ypmatch ]; then
+			# Give NIS a try
+			AUTHOR=$(ypmatch $USER passwd.byname|$AWK -F: '{ print $5; }')
+		fi
+		if echo $AUTHOR | grep -q -- "\,"; then
+			X=$(expr index "$AUTHOR" ",")
+			X=$(expr $X - 1)
+			AUTHOR=$(expr substr "$AUTHOR" 1 $X)
+		fi
+	fi
+	type_string "What is the name of the author?" "$AUTHOR" ""
+	AUTHOR="$ANS"
+
+	FIRSTNAME="$(echo $AUTHOR | $AWK '{ print $1 }')"
+	SURNAME="$(echo $AUTHOR | $AWK '{ print $NF }')"
+fi
+
+
+if [ "$EMAIL" = "" ]; then
+	if [ -n "$DEBEMAIL" ]; then
+		EMAIL="$DEBEMAIL"
+	else
+		if [ -s /etc/mailname ]; then
+			EMAIL="$USER@$(cat /etc/mailname)"
+		else if [ -s /etc/news/whoami ]; then
+			EMAIL="$USER@$(cat /etc/news/whoami)"
+		else EMAIL="$(whoami)@$(hostname)"
+		fi
+	fi
+fi
+type_string "What is the email address of the author?" "$EMAIL" ""
+EMAIL="$ANS"
+fi
+# `@' must be escaped in a .texinfo file
+EEMAIL=$(echo $EMAIL | sed s/@/@@/)
+INITIALS=$(echo $EMAIL | sed s/@.*$//)
+
+# Do the real work.
+echo >&2 ""
+echo >&2 "Creating project '$NAME' from $MODE/$TMPL template..."
+
+# Copy template files while excluding Subversion files.
+mkdir $NAME; src=$TEMPLATEDIR/$MODE/$TMPL; dest=$PWD/$NAME
+(cd  $src && tar --exclude 'CVS' --exclude '.svn' -cf - .) | (cd $dest; tar -xf -)
+
+for f in $(find $NAME -type f); do
+	newf=$(echo $f | substitute '__')
+	if [ "$newf" != "$f" ]; then
+		if [ -f "$newf" ]; then
+			echo >&2 \
+		"Warning: A file with the name '$newf' exists; refuse to rename it."
+		else
+			mv $f $newf
+			f=$newf
+		fi
+	fi
+	substitute <$f >$f.$$
+	# Preserve permissions.
+	cat $f.$$>$f; rm -f $f.$$
+done
+
+if [ -x $NAME/$AUTOGEN ]; then
+	echo >&2 ""
+	echo >&2 "Initiating $NAME project..."
+	cd $NAME; ./$AUTOGEN $AUTOGEN_ARGS
+fi

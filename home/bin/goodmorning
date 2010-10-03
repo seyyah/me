@@ -1,0 +1,84 @@
+#!/bin/bash
+#
+# Play a "good morning" music.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Wed, 20 Oct 2004 23:35:44 +0300
+
+
+PLAYLIST=${PLAYLIST:-$HOME/music/goodmorning.m3u}
+CMD="mpg321 --shuffle --list $PLAYLIST"
+
+# Total play time.
+TOTAL=40
+# Time step to increment volume.
+STEP=$(($TOTAL/10))
+# Time unit (s: seconds, m: minutes, h:hours).
+UNIT=m
+
+# Initial volume.
+VOLINIT=50
+# Maximum volume.
+VOLMAX=70
+# Volume increment step.
+VOLSTEP=5
+
+log() { logger -t bot "$@"; }
+getvol() { aumix -q | sed -ne '/^vol/ s/vol \([0-9]\+\).*/\1/p'; }
+setvol() { aumix -v$1; log "volume set to $1"; }
+
+set -e
+
+# Just kill the running session and return.
+if echo "$@" | grep -q '\-\-kill'; then
+	# FIXME Buggy code (but it usually works).
+	ppid=$(pgrep -f -o $0)
+	if [ -n "$ppid" ]; then
+		for p in $ppid $(pgrep -P $ppid); do
+			kill -9 $p
+		done
+	fi
+	exit 0
+fi
+
+[ -x /usr/bin/mpg321 ] || { log "mpg321 is not available"; exit 1; }
+[ -x /usr/bin/aumix ] || { log "aumix is not available"; exit 1; }
+
+if [ ! -f $PLAYLIST ]; then
+	log "playlist $PLAYLIST is not available"
+	exit 1
+fi
+
+log "playing $PLAYLIST"
+
+# Save initial volume setting.
+VOLSAVE=$(getvol)
+setvol $VOLINIT
+
+# Invoke player.
+$CMD &
+pid=$!
+
+# Increase volume gradually.
+remaining=$TOTAL
+until [ $remaining -le 0 ]; do
+        remaining=$(($remaining - $STEP))
+	
+        sleep ${STEP}${UNIT}
+	v=$(getvol)
+	if [ -n "$v" ]; then
+		# Restore to initial level if reached to maximum.
+		if [ $v -ge $VOLMAX ]; then
+			setvol $VOLINIT
+		else
+			setvol "+$VOLSTEP"
+		fi
+	fi
+done
+
+log "stopping player and restore volume level"
+kill -9 $pid
+setvol $VOLSAVE

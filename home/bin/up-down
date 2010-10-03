@@ -1,0 +1,86 @@
+#!/bin/sh
+#
+# Rsync wrapper.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file 'http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Sun, 24 Oct 2004 02:59:01 +0300
+
+set -e
+
+PROGRAM=$(echo $0 | sed -e 's!.*/!!')
+RCFILE=.${PROGRAM}rc
+
+STAMP_UPLOAD="up"
+STAMP_DOWNLOAD="down"
+RSYNC_OPTS="-Cavzl"
+
+if [ -f ${HOME}/${RCFILE} ]; then
+	. ${HOME}/${RCFILE}
+fi
+
+usage()
+{
+	echo >&2 "Usage: $PROGRAM [SRC|DEST] [DEST|SRC]"
+	echo >&2 "See 'rsync' man page for details."
+}
+
+doit()
+{
+	if echo "$@" | grep '\-[0-9a-zA-Z]\|\-\-'; then
+		# There exists some options, seems to be an rsync call.
+		rsync "$@"
+	elif [ "$#" -eq 2 ]; then
+		# We need at least two argument.
+		rsync $RSYNC_OPTS $1 $2
+	else
+		echo >&2 "$PROGRAM: bad arguments '$@'"
+	fi
+}
+
+cat >&2 <<EOF 
+$PROGRAM
+
+Copyright 2004 by Recai Oktaş <roktas@omu.edu.tr>
+There is NO warranty.  You may redistribute this software
+under the terms of the GNU General Public License.
+For more information about these matters, see the files named COPYING.
+
+EOF
+
+mode=
+if echo $PROGRAM | grep -q "^$STAMP_UPLOAD$"; then
+	mode="$STAMP_UPLOAD"
+elif echo $PROGRAM | grep -q "^$STAMP_DOWNLOAD$"; then
+	mode="$STAMP_DOWNLOAD"
+else
+	if [ -f ".$STAMP_UPLOAD" ]; then
+		mode="$STAMP_UPLOAD"
+	elif [ -f ".$STAMP_DOWNLOAD" ]; then
+		mode="$STAMP_DOWNLOAD"
+	fi
+fi
+
+if [ -n "$1" ]; then
+	doit $@
+elif [ -n "$mode" -a -e .${mode} ]; then
+	if [ "$UPDOWN_RUNNING" = yes ]; then
+		exit 1
+	fi
+
+	she_bang=$(head -1 .${mode} | sed -n 's/^#! *\(.*\)$/\1/p')
+	if [ -n "$she_bang" ]; then
+		export UPDOWN_RUNNING=yes
+		# XXX Arggh.  Watch for the trojans.
+		$she_bang .${mode}
+	else
+		grep -v '^[ 	]*\(#\|$\)' .${mode} |
+		while read line; do
+			doit $line
+		done
+	fi
+else
+	usage; false
+fi

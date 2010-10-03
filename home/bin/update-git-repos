@@ -1,0 +1,36 @@
+#!/bin/sh
+
+PROGRAM=${0##*/}
+
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH2_CLIENT" ]; then
+	WC="$(git config location.wcroot)"
+	WC=$(eval echo $WC)
+
+	[ -d $WC ] || exit
+
+	REPOS="$(git config update.repos | uniq)"
+
+	for r in $REPOS; do
+		[ -d $WC/$r/.git ] || continue
+		echo >&2 "$PROGRAM: updating $r..."
+		(
+			cd $WC/$r
+			git-fetch
+			git rebase origin/master || git pull origin # workaround
+		)
+	done
+else
+	user=$1
+	sect=update
+	if [ -n "$user" ]; then
+		sect=$sect.$user
+	fi
+	HOSTS="$(git config $sect.hosts | uniq)"
+	for h in $HOSTS; do
+		if [ -n "$user" ] && !echo $h | grep -q '@'; then
+			h="$user@$h"
+		fi
+		echo >&2 "$PROGRAM: entering $h..."
+		echo 'PATH=~/bin:~/local/bin:/home/roktas/local/bin:$PATH' $PROGRAM | ssh $h sh -
+	done
+fi

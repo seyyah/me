@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# Workaround for uw-imap related UID validity problems.
+#
+# This script fix the problem which happens if we make a modification (eg. save
+# or delete a message) at the *remote* IMAP site.  To prevent such problems
+# follow this simple rule: "Do make the modifications always at the *local*
+# site".  (Alternatively, we could access our mailboxes via an uw-imap agent
+# which is not practical.)
+#
+# Recai Oktaş <roktas@omu.edu.tr> Last modified: Sun, 30 May 2004 13:51:36 +0300
+
+#set -e
+
+ACCOUNT=OMU
+BOXES=$@
+
+if [ -z "$1" ]; then
+	echo >&2 "Usage: $0 MBOX..."
+	exit 1
+fi
+
+if [ -d ~/.offlineimap ]; then
+	offlineimap=~/.offlineimap
+elif [ -d /srv/mail/.offlineimap ]; then
+	offlineimap=/srv/mail/.offlineimap
+else
+	echo >&2 "$0: can't find the offlineimap dir"
+	exit 1
+fi
+
+rm -r $offlineimap/Account-${ACCOUNT}
+rm -r $offlineimap/Repository-Remote
+rm -r $BOXES
+
+ssh 193.140.28.3 "rm $BOXES"

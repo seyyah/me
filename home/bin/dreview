@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Review changes file and the diffstat output for the diff file for a debian
+# package.
+# Based on the original work by Joey Hess <joey@kitenet.net>
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sun, 30 May 2004 13:52:25 +0300
+
+
+SRV=/srv
+
+if [ ! -f debian/changelog ]; then
+	echo 2>&1 "$0: must be in the top level source directory."
+	exit 1
+fi
+
+# Get the package name.
+package=$(head -1 debian/changelog | cut -f 1 -d ' ')
+
+# Get the package version.
+version=$(head -1 debian/changelog | cut -f 2 -d ' ' | perl -pe 's/\((.*?)\)/$1/; s/^\d+://;')
+
+header () {
+	echo ">>> $1 <<<"
+}
+
+(
+	header linda
+	linda ../${package}_${version}*.changes
+	header lintian
+	lintian ../${package}_${version}*.changes
+	header debdiff
+	debdiff $SRV/debian/unstable/${package}_*.changes ../${package}_${version}*.changes 
+	header diffstat
+	zcat ../${package}_${version}*.diff.gz | diffstat
+	header changes file
+	cat ../${package}_${version}*.changes
+	header package contents
+	debc ../${package}_${version}*.changes
+) 2>&1 | $PAGER

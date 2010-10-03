@@ -1,0 +1,2 @@
+#!/bin/sh
+wine /mnt/pros/program_arsivi/sozlukler/MoonStar/mtu.exe &

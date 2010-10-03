@@ -1,0 +1,116 @@
+#!/bin/sh
+#
+# Builds a debian package.  Assumes I'm already in the package directory.
+# Based on the original work by Joey Hess <joey@kitenet.net>
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sun, 30 May 2004 13:54:03 +0300
+
+
+set -e
+
+STAMP="Recai Oktaş <roktas@omu.edu.tr>"
+HOST=40ambar.mine.nu
+SRV=/srv
+
+if [ ! -f debian/changelog ]; then
+	echo 2>&1 "$0: must be in the top level source directory."
+	exit 1
+fi
+
+# Get the package name.
+package=$(head -1 debian/changelog | cut -f 1 -d ' ')
+if [ -z "$package" ]; then
+	echo "Can't find package!" >&2
+	exit 1
+fi
+
+# Clean up cvs dotfiles, which otherwise may accidentially creep into
+# packages..
+find . -type f -name '.#*' 2>/dev/null | xargs rm -f
+
+# And vim swap files.
+find . -name .*.sw* 2>/dev/null | xargs rm -f
+
+# Package version, ignoring epochs.
+version=$(dpkg-parsechangelog | grep Version: | cut -f 2 -d ' ')
+newversion=$(expr $version : '[0-9]:\(.*\)') 2>/dev/null || true
+if [ "$newversion" ]; then
+	version=$newversion
+fi
+baseversion=$(expr $version : '\(.*\)-.*') || true
+
+# First, make sure it has the newest policy version on it. I don't use these,
+# think they're silly for well maintained packages like mine. ;-)
+policy=$(dpkg -p debian-policy |grep ^Version: | cut -d ' ' -f 2)
+perl -i -pe "s/Standards-Version: .*/Standards-Version: $policy/" debian/control
+
+# Put the current 822-date into the topmost changelog entry, so it's always
+# fresh. I can omit the date entirely, and this will still work; it looks
+# for the end of the email address before the date.
+perl -i -pe '
+	if (! $done && /^( -- ).* <.*@.*>/) {
+		$_=$1." '"$STAMP"'  ".$(822-date);
+		$done=1;
+	}
+' debian/changelog
+
+# Change distribution.
+#perl -i -pe '
+#        if (! $done && /^(.* \(.*\) ).*(; urgency=.*)/) {
+#                $_=$1."'"$DIST"'".$2."\n";
+#                $done=1;
+#        }
+#' debian/changelog
+
+# Get a copy of the source and put it in ../, if it's not already there.
+# Skip this for native packages.
+origfile=${package}_${baseversion}.orig.tar.gz
+if [ "$baseversion" -a ! -e "../$origfile" -a ! -d "../$(basename $PWD /).orig" ]; then
+	origfile=${package}_$(expr ${version} : '\(.*\)-.*').orig.tar.gz
+
+	if [ -d .svn ]; then
+		# Not used for now, may be in future.
+		location=$(svnpath -p vendor)/${origfile}
+	else
+		location=$(find $SRV/debian/unstable $SRV/debian/stable -name $origfile | head -1) 
+	fi
+#        echo $location; exit 0;
+	if [ ! -e $location ]; then
+		svn update $location
+	fi
+		
+	if [ -e $location ]; then
+#                cp $location ..
+		ln -s $location ..
+	else
+		echo "Couldn't Trying to locate the upstream source from remote..."
+		echo "Trying to locate the upstream source from remote..."
+		scp $USER@$HOST:$SRV/debian/unstable/$origfile ..
+
+		# This should not be necessary, but some broken versions
+		# of scp do not return an error code on failure.
+		if [ ! -e ../$origfile ]; then
+			echo "Cannot locate an upstream source!"
+			exit 1
+		fi
+	fi
+fi
+
+# Now, launch the builder with all specified command line options. If none were
+# specified, go with my usual.
+# Always add -i -- makes dpkg-source ignore my CVS dirs.
+# Always add -tc cause I don't like build crap lying around.
+# Always add -us -uc, because I sign on release.
+
+# Until dpkg-source gets .svn added.
+i_regexp='(?:^|/).*~$|(?:^|/)\..*\.swp|DEADJOE|(?:/CVS|/.svn|/RCS|/.deps)(?:$|/.*$)'
+
+# Hmmm, do not forget debhelper.
+export DH_ALWAYS_EXCLUDE=CVS:.svn
+
+if [ ! "$1" ]; then
+	dpkg-buildpackage -i$i_regexp -ICVS -I.svn -rfakeroot -tc -us -uc
+else
+	dpkg-buildpackage -i$i_regexp -ICVS -I.svn -tc -us -uc $@
+fi

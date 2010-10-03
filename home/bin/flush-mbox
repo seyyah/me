@@ -1,0 +1,62 @@
+#!/bin/sh
+#
+# Flush mbox while retaining UW-IMAP craps.
+# 
+# This script -unfortunately- does more than one thing:
+# 
+#   (1) Pipe the mbox to STDOUT excluding the UW-IMAP placeholder.
+#   (2) Remove all but placeholder messages.
+#   (3) Create the mbox if it doesn't exist.
+#
+# Copyright © 2003  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file 'http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Sun, 01 Feb 2004 04:07:33 +0200
+
+set -e
+
+if [ -z "$1" ]; then
+	echo >&2 "Usage: $0 MBOX"
+	exit 1
+fi
+
+mbox=$1
+
+# Code adapted from the perl script 'nstouwimap'
+# of Dan Wallach <dwallach@cs.rice.edu>.
+
+dont_delete_message()
+{
+	now_string=$(LC_ALL=C date --rfc)
+	now_time=$(LC_ALL=C perl -e 'printf("%10i", scalar(time()));')
+	cat $1 <<EOF
+From MAILER-DAEMON $now_string
+Date: $now_string
+From: Mail System Useless Data <MAILER-DAEMON@nowhere.nobody.noway>
+Subject: DON'T DELETE THIS MESSAGE -- NECESSARY IMAP SERVER CRUD
+X-IMAP: $now_time 0000000000
+Status: RO
+
+This text is here because the U.W. IMAP daemon is incredibly strange
+in its design and seems to want to keep this around.  Far be it for
+us to argue with them.  Just leave it alone and things should work.
+
+EOF
+}
+
+if test -f $mbox && formail -1 -s <$mbox | \
+	grep -q "DON'T DELETE THIS MESSAGE"; then
+	mbox_bak=$mbox.$$
+	mv -f $mbox $mbox_bak
+	formail +1 -s <$mbox_bak
+	formail -1 -s <$mbox_bak >$mbox
+	rm -rf $mbox_bak
+else
+	if [ -f $mbox ]; then
+		cat $mbox
+	fi
+
+	dont_delete_message >$mbox
+fi

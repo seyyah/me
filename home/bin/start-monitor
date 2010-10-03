@@ -1,0 +1,60 @@
+#!/bin/sh
+#
+# Copyright © 2003  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file 'http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Sat, 21 Aug 2004 04:41:52 +0300
+
+set -e
+
+# Prefered program.
+PROG=multitail
+#PROG=ccze
+# Files to be monitored
+FILES="syslog cups/access_log cups/error_log lpr.log ppp.log apache/error.log apache/access.log \
+       apache2/error.log apache2/access.log kern.log auth.log snort/alert"
+
+
+if ! which $PROG; then
+	PROG=
+fi
+       
+files=
+for f in $FILES; do
+	if ! echo "$f" | grep -q '^/'; then
+		f=/var/log/$f
+	fi
+
+	if [ -r $f ]; then
+		files="$files $f"
+	fi
+done
+      
+case "$PROG" in
+	ccze)
+		command=`echo $files | awk '{
+				for (i = 1; i < NF; i++)
+					print "tail -f "$i" && "
+				print "tail -f "$NF
+			}'`
+		command="( $command ) | ccze -A -p syslog"
+		;;
+	multitail)
+		command=`echo $files | awk '{
+			print $1
+			for (i = 2; i <= NF; i++)
+				print "-I "$i
+		}'`
+		# Workaround to prevent mt from exiting before resizing the xterm.
+		command="sleep 10; multitail -Cs $command"
+		;;
+esac
+
+if [ -n "$command" ]; then
+	eval $command
+else
+	# Good than nothing.
+	[ -r /var/log/syslog ] && tail -f /var/log/syslog
+fi

@@ -1,0 +1,103 @@
+#!/bin/sh
+#
+# Run a remote svn admin script at remote side interactively.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Sat, 23 Oct 2004 07:25:02 +0300
+
+REMOTE_BIN=~/bin
+ACTIONS="recover perms"
+
+# TODO Make this function a separate script.
+# Prompt user for a string.
+type_string()
+{
+	query=$1; default=$2; help=$3; finished=no
+
+	while [ $finished != yes ]; do
+		echo -n "$query"; [ -n "$default" ] && echo -n " [$default]"; echo -n ": "
+		read ANS;
+		if [ "$ANS" = "" ]; then ANS="$default"; fi
+		if [ "$ANS" = "?" ]; then
+			if [ "$help" = "" ]; then
+				echo "sorry, no help is available"
+			else
+				echo "$help"
+			fi
+		else 
+			if [ -n "$ANS" ]; then
+				finished=yes
+			else
+				echo "please supply an entry!"
+			fi
+		fi
+	done
+}
+
+# TODO Make this function a separate script.
+# Prompt user to select from a list.
+choose_from_list()
+{
+	query=$1; choices=" $(echo $2) "; default=$3; help=$4; finished=no;
+
+	ANS=
+	while [ $finished != yes ]; do
+		echo "$query";
+		echo -n "    select from: $choices [$default]: "; read ANS;
+		if [ "$ANS" = "" ]; then ANS="$default"; fi
+		if [ "$ANS" = "?" ]; then 
+			if [ "$help" = "" ]; then
+				echo "    sorry, no help is available"
+			else
+				echo "$help";
+			fi
+		else if echo "$choices" | grep -q -- " $ANS "; then
+			finished=yes;
+		else echo "    unrecognized choice $ANS"; fi; fi
+	done
+}
+
+[ -x $HOME/bin/isserverup ] || { echo >&2 "isnetup not executable"; exit 1; }
+
+type_string "Enter [user@]hostname:repository" "" ""
+if echo "$ANS" | grep -q ':'; then
+	HOST=$(echo "$ANS" | cut -d ':' -f 1)
+	REPOS=$(echo "$ANS" | cut -d ':' -f 2)
+else
+	HOST=
+	REPOS=$ANS
+fi
+
+choose_from_list "Action?" "$ACTIONS" "recover" ""
+SCRIPT="repos-$ANS"
+
+case "$SCRIPT" in
+	repos-recover)
+		# Nothing to do.
+		;;
+	repos-perms)
+		echo ""
+		type_string "Enter 'OWNER[:[GROUP]]' or ':GROUP'" "" ""; ARGS="$ANS" ;;
+esac
+
+if [ -z "$HOST" ]; then
+	# Work in local filesystem.
+	$REMOTE_BIN/$SCRIPT $REPOS $ARGS
+else
+	if ! $HOME/bin/isserverup $HOST 22; then
+		echo >&2 "Couldn't reach SSH port of '$HOST'"
+		exit 1
+	fi
+
+	echo >&2 "Checking action script '$SCRIPT' at remote side..."
+	if ! ssh $HOST "test -x $REMOTE_BIN/$SCRIPT"; then
+		echo >&2 "Couldn't locate a valid script in $REMOTE_BIN..."
+		echo >&2 "You must have the $SCRIPT in $HOST:$REMOTE_BIN"
+		echo >&2 "Please copy the script first!"
+	fi
+
+	ssh $HOST "$REMOTE_BIN/$SCRIPT $REPOS $ARGS"
+fi

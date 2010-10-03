@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# Call center for home setup.
+# Recai Oktaş <roktas@omu.edu.tr>
+#
+# Last modified: Tue, 24 Aug 2004 18:49:15 +0300
+
+# Can't just assume home is the current directory.
+HOME=$(perl -e '@a=getpwuid($<); print $a[7]')
+
+cd $HOME
+
+if [ -f .bashrc ]; then
+	. .bashrc
+fi
+
+if [ -f $HOME/bin/my-shared-setup ]; then
+	if [ -x /usr/bin/sudo ]; then
+		sudo $HOME/bin/my-shared-setup
+	else
+		echo >&2 "Run shared config as root!"
+	fi
+fi
+
+if [ -f $HOME/bin/my-private-setup ]; then
+	. $HOME/bin/my-private-setup
+fi
+
+if [ -f $HOME/bin/my-gnome-config ]; then
+	. $HOME/bin/my-gnome-config
+fi

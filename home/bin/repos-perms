@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# Fix permissions of svn repository.
+# Copyright Â© 2004  Recai OktaÅ~_ <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Fri, 22 Oct 2004 19:56:30 +0300
+
+set -e
+
+# Sane defaults.
+DEFAULT_MODE='ug+rw,o-w'
+
+REPOS=$1; OG=$2; MODE=${3:-$DEFAULT_MODE}
+
+if [ -z "$REPOS" ] || [ -z "$OG" ]; then
+        echo >&2 "Usage: $0 REPOS OWNER[:[GROUP]] [MODE]"
+        echo >&2 "Usage: $0 REPOS :GROUP [MODE]"
+        exit 1
+fi
+
+cd $REPOS
+
+for d in conf dav db hooks locks; do
+        if [ ! -d $d ]; then
+                echo >&2 "'.' is not an svn directory; aborting"
+                exit 1
+        fi
+done
+
+echo >&2 "Fixing permissions in repository '$PWD'..."
+chown -R $OG .
+chmod -R $MODE .

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+DISTRIBUTION=${1:-unstable}
+BASE_DIR="/usr/local/src/pbuilder"
+
+case "$DISTRIBUTION" in
+stable|testing|unstable|experimental)
+	shift
+	sudo /usr/bin/pdebuild --buildresult $BASE_DIR/result -- \
+			       --basetgz $BASE_DIR/$DISTRIBUTION-base.tgz \
+			       --distribution $DISTRIBUTION  $@
+	;;
+*)
+	echo >&2 "Invalid distribution; valid distributions are:"
+	echo >&2 "   stable"
+	echo >&2 "   testing"
+	echo >&2 "   unstable"
+	echo >&2 "   experimental"
+	exit 1
+	;;
+esac

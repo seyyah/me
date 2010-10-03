@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# Too much primitive script to dump an ELOG log.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sun, 30 May 2004 13:52:12 +0300
+
+STAMP='\$@MID@\$: '
+LOGBOOK_ROOT=/srv/elog
+
+if [ ! $# -eq 2 ]; then
+	echo >&2 "Usage: $0 LOGBOOK ID"
+	exit 1
+fi
+book=$1; id=$2
+
+if echo $book | grep -q '^/'; then
+	logbook_dir=$book
+else
+	logbook_dir=$LOGBOOK_ROOT/$book
+fi
+	
+if [ ! -d $logbook_dir ]; then
+	echo >&2 "$0: no such logbook '$book' exists"
+	exit 1
+fi
+
+logfile=$(grep -l "${STAMP}${id}" $logbook_dir/*.log 2>/dev/null)
+if [ -z "$logfile" ]; then
+	echo >&2 "$0: no such log with id '$id'"
+
+	exit 0
+fi
+
+sed -ne "/${STAMP}${id}/,/$STAMP/{/$STAMP/!p}" $logfile | \
+sed -ne '/^=\+$/,$p' | sed -ne '2,$p' | tr -d ''

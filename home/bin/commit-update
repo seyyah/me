@@ -1,0 +1,84 @@
+#!/bin/sh
+#
+# Trigger an svn update on match.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Example usage in hooks/post-commit:
+#    LOG=/home/foo/logs/post-commit
+#    $REPOS/bin/commit-update $REPOS -x 'cgi-bin' sites >>$LOG 2>&1
+#
+# Last modified: Fri, 22 Oct 2004 23:54:51 +0300
+
+
+set -e
+
+USAGE="Usage: $0 [OPTION]... REPOS WC...
+
+Options:
+  -b, --basedir   base directory for WCs
+  -x, --expr      modified directory pattern to trigger an update
+  -v, --invert    invert the sense of match
+  -h, --help      display this help and exit"
+
+CTLFILE=no-commit-update
+
+arg_basedir=$PWD
+arg_pattern=""
+opt_invert=""
+
+GETOPT=$(getopt \
+--options     b:x:vh \
+--longoptions basedir:,expr:,invert,help \
+--name "$0" -- $@)
+
+eval set -- "$GETOPT"
+
+while true; do
+	case "$1" in
+		-b|--basedir)	arg_basedir="$2"; shift 2 ;;
+		-x|--expr)	arg_pattern="$2"; shift 2 ;;
+		-v|--invert)	opt_invert='-v';  shift   ;;
+		-h|--help)	echo >&2 "$USAGE"; exit 0 ;;
+		--)		shift; break ;;
+		*)		echo >&2 "$USAGE"; exit 1 ;;
+	esac
+done
+
+REPOS=$1
+shift
+
+if [ -z "$1" ]; then
+	echo >&2 "$USAGE"
+	exit 0 
+fi
+
+if [ ! -d $REPOS ]; then
+	echo >&2 "$0: no such repository '$REPOS'."
+	exit 1
+fi
+
+echo >&2 "========================================================================"
+for wc in $@; do
+	wc=$arg_basedir/$wc
+	if [ ! -d $wc ]; then
+		echo >&2 "$0: No such directory '$wc' to update."
+		continue
+	fi
+
+	if [ -e $CTLFILE ]; then
+		echo >&2 "$0: $CTLFILE file encountered; aborting."
+		continue
+	fi
+
+	if svnlook dirs-changed $REPOS | grep -q $opt_invert "$arg_pattern"; then
+		(
+			cd $wc && svn up && echo >&2 "'$wc' updated on $(date)."
+		)
+	else
+		echo >&2 "$0: '$wc' does not satisfy '$arg_pattern' for an update."
+	fi
+done
+echo >&2 "========================================================================"

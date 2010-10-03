@@ -1,0 +1,11 @@
+#!/bin/sh
+# Wrapper to saxon.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sun, 09 Nov 2003 00:32:07 +0200
+
+JAVASH=/usr/share/java
+
+export CLASSPATH=$JAVASH/saxon.jar:$CLASSPATH
+
+java $JAVA_OPTS com.icl.saxon.StyleSheet "$@"

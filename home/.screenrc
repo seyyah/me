@@ -1,0 +1,14 @@
+
+deflogin on
+
+# Key bindings for some applications.
+# update-alternatives --config www-browser --> elinks
+bind B screen -M -t "browser" 0 www-browser
+bind C screen -t "mc" $HOME/bin/launch mc
+bind F screen -t "off" 9 $HOME/bin/launch -offlineimap
+bind T screen -t "traps" 8 $HOME/bin/launch -edepot
+bind L screen -t "mail" 0 $HOME/bin/launch -mutt
+bind O screen -t "logs" $HOME/bin/launch -monitor
+bind P screen -M -t "music" 8 $HOME/bin/launch player
+bind R screen -M -t "root" 0 sudo -s
+bind U screen -t "mail" 0 $HOME/bin/launch -mutt

@@ -1,0 +1,80 @@
+#!/bin/sh
+#
+# Archive mails.
+# Copyright (©) 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Thu, 17 Feb 2005 01:32:22 +0200
+
+PATH=/sbin:/usr/local/sbin:/usr/sbin:/bin:/usr/local/bin:/usr/bin
+export PATH
+
+LISTPREFIX='list.'
+
+LISTS="debian-l10n-turkish debian-user-turkish debian-news debian-devel-announce 42"
+BOXES1="sent selected personal.plans personal.todos"
+BOXES2="inbox urgent"
+CRUFT="duplicates admin"
+
+MAILDIR=${1:-$MAILDIR}
+if [ -z "$MAILDIR" ]; then
+	MAILDIR=$HOME/Mail
+	echo >&2 "MAILDIR not set; falling back to $HOME/Mail"
+fi
+
+if [ ! -d $MAILDIR ]; then
+	echo >&2 "No such mail directory '$MAILDIR'"
+	exit 1
+fi
+
+ARCHDIR=$2
+if [ -z "$ARCHDIR" ]; then
+	ARCHDIR=$MAILDIR/Archive
+	echo >&2 "Archive directory set as $ARCHDIR"
+fi
+
+# Create archive dir if not exists...
+if ! mkdir -p $ARCHDIR; then
+	echo >&2 "Can't create archive directory '$ARCHDIR'"
+	exit 1
+fi
+
+# and change to mail directory.
+if ! cd $MAILDIR; then
+	echo >&2 "Can't change to mail directory '$MAILDIR'"
+	exit 1
+fi
+
+archmail="archivemail --quiet --output-dir=$ARCHDIR "
+pattern=$(echo -n $LISTS | tr ' ' "\n" | sed -e "s/^/${LISTPREFIX}/" | tr "\n" '|')
+
+all_lists="$(find . -maxdepth 1 -name "$LISTPREFIX*" -type d -print)"
+deleted_lists=$(echo "$all_lists" | egrep -v $pattern)
+archived_lists=$(echo "$all_lists" | egrep $pattern)
+
+# Delete crufts.
+[ -n "$CRUFT" ] && $archmail --days 7 --delete $CRUFT
+
+# Delete lists which are already archived somewhere on the net.
+[ -n "$deleted_lists" ] && $archmail --days 7 --delete $deleted_lists
+
+# Archive selected lists.
+[ -n "$archived_lists" ] && $archmail --days 14 $archived_lists
+
+# Archive special boxes.
+[ -n "$BOXES1" ] && $archmail $BOXES1
+[ -n "$BOXES2" ] && $archmail --days 14 $BOXES2
+
+# Now, remove empty lists to prevent screen cluttering.
+# TODO: Maybe a better method exists to reach the same goal.
+for d in $(find $MAILDIR -maxdepth 1 -mindepth 1 -type d -name "list.*"); do
+	(
+	cd $d
+	if [ "$(find . -maxdepth 1 -empty -print0)" = "./cur./new./tmp" ]; then
+		echo >&2 "Removing empty maildir '$d'..."
+		rm -rf $d
+	fi
+	)
+done

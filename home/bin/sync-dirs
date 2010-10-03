@@ -1,0 +1,189 @@
+#!/bin/sh
+#
+# Wrapper to rsync.  Sync to here and from there.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file 'http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Fri, 04 Mar 2005 07:53:19 +0200
+
+# TODO Needs a lot of sanitizations.
+
+# Only sync the files which are already exist and new.
+RSYNC_OPTS=${RSYNC_OPTS-"-Crv --update --existing"}
+LOG=${LOG-.log}
+DRYRUN=${DRYRUN-yes}
+
+RECIPE_PREFIX=.sync
+RC_PREFIX=.syncrc
+
+dosync() { rsync $@; }
+
+yesno()
+{
+	default=${2:-'y'}; upper_default=$(echo $default | tr a-z A-Z)
+
+	prompt=$(echo "[y/n]" | sed -e "s/[$default]/$upper_default/")
+        while true; do
+                echo -n "$1 $prompt "
+                read answer
+		
+		case "${answer:-$default}" in
+			[yY] | [yY][eE][sS])
+				return 0
+				;;
+			[nN] | [nN][oO])
+				return 1
+				;;
+			*)
+				echo "Type '[y]es' or '[n]o'"
+				;;
+		esac
+        done
+}
+
+# Stolen and modified from 'autoproject'.
+choose()
+{
+	query=$1; choices=" $(echo $2) "; default=$3
+	
+	finished=no; ANS=
+	while [ $finished != yes ]; do
+		echo -n "$query $choices [$default]: "; read ANS;
+		if [ "$ANS" = "" ]; then ANS="$default"; fi
+		if echo "$choices" | grep -q -- " $ANS "; then
+			finished=yes;
+		else
+			echo "    unrecognized choice $ANS"
+		fi
+	done
+}
+
+RECIPES=`find . -type f -name "${RECIPE_PREFIX}.*" -maxdepth 1 -mindepth 1 -printf " %f " | \
+	sed -e "s/ $RECIPE_PREFIX\./ /g" 2>/dev/null`
+
+if [ -f $RECIPE_PREFIX ]; then
+	RECIPES="$RECIPES noname"
+	DEFAULT_CHOICE="noname"
+fi
+
+RECIPES=$(echo $RECIPES)
+
+if [ -z "$RECIPES" ]; then
+	if [ $@ = 0 ]; then
+		echo >&2 "No way to determine source and destination."
+		exit 1
+	fi
+
+	SRC=$1
+	
+	# Generate the DEST from SRC if it wasn't defined.
+	DEST=${2:-$(basename $(echo "$SRC" | sed -e 's#/\+$##'))}
+else
+	if [ -n "$1" ]; then
+		recipe=$1
+		if ! echo " $RECIPES " | grep -q -- " $1 "; then
+			echo >&2 "No such recipe '$1' exists"
+		fi
+
+		shift
+
+		if [ -n "$@" ]; then
+			echo >&2 "Ignoring other arguments '$@'"
+		fi
+	else
+		if [ $(echo "$RECIPES" | wc -w) = 1 ]; then
+			recipe="$RECIPES"
+		else
+			choose "Which sync recipe will be applied?" \
+				"$RECIPES" "$DEFAULT_CHOICE"
+			recipe=$ANS
+		fi
+	fi
+fi
+
+if [ -n "$recipe" ]; then
+	if [ "$recipe" = "noname" ]; then
+		recipe_file=$RECIPE_PREFIX
+		recipe_rc=$RC_PREFIX
+	else
+		recipe_file=$RECIPE_PREFIX.$recipe
+		recipe_rc=$RC_PREFIX.$recipe
+
+		if [ -n "$LOG" ]; then
+			LOG=".${recipe}${LOG}"
+		fi
+	fi
+
+
+	if [ -f $recipe_rc ]; then
+		set -e
+		trap "echo \"Error in configuration file '$recipe_rc'; aborting.\"; exit 1" 0 INT
+		. $recipe_rc
+		trap - 0 INT
+		set +e
+	fi
+
+	if [ -x $recipe_file ]; then
+		export RSYNC_OPTS DRYRUN
+
+		# Prevent nested calls.
+		if [ "$SYNC_RUNNING" = "yes" ]; then
+			exit 0
+		fi
+
+		export SYNC_RUNNING=yes
+
+		echo -e "Syncing at $(date)\n" | tee $LOG
+		set -e
+		./$recipe_file 2>&1 | tee -a $LOG
+		exit 0
+	else
+		if [ ! -r $recipe_file ]; then
+			echo >&2 "Can't read '$recipe_file'"
+			exit 1
+		fi
+
+		eval set -- "$(sed -e '/^[ ]*\(#.*\|$\)/d' $recipe_file | head -1)";
+
+		SRC=$1
+		# Generate the DEST from SRC if it wasn't defined.
+		DEST=${2:-$(basename $(echo "$SRC" | sed -e 's#/\+$##'))}
+	fi
+fi
+
+# Default action.
+
+if [ ! -e "$SRC" ]; then
+	echo >&2 "Source '$SRC' doesn't exist; aborting."
+	exit 1
+fi
+
+if [ ! -e "$DEST" ]; then
+	echo >&2 "Destination '$DEST' doesn't exist; aborting."
+	exit 1
+fi
+
+if [ "$DRYRUN" = "yes" ]; then
+	dosync "$RSYNC_OPTS --dry-run" $SRC $DEST 2>&1 | $PAGER
+fi
+
+if yesno "Do the wet sync?" "n"; then
+	from=$SRC
+	if [ -L $from ]; then
+		from="$from --> $(ls -l $1 | awk '{ print $NF }')"
+	fi
+
+	to=$DEST
+	if [ -L $to ]; then
+		to="$to --> $(ls -l $2 | awk '{ print $NF }')"
+	fi
+
+	echo "Syncing at $(date)" | tee $LOG
+	echo "Source: $from" | tee -a $LOG
+	echo "Destination: $to" | tee -a $LOG
+	echo "------------------------------------------------------------------------" | tee -a $LOG
+	echo "" | tee -a $LOG
+	dosync $RSYNC_OPTS $SRC $DEST 2>&1 | tee -a $LOG
+fi

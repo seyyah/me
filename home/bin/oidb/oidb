@@ -1,0 +1,212 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use open qw{:locale};
+use Encode;
+use utf8;
+
+use constant COLUMNCSV => qw(no isim soyisim);
+use constant COLUMNTAB => {
+	'(öğrenci +no|numara|no)' => 'no',
+	'(ad|isim)' => 'isim',
+	'(soyad|soyisim)' => 'soyisim',
+	'(not)' => 'not',
+	'(durum)' => 'durum',
+};
+
+# file basename
+sub basename ($) {
+	my ($file) = @_;
+
+	$file =~ s/.*\/+//;
+	return $file;
+}
+
+
+# file dirname
+sub dirname ($) {
+	my ($file) = @_;
+
+	$file =~ s/\/*[^\/]+$//;
+	return $file;
+}
+
+
+# slurp file content
+sub slurp (%) {
+	my (%arg) = @_;
+	
+	$arg{file} = '-'  if !defined $arg{file};
+	$arg{ischomp} = 0 if !defined $arg{ischomp};
+
+	require IO::File;
+	my $in = new IO::File;
+
+	local $/=undef if !wantarray;
+	open $in, "$arg{file}" or die "failed to read $arg{file}: $!";
+	binmode $in, ":encoding($arg{encoding})" if defined $arg{encoding};
+	binmode $in if $arg{is_binary};
+
+	return wantarray && $arg{ischomp} ? map { chomp; $_ } <$in> : <$in>;
+}
+
+
+# spew content to a file
+sub spew (%) {
+	my (%arg) = @_;
+
+	$arg{file} = '-'      if !defined $arg{file};
+	$arg{directory} = '.' if !defined $arg{directory};
+	$arg{joinexpr} = "\n" if !defined $arg{joinexpr};
+
+	my $test = $arg{file};
+	while (length $test) {
+		if (-l "$arg{directory}/$test") {
+			die "Cannot write to a symlink ($test)";
+		}
+		$test = dirname($test);
+	}
+
+	my $dir = dirname("$arg{directory}/$arg{file}");
+	if (! -d $dir) {
+		my $d = "";
+		foreach my $s (split m!/+!, $dir) {
+			$d .= "$s/";
+			if (! -d $d) {
+				mkdir($d)
+				    or die "failed to create directory $d: $!";
+			}
+		}
+	}
+	
+	require IO::File;
+	my $out = new IO::File;
+
+	open $out, ">$arg{directory}/$arg{file}"
+	    or die "failed to write $arg{directory}/$arg{file}: $!";
+	binmode $out, ":encoding($arg{encoding})" if defined $arg{encoding};
+	binmode $out if $arg{is_binary};
+	print $out (
+		ref $arg{content} eq 'ARRAY' ? join $arg{joinexpr}, @{ $arg{content} } : $arg{content}
+	);
+}
+
+# trim spaces
+sub trim ($) {
+	my ($string) = @_;
+
+	if (defined $string && length $string) {
+		$string =~ s/^\s+//;
+		$string =~ s/\s+$//;
+	}
+
+	return $string;
+}
+
+# create csv lines from list
+sub csvlines ($$) {
+	my ($list_ref, $order) = @_;
+
+	my @rets;
+
+	require Text::CSV_XS;
+	my $csv = Text::CSV_XS->new({ binary => 1});
+	foreach my $record (@{ $list_ref }) {
+		my %h = %{ $record };
+		my @columns = @h{@{ $order }};
+		if ($csv->combine(@columns)) {
+			push @rets, decode_utf8($csv->string);
+		}
+		else {
+			my $err = $csv->error_input;
+			die "CSV combine() failed on argument: $err\n";
+		}
+	}
+
+	return @rets;
+}
+
+my $outfile;
+my @columns;
+my $wantheader;
+
+use Getopt::Long;
+if (!GetOptions("output=s" => \$outfile, "col=s@" => \@columns, "header" => \$wantheader)) {
+	die "Usage: $0 [--output FILE] [--col COLUMN]... [--header] [FILE]\n";
+}
+
+my $infile = $ARGV[0];
+
+my %header = ();
+my @list = ();
+my @fields;
+
+my $list_seen = 0;
+my $colpat = '\b(' . join('|', keys %{ +COLUMNTAB }) . ')[ ]*' . "\t";
+my $colre  = qr/$colpat/;
+
+foreach (slurp(file => $infile, encoding => 'cp1254', ischomp => 1)) {
+	tr/[*]//d;
+	$_ = trim($_);
+	$_ = lc($_);
+
+	if (!$list_seen) {
+		if (m/\böğretim\s+yılı\s*[:]\s*(\d+)/) {
+			$header{yil} = $1;
+		}
+		if (m/\bdönem\s*[:]\s*(\S+)/) {
+			$header{donem} = $1;
+		}
+		if (m/\bfakülte\s*[:]\s*(\S+)/) {
+			$header{fakulte} = $1;
+		}
+		if (m/\bders\s+kodu\s*[:]\s*(\S+)/) {
+			$header{kod} = $1;
+		}
+		if (m/\bders\s+adı\s*[:]\s*(\S+)/) {
+			$header{ad} = $1;
+		}
+		if (m/\btoplam\s*[:]\s*(\d+)/) {
+			$header{toplam} = $1;
+		}
+		if (m/$colre/o) {
+			my @raw = split "\t";
+			if (scalar @raw > 2) {
+				foreach my $field (map { trim($_) } @raw) {
+					while (my ($k, $v) = each %{ +COLUMNTAB }) {
+						my $re = qr(^$k$); # suboptimal code
+						push @fields, $v if $field =~ m/$re/;
+					}
+				}
+				$list_seen = 1;
+			}
+		}
+	}
+	else {
+		my @raw = split "\t";
+		if (scalar @raw > 2) {
+			my %data;
+			@data{@fields} = map { trim($_) } @raw;
+			$data{no} =~ s/[-]//g;
+			push @list, \%data;
+		} else { $list_seen = 0 }
+	}
+}
+
+if (@columns) {
+	foreach my $record (@list) {
+		my %h = %{ $record };
+		my @values = @h{@columns};
+		next if !@values;
+		print join "\t", @values, "\n";
+	}
+}
+elsif (defined $wantheader) {
+	while (my ($k, $v) = each %header) {
+		print "$k: $v\n";
+	}
+}
+else {
+	spew(file => $outfile, content => [csvlines(\@list, [COLUMNCSV])]);
+}

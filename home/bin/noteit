@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# Create a note from STDIN.
+#
+# Recai Oktaş <roktas.omu.edu.tr>
+# Last modified: Sun, 30 May 2004 13:54:39 +0300
+
+
+# Where the notes reside.
+NOTE_DIR=~/unfiled/notes
+
+# Unique note name.
+NOTE_NAME=$(date --iso-8601=seconds)
+
+# Seperator in 'printf' format.
+SEP="\n\n"
+
+usage() { echo >&2 "usage: $0 [-a (append) | -h (help)]"; }
+
+if [ ! -z "$2" ]; then
+	echo >&2 "$0: too much argument '$@'"
+	usage; 	exit 1
+fi
+
+if [ ! -z "$1" ]; then
+  case "$1" in
+	  -a)
+		  note=$(ls $NOTE_DIR 2>/dev/null | tail -1)
+		  ;;
+	  -h)
+		  usage; exit 0
+		  ;;
+	  *)
+		  echo >&2 "$0: no such argument '$1'"
+		  usage; exit 1
+		  ;;
+  esac
+fi
+
+if [ ! -d $NOTE_DIR ]; then
+	mkdir -p $NOTE_DIR && echo >&2 "$0: directory '$NOTE_DIR' created."
+fi
+ 
+if [ ! -z "$SEP" -a -f $NOTE_DIR/$note ]; then
+	printf "$SEP" >>$NOTE_DIR/$note
+elif [ -z "$note" ]; then
+	note=$NOTE_NAME
+fi
+
+# Filter out trailing white spaces.
+xclip -o | sed -e "s/[ 	]*$//" >>$NOTE_DIR/$note && beep

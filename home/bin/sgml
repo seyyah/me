@@ -1,0 +1,82 @@
+#!/bin/sh
+#
+# Wrapper to db2xxx wrappers.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sun, 01 Feb 2004 04:24:32 +0200
+
+set -e
+
+#TIDY="tidy -im -wrap 72 -raw"
+
+if [ $# -lt 2 ] ; then
+	echo >&2 "Usage: $0 MODE ARGS"
+	exit 1
+fi
+mode=$1; shift; args="$@"
+
+dbproc="db2${mode}"
+if ! which $dbproc; then
+	echo >&2 "$0: no such processor '$dbproc' exists"
+	exit 1
+fi
+
+# Stolen code and idea from 'xmlto'.
+charmap=$SP_ENCODING
+if [ -z "$charmap" ]; then
+	# Magic encoding, based on locale
+	if [ -x /usr/bin/locale ]; then
+		charmap=$(locale charmap 2>/dev/null)
+	fi
+
+	if [ -n "$charmap" ]; then
+		export SP_ENCODING=$charmap
+	fi
+fi
+
+if [ "$mode" = "html" -a -n "$charmap" ] && \
+	! echo $@ | egrep -q '[      ](\-d|\-\-dsl)[         ]'; then
+	dsl_temp=${TMPDIR-/tmp}/xml.$$
+        trap "rm -rf $dsl_temp" 0 INT
+
+	cat >$dsl_temp <<EOF
+<!DOCTYPE style-sheet PUBLIC "-//James Clark//DTD DSSSL Style Sheet//EN" [
+<!ENTITY dbstyle PUBLIC "-//Norman Walsh//DOCUMENT DocBook HTML
+Stylesheet//EN" CDATA DSSSL>
+]>
+
+<style-sheet>
+<style-specification use="docbook">
+<style-specification-body>
+
+(define %html-header-tags% 
+  '(("META" ("HTTP-EQUIV" "Content-Type") 
+	    ("CONTENT" "text/html; charset=$charmap"))))
+
+(define %root-filename% "index")
+(define %html-ext% ".html")
+
+(define %html-index% #t)
+(define %html-index-filename% "SGML.index")
+(define %use-id-as-filename%i #t)
+
+</style-specification-body>
+</style-specification>
+<external-specification id="docbook" document="dbstyle">
+</style-sheet>
+EOF
+	args="-d $dsl_temp $args"
+fi
+echo "$dbproc $args"
+
+message=$($dbproc $args)
+
+# 'tidy' may produce bad results for '<pre>' content, don't examine why?
+if [ "$?" -eq 0 -a "$mode" = "html"  -a -n "$TIDY" ]; then
+	output=$(echo "$message" | sed -ne 's/^output is \(.*\)/\1/p')
+	if [ -d "$output" ]; then
+		for f in $output/*.html; do
+			$TIDY $f
+		done
+	fi
+fi

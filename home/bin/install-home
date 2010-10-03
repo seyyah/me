@@ -1,0 +1,123 @@
+#!/bin/sh
+#
+# Install checked out files to home.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Fri, 29 Oct 2004 06:24:10 +0300
+
+set -e
+
+DESTDIR=${1:-$HOME}
+BACKUPDIR=$DESTDIR/$(basename $DESTDIR).$(date +"%Y%m%d")
+REALHOME=.home
+FILES_FOR_ROOT="bin .cron .vim .vimrc"
+
+backup()
+{
+	if [ -e $DESTDIR/$1 ]; then
+		mv -f $DESTDIR/$1 $BACKUPDIR/
+	fi
+}
+
+move()
+{
+	backup ${2:-$1}
+	cp -a $1 $DESTDIR/$2
+}
+
+link()
+{
+	backup ${2:-$1}
+	ln -s $1 $DESTDIR/$2
+}
+
+if [ ! -d $DESTDIR ]; then
+	echo >&2 "Destination $DESTDIR does not exist!"
+	exit 1
+fi
+
+if [ ! -d private/.svn ] || [ ! -d public/.svn ]; then
+	echo >&2 "Directories 'private' and 'public' not found or valid!"
+	exit 1
+fi
+
+echo >&2 "Destination: $DESTDIR"
+
+oldbackup_dir=
+if [ -d $BACKUPDIR ]; then
+	mv -f $BACKUPDIR $BACKUPDIR.$$
+	oldbackup_dir=$BACKUPDIR.$$
+fi
+mkdir $BACKUPDIR
+
+# Prepare the real home directory from which we create symlinks.
+mkdir -p $DESTDIR/$REALHOME
+
+for base in public private; do
+	# Repos directory with the home content.
+	home=home
+
+	echo >&2 "Installing from $base"
+	(
+		cd $base
+
+		if [ -e $home ]; then
+			move $home $REALHOME/$base
+		fi
+
+		# Do not install modules for root.
+		if [ "$(id -u)" != 0 ]; then
+			find . -maxdepth 1 -type d -printf "%f\n" | \
+			grep -v "^\(\..*\|$home\)$" | \
+			while read d; do
+				echo -n >&2 "    Moving $d "
+				move $d
+				echo >&2 "OK"
+			done
+		fi
+	)
+	
+	if [ ! -e $DESTDIR/$REALHOME/$base ]; then
+		continue
+	fi
+
+	(
+		cd $DESTDIR
+
+		# Root should have minimum files.
+		if [ "$(id -u)" = 0 ]; then
+			for f in $FILES_FOR_ROOT; do
+				f=$REALHOME/$base/trunk/$f
+				if [ -e $f ]; then
+					echo $f
+				fi
+			done
+		else
+			find $REALHOME/$base/trunk -maxdepth 1 -mindepth 1 | \
+			grep -v "\(\.svn\)$"
+		fi | \
+		while read f; do
+			linkname=$(basename $f)
+			echo -n >&2 "    Symlinking $linkname "
+			link $f $linkname
+			echo >&2 "OK"
+		done
+	)
+done
+
+# Silently remove backup directory if empty.
+if rmdir $BACKUPDIR 2>/dev/null; then
+	[ -n "$oldbackup_dir" ] && mv $oldbackup_dir $BACKUPDIR
+fi
+
+# Set up environment only for non-root.
+if [ "$(id -u)" != 0 ]; then
+	echo >&2 "Setting up private environment..."
+	$HOME/bin/my-private-setup
+fi
+
+echo >&2 "Installation finished successfully!"
+echo >&2 "Check the backups and remove this installation directory if you want."

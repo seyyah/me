@@ -1,0 +1,2 @@
+#!/bin/sh
+xtightvncviewer -passwd $HOME/local/myVNCpasswd 192.168.140.142

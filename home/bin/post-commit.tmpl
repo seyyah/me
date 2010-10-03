@@ -1,0 +1,45 @@
+#!/bin/sh
+#
+# Post-commit hook template for Subversion
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Tue, 02 Nov 2004 03:49:23 +0200
+
+set -e
+
+# Make sure to include the path of custom scripts.
+PATH=~/bin:$PATH:/usr/lib/subversion/:/usr/lib/subversion/hook-scripts/
+
+REPOS="$1"; REV="$2"
+
+# Edit followings to suit your needs.
+BASE=/home/roktas
+LOG=$BASE/logs/svn/post-commit
+NAME=$(basename $REPOS)
+BACKUPS=$BASE/backups/$NAME
+CTLFILE=$REPOS/no-post-commit
+
+# Stop all post commits if told so.
+if [ -e $CTLFILE ]; then
+	echo >&2 "$0: $CTLFILE file encountered; aborting."
+	exit 0
+fi
+
+# Simple log rotate functionality.
+#[ -f $LOG ] && [ "$(du -k $LOG | cut -f1)" -gt 200 ] && :>$LOG
+
+# Auto update some WCs on commit.
+#commit-update $REPOS -b $BASE sites .home/public >>$LOG 2>&1 &
+
+# Post a short commit log to a watcher. 
+#commit-mail $REPOS $REV $NAME roktas >>$LOG 2>&1 &
+#MAIL_COMMAND='mutt' commit-mail $REPOS $REV $NAME roktas >>$LOG 2>&1 &
+
+# Post a commit log to admin (more detailed).
+#commit-email.pl "$REPOS" "$REV" roktas &
+
+# Create hot backups.
+#[ -w $BACKUPS ] && hot-backup.py $REPOS $BACKUPS &

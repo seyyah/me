@@ -1,0 +1,93 @@
+#!/bin/sh
+#
+# Updates a package in svn vs a new upstream directory.  Run it in the current
+# checkout of the package and its version number.
+# Based on the original work by Joey Hess <joey@kitenet.net>
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sun, 30 May 2004 13:51:56 +0300
+
+
+set -e
+
+PROGRAM=$(echo $0 | sed -e 's!.*/!!')
+
+if [ ! -f debian/changelog ]; then
+	echo 2>&1 "$0: must be in the top level source directory."
+	exit 1
+fi
+
+# This script is prepared basically for svn.  But also wrap others.
+if [ ! -d .svn ]; then
+	if [ -d CVS ]; then
+		cvs-uupdate "$@"
+	else
+		uupdate "$@"
+	fi	
+	exit $?
+fi
+
+new_upstream_source=$1
+new_upstream_version=$2
+
+if [ ! -f $new_upstream_source ] || [ -z "$new_upstream_version" ]; then
+	echo "Usage: $PROGRAM new-upstream-tarball new-upstream-version" >&2
+	exit 1
+fi
+
+# Make sure this wc is clean.
+if [ -n "$(svn st)" ]; then
+	echo "Working directory is not clean or up-to-date.  Resolve and retry." >&2
+	svn st
+	exit 1
+fi
+
+old_upstream_version=$(dpkg-parsechangelog | grep Version: | cut -f 2 -d ' ' | cut -f 1 -d -)
+temp_dir=${TMPDIR-/tmp}/${PROGRAM}.$$
+temp_work_dir=$temp_dir/workdir
+temp_upstream_dir=$temp_dir/upstream
+
+mkdir -p $temp_work_dir $temp_upstream_dir
+trap "rm -rf $temp_dir" 0 INT
+
+# First unpack upstream.
+if ! tar zxvf $new_upstream_source --directory $temp_upstream_dir; then
+	echo "failure unpacking upstream source" >&2
+	exit 1
+fi
+new_upstream_dir=$(echo $temp_upstream_dir/*)
+
+# You may need to change these expressions to match your repo.
+upstream_branch=$(svnpath vendor)
+old_upstream_url=$upstream_branch/$old_upstream_version
+new_upstream_url=$upstream_branch/$new_upstream_version
+current_upstream_url=$upstream_branch/current
+
+# Set up the temp workdir. This is only needed because svn_load_dirs wants
+# it. We could actually use the real workdir, but that would involve
+# switching it to the old upstream version, and then back, which would
+# waste network bandwidth. Instead, waste some disk. (There's something to
+# be said for the idempotency of this approach, too.)
+cp -a . $temp_work_dir
+
+# Switch workdir back to the previous upstream source. 
+if ! svn switch $current_upstream_url $temp_work_dir; then
+	echo "Failed to switch to $current_upstream_url" >&2
+	exit 1
+fi
+
+# All the ugly/hard stuff is in here.
+svn_load_dirs -t $new_upstream_version $upstream_branch current $new_upstream_dir -wc $temp_work_dir
+
+# Merge all changes that occurred between the two upstream releases into
+# the working copy.
+svn merge $old_upstream_url $current_upstream_url .
+
+# Check for conflicts.
+if [ -n "$(svn st | grep ^C)" ]; then
+	echo "** There were conflicts. Resolve them and commit." >&2
+	svn st | grep ^C
+else
+	svn commit -m "merged changes between upstream releases $old_upstream_version and $new_upstream_version"
+	echo "Update complete."
+fi

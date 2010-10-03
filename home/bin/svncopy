@@ -1,0 +1,46 @@
+#!/bin/bash
+#
+# Wrapper to 'svn copy' for well-defined repository layouts.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Tue, 24 Aug 2004 10:04:01 +0300
+
+
+# TODO Should be more smart.
+
+if [ $# -le 2 ]; then
+	echo 2>&1 "Usage: $0 BASE DEST [svn copy args]"
+	exit 1
+fi
+
+base=$1; shift; dest=$1; shift; args_svn="$@"
+
+if [ ! -d .svn ]; then
+	echo 2>&1 "Is this an svn working directory?"
+        exit 1
+fi
+
+# XXX Ugly code.  Any clever solution?
+if [ ! -d ../trunk -a ! ../../trunk ] || \
+	svn list $(svnpath $base) 2>&1 | grep -qs "^svn: URL non-existent"; then
+	echo 2>&1 "Unusual directory structure.  Are you in the trunk level?"
+	exit 1
+fi
+
+url_trunk=$(svnpath trunk)
+
+url_base=$(svnpath $base)
+
+if ! svn list $url_base/$dest 2>&1 | grep -qs "^svn: URL non-existent"; then
+	echo 2>&1 "A copy of '$dest' already exists under $url_base."
+	exit 1
+fi
+
+if svn status | grep ''; then
+	echo -e 2>&1 "\nStatus not clean; fix this first."
+	exit 1
+fi
+
+echo 2>&1 "Status clean; creating a trunk copy as '$dest'."
+
+svn copy $url_trunk $url_base/$dest "$args_svn"

@@ -1,0 +1,31 @@
+#!/bin/sh -e
+#
+# Start elog browsing.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sat, 04 Sep 2004 15:35:59 +0300
+
+[ -x $HOME/bin/isserverup ] || { echo >&2 "isnetup not executable"; exit 1; }
+
+PORT=8080
+
+vbrowser=
+for prog in $VBROWSER w3m $BROWSER links lynx; do
+	if which $prog >/dev/null; then
+		vbrowser=$prog
+		break
+	fi
+done
+
+[ -n "$vbrowser" ] || { echo >&2 "no text browser found"; exit 1; }
+
+host=
+for h in $SERVER hydrogen neathacks.mine.nu; do
+	if $HOME/bin/isserverup $h $PORT; then
+		host=$h
+		break
+	fi
+done
+
+[ -n "$host" ] || { echo >&2 "no ELOG host available"; exit 1; }
+$vbrowser http://$host:$PORT/40ambar/?mode=threaded

@@ -1,0 +1,33 @@
+#!/bin/sh -e
+#
+# Invoke a command while logging it to syslog.
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Mon, 06 Sep 2004 04:12:34 +0300
+
+# Permitted executables to invoke.
+PERMITTED="goodmorning"
+
+log() { logger -t bot "$@"; }
+
+[ -n "$1" ] || { log "nothing to run"; exit 1; }
+[ -n "$(which $1)" ] || { log "$1 is not available"; exit 1; }
+
+if ! echo $PERMITTED | grep -q "\<$1\>"; then
+	log "no permission for '$1' to run"
+	exit 1
+fi
+
+if [ -f $HOME/no-bot ]; then
+	log "found no-bot stamp; aborting"
+	exit 0
+elif [ -f $HOME/no-$1 ]; then
+	log "found no-$1 stamp; aborting"
+	exit 0
+fi
+
+log "invoking $@"
+exec $@

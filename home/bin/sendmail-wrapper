@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# TODO
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Mon, 23 Feb 2004 07:29:24 +0200
+
+set -e
+
+
+SENDMAIL="/usr/bin/ssh 193.140.28.3 /usr/sbin/sendmail -t"
+
+$SENDMAIL $@

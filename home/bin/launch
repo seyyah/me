@@ -1,0 +1,86 @@
+#! /bin/bash
+# Launch a program.
+
+PATH=$HOME/bin:$PATH
+export PATH
+
+TARGET="$1"
+RESPAWN=
+
+[ -n "$TARGET" ] || exit 0
+shift
+
+if [ -e $HOME/bin/launch.sh ]; then
+	. $HOME/bin/launch.sh
+elif [ -e $HOME/.launch.conf ]; then
+	. $HOME/.launch.conf
+else
+	exit 0
+fi
+
+if expr "$TARGET" : '-*' >/dev/null 2>&1; then
+	RESPAWN=yes
+	TARGET=$(echo "$TARGET" | sed -e 's/^-//')
+fi
+
+# Stolen and modified from somewhere else (I forgot).
+yesno()
+{
+	local default upper_default prompt answer
+
+	default=${2:-'y'}; upper_default=$(echo $default | tr a-z A-Z)
+
+	prompt=$(echo "[y/n]" | sed -e "s/[$default]/$upper_default/")
+        while true; do
+                echo -n "$1 $prompt "
+                read answer
+		
+		case "${answer:-$default}" in
+		[yY] | [yY][eE][sS])
+			return 0
+			;;
+		[nN] | [nN][oO])
+			return 1
+			;;
+		*)
+			echo "Type '[y]es' or '[n]o'"
+			;;
+		esac
+        done
+}
+
+if [ "$TERM" = screen ] && [ -x /usr/bin/screen ]; then
+	alert()
+	{
+		MSG="$TARGET died!"
+		screen -X echo $MSG ||:
+		screen -X backtick 9 0 0 echo $MSG ||:
+		screen -X redisplay ||:
+	}
+
+	mute()
+	{
+		screen -X backtick 9 ||:
+	}
+else
+	alert() { :; }
+	mute()	{ :; }
+fi
+
+if launch_prep_${TARGET} && [ -n "$CMD" ]; then
+	if [ -n "$RESPAWN" ]; then
+		while :; do
+			mute
+			$CMD $@
+			reset
+			alert 
+			if ! yesno "Respawn '$TARGET'?" "y"; then
+				sleep 1
+				mute
+				break
+			fi
+		done
+	else
+		exec -a "$TARGET" $CMD "$@"
+	fi
+fi

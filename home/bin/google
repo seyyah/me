@@ -1,0 +1,51 @@
+#! /bin/bash
+#
+# Search google via command line.
+#
+# Written by Thiemo Seufer <seufer@csv.ica.uni-stuttgart.de>
+#
+function usage ()
+{
+	echo "Usage: $0 <first_word> [more_words...]"
+	exit 1
+}
+
+[ ${#} -ge 1 ] || usage
+
+# Convert ANSI characters to integers
+#
+for i in $(seq 0 255); do
+	j=$(printf '%o' $i)
+	_charset[i]=$(echo -ne "\\$j")
+done
+
+function atoi ()
+{
+	for _i in $(seq 0 255); do
+		if [ "${_charset[$_i]}" = "$1" ]; then
+			_n=$_i
+			return $_i
+		fi
+	done
+}
+
+# Urlencode arguments (RFC 1738)
+#
+for i in $(seq 1 $#); do
+	arg=${!i}
+	for j in $(seq 0 ${#arg}); do
+		c="${arg:$j:1}"
+		if [ -n "${c/[[:alnum:]$-_.+!*\'(),]/}" ]; then
+			atoi "$c"
+			urlargs="${urlargs}"$(printf "%%%X" ${_n})
+		else
+			urlargs="${urlargs}"$(echo -n "${c}")
+		fi
+	done
+	[ $i -lt $# ] && urlargs="${urlargs}+"
+done
+
+# Google query
+#
+links -source "http://www.google.com/search?safe=off&q=${urlargs}" \
+	|grep -v ".google.com" |urlview

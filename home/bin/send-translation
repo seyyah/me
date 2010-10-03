@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+# Check Turkish Debconf translation and submit to BTS.
+# Copyright © 2005  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Fri, 01 Apr 2005 20:48:46 +0300
+
+set -e
+
+CHECK_TRANSLATIONS="check-translations"
+
+PACKAGE=$1
+POFILE=$2
+
+if [ -z "$PACKAGE" ]; then
+	echo >&2 "Please supply a package name"
+	exit 1
+fi
+
+POFILE=${2:-"tr.po"}
+if [ ! -f $POFILE ]; then
+	echo >&2 "Couldn't find '$POFILE'."
+	exit 1
+fi
+
+if which $CHECK_TRANSLATIONS >/dev/null; then
+	echo >&2 "Checking '$POFILE' against errors... "
+	if ! $CHECK_TRANSLATIONS $POFILE; then
+		echo >&2 "Please fix the errors before submitting; aborting."
+		exit 1
+	fi
+fi
+
+gzip -9 $POFILE
+if [ -e $POFILE.gz ]; then
+	POFILE=$POFILE.gz
+fi
+
+SUBJECT="${PACKAGE}: [INTL:tr] Turkish debconf templates translation"
+
+reportbug --attach "${POFILE}" \
+	  --subject "${SUBJECT}" \
+	  --severity=wishlist \
+	  --tag=patch \
+	  --tag=l10n \
+	  --no-config-files \
+	  --no-check-available \
+	  --no-query-bts \
+	  --no-check-installed \
+	  --package-version="N/A" \
+	  --list-cc="" $PACKAGE

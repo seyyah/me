@@ -1,0 +1,60 @@
+#!/usr/bin/python
+#
+# Copyright (C) 2007  Enrico Zini <enrico@debian.org>
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by the
+# Free Software Foundation; either version 2 of the License, or (at your
+# option) any later version.
+
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning, append=1)
+
+# From python-debian
+from debian_bundle import debtags
+# From python-apt
+import apt
+import sys
+import re
+
+def main():
+    if not sys.argv[1:]:
+	print "usage: deblike package"
+	sys.exit(2)
+
+    target =  sys.argv[1]
+    aptCache = apt.Cache()
+
+    # Read the debtags database 
+    db = debtags.DB()
+    tagFilter = re.compile(r"^special::.+$|^.+::TODO$")
+    db.read(open('/var/lib/debtags/package-tags', "r"), lambda x: not tagFilter.match(x))
+
+    # Get the tags of the package
+    tagset = db.tagsOfPackage(target)
+
+    # Get the list of packages that have some tag in common with pkg
+    nextpkgs = set()
+    for pkg, tags in db.iterPackagesTags():
+	if tagset & tags:
+	    nextpkgs.add(pkg)
+
+    # Score every package by the number of tags it has in common with pkg
+    def pkgscore(pkg):
+	if pkg == target:
+	    return -1
+	score = 0
+	for tag in db.tagsOfPackage(pkg):
+	    if tag in tagset:
+		score += 1
+	return score
+
+    # Show the top 20 related packages in reverse score order
+    display = sorted(nextpkgs, key=pkgscore, reverse=True)[:20]
+    for num, pkg in enumerate(display):
+	aptpkg = aptCache[pkg]
+	desc = aptpkg.rawDescription.split("\n")[0]
+	print "%2d %s - %s" % (num + 1, pkg, desc)
+
+if __name__=='__main__':
+    main()

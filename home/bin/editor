@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Wrapper to VI(M).
+# Copyright © 2004  Recai Oktaş <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+
+set -e
+
+if [ "$0" = "vi" ] || [ "$(id -u)" = 0 ] && [ -z "$FORCE_VIM" ]; then
+	EDITOR='~/bin/vim-small -u ~/.virc'
+else
+	EDITOR='/usr/bin/vim'
+fi
+
+if ! expr "$*" : ".*\(~/tmp\|$HOME/tmp\|${TMPDIR-/tmp}\)/.*" \
+		>/dev/null 2>&1; then
+	# Generate a neat title.
+	ts=$(echo "${1##*/}" | sed -ne 's/^\(\.*[^.]\+\).*/\1/p' | cut -b0-3)
+	tl=$(echo "${1##*/}" | sed -ne 's/^\(\.*[^.]\+\).*/\1/p' | cut -b0-5)
+
+	if [ -n "$ts" ]; then
+		# Now change the title.
+		case "$TERM" in
+		screen)
+			if [ -x /usr/bin/screen ]; then
+				screen -X title $ts >/dev/null 2>&1 ||:
+			fi
+			;;
+		# Make sure that xttitle available.
+		xterm*|rxvt*|aterm*|wterm*)
+			if [ -x /usr/bin/xttitle ]; then
+				xttitle $tl >/dev/null 2>&1 ||:
+			fi
+			;;
+		esac
+	fi
+fi
+
+exec -a "editor" $EDITOR "$@"

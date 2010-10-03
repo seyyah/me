@@ -1,0 +1,29 @@
+#!/bin/sh -e
+#
+# Wrapper to 'offlineimap'.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Fri, 23 Sep 2005 14:36:51 +0300
+
+# Hack alert!  Source my Xmodmap here, damn!
+#if [ "$DISPLAY" ] && [ -f $HOME/.Xmodmap ] && [ -x /usr/bin/X11/xmodmap ]; then
+#        /usr/bin/X11/xmodmap $HOME/.Xmodmap || true
+#fi
+
+[ -x /usr/bin/offlineimap ] || { echo >&2 "offlineimap not executable"; exit 1; }
+[ -f $HOME/.offlineimaprc ] || { echo >&2 "no config for offlineimap exists"; exit 1; }
+[ -x $HOME/bin/isnetup ] || { echo >&2 "isnetup not executable"; exit 1; }
+
+# Max attempts while waiting for the network up.
+MAX_TRY=15
+USE_SSH_AGENT=no
+
+# Check my current mail server.
+$HOME/bin/isnetup 193.140.28.3 22
+
+# Reached here, start the program.
+if [ "$USE_SSH_AGENT" = yes ]; then
+	ssh-add && offlineimap
+else
+	offlineimap
+fi

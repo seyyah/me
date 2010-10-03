@@ -1,0 +1,20 @@
+\usepackage[turkish]{babel}
+
+\textwidth=19cm
+\textheight=22cm
+\topmargin=-1.14cm
+\footskip=2.5cm
+\oddsidemargin=-1.0cm
+\evensidemargin=-1.5cm
+\marginparsep=-0.0cm
+\marginparwidth=-0.0cm
+
+%\onehalfspacing
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{4}
+
+\pagestyle{myheadings}
+
+% Satır aralığı
+%\renewcommand{\baselinestretch}{1.5}
+%\parskip 2.mm

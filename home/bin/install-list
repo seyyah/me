@@ -1,0 +1,226 @@
+#!/bin/sh
+# Install files into a destination.
+# Copyright © 2003  Recai Oktaş <roktas.omu.edu.tr>
+# Based on the original idea of 'dh_install' by Joey Hess <joey@kitenet.net>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file 'http://www.gnu.org/copyleft/gpl.txt'.
+
+set -e
+
+# Expanded by svn automatically when this file is checked out.
+REVISION='$Id$'
+
+PROGRAM=$(echo $0 | sed -e 's!.*/!!')
+
+# Expanded by svn automatically when this file is checked out.
+VERSION=$(echo '$Rev$' | cut -f2 -d' ')
+
+# Default install file to look for.
+LISTFILE=.install
+
+msg_usage="Usage: $PROGRAM [OPTION]... [SOURCE]... DEST-DIR"
+
+msg_try="Try '$PROGRAM --help' for more information."
+
+msg_help=\
+"Install files into DEST-DIR.  SOURCE files and destinations can be defined in
+a list file named '$LISTFILE' which must be present in the current directory.
+The format is a set of lines, where each line lists a file or files to
+install, and optionally, at the end of the line tells the directory it should
+be installed in.  The name of the files (or directories) to install should be
+given relative to the current directory, while the installation directory is
+given relative to the DEST-DIR. You may use wildcards in the names of the
+files to install.  If only one field exists in a line, it will be treated as a
+source and will be directly installed into DEST-DIR.  This is in contrast with
+the command line syntax in which the last field is always treated as the
+destination.
+
+  -c, --chdir DIR                     change current directory
+  -h, --help                          display this help and exit
+  -i, --install-list FILE             use FILE as the install list
+  -V, --version                       output version information and exit
+  -v, --verbose                       be verbose
+  -X, --exclude PATTERN               exclude sources matching with the PATTERN
+
+Report bugs to <roktas@omu.edu.tr>."
+
+msg_version=\
+"$PROGRAM $VERSION
+
+Copyright © 2002 by Recai Oktaş <roktas@omu.edu.tr>.
+There is NO warranty.  You may redistribute this software
+under the terms of the GNU General Public License.
+For more information about these matters, see the files named COPYING."
+
+# Primitive to pretty-print messages of arbitrary length.
+msg() { echo -e "$*" | fold -s -w ${COLUMNS:-80} >&2; }
+
+
+verbose()
+{
+	if [ "$VERBOSE" = yes ]; then
+		msg "$*"
+	fi
+}
+
+
+fatal()
+{
+	# Always print the first argument as a formatted error.
+	msg "${PROGRAM:-$(echo $0 | sed -e 's!.*/!!')}: $1"
+	shift
+
+	# Print the remaining arguments as they are.
+	while [ "$#" -gt 0 ]; do
+		msg "$1"
+		shift
+	done
+
+	exit 1
+}
+
+doit() { eval $* || fatal "command returned error code"; }
+
+GETOPT=$(getopt \
+--options     c:hi:VvX: \
+--longoptions chdir:,help,install-list,version,verbose,exclude: \
+--name "$PROGRAM" -- "$@")
+[ $? != 0 ] && fatal "$msg_try"
+
+eval set -- "$GETOPT"
+
+while true; do
+	case "$1" in
+		-c|--chdir)          arg_dir="$2"; shift 2 ;;
+		-h|--help)           msg "$msg_usage"; msg "$msg_help"; exit 0 ;;
+		-i|--install-list)   arg_listfile="$2"; shift 2 ;;
+		-V|--version)        msg "$msg_version"; exit 0 ;;
+		-v|--verbose)        VERBOSE="yes"; shift ;;
+		-X|--exclude)        arg_exclude="$2"; shift 2 ;;
+		--)	                 shift; break ;;
+		*)	                 msg "$msg_try"; exit 1 ;;
+	esac
+done
+msg "arg_listfile: $arg_listfile"
+msg "arg_exclude: $arg_exclude"
+msg "arg_dir: $arg_dir"
+exit 0
+[ -z "$1" ] && fatal "missing argument" "$msg_try"
+
+if [ ! -z "$arg_dir" ]; then
+	cd $arg_dir || fatal "can't change to directory '$arg_dir'"
+fi
+
+verbose "\n${PROGRAM}: Will work in '$(pwd)'.\n"
+
+arg_listfile=${arg_listfile:-$LISTFILE}
+
+base_dest=$(echo $* | awk '{ print $NF }')
+
+verbose "Destination directory '$base_dest'..."
+
+# Disable globbing first.
+src=$(set -f; echo $* | awk 'NF=NF-1')
+
+temp_listfile=${TMPDIR-/tmp}/${PROGRAM}_listfile.$$
+temp_dirlist=${TMPDIR-/tmp}/${PROGRAM}_dirlist.$$
+trap "rm -rf $temp_listfile $temp_dirlist" 0 INT
+
+# Prepend command line sources to the existing list file.
+if [ ! -z "$src" ]; then
+	echo "$src ." >$temp_listfile
+fi
+
+if [ -e $arg_listfile ]; then
+	verbose "Using list file '$arg_listfile'"
+	if [ -e $temp_listfile ]; then
+		cat $arg_listfile >>$temp_listfile
+		listfile=$temp_listfile
+	else
+		listfile=$arg_listfile
+	fi
+else
+	[ -z "$src" ] && fatal "no source file defined" "$msg_try"
+
+	# FIXME: Treat the name 'nul' special, this is undocumented.
+	if [ "$arg_listfile" != "nul" ]; then
+		verbose "*** Warning: can't open list file '$arg_listfile'"
+	fi
+fi
+
+# Process list file.
+
+line_count=$(sed -n '$=' $listfile)
+
+for line in $(seq ${line_count:-0}); do
+	read line
+
+	if [ -z "$line" ]; then
+		continue
+	fi
+
+	# Disable globbing while getting fields.
+	src=$(set -f; echo $line | awk 'NF=NF-1')
+	dest=$(set -f; echo $line | awk '{ print $NF }')
+
+	# If only one field exists, treat it as a source.
+	if [ -z "$src" ]; then
+		src=$dest
+		dest=.
+	fi
+
+	dest=$base_dest/$dest
+
+	# Process each source.
+	for f in $src; do
+
+		if [ ! -z "$arg_exclude" ]; then
+			if echo $f | grep -q "$arg_exclude"; then
+				continue
+			fi
+
+			# Examine all files under a directory for exclusions.
+			if [ -d $f ]; then
+				dir_list=$temp_dirlist
+
+				(
+				cd $f/.. &&                                   \
+				find $(basename $f)                           \
+				-follow                                  \
+				-type f                                  \
+				-a ! \( -regex '.*'$arg_exclude'.*' \)   \
+				-fprint "$dir_list"\
+				)
+			fi
+		fi
+
+		# Destination must exist before installation.
+		if [ ! -e $dest ]; then
+			verbose "Creating destination directory '$dest'..."
+			doit "install -d $dest"
+		fi
+
+		if [ ! -z $dir_list -a -e $dir_list ]; then
+			# Install filtered directory content listed in a temporary file.
+			line_count=$(sed -n '$=' $dir_list)
+
+			for f in $(seq ${line_count:-0}); do
+				read f
+
+				verbose "Copying '$f' to destination..."
+				doit "cp --parents -dp $f $dest"
+			done <$dir_list
+
+			dir_list=
+		else # Install the file as it is, if no filtered content exists.
+			verbose "Copying '$f' to destination..."
+			doit "cp -a $f $dest"
+		fi
+	done
+
+done <$listfile
+
+verbose "\n${PROGRAM}: Finished successfully.\n"
+
+exit 0

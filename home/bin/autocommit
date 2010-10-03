@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# Auto commit some directories.
+# Joey Hess <joey@kitenet.net>
+#
+# Modified by Recai Oktaş <roktas@omu.edu.tr>
+# Set this as a daily cron job.
+# Last modified: Sun, 01 Feb 2004 04:10:29 +0200
+
+
+COMMIT_LOG="* Auto commit."
+COMMIT_DIRS="unfiled Mail"
+
+if ps cx | grep -q 'svn$'; then
+	echo >&2 "Another 'svn' process exists, skipping auto commit."
+	exit 0
+fi
+
+for d in $COMMIT_DIRS; do
+        (cd $HOME/$d && svn -m "$COMMIT_LOG" ci)
+done

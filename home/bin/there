@@ -1,0 +1,140 @@
+#!/bin/sh
+#
+# Wrapper for biabam which packs and sends the current directory by default.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+#
+# Last modified: Sat, 21 Aug 2004 15:11:12 +0300
+
+PREFIX="$(date +%Y%m%d)-"	# Prefix to prepend to pack. 
+OMIT_PREFIX='^[0-9]+\-'		# Omit prepending the prefix for this pattern.
+DEFAULTCOMPRESS="bz2"
+
+PROGRAM="there"
+
+# Expanded by svn automatically when this file is checked out.
+VERSION=$(echo '$Rev$' | cut -f2 -d' ')
+
+INVOKE_NAME=$(echo $0 | sed -e 's!.*/!!')
+ZCP="zcp"
+BIABAM="xbiabam"
+
+
+yesno()
+{
+	default=${2:-'y'}; upper_default=$(echo $default | tr a-z A-Z)
+
+	prompt=$(echo "[y/n]" | sed -e "s/[$default]/$upper_default/")
+        while true; do
+                echo -n "$1 $prompt "
+                read answer
+		
+		case "${answer:-$default}" in
+			[yY] | [yY][eE][sS])
+				return 0
+				;;
+			[nN] | [nN][oO])
+				return 1
+				;;
+			*)
+				echo "Type '[y]es' or '[n]o'"
+				;;
+		esac
+        done
+}
+
+
+if echo "$@" | grep -q '[ 	]\(\-h\|\-\-help\)[ 	]'; then
+	echo >&2 "Usage: $INVOKE_NAME RECIPIENT [SOURCE]"
+	exit 0
+fi
+
+if  [ $# -gt 2 -o $# -eq 0 ]; then
+	echo >&2 "Usage: $INVOKE_NAME RECIPIENT [SOURCE]"
+	exit 1
+fi
+
+PATH="$HOME/bin:$PATH"
+BIABAM=$(which $BIABAM)
+if [ -z "$BIABAM" ]; then
+	echo "This program needs the $BIABAM utility."
+	exit 1
+fi
+
+RECIPIENT=$1
+SOURCE=$2
+
+# Do some smart swap.
+if echo $SOURCE | grep -q '@' && ! echo $RECIPIENT | grep -q '@'; then
+	tmp=$RECIPIENT
+	RECIPIENT=$SOURCE
+	SOURCE=$tmp
+fi
+
+if [ -z "$SOURCE" ]; then
+	SOURCE="."
+	if ! yesno "Current directory will be packed and sent?" "y"; then
+		exit 1
+	fi
+else
+	if [ ! -e $SOURCE ]; then
+		echo >&2 "Source '$SOURCE' doesn't exist."
+		exit 1
+	fi
+fi
+	
+if [ -z "$COMPRESS" ]; then
+	# Compression method depends on the invocation name.
+	if echo "$INVOKE_NAME" | grep -q "^z${PROGRAM}"; then
+		COMPRESS="$DEFAULTCOMPRESS"
+	elif echo "$INVOKE_NAME" | grep -q "^gz${PROGRAM}"; then
+		COMPRESS="gz"
+	elif echo "$INVOKE_NAME" | grep -q "^zi[p]*${PROGRAM}"; then
+		COMPRESS="zip"
+	elif echo "$INVOKE_NAME" | grep -q "^bz[2]*${PROGRAM}"; then
+		COMPRESS="bz2"
+	else
+		COMPRESS="$DEFAULTCOMPRESS"
+	fi
+fi
+
+if [ -z "$COMPRESS" ]; then
+	if [ -d "$SOURCE" ]; then
+		echo "Maybe you might want to use packing option for this directory."
+	fi
+	exit 1
+else
+	PATH="$PATH:$HOME/bin"
+	ZCP=$(which $ZCP)
+	if [ -z "$ZCP" ]; then
+		echo "This program needs the $ZCP utility to perform compression."
+		exit 1
+	fi
+
+	# TODO Make this a separate utility.
+	SOURCE=$SOURCE
+
+	# Dirty hack to convert dots, any better method?
+	if [ -d $SOURCE ]; then
+		SOURCE=$((cd $SOURCE 2>/dev/null; echo $PWD))
+	fi
+
+	basename=$(basename "$SOURCE")
+	if [ -n "$PREFIX" ] && \
+		( [ -z "$OMIT_PREFIX" ] || ! echo "$basename" | egrep -q "$OMIT_PREFIX" ); then
+		basename="${PREFIX}${basename}"
+	fi
+
+	echo -n >&2 "Compressed file name without extension [$basename]: "
+	read PACK
+	if [ "$PACK"x = x ]; then PACK="$basename"; fi
+
+	if ! SOURCE=$($ZCP $SOURCE ${TMPDIR-/tmp}/${PACK} $COMPRESS); then
+		exit 1
+	fi
+
+	trap "rm -f $SOURCE" 0 INT
+	trap "echo -e >&2 '\nSending canceled.'; rm -f $SOURCE; exit 1" SIGINT
+fi
+
+$BIABAM $SOURCE $RECIPIENT 

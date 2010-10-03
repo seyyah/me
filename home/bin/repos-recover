@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+# Recover or fix permissions of svn repository (in current dir).
+# Copyright Â© 2004  Recai OktaÅ~_ <roktas@omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file `http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Fri, 22 Oct 2004 21:42:27 +0300
+
+set -e
+
+if [ -z "$1" ]; then
+        echo >&2 "Usage: $0 REPOS [OWNER[:[GROUP]]] [MODE]"
+        echo >&2 "Usage: $0 REPOS [:GROUP] [MODE]"
+        exit 1
+fi
+
+REPOS=$1; OG=$2; MODE=$3
+
+cd $REPOS
+
+for d in conf dav db hooks locks; do
+        if [ ! -d $d ]; then
+                echo >&2 "'.' is not an svn directory; aborting"
+                exit 1
+        fi
+done
+
+# Create zero sized sample files for setting up permissions.
+reposref=${TMPDIR-/tmp}/repos.$$
+filesref=${TMPDIR-/tmp}/files.$$
+trap "rm -rf $reposref $filesref" 0 INT
+
+touch $reposref
+chmod --reference . $reposref; chown --reference . $reposref
+touch $filesref
+chmod --reference db/strings $filesref; chown --reference db/strings $filesref
+[ -n "$OG" ] && chown $OG $filesref; [ -n "$MODE" ] && chmod $MODE $filesref
+
+echo >&2 ""
+echo >&2 "Recovering repository '$PWD'..."
+
+# Prevent others from accessing to repos.
+chmod og-x .
+
+svnadmin recover . >&2 || true
+
+# Fix permissions.
+echo >&2 "Fixing permissions in repository '$PWD'..."
+chown --reference $filesref -R .
+
+# Restore repos root permissions.
+chmod --reference $reposref .

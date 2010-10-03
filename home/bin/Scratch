@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# gecici bir cozum
+cd /home/nurettins/tmp/src/Scratch;
+
+./squeak/3.9-8/squeak -plugins ./squeak/3.9-8 Scratch.image

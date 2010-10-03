@@ -1,0 +1,3 @@
+#!/bin/bash
+# rdesktop -b -a 16 -K -D -g 95%  -T Laptop -u nurettins -p 55eng1979 -n nurettins2 -N 192.168.140.212
+rdesktop -f -b -a 16 -K -D -k tr -B -z -T Proje -u nurettins -p 55eng1979 -n proje -N 10.0.0.101 #192.168.140.212

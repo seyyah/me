@@ -1,0 +1,209 @@
+#!/bin/bash
+#
+# Chroot to a jail and run a command.
+# Copyright © 2003  Recai Oktaş <roktas.omu.edu.tr>
+#
+# Licensed under the GNU General Public License, version 2.
+# See the file 'http://www.gnu.org/copyleft/gpl.txt'.
+#
+# Last modified: Tue, 17 Aug 2004 04:44:12 +0300
+
+
+set -e
+
+JAILS=/jail
+JAIL_ENV=~/.jail.env
+RCFILE=~/.jailrc
+
+# Expanded by svn automatically when this file is checked out.
+VERSION=$(echo '$Rev$' | cut -f2 -d' ')
+
+PROGRAM=$(echo $0 | sed -e 's!.*/!!')
+
+VERSION=$(set - $REVISION; echo $3)
+
+msg_usage="Usage: $PROGRAM [OPTION]... JAIL [-c COMMAND]"
+
+msg_try="Try '$PROGRAM --help' for more information."
+
+msg_help=\
+"Chroot to JAIL and run the COMMAND.  '-c COMMAND' must be the last option.
+
+  -b, --bind-dir DIR            bind directory (default \$HOME)
+  -j, --jails                   base directory where the jails reside
+  -m, --mount-dir DIR           mount point under jail
+  -u, --umount                  umount the moint point first
+  -V, --version                 output version information and exit
+  -h, --help                    display this help and exit
+
+You might define the options in '~/$JAIL_ENV'.  Variables are as follows:
+
+  JBIND                        bind directory (default \$HOME)
+  JMOUNT                       moint point under jail
+  JROOT                        base directory where the jails reside
+  JPATH                        PATH to be exported to jail
+  JPWD                         PWD to be exported to jail
+
+You must have an account in JAIL and also please note that you need to be in
+the suoders to run this script.
+
+Report bugs to <roktas@omu.edu.tr>."
+
+msg_version=\
+"$PROGRAM $VERSION
+
+Copyright © 2002 by Recai Oktaş <roktas@omu.edu.tr>.
+There is NO warranty.  You may redistribute this software
+under the terms of the GNU General Public License.
+For more information about these matters, see the files named COPYING."
+
+# Primitive to pretty-print messages of arbitrary length.
+msg() { echo -e "$*" | fold -s -w ${COLUMNS:-80} >&2; }
+
+verbose()
+{
+	if [ "$VERBOSE" = yes ]; then
+		msg "$*"
+	fi
+}
+
+fatal()
+{
+	# Always print the first argument as a formatted error.
+	msg "${PROGRAM:-$(echo $0 | sed -e 's!.*/!!')}: $1"
+	shift
+
+	# Print the remaining arguments as they are.
+	while [ "$#" -gt 0 ]; do
+		msg "$1"
+		shift
+	done
+
+	exit 1
+}
+
+norm_path() { echo "$1" | tr / -s | sed -e 's#\([^^]\)/$#\1#'; }
+abs_path()  { (cd $1 2>/dev/null && pwd); }
+
+has_binded() { grep -q "^/dev/root $1" /proc/mounts; } 
+	
+bind()
+{
+	if [ ! -d "$2" ]; then
+		msg "No such '$2' directory for binding"
+	fi
+
+	if has_binded $2; then
+		msg "'$1' has been already binded"
+	else
+		msg "Binding '$1' to '$2'..."
+		sudo mount --bind $1 $2 && trap "unbind $2" 0 INT
+	fi
+}
+
+unbind()
+{
+	if has_binded $1; then
+		msg "Unbinding '$1'..."
+		sudo umount $1
+	else
+		msg "'$1' has been already binded"
+	fi
+}
+
+JPWD=$PWD
+JPATH=$HOME/bin
+
+# Init jail environment.
+if [ -e $JAIL_ENV ]; then
+	. $JAIL_ENV
+fi
+
+#arg_command=$(echo $@ | sed -n 's/^.*-c *//p')
+arg_all="$@"
+if echo "$arg_all" | grep -q "\-c"; then
+	arg_command=${arg_all#*-c }
+fi
+arg_remaining=$(echo $arg_all | sed -e 's/-c.*//')
+
+GETOPT=$(getopt \
+--options     b:j:hm:Vu \
+--longoptions bind-dir:,help,jail-root:,mount-dir:,umount,version \
+--name "$PROGRAM" -- $arg_remaining)
+
+eval set -- "$GETOPT"
+
+while true; do
+	case "$1" in
+		-h|--help)		msg "$msg_usage"; msg "$msg_help"; exit 0 ;;
+		-b|--bind-dir)		arg_bind_dir=$(norm_path "$2"); shift 2 ;;
+		-u|--umount)		arg_umount="yes"; shift ;;
+		-m|--mount-dir)		arg_mount_dir=$(norm_path "$2"); shift 2 ;;
+		-j|--jail-root)		arg_jail_root=$(norm_path "$2"); shift 2 ;;
+		-V|--version)		msg "$msg_version"; exit 0 ;;
+		--)			shift; break ;;
+		*)			msg "$msg_try"; exit 1 ;;
+	esac
+done
+
+JROOT=${arg_jail_root:-$JROOT}
+JAIL=${1:-$JAIL}
+JMOUNT=${arg_mount_dir:-$JMOUNT}
+JBIND=${arg_bind_dir:-$JBIND}
+
+JCOMMAND=${arg_command:-$JCOMMAND}
+
+jail_dir=$JROOT/$JAIL
+
+if [ ! -d $jail_dir ]; then
+	fatal "no jail '$jail_dir' found"
+fi
+
+if [ ! -z "$JMOUNT" ]; then
+	mount_dir=$(norm_path $jail_dir/$JMOUNT)
+
+	if [ ! -d $mount_dir ]; then
+		fatal "no such '$mount_dir' mount point"
+	fi
+
+	if [ "$arg_umount" = "yes" ]; then
+		while has_binded $mount_dir; do
+			unbind $mount_dir
+		done
+	fi
+
+	if [ "$(find $mount_dir -empty 2>/dev/null)" != "$mount_dir" ]; then
+		fatal "mount point '$mount_dir' must be empty"
+	fi
+
+	JBIND=${JBIND:-$HOME}
+	if [ ! -d $JBIND ]; then
+		fatal "no such directory '$JBIND' to be binded"
+	fi
+
+	JBIND=$(abs_path $JBIND)
+
+	bind "$JBIND" "$mount_dir"
+else
+	if [ ! -z "$JBIND" ]; then
+		fatal "no mount point defined for '$JBIND'"
+	fi
+fi
+
+JPWD=$(norm_path $JMOUNT/$JPWD)
+JPWD=${JPWD%$JBIND}
+
+JPATH=${JPATH#$JBIND}
+JPATH=$(norm_path $JMOUNT/$JPATH)
+
+# Export environment.
+jail_env="JAIL=$JAIL JPATH=$JPATH JPWD=$JPWD JMOUNT=$JMOUNT JBIND=$JBIND JCOMMAND=$JCOMMAND"
+
+if [ -z "$JCOMMAND" ]; then
+	JCOMMAND="env $jail_env /bin/bash --rcfile $RCFILE"
+else
+	JCOMMAND="env $jail_env /bin/bash --rcfile $RCFILE -c $JCOMMAND"
+fi
+
+msg "Entering chroot environment '$jail_dir'..."
+sudo /usr/sbin/chroot $jail_dir /bin/su - $USER -c "$JCOMMAND"

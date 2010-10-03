@@ -1,0 +1,29 @@
+#!/bin/sh -e
+#
+# Make some sane tests whether the network is up.
+# Recai Oktaş <roktas@omu.edu.tr>
+#
+# Last modified: Fri, 17 Sep 2004 21:59:46 +0300
+
+[ -x $HOME/bin/isserverup ] || { echo >&2 "isserverup not executable"; exit 1; }
+
+MAX_TRY=100
+
+# Google should be a sane default.
+host=${1:-www.google.com}
+port=${2:-80}
+
+echo -n >&2 "Checking $host:$port if network is up "
+try=$MAX_TRY
+while ! $HOME/bin/isserverup $host $port; do
+	echo -n >&2 .
+	if [ $try -eq 0 ]; then
+		echo >&2 " FAILED"
+		echo >&2 \
+	"Max attempt has been reached while waiting for the network; aborting"
+		exit 1
+	fi
+	sleep 2
+	try=$(($try - 1))
+done
+echo >&2 "OK"

@@ -1,0 +1,41 @@
+#!/bin/sh -e
+#
+# Start player.
+#
+# Recai Oktaş <roktas@omu.edu.tr>
+# Last modified: Sun, 05 Sep 2004 05:43:34 +0300
+
+PLAYLIST=${1:-$HOME/music/list.m3u}
+
+player=
+for prog in $PLAYER cplay mp3blaster mpg321; do
+	if which $prog >/dev/null; then
+		player=$prog
+		break
+	fi
+done
+
+[ -n "$player" ] || { echo >&2 "no player found"; exit 1; }
+
+case "$player" in
+	cplay)      args= ;;
+	mpg321)     args="--list" ;;
+	mp3blaster) args="--list" ;;
+esac
+	
+DIR=$(dirname $PLAYLIST)
+
+if [ -d "$DIR" ]; then
+	cd $DIR
+fi
+
+if [ -f $PLAYLIST ]; then
+	exec $player $args $PLAYLIST
+else
+	if [ "$player" = "mpg321" ]; then
+		echo >&2 "Create the '$PLAYLIST' playlist first!"
+		exit 1
+	fi
+fi
+
+exec $player
