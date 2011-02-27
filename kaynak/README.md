@@ -1,5 +1,13 @@
 # 19/asid
 
+## Gölge Algılama ve Takip
+
+- mikic00: [Moving Shadow and Object Detection in Traffic Scenes][mikic00]
+
+- prati01-survey: [Detecting Moving Shadows: Formulation, Algorithms and
+  Evaluation][prati01-survey], Andrea Prati, Ivana Mikic, Mohan M. Trivedi,
+  Rita Cucchiara, 2001
+
 ## Şüpheli Durum
 
 - samudin09: [Analysis of Gait Features between Loaded and Normal
@@ -20,11 +28,9 @@
 
 - nixon10: [On the use of Biometrics in Forensics: Gait and Ear][nixon10]
 
-### Sınıflandırılmamış
+## Sınıflandırılmamış
 
 - hsu09-patent: [Method For Recognizing Dice Dots][hsu09-patent]
-
-## Sınıflandırılmamış
 
 - [wikipedia-surveillance]
 
@@ -87,11 +93,16 @@
 [larsen08]:                 http://onlinelibrary.wiley.com/doi/10.1111/j.1556-4029.2008.00807.x/pdf
 
 [makarski02]:               http://edocs.nps.edu/npspubs/scholarly/theses/2002/Sep/02Sep_Makarski.pdf
+
 [micro-air-vehicle]:        http://en.wikipedia.org/wiki/File:MicroAirVehicle.jpg
+
+[mikic00]:                  http://cvrr.ucsd.edu/aton/publications/pdfpapers/icpr00.pdf
 
 [nixon10]:                  http://www.eurasip.org/Proceedings/Eusipco/Eusipco2010/.../1569292301.pdf
 
 [otsu08-patent]:            http://www.freepatentsonline.com/20080123975.pdf
+
+[prati01-survey]:          http://cvrr.ucsd.edu/aton/publications/pdfpapers/TRshadow.pdf
 
 [rohila10]:                 http://www.enggjournals.com/ijcse/doc/IJCSE10-02-05-51.pdf
 
