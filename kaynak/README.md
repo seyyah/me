@@ -21,6 +21,9 @@
 
 - ilktan10sunum: [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
 
+- kaluza08-fall-detection: [Fall Detection and Activity Recognition
+Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
+
 ## Şüpheli Durum
 
 - samudin09: [Analysis of Gait Features between Loaded and Normal
@@ -104,6 +107,8 @@
 [ilktan10sunum]:            http://vision.gyte.edu.tr/publications/seminars/2008/ar_s2.pdf
 
 [jiang92]:                  http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=223128
+
+[kaluza08-fall-detection]:  http://dis.ijs.si/bostjan/papers/IS2008-kaluza_lustrek.pdf
 
 [kampus-dışı-erişim]:       http://kutuphane.omu.edu.tr/kampusdisierisim.htm
 
