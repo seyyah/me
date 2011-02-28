@@ -15,6 +15,8 @@
 
 ## Eylem Analizi
 
+- ryoo11-review: [Human Activity Analysis: A Review][ryoo11-review], ACM, 2011
+
 - ilktan09rapor: [İnsan Eylem Analizi-Rapor][ilktan09rapor], 2009
 
 - ilktan10sunum: [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
@@ -117,9 +119,11 @@
 
 [otsu08-patent]:            http://www.freepatentsonline.com/20080123975.pdf
 
-[prati01-survey]:          http://cvrr.ucsd.edu/aton/publications/pdfpapers/TRshadow.pdf
+[prati01-survey]:           http://cvrr.ucsd.edu/aton/publications/pdfpapers/TRshadow.pdf
 
 [rohila10]:                 http://www.enggjournals.com/ijcse/doc/IJCSE10-02-05-51.pdf
+
+[ryoo11-review]:            http://cvrc.ece.utexas.edu/mryoo/papers/review_ryoo_hdr.pdf
 
 [samudin09]:                http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5634017
 
