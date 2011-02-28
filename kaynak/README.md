@@ -13,6 +13,12 @@
 - vladimir10: [Geometric Constraints for Human Detection in Aerial
   Imagery][vladimir10], 2010
 
+## Eylem Analizi
+
+- ilktan09rapor: [İnsan Eylem Analizi-Rapor][ilktan09rapor], 2009
+
+- ilktan10sunum: [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
+
 ## Şüpheli Durum
 
 - samudin09: [Analysis of Gait Features between Loaded and Normal
@@ -90,6 +96,10 @@
 [hsu09-patent]:             http://www.freepatentsonline.com/20090263008.pdf
 
 [IEEexplore]:               http://ieeexplore.ieee.org
+
+[ilktan09rapor]:            http://bilmuh.gyte.edu.tr/files/seminer/ilktanArSunum.pdf)
+
+[ilktan10sunum]:            http://vision.gyte.edu.tr/publications/seminars/2008/ar_s2.pdf
 
 [jiang92]:                  http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=223128
 
