@@ -21,8 +21,16 @@
 
 - ilktan10sunum: [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
 
+### fall-detection
+
 - kaluza08-fall-detection: [Fall Detection and Activity Recognition
 Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
+
+- anderson08-fall-detection: [Evaluation of a Video-Based Fall Recognition
+  System for Elders Using Voxel Space][anderson08-fall-detection]
+
+- noury07-fall-detection: [Fall detection – Principles and Methods][noury07],
+  IEEE, 2007
 
 ## Şüpheli Durum
 
@@ -88,6 +96,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
      gyro-stabilized
 
 <!-- kaynaklar -->
+[anderson08-fall-detection]: http://eldertech.missouri.edu/.../Evaluation_of_a_Video-Based_Fall_%20Recognition_System.pdf
+
 [aselsan-kaşif]:            http://www.aselsan.com.tr/urun.asp?urun_id=238&lang=tr
 
 [bauckhage09]:              http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1443142
@@ -121,6 +131,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [mikic00]:                  http://cvrr.ucsd.edu/aton/publications/pdfpapers/icpr00.pdf
 
 [nixon10]:                  http://www.eurasip.org/Proceedings/Eusipco/Eusipco2010/.../1569292301.pdf
+
+[noury07]:                  http://subversion.assembla.com/svn/fallD/trunk/Stage-I/Literature/Fall%20detection.pdf
 
 [otsu08-patent]:            http://www.freepatentsonline.com/20080123975.pdf
 
