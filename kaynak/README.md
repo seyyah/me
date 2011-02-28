@@ -8,6 +8,11 @@
   Evaluation][prati01-survey], Andrea Prati, Ivana Mikic, Mohan M. Trivedi,
   Rita Cucchiara, 2001
 
+## Aerial Video Analiz
+
+- vladimir10: [Geometric Constraints for Human Detection in Aerial
+  Imagery][vladimir10], 2010
+
 ## Şüpheli Durum
 
 - samudin09: [Analysis of Gait Features between Loaded and Normal
@@ -121,6 +126,8 @@
 [stoica09-bliss]:           http://adrianstoica.com/BLISS2009.pdf
 
 [turaga08]:                 http://www.umiacs.umd.edu/~pturaga/papers/survey_final.pdf
+
+[vladimir10]:               http://www.eecs.ucf.edu/~bsolmaz/Reilly_ECCV_2010_Geometric.pdf
 
 [wikipedia-IAO]:            http://en.wikipedia.org/wiki/Information_Awareness_Office
 
