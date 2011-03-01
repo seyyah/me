@@ -64,6 +64,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 ## TOF kamera
 
+- foix11-review: [Lock-in Time-of-Flight (ToF) Cameras: A
+  Survey][foix11-review], IEEE SENSORS JOURNAL, 2011, Sergi Foix, Guillem
+  Alenya and Carme Torras
+
 - pardas08-tof: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08], IEEE, 2008
 
 ## Sınıflandırılmamış
@@ -117,6 +121,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [bauckhage09]:              http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1443142
 
 [felez10]:                  http://marmota.dlsi.uji.es/WebBIB//papers/2010/0_ICPR2010_RMartin.pdf
+
+[foix11-review]:            http://ieeexplore.ieee.org/ielx5/7361/4427201/05686908.pdf?tp=&arnumber=5686908&isnumber=4427201
 
 [GaTech02]:                 http://gtresearchnews.gatech.edu/newsrelease/GAIT.htm
 
