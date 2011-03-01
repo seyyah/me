@@ -112,7 +112,7 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
   Survey][foix11-review], IEEE SENSORS JOURNAL, 2011, Sergi Foix, Guillem
   Alenya and Carme Torras
 
-- pardas08-tof: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08], IEEE, 2008
+- pardas08-tof: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08-tof], IEEE, 2008
 
 ## Sınıflandırılmamış
 
@@ -174,6 +174,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [samudin09]:                http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5634017
 
 [ScienceDirect]:            http://www.sciencedirect.com
+
+[shafer84]:                 https://urresearch.rochester.edu/fileDownloadForInstitutionalItem.action;jsessionid=EB2C25B80E5E694297F5A05FBA847AA6?itemId=2464&itemFileId=3408
 
 [stoica-bio]:               http://adrianstoica.com/bio.html
 
