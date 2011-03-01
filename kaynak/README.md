@@ -1,5 +1,10 @@
 # 19/asid
 
+## Gölgeden Tanıma
+
+- iwashita10: [Person Identification using Shadow Analysis][iwashita10], BMVC
+  2010, Yumi Iwashita, Adrian Stoica, Ryo Karazume
+
 ## Gölge Algılama ve Takip
 
 - mikic00: [Moving Shadow and Object Detection in Traffic Scenes][mikic00]
@@ -51,6 +56,15 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 - larsen08: [Gait Analysis in Forensic Medicine][larsen08]
 
 - nixon10: [On the use of Biometrics in Forensics: Gait and Ear][nixon10]
+
+## Güneş
+
+- shafer84: [Using color to separate Reflection Components][shafer84], Steven
+  A. Shafer, 1984
+
+## TOF kamera
+
+- pardas08: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08], IEEE, 2008
 
 ## Sınıflandırılmamış
 
@@ -116,6 +130,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [ilktan10sunum]:            http://vision.gyte.edu.tr/publications/seminars/2008/ar_s2.pdf
 
+[iwashita10]:               http://robotics.ait.kyushu-u.ac.jp/~yumi/pdf/BMVC10_paper35.pdf
+
 [jiang92]:                  http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=223128
 
 [kaluza08-fall-detection]:  http://dis.ijs.si/bostjan/papers/IS2008-kaluza_lustrek.pdf
@@ -135,6 +151,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [noury07]:                  http://subversion.assembla.com/svn/fallD/trunk/Stage-I/Literature/Fall%20detection.pdf
 
 [otsu08-patent]:            http://www.freepatentsonline.com/20080123975.pdf
+
+[pardas08]:                 http://mplab.ucsd.edu/wordpress/wp-content/uploads/CVPR2008/WorkShops/data/papers/205.pdf
 
 [prati01-survey]:           http://cvrr.ucsd.edu/aton/publications/pdfpapers/TRshadow.pdf
 
