@@ -64,7 +64,7 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 ## TOF kamera
 
-- pardas08: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08], IEEE, 2008
+- pardas08-tof: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08], IEEE, 2008
 
 ## Sınıflandırılmamış
 
@@ -152,7 +152,7 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [otsu08-patent]:            http://www.freepatentsonline.com/20080123975.pdf
 
-[pardas08]:                 http://mplab.ucsd.edu/wordpress/wp-content/uploads/CVPR2008/WorkShops/data/papers/205.pdf
+[pardas08-tof]:             http://mplab.ucsd.edu/wordpress/wp-content/uploads/CVPR2008/WorkShops/data/papers/205.pdf
 
 [prati01-survey]:           http://cvrr.ucsd.edu/aton/publications/pdfpapers/TRshadow.pdf
 
