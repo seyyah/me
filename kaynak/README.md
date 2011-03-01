@@ -5,7 +5,20 @@
 - iwashita10: [Person Identification using Shadow Analysis][iwashita10], BMVC
   2010, Yumi Iwashita, Adrian Stoica, Ryo Karazume
 
+- [stoica-bio]: kişisel sayfasındaki yorumlarını içeren web sayfası
+
+- stoica09-patent: [Method for Using Information in Human Shadows and Their
+  Dynamics][stoica09-patent] erişilemezsen [stoica09-patent-html]
+
+- stoica08-bliss: [Towards Recognition of Humans and their Behaviors from Space
+  and Airborne Platforms: Extracting the Information in the Dynamics of Human
+  Shadows][stoica08-bliss]
+
+- stoica09-bliss: [Gait Recognition using Shadow Analysis][stoica09-bliss]
+
 ## Gölge Algılama ve Takip
+
+- jiang92: [Shadow Identification][jiang92], IEEE, 1992
 
 - mikic00: [Moving Shadow and Object Detection in Traffic Scenes][mikic00]
 
@@ -20,11 +33,12 @@
 
 ## Eylem Analizi
 
+- ilktan09: rapor: [İnsan Eylem Analizi-Rapor][ilktan09rapor], 2009; sunum:
+  [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
+
 - ryoo11-review: [Human Activity Analysis: A Review][ryoo11-review], ACM, 2011
 
-- ilktan09rapor: [İnsan Eylem Analizi-Rapor][ilktan09rapor], 2009
-
-- ilktan10sunum: [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
+- turaga08: [machine recognition of human activities a survey][turaga08]
 
 ### fall-detection
 
@@ -51,6 +65,27 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 - bauckhage09: [Detecting Abnormal Gait][bauckhage09]
 
+## Surveillance
+
+- gatech02: [Walk the Walk: Gait Recognition Technology Could Identify Humans
+  at a Distance][GaTech02]
+
+- [Information Awareness Office][wikipedia-IAO]
+
+- makarski02: [a surveillance society and the conflict state: leveraging
+  ubiquitous surveillance and biometrics technology to Improve homeland
+  security][makarski02], naval postgraduate school, monterey, california,
+  master tezi, 2002
+
+- [wikipedia-surveillance]
+
+## Gait Analysis
+
+- felez10: [Towards a More Realistic Appearance-Based Gait Representation for
+  Gender Recognition][felez10], IEEE, 2010
+
+- YAHTS:
+
 ## Forensic
 
 - larsen08: [Gait Analysis in Forensic Medicine][larsen08]
@@ -61,6 +96,15 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 - shafer84: [Using color to separate Reflection Components][shafer84], Steven
   A. Shafer, 1984
+
+## Kaşif Balonu
+
+- Aselsan'ın [KAŞİF][aselsan-kaşif] gözlem balonu.
+
+   + Benzer çalışma olarak [Micro Air Vehicle][micro-air-vehicle]
+
+   + [helikite]: Here a Skyhook Helikite is flying steadily - in 50 mph storm.
+     gyro-stabilized
 
 ## TOF kamera
 
@@ -73,45 +117,6 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 ## Sınıflandırılmamış
 
 - hsu09-patent: [Method For Recognizing Dice Dots][hsu09-patent]
-
-- [wikipedia-surveillance]
-
-- [Walk the Walk: Gait Recognition Technology Could Identify Humans at a
-  Distance][GaTech02]
-
-- [Information Awareness Office][wikipedia-IAO]
-
-- [stoica-bio]: kişisel sayfasındaki yorumlarını içeren web sayfası
-
-- [Method for Using Information in Human Shadows and Their
-  Dynamics][stoica09-patent] erişemezsen [stoica09-patent-html]
-
-- stoica08-bliss: [Towards Recognition of Humans and their Behaviors from Space
-  and Airborne Platforms: Extracting the Information in the Dynamics of Human
-  Shadows][stoica08-bliss]
-
-- stoica09-bliss: [Gait Recognition using Shadow Analysis][stoica09-bliss]
-
-- jiang92: [Shadow Identification][jiang92], IEEE, 1992
-
-- felez10: [Towards a More Realistic Appearance-Based Gait Representation for
-  Gender Recognition][felez10], IEEE, 2010
-
-- turaga08: [machine recognition of human activities a survey][turaga08]
-
-- makarski02: [a surveillance society and the conflict state: leveraging
-  ubiquitous surveillance and biometrics technology to Improve homeland
-  security][makarski02], naval postgraduate school, monterey, california,
-  master tezi, 2002
-
-- YAHTS:
-
-- Aselsan'ın [KAŞİF][aselsan-kaşif] gözlem balonu.
-
-   + Benzer çalışma olarak [Micro Air Vehicle][micro-air-vehicle]
-
-   + [helikite]: Here a Skyhook Helikite is flying steadily - in 50 mph storm.
-     gyro-stabilized
 
 <!-- kaynaklar -->
 [anderson08-fall-detection]: http://eldertech.missouri.edu/.../Evaluation_of_a_Video-Based_Fall_%20Recognition_System.pdf
