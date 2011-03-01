@@ -29,6 +29,12 @@
   Evaluation][prati01-survey], Andrea Prati, Ivana Mikic, Mohan M. Trivedi,
   Rita Cucchiara, 2001
 
+- salvador01: [Shadow Identificatıon and classıfication using invariant color
+  models][salvador01], 2001, Salvador E. , Cavallaro A. , Ebrahimi T. 
+
+- sanin10-surveillance: [Improved Shadow Removal for Robust Person Tracking in
+  Surveillance Scenarios][sanin10], 2010, Sanin A. , Sanderson C. , Lovell B.C.
+
 ## Aerial Video Analiz
 
 - oreifej10: [Human Identity Recognition in Aerial Images][oreifej10], 2010,
@@ -38,6 +44,12 @@
   Imagery][vladimir10], 2010, Reilly V. , Solmaz B. , Shah M.
 
 ## Eylem Analizi
+
+- candamo10-review: [Understanding Transit Scenes: A Survey on Human
+  Behavior-Recognition Algorithms][candamo10-review], Joshua Candamo, Matthew
+  Shreve, Dmitry B. Goldgof, Deborah B. Sapper, and Rangachar Kasturi, IEEE
+  TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS, VOL. 11, NO. 1, MARCH
+  2010
 
 - ilktan09: rapor: [İnsan Eylem Analizi-Rapor][ilktan09rapor], 2009; sunum:
   [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
@@ -90,7 +102,25 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 - felez10: [Towards a More Realistic Appearance-Based Gait Representation for
   Gender Recognition][felez10], IEEE, 2010
 
+- guha10-radon: [DIFFERENTIAL RADON TRANSFORM FOR GAIT
+  RECOGNITION][guha10-radon], IEEE, 2010, Tanaya Guha, Rabab Ward
+
+- kale04: [Identification of Humans Using Gait][kale04], 2004, Kale A. ,
+  Sundaresan A. , A. N. Rajagopalan, Cuntoor N. ,Roy-Chowdhury A. ,Krüger V. ,
+  Chellappa R.
+
 - YAHTS:
+
+- veres04: [What image information is important in silhouette-based gait
+  recognition?][veres04], 2004, G.V. Veres, L. Gordon, J.N. Carter and M.S.
+  Nixon
+
+- wang10-review: [A Review of Vision-based Gait Recognition Methods for Human
+  Identification][wang10-review], 2010, Wang J. , She M. , Nahavandi S. ,
+  Kouzani A.
+
+- yi07: [General methods and development actuality of gait recognıtion][yi07],
+  2007, Yı-Bo lı, Tıan-Xıao Jıang, Zhı-Hua Qıao, Hong-Juan Qıan
 
 ## Forensic
 
@@ -131,6 +161,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [bauckhage09]:              http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1443142
 
+[candamo10-review]:         http://www.cse.usf.edu/~mshreve/publications/ITS.pdf
+
 [felez10]:                  http://marmota.dlsi.uji.es/WebBIB//papers/2010/0_ICPR2010_RMartin.pdf
 
 [foix11-review]:            http://ieeexplore.ieee.org/ielx5/7361/4427201/05686908.pdf?tp=&arnumber=5686908&isnumber=4427201
@@ -141,6 +173,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [hsu09-patent]:             http://www.freepatentsonline.com/20090263008.pdf
 
+[guha10-radon]:             http://www.imt.liu.se/mi_old/Intern/Onlineproceedings/ICASSP_2010/pdfs/0000834.pdf
+
 [IEEexplore]:               http://ieeexplore.ieee.org
 
 [ilktan09rapor]:            http://bilmuh.gyte.edu.tr/files/seminer/ilktanArSunum.pdf)
@@ -150,6 +184,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [iwashita10]:               http://robotics.ait.kyushu-u.ac.jp/~yumi/pdf/BMVC10_paper35.pdf
 
 [jiang92]:                  http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=223128
+
+[kale04]:                   http://www.cfar.umd.edu/~cuntoor/01323098.pdf
 
 [kaluza08-fall-detection]:  http://dis.ijs.si/bostjan/papers/IS2008-kaluza_lustrek.pdf
 
@@ -181,7 +217,11 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [ryoo11-review]:            http://cvrc.ece.utexas.edu/mryoo/papers/review_ryoo_hdr.pdf
 
+[salvador01]:               http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.10.6641&rep=rep1&type=pdf
+
 [samudin09]:                http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5634017
+
+[sanin10-surveillance]:     http://elec.uq.edu.au/~conrad/pdfs/sanin_shadow_removal_icpr_2010.pdf
 
 [ScienceDirect]:            http://www.sciencedirect.com
 
@@ -199,8 +239,14 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [turaga08]:                 http://www.umiacs.umd.edu/~pturaga/papers/survey_final.pdf
 
+[veres04]:                  http://ieeexplore.ieee.org/iel5/9183/29134/01315243.pdf
+
 [vladimir10]:               http://www.eecs.ucf.edu/~bsolmaz/Reilly_ECCV_2010_Geometric.pdf
+
+[wang10-review]:            http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&arnumber=5686908&queryText%3D%28%28%28%28tof%29+OR+range+camera%29+AND+survey%29+OR+review%29%26openedRefinements%3D*%26ranges%3D2007_2011_Publication_Year%26matchBoolean%3Dtrue%26searchField%3DSearch+All+Text
 
 [wikipedia-IAO]:            http://en.wikipedia.org/wiki/Information_Awareness_Office
 
 [wikipedia-surveillance]:   http://en.wikipedia.org/wiki/Surveillance
+
+[yi07]:                     ???
