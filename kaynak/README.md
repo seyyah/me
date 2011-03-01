@@ -22,6 +22,9 @@
 
 - mikic00: [Moving Shadow and Object Detection in Traffic Scenes][mikic00]
 
+- nadimi04: [Physical Models for Moving Shadow and Object Detection in
+  Video][nadimi04], 2004, Nadimi S. , Bhanu B. 
+
 - prati01-survey: [Detecting Moving Shadows: Formulation, Algorithms and
   Evaluation][prati01-survey], Andrea Prati, Ivana Mikic, Mohan M. Trivedi,
   Rita Cucchiara, 2001
@@ -29,7 +32,7 @@
 ## Aerial Video Analiz
 
 - vladimir10: [Geometric Constraints for Human Detection in Aerial
-  Imagery][vladimir10], 2010
+  Imagery][vladimir10], 2010, Reilly V. , Solmaz B. , Shah M.
 
 ## Eylem Analizi
 
@@ -156,6 +159,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [micro-air-vehicle]:        http://en.wikipedia.org/wiki/File:MicroAirVehicle.jpg
 
 [mikic00]:                  http://cvrr.ucsd.edu/aton/publications/pdfpapers/icpr00.pdf
+
+[nadimi04]:                 http://www.vislab.ucr.edu/.../Physical%20Models%20for%20Moving%20Shadow04.pdf
 
 [nixon10]:                  http://www.eurasip.org/Proceedings/Eusipco/Eusipco2010/.../1569292301.pdf
 
