@@ -31,6 +31,9 @@
 
 ## Aerial Video Analiz
 
+- oreifej10: [Human Identity Recognition in Aerial Images][oreifej10], 2010,
+  Oreifej O, Mehran R., Shah M. 
+
 - vladimir10: [Geometric Constraints for Human Detection in Aerial
   Imagery][vladimir10], 2010, Reilly V. , Solmaz B. , Shah M.
 
@@ -165,6 +168,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [nixon10]:                  http://www.eurasip.org/Proceedings/Eusipco/Eusipco2010/.../1569292301.pdf
 
 [noury07]:                  http://subversion.assembla.com/svn/fallD/trunk/Stage-I/Literature/Fall%20detection.pdf
+
+[oreifej10]:                http://server.cs.ucf.edu/~vision/papers/cvpr2010/WRM_CVPR2010.pdf
 
 [otsu08-patent]:            http://www.freepatentsonline.com/20080123975.pdf
 
