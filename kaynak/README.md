@@ -45,6 +45,9 @@
 
 ## Eylem Analizi
 
+- bodor03: [Vision-Based Human Tracking and Activity Recognition][bodor03],
+  Robert Bodor, Bennett Jackson, Nikolaos Papanikolopoulos, 2003
+
 - candamo10-review: [Understanding Transit Scenes: A Survey on Human
   Behavior-Recognition Algorithms][candamo10-review], Joshua Candamo, Matthew
   Shreve, Dmitry B. Goldgof, Deborah B. Sapper, and Rangachar Kasturi, IEEE
@@ -179,6 +182,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [aselsan-kaşif]:            http://www.aselsan.com.tr/urun.asp?urun_id=238&lang=tr
 
 [bauckhage09]:              http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1443142
+
+[bodor03]:                  http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.9664&rep=rep1&type=pdf
 
 [candamo10-review]:         http://www.cse.usf.edu/~mshreve/publications/ITS.pdf
 
