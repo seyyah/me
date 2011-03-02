@@ -102,6 +102,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 ## Gait Analysis
 
+- dimitros09-rapor: [Activity Recognition: Gait Analysis and
+  Recognition][dimitros09-rapor], Centre of Research & Technology - Hellas,
+  Dimitrios Tzovaras, 2009
+
 - felez10: [Towards a More Realistic Appearance-Based Gait Representation for
   Gender Recognition][felez10], IEEE, 2010
 
@@ -111,6 +115,12 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 - kale04: [Identification of Humans Using Gait][kale04], 2004, Kale A. ,
   Sundaresan A. , A. N. Rajagopalan, Cuntoor N. ,Roy-Chowdhury A. ,Krüger V. ,
   Chellappa R.
+
+- li10: [Part-based human gait identification under clothing and carrying
+  condition variations][li10], IEEE, 2010, Ning Li;   Yi Xu;   Xiao-Kang Yang
+
+- ni09: [A New Method Based on KFDA and SVM for Gait Identification][ni09],
+  IEEE, 2009, Jian Ni;   Libo Liang
 
 - YAHTS:
 
@@ -124,6 +134,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 - yi07: [General methods and development actuality of gait recognıtion][yi07],
   2007, Yı-Bo lı, Tıan-Xıao Jıang, Zhı-Hua Qıao, Hong-Juan Qıan
+
+- zhao10: [Research on gait-based human identification][zhao10], IEEE, 2010, XiLing Zhao;   YongQiang Du
 
 ## Forensic
 
@@ -170,6 +182,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [candamo10-review]:         http://www.cse.usf.edu/~mshreve/publications/ITS.pdf
 
+[dimitros09-rapor]:         http://www.iti.gr/iti/files/document/seminars/Activity_recognition_final.pdf
+
 [felez10]:                  http://marmota.dlsi.uji.es/WebBIB//papers/2010/0_ICPR2010_RMartin.pdf
 
 [foix11-review]:            http://ieeexplore.ieee.org/ielx5/7361/4427201/05686908.pdf?tp=&arnumber=5686908&isnumber=4427201
@@ -200,6 +214,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [larsen08]:                 http://onlinelibrary.wiley.com/doi/10.1111/j.1556-4029.2008.00807.x/pdf
 
+[li10]:                     http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5581055
+
 [makarski02]:               http://edocs.nps.edu/npspubs/scholarly/theses/2002/Sep/02Sep_Makarski.pdf
 
 [micro-air-vehicle]:        http://en.wikipedia.org/wiki/File:MicroAirVehicle.jpg
@@ -211,6 +227,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [nadimi04]:                 http://www.vislab.ucr.edu/.../Physical%20Models%20for%20Moving%20Shadow04.pdf
 
 [nixon10]:                  http://www.eurasip.org/Proceedings/Eusipco/Eusipco2010/.../1569292301.pdf
+
+[ni09]:                     http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5072648
 
 [noury07]:                  http://subversion.assembla.com/svn/fallD/trunk/Stage-I/Literature/Fall%20detection.pdf
 
@@ -261,3 +279,5 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [wikipedia-surveillance]:   http://en.wikipedia.org/wiki/Surveillance
 
 [yi07]:                     ???
+
+[zhao10]:                   http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5622362
