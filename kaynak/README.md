@@ -54,6 +54,9 @@
 - ilktan09: rapor: [İnsan Eylem Analizi-Rapor][ilktan09rapor], 2009; sunum:
   [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
 
+- poppe10-survey: [A survey on vision-based human action
+  recognition][poppe10-survey], ScienceDirect, 2010, Ronald Poppe
+
 - ryoo11-review: [Human Activity Analysis: A Review][ryoo11-review], ACM, 2011
 
 - turaga08: [machine recognition of human activities a survey][turaga08]
@@ -142,11 +145,15 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
    + [helikite]: Here a Skyhook Helikite is flying steadily - in 50 mph storm.
      gyro-stabilized
 
-## TOF kamera
+## Motion Capture; TOF kamera
 
 - foix11-review: [Lock-in Time-of-Flight (ToF) Cameras: A
   Survey][foix11-review], IEEE SENSORS JOURNAL, 2011, Sergi Foix, Guillem
   Alenya and Carme Torras
+
+- moeslund06-survey: [A survey of advances in vision-based human motion capture and
+  analysis][moeslund06-survey],  Journal Computer Vision and Image
+  Understanding, ACM, 2006, Thomas B. Moeslund, Adrian Hilton, Volker Krüger
 
 - pardas08-tof: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08-tof], IEEE, 2008
 
@@ -199,6 +206,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [mikic00]:                  http://cvrr.ucsd.edu/aton/publications/pdfpapers/icpr00.pdf
 
+[moeslund06-survey]:        ???
+
 [nadimi04]:                 http://www.vislab.ucr.edu/.../Physical%20Models%20for%20Moving%20Shadow04.pdf
 
 [nixon10]:                  http://www.eurasip.org/Proceedings/Eusipco/Eusipco2010/.../1569292301.pdf
@@ -210,6 +219,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [otsu08-patent]:            http://www.freepatentsonline.com/20080123975.pdf
 
 [pardas08-tof]:             http://mplab.ucsd.edu/wordpress/wp-content/uploads/CVPR2008/WorkShops/data/papers/205.pdf
+
+[poppe10-survey]:           http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6V09-4XX15PT-1-J&_cdi=5641&_user=736649&_pii=S0262885609002704&_origin=gateway&_coverDate=06%2F30%2F2010&_sk=999719993&view=c&wchp=dGLbVlW-zSkzk&md5=35420ebe6cc338d44778dfa3f90d79f5&ie=/sdarticle.pdf
 
 [prati01-survey]:           http://cvrr.ucsd.edu/aton/publications/pdfpapers/TRshadow.pdf
 
