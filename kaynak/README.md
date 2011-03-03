@@ -23,14 +23,14 @@
 - mikic00: [Moving Shadow and Object Detection in Traffic Scenes][mikic00]
 
 - nadimi04: [Physical Models for Moving Shadow and Object Detection in
-  Video][nadimi04], 2004, Nadimi S. , Bhanu B. 
+  Video][nadimi04], 2004, Nadimi S. , Bhanu B.
 
 - prati01-survey: [Detecting Moving Shadows: Formulation, Algorithms and
   Evaluation][prati01-survey], Andrea Prati, Ivana Mikic, Mohan M. Trivedi,
   Rita Cucchiara, 2001
 
 - salvador01: [Shadow Identificatıon and classıfication using invariant color
-  models][salvador01], 2001, Salvador E. , Cavallaro A. , Ebrahimi T. 
+  models][salvador01], 2001, Salvador E. , Cavallaro A. , Ebrahimi T.
 
 - sanin10-surveillance: [Improved Shadow Removal for Robust Person Tracking in
   Surveillance Scenarios][sanin10], 2010, Sanin A. , Sanderson C. , Lovell B.C.
@@ -38,7 +38,7 @@
 ## Aerial Video Analiz
 
 - oreifej10: [Human Identity Recognition in Aerial Images][oreifej10], 2010,
-  Oreifej O, Mehran R., Shah M. 
+  Oreifej O, Mehran R., Shah M.
 
 - vladimir10: [Geometric Constraints for Human Detection in Aerial
   Imagery][vladimir10], 2010, Reilly V. , Solmaz B. , Shah M.
@@ -57,8 +57,18 @@
 - ilktan09: rapor: [İnsan Eylem Analizi-Rapor][ilktan09rapor], 2009; sunum:
   [İnsan Eylem Analizi-Sunum][ilktan10sunum], 2010
 
+- mukherjee10-sdha10: [Modeling Sense Disambiguation of Human Pose: Recognizing
+  Action at a Distance by Key Poses][mukherjee10-sdha10], Snehasis Mukherjee,
+  Sujoy Kumar Biswas, Dipti Prasad Mukherjee, ACCV2010
+
 - poppe10-survey: [A survey on vision-based human action
   recognition][poppe10-survey], ScienceDirect, 2010, Ronald Poppe
+
+- ryoo10-sdha10-overview: [n Overview of Contest on Semantic Description of
+  Human Activities (SDHA) 2010][ryoo10-sdha10-overview], 2010
+
+- ryoo10-sdha10-slides: [An Overview of Contest on Semantic Description of Human
+  Activities (SDHA) 2010][ryoo10-sdha10-slides], 2010
 
 - ryoo11-review: [Human Activity Analysis: A Review][ryoo11-review], ACM, 2011
 
@@ -170,7 +180,15 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
   analysis][moeslund06-survey],  Journal Computer Vision and Image
   Understanding, ACM, 2006, Thomas B. Moeslund, Adrian Hilton, Volker Krüger
 
-- pardas08-tof: [TOF Imaging in Smart Room Environments towards Improved People Tracking][pardas08-tof], IEEE, 2008
+- pardas08-tof: [TOF Imaging in Smart Room Environments towards Improved People
+  Tracking][pardas08-tof], IEEE, 2008
+
+## Homography
+
+- irschara10-reconstruction-from-uavs: [TOWARDS FULLY AUTOMATIC PHOTOGRAMMETRIC
+  RECONSTRUCTION USING DIGITAL IMAGES TAKEN FROM
+  UAVS][irschara10-reconstruction-from-uavs], A. Irschara, V. Kaufman, M.
+  Klopschitz, H. Bischof, F. Leberl, IAPRS, 2010
 
 ## Sınıflandırılmamış
 
@@ -248,6 +266,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [prati01-survey]:           http://cvrr.ucsd.edu/aton/publications/pdfpapers/TRshadow.pdf
 
 [rohila10]:                 http://www.enggjournals.com/ijcse/doc/IJCSE10-02-05-51.pdf
+
+[ryoo10-sdha10-overview]:   http://cvrc.ece.utexas.edu/SDHA2010/final/ryoo_sdha2010_summary.pdf
+
+[ryoo10-sdha10-slides]:     http://cvrc.ece.utexas.edu/SDHA2010/final/sdha2010_overview_slides.pdf
 
 [ryoo11-review]:            http://cvrc.ece.utexas.edu/mryoo/papers/review_ryoo_hdr.pdf
 
