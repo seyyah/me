@@ -72,8 +72,8 @@
 - bodor03: [Vision-Based Human Tracking and Activity Recognition][bodor03],
   Robert Bodor, Bennett Jackson, Nikolaos Papanikolopoulos, 2003
 
-- candamo10-review: [Understanding Transit Scenes: A Survey on Human
-  Behavior-Recognition Algorithms][candamo10-review], Joshua Candamo, Matthew
+- candamo10-survey: [Understanding Transit Scenes: A Survey on Human
+  Behavior-Recognition Algorithms][candamo10-survey], Joshua Candamo, Matthew
   Shreve, Dmitry B. Goldgof, Deborah B. Sapper, and Rangachar Kasturi, IEEE
   TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS, VOL. 11, NO. 1, MARCH
   2010
@@ -227,7 +227,7 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [bodor03]:                  http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.9664&rep=rep1&type=pdf
 
-[candamo10-review]:         http://www.cse.usf.edu/~mshreve/publications/ITS.pdf
+[candamo10-survey]:         http://www.cse.usf.edu/~mshreve/publications/ITS.pdf
 
 [dimitros09-rapor]:         http://www.iti.gr/iti/files/document/seminars/Activity_recognition_final.pdf
 
