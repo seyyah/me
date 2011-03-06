@@ -1,5 +1,29 @@
 # 19/asid
 
+## Projeler
+
+- saylan00-havadan: [Uzaktan Algılanan Verilerden Hedef/Nesne
+  Tanıma][saylan00-havadan], 2000, Tubitak
+
+- turgut95-hastalik: [Diz Osteoartriti Bulunan Hastaların Ayak Bileği Diz ve
+  Kalça Eklemlerinde Oluşan Momentlerdeki Değişikliklerin
+  İncelenmesi][turgut95-hastalik], 1995, Tubitak
+
+- bozkurt08-mera: [RS (Uzaktan Algılama) ve GIS (Coğrafi Bilgi Sistemi)
+  Kullanarak, Meralarda Kalite Belirleme, Biomass ve Otlatma Kapasite Tahminleri
+  ile Hayvan İzleme Olanaklarının Araştırılması][bozkurt08-mera], 2008, Tubitak
+
+- ormeci07-sinir-analizi: [Tuz Gölü ve Yakın Çevresinin Yer ve Uydu Verileri ile
+  Kuraklık ve Su Kalitesi Bakımından Zamansal Analizi][ormeci07-sinir-analizi],
+  2007, Tubitak
+
+- unsalan09-derinlik: [Renk Kodlu Yapısal Işık Kullanan Bir Derinlik Tarayıcı
+  Tasarımı][unsalan09-derinlik], 2009-, Tubitak (devam ediyor)
+
+- turker10-iskelet-cinsiyet: [İnsan İskelet Kası Reflekslerinin Cinsiyete, Yaşa
+  ve Kas Yorgunluğuna Bağlı Değişimin İncelenmesi][turker10-iskelet-cinsiyet],
+  2010, Tubitak (gizli)
+
 ## Gölgeden Tanıma
 
 - iwashita10: [Person Identification using Shadow Analysis][iwashita10], BMVC
@@ -279,6 +303,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [sanin10-surveillance]:     http://elec.uq.edu.au/~conrad/pdfs/sanin_shadow_removal_icpr_2010.pdf
 
+[saylan00-havadan]:         http://uvt.ulakbim.gov.tr/uvt/index.php?cwid=9&vtadi=TPRJ&ano=38675_de8456bee3b8eeb89a544e2e63ba6ee0
+
 [ScienceDirect]:            http://www.sciencedirect.com
 
 [shafer84]:                 https://urresearch.rochester.edu/fileDownloadForInstitutionalItem.action;jsessionid=EB2C25B80E5E694297F5A05FBA847AA6?itemId=2464&itemFileId=3408
@@ -294,6 +320,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [stoica09-bliss]:           http://adrianstoica.com/BLISS2009.pdf
 
 [turaga08]:                 http://www.umiacs.umd.edu/~pturaga/papers/survey_final.pdf
+
+[turgut95-hastalik]:        ???
 
 [veres04]:                  http://ieeexplore.ieee.org/iel5/9183/29134/01315243.pdf
 
