@@ -218,6 +218,11 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 - hsu09-patent: [Method For Recognizing Dice Dots][hsu09-patent]
 
+- verwer88: [Improved metrics in image processing applied to the Hilditch
+  skeleton][verwer88], B.J.H. Verwer, 9th ICPR, Rome, November 14-17, 1988.
+
+- dipimage: [Diplig.org][dipimage], 2009, http://www.diplib.org/
+
 <!-- kaynaklar -->
 [anderson08-fall-detection]: http://eldertech.missouri.edu/.../Evaluation_of_a_Video-Based_Fall_%20Recognition_System.pdf
 
