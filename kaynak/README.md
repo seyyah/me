@@ -40,7 +40,7 @@
 
 - stoica09-bliss: [Gait Recognition using Shadow Analysis][stoica09-bliss]
 
-## Gölge Algılama ve Takip
+## Gölge Algılama, Uzaklaştırma ve Takip
 
 - jiang92: [Shadow Identification][jiang92], IEEE, 1992
 
@@ -58,6 +58,11 @@
 
 - sanin10-surveillance: [Improved Shadow Removal for Robust Person Tracking in
   Surveillance Scenarios][sanin10], 2010, Sanin A. , Sanderson C. , Lovell B.C.
+
+- xu05: [Shadow removal with blob-based morphological reconstruction fo r error
+  correction][xu05], 2005, L.Q. Xu and J. L. Landabaso and M. Pardas,
+  Proceedings of the IEEE International Conference on Acoust ics, Speech, and
+  Signal Processing (ICASSP)
 
 ## Aerial Video Analiz
 
@@ -149,6 +154,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 - guha10-radon: [DIFFERENTIAL RADON TRANSFORM FOR GAIT
   RECOGNITION][guha10-radon], IEEE, 2010, Tanaya Guha, Rabab Ward
 
+- huang98: [A statistical approach for recognizing humans by gait using sp
+  atial-temporal templates][huang98], P.S. Huang and C.J. Harris and M.S.
+  Nixon, Image Processing, International Conference on, 1998
+
 - kale04: [Identification of Humans Using Gait][kale04], 2004, Kale A. ,
   Sundaresan A. , A. N. Rajagopalan, Cuntoor N. ,Roy-Chowdhury A. ,Krüger V. ,
   Chellappa R.
@@ -217,6 +226,11 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 ## Sınıflandırılmamış
 
 - hsu09-patent: [Method For Recognizing Dice Dots][hsu09-patent]
+
+- lo01: [Automatic congestion det ection system for underground
+  platforms][lo01], 2001,Lo, B.P.L. and Velastin, S.A., Intelligent Multimedia,
+  Video and Speech Processing, 2001. P roceedings of 2001 International
+  Symposium on
 
 - verwer88: [Improved metrics in image processing applied to the Hilditch
   skeleton][verwer88], B.J.H. Verwer, 9th ICPR, Rome, November 14-17, 1988.
