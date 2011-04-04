@@ -23,14 +23,14 @@
 - mikic00: [Moving Shadow and Object Detection in Traffic Scenes][mikic00]
 
 - nadimi04: [Physical Models for Moving Shadow and Object Detection in
-  Video][nadimi04], 2004, Nadimi S. , Bhanu B. 
+  Video][nadimi04], 2004, Nadimi S. , Bhanu B.
 
 - prati01-survey: [Detecting Moving Shadows: Formulation, Algorithms and
   Evaluation][prati01-survey], Andrea Prati, Ivana Mikic, Mohan M. Trivedi,
   Rita Cucchiara, 2001
 
 - salvador01: [Shadow Identificatıon and classıfication using invariant color
-  models][salvador01], 2001, Salvador E. , Cavallaro A. , Ebrahimi T. 
+  models][salvador01], 2001, Salvador E. , Cavallaro A. , Ebrahimi T.
 
 - sanin10-surveillance: [Improved Shadow Removal for Robust Person Tracking in
   Surveillance Scenarios][sanin10], 2010, Sanin A. , Sanderson C. , Lovell B.C.
@@ -38,7 +38,7 @@
 ## Aerial Video Analiz
 
 - oreifej10: [Human Identity Recognition in Aerial Images][oreifej10], 2010,
-  Oreifej O, Mehran R., Shah M. 
+  Oreifej O, Mehran R., Shah M.
 
 - vladimir10: [Geometric Constraints for Human Detection in Aerial
   Imagery][vladimir10], 2010, Reilly V. , Solmaz B. , Shah M.
@@ -70,6 +70,9 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
   IEEE, 2007
 
 ## Şüpheli Durum
+
+- lee09: [Gait analysis to classify external load conditions using linear
+  discriminant analysis][lee09], Hum Mov Sci. 2009
 
 - samudin09: [Analysis of Gait Features between Loaded and Normal
   Gait][samudin09]
@@ -208,6 +211,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [larsen08]:                 http://onlinelibrary.wiley.com/doi/10.1111/j.1556-4029.2008.00807.x/pdf
 
 [li10]:                     http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5581055
+
+[lee09]:                    http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6V8T-4VF0XND-1-9&_cdi=5879&_user=736649&_pii=S0167945708001115&_origin=gateway&_coverDate=04%2F30%2F2009&_sk=999719997&view=c&wchp=dGLbVlz-zSkzk&md5=ff2c1b73ef154d77d922b2da39df006e&ie=/sdarticle.pdf
 
 [makarski02]:               http://edocs.nps.edu/npspubs/scholarly/theses/2002/Sep/02Sep_Makarski.pdf
 
