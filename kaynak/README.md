@@ -127,6 +127,9 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 - otsu08-patent: [Abnormal Action Detector and Abnormal Action Detecting
   Method][otsu08-patent]
 
+- wittman05-loaded: [Visual Analysis of the Effects of Load Carriage on
+  Gait][wittman05-loaded], 2005
+
 ## Abnormality
 
 - rohila10: [Abnormal Gait Recognition][rohila10]
@@ -360,6 +363,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [wikipedia-IAO]:            http://en.wikipedia.org/wiki/Information_Awareness_Office
 
 [wikipedia-surveillance]:   http://en.wikipedia.org/wiki/Surveillance
+
+[wittman05-loaded]:         http://www.nd.edu/~flynn/papers/Wittman%20SPIE05.pdf
 
 [yi07]:                     ???
 
