@@ -116,6 +116,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 ## Şüpheli Durum
 
+- lee08: doktora tez önerisi [Biomechanical Adaptations of Human Gait Due to External Loads][lee08-loaded], Blacksburg, Virginia, 2008
+
 - lee09: [Gait analysis to classify external load conditions using linear
   discriminant analysis][lee09], Hum Mov Sci. 2009
 
@@ -284,6 +286,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [larsen08]:                 http://onlinelibrary.wiley.com/doi/10.1111/j.1556-4029.2008.00807.x/pdf
 
 [li10]:                     http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5581055
+
+[lee08-loaded]:             http://www.google.com.tr/url?sa=t&source=web&cd=3&ved=0CDMQFjAC&url=http%3A%2F%2Fscholar.lib.vt.edu%2Ftheses%2Favailable%2Fetd-08052008-150018%2Funrestricted%2FDissertation_Lee.pdf&ei=GoWZTeO7K47FtAaU4MjKCA&usg=AFQjCNH-mcqzNLjO4T4zWolsovnGYMI_mg
 
 [lee09]:                    http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6V8T-4VF0XND-1-9&_cdi=5879&_user=736649&_pii=S0167945708001115&_origin=gateway&_coverDate=04%2F30%2F2009&_sk=999719997&view=c&wchp=dGLbVlz-zSkzk&md5=ff2c1b73ef154d77d922b2da39df006e&ie=/sdarticle.pdf
 
