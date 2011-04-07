@@ -156,8 +156,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
   Recognition][dimitros09-rapor], Centre of Research & Technology - Hellas,
   Dimitrios Tzovaras, 2009
 
-- felez10: [Towards a More Realistic Appearance-Based Gait Representation for
-  Gender Recognition][felez10], IEEE, 2010
+- felez10a-ocs: [Towards a More Realistic Appearance-Based Gait Representation for
+  Gender Recognition][felez10a-ocs], IEEE, 2010
+
+- felez10b-ocs: [A GENDER RECOGNITION EXPERIMENT ON THE CASIA GAIT DATABASE DEALING WITH ITS IMBALANCED NATURE][felez10b-ocs], IEEE, 2010
 
 - guha10-radon: [DIFFERENTIAL RADON TRANSFORM FOR GAIT
   RECOGNITION][guha10-radon], IEEE, 2010, Tanaya Guha, Rabab Ward
@@ -258,7 +260,9 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [dimitros09-rapor]:         http://www.iti.gr/iti/files/document/seminars/Activity_recognition_final.pdf
 
-[felez10]:                  http://marmota.dlsi.uji.es/WebBIB//papers/2010/0_ICPR2010_RMartin.pdf
+[felez10a-ocs]:             http://marmota.dlsi.uji.es/WebBIB//papers/2010/0_ICPR2010_RMartin.pdf
+
+[felez10b-ocs]:             http://marmota.dlsi.uji.es/WebBIB//papers/2010/RaulMartinVISAPP2010.pdf
 
 [foix11-review]:            http://ieeexplore.ieee.org/ielx5/7361/4427201/05686908.pdf?tp=&arnumber=5686908&isnumber=4427201
 
