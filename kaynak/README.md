@@ -152,6 +152,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 ## Gait Analysis
 
+- chen09-weighted: [Gender Classification Based on Fusion of Weighted Multi-view
+  Gait Component Distance][chen09-weighted], Lei Chen1, Yunhong Wang1, Yiding
+  Wang2, IEEE, 2009
+
 - dimitros09-rapor: [Activity Recognition: Gait Analysis and
   Recognition][dimitros09-rapor], Centre of Research & Technology - Hellas,
   Dimitrios Tzovaras, 2009
@@ -261,6 +265,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [bodor03]:                  http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.9664&rep=rep1&type=pdf
 
 [candamo10-survey]:         http://www.cse.usf.edu/~mshreve/publications/ITS.pdf
+
+[chen09-weighted]:          http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5344035
 
 [dimitros09-rapor]:         http://www.iti.gr/iti/files/document/seminars/Activity_recognition_final.pdf
 
