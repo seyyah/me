@@ -164,6 +164,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 - guha10-radon: [DIFFERENTIAL RADON TRANSFORM FOR GAIT
   RECOGNITION][guha10-radon], IEEE, 2010, Tanaya Guha, Rabab Ward
 
+- hu10-ocs: [Combining Spatial and Temporal Information for Gait Based Gender Classification][hu10-ocs], IEEE, 2010, Maodi Hu1 , Yunhong Wang1 , Zhaoxiang Zhang1 and Yiding Wang2
+
 - huang98: [A statistical approach for recognizing humans by gait using sp
   atial-temporal templates][huang98], P.S. Huang and C.J. Harris and M.S.
   Nixon, Image Processing, International Conference on, 1998
@@ -171,6 +173,8 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 - kale04: [Identification of Humans Using Gait][kale04], 2004, Kale A. ,
   Sundaresan A. , A. N. Rajagopalan, Cuntoor N. ,Roy-Chowdhury A. ,Krüger V. ,
   Chellappa R.
+
+- lee02-mit: [Gait Analysis for Recognition and Classification][lee02-mit], L. Lee, W. E. L. Grimson, 2002, MIT
 
 - li10: [Part-based human gait identification under clothing and carrying
   condition variations][li10], IEEE, 2010, Ning Li;   Yi Xu;   Xiao-Kang Yang
@@ -292,11 +296,13 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [larsen08]:                 http://onlinelibrary.wiley.com/doi/10.1111/j.1556-4029.2008.00807.x/pdf
 
-[li10]:                     http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5581055
+[lee02-mit]:                http://arnetminer.org/dev.do?m=downloadpdf&url=http://arnetminer.org/pdf/PDFFiles2/--d---d-1253746325087/Gait%20Analysis%20for%20Recognition%20and%20Classification1253746760592.pdf
 
 [lee08-loaded]:             http://www.google.com.tr/url?sa=t&source=web&cd=3&ved=0CDMQFjAC&url=http%3A%2F%2Fscholar.lib.vt.edu%2Ftheses%2Favailable%2Fetd-08052008-150018%2Funrestricted%2FDissertation_Lee.pdf&ei=GoWZTeO7K47FtAaU4MjKCA&usg=AFQjCNH-mcqzNLjO4T4zWolsovnGYMI_mg
 
 [lee09]:                    http://www.sciencedirect.com/science?_ob=MImg&_imagekey=B6V8T-4VF0XND-1-9&_cdi=5879&_user=736649&_pii=S0167945708001115&_origin=gateway&_coverDate=04%2F30%2F2009&_sk=999719997&view=c&wchp=dGLbVlz-zSkzk&md5=ff2c1b73ef154d77d922b2da39df006e&ie=/sdarticle.pdf
+
+[li10]:                     http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5581055
 
 [makarski02]:               http://edocs.nps.edu/npspubs/scholarly/theses/2002/Sep/02Sep_Makarski.pdf
 
