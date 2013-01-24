@@ -255,6 +255,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 - dipimage: [Diplig.org][dipimage], 2009, http://www.diplib.org/
 
+- Jabri S. vd, "Detection and Location of People in Video Images Using Adaptive Fusion of Color and Edge Information", 2000, Proc.
+15th International Conf Pattern Recognition, vol. 4, 627-630, Gerçekleme: [frm2confC](https://github.com/19bal/gad/blob/master/02-bgextract/03-bgextract-mn-st/frm2confC.m)
+
+
 <!-- kaynaklar -->
 [anderson08-fall-detection]: http://eldertech.missouri.edu/.../Evaluation_of_a_Video-Based_Fall_%20Recognition_System.pdf
 
