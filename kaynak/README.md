@@ -322,7 +322,7 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 
 [moeslund06-survey]:        ???
 
-[nadimi04]:                 http://www.vislab.ucr.edu/.../Physical%20Models%20for%20Moving%20Shadow04.pdf
+[nadimi04]:                 http://vislab.ee.ucr.edu/PUBLICATIONS/pubs/Journal%20and%20Conference%20Papers/after10-1-1997/Journals/2004/Physical%20Models%20for%20Moving%20Shadow04.pdf
 
 [nixon10]:                  http://www.eurasip.org/Proceedings/Eusipco/Eusipco2010/.../1569292301.pdf
 
