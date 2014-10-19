@@ -8,9 +8,9 @@
 
 - Manage the (Automatic) Naming of Your Figure Windows: <http://blogs.mathworks.com/pick/2013/04/19/manage-the-automatic-naming-of-your-figure-windows/>
 - Figure margins, subplot spacings, and more…: <http://blogs.mathworks.com/pick/2012/12/21/figure-margins-subplot-spacings-and-more/>
-- plotyy: http://blogs.mathworks.com/loren/2013/03/27/multiple-y-axes/
-- regresyon: http://blogs.mathworks.com/loren/2012/03/16/new-regression-capabilities-in-release-2012a/
-- 
+- plotyy: <http://blogs.mathworks.com/loren/2013/03/27/multiple-y-axes/>
+- regresyon: <http://blogs.mathworks.com/loren/2012/03/16/new-regression-capabilities-in-release-2012a/>
+
 ## GUI
 
-- http://blogs.mathworks.com/loren/2014/01/15/cool-graphics-and-graphical-user-interfaces/
+- <http://blogs.mathworks.com/loren/2014/01/15/cool-graphics-and-graphical-user-interfaces/>
