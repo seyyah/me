@@ -42,6 +42,8 @@
 
 ## Gölge Algılama, Uzaklaştırma ve Takip
 
+- Ziraat Bankası reklam filmi: http://www.youtube.com/watch?v=bmCa4R9zsPk
+
 - jiang92: [Shadow Identification][jiang92], IEEE, 1992
 
 - mikic00: [Moving Shadow and Object Detection in Traffic Scenes][mikic00]
