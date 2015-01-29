@@ -39,7 +39,7 @@
 #       setting up the boot scripts.
 ```
 
-cp matlabroot/etc/flexnet.boot.linux /etc/init.d/flexnet
+- cp matlabroot/etc/flexnet.boot.linux /etc/init.d/flexnet
 
 - Ubuntu yazılım merkezinden Matlab'ı kur
 
