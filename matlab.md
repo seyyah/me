@@ -14,3 +14,34 @@
 ## GUI
 
 - <http://blogs.mathworks.com/loren/2014/01/15/cool-graphics-and-graphical-user-interfaces/>
+
+# Kurulum Ubuntu
+
+- seyyah@bil
+- apt lsb lsb-core
+
+# MATLAB FLEXnet Network License Manager Daemon
+#
+#       For boot-time initialization on Linux
+#
+# Steps: (as root)
+#
+#    1. If the following links do not exist create them:
+#
+#       ln -s $MATLAB/etc/lmboot /etc/lmboot_TMW
+#       ln -s $MATLAB/etc/lmdown /etc/lmdown_TMW
+#
+#    2. Replace CHANGE_USER_NAME argument to the lmboot_TMW
+#       command below by a real usename OTHER than root!
+#
+#    3. Follow the instructions in the Installation Guide for
+#       setting up the boot scripts.
+
+cp matlabroot/etc/flexnet.boot.linux /etc/init.d/flexnet
+
+- Ubuntu yazılım merkezinden Matlab'ı kur
+
+- /etc/init.d/flexnet start
+- matlab
+
+1. http://www.mathworks.com/matlabcentral/answers/97361-why-am-i-unable-to-start-the-flexnet-license-manager-v11-8-or-higher-on-debian-based-linux-distribut
