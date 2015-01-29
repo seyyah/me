@@ -20,6 +20,7 @@
 - seyyah@bil
 - apt lsb lsb-core
 
+```sh
 # MATLAB FLEXnet Network License Manager Daemon
 #
 #       For boot-time initialization on Linux
@@ -36,6 +37,7 @@
 #
 #    3. Follow the instructions in the Installation Guide for
 #       setting up the boot scripts.
+```
 
 cp matlabroot/etc/flexnet.boot.linux /etc/init.d/flexnet
 
