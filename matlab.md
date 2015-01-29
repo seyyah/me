@@ -41,7 +41,9 @@
 
 - cp matlabroot/etc/flexnet.boot.linux /etc/init.d/flexnet
 
-- Ubuntu yazılım merkezinden Matlab'ı kur
+- apt matlab-support
+
+## Çalıştırırken
 
 - /etc/init.d/flexnet start
 - matlab
