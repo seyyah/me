@@ -1,3 +1,8 @@
+# Best Practices
+
+Web FundamentalsBest practices for modern web development
+<https://developers.google.com/web/fundamentals>
+
 # Front-end Stuff
 
 A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff.
