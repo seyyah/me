@@ -18,3 +18,7 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 # Editor Makale
 
 - https://github.com/scholmd/scholmd
+
+# LSIM
+
+- Sirius: Speech and Vision Based Intelligent Personal Assistant https://github.com/jhauswald/sirius
