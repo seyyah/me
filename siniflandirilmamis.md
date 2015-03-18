@@ -8,6 +8,9 @@ Web FundamentalsBest practices for modern web development
 - Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 
 # Front-end Stuff
+Editor
+- html: http://www.bootstrap-switch.org/examples.html
+- markdown: https://github.com/vmg/redcarpet
 
 A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff.
 
