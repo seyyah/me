@@ -76,6 +76,8 @@
 
 ## Eylem Analizi
 
+- popoola11, [Video-Based Abnormal Human BehaviorRecognition—A Review](https://www.academia.edu/8153063/Video-Based_Abnormal_Human_Behavior_Recognition_A_Review)
+
 - bodor03: [Vision-Based Human Tracking and Activity Recognition][bodor03],
   Robert Bodor, Bennett Jackson, Nikolaos Papanikolopoulos, 2003
 
