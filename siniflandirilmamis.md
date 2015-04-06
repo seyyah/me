@@ -5,6 +5,7 @@ Web FundamentalsBest practices for modern web development
 
 # Back-end Stuff
 
+- HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
 - Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 
 # Front-end Stuff
