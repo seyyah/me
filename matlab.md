@@ -46,6 +46,6 @@
 ## Çalıştırırken
 
 - /etc/init.d/flexnet start
-- matlab
+- LC_ALL=C matlab
 
 1. http://www.mathworks.com/matlabcentral/answers/97361-why-am-i-unable-to-start-the-flexnet-license-manager-v11-8-or-higher-on-debian-based-linux-distribut
