@@ -16,7 +16,7 @@ Web FundamentalsBest practices for modern web development
 
 - https://github.com/angular/material-start
 - http://www.bootbundle.com/tool
-- https://github.com/ripienaar/free-for-dev
+- A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: https://github.com/ripienaar/free-for-dev
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
 
 Editor,
