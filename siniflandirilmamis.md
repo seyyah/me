@@ -1,18 +1,18 @@
-# Best Practices
+# A. Best Practices
 
 Web FundamentalsBest practices for modern web development
 <https://developers.google.com/web/fundamentals>
 
-# Back-end Stuff
+# B. Back-end Stuff
 
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
 - Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 
-## GEM
+## B.1. GEM
 
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
 
-# Front-end Stuff
+# C. Front-end Stuff
 
 - https://github.com/angular/material-start
 - http://www.bootbundle.com/tool
@@ -23,19 +23,22 @@ Editor,
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
 
-## Javascript
+## C.1. Javascript
 
 Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well …
 
 <https://github.com/NativeScript/NativeScript>
 
-# Editor Makale
+# System
+
+- A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
+# V. Editor Makale
 
 - https://github.com/scholmd/scholmd
 
-# LSIM
+# Y. LSIM
 
 - Sirius: Speech and Vision Based Intelligent Personal Assistant https://github.com/jhauswald/sirius
 
-# Tools
+# Z. Tools
 sparkle, mega.co.nz, zenhub
