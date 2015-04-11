@@ -245,6 +245,10 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
   UAVS][irschara10-reconstruction-from-uavs], A. Irschara, V. Kaufman, M.
   Klopschitz, H. Bischof, F. Leberl, IAPRS, 2010
 
+## Color
+
+- Color Names: <https://www.researchgate.net/post/How_can_I_change_RGB_to_11_basic_color_namesLearning_Color_Names_for_Real-World_Applications>
+- 
 ## Sınıflandırılmamış
 
 - hsu09-patent: [Method For Recognizing Dice Dots][hsu09-patent]
@@ -393,3 +397,4 @@ Methods for the Confidence Project: a Survey][kaluza08-fall-detection], 2008
 [yi07]:                     ???
 
 [zhao10]:                   http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5622362
+
