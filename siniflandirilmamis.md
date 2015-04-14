@@ -3,6 +3,8 @@
 Web FundamentalsBest practices for modern web development
 <https://developers.google.com/web/fundamentals>
 
+- A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: https://github.com/ripienaar/free-for-dev
+
 # B. Back-end Stuff
 
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
@@ -16,7 +18,6 @@ Web FundamentalsBest practices for modern web development
 
 - https://github.com/angular/material-start
 - http://www.bootbundle.com/tool
-- A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: https://github.com/ripienaar/free-for-dev
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
 
 Editor,
