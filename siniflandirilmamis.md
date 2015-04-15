@@ -19,6 +19,7 @@ Web FundamentalsBest practices for modern web development
 - https://github.com/angular/material-start
 - http://www.bootbundle.com/tool
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
+- http://cssguidelin.es/
 
 Editor,
 - html: http://www.bootstrap-switch.org/examples.html
