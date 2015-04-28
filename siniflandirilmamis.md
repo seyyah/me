@@ -35,9 +35,20 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 
 - https://github.com/cjwirth/awesome-ios-ui
 
-# D. System
+# D. Mobile
+
+- https://github.com/adamwulf/app-launch-guide
+> This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
+https://getlooseleaf.com
+
+# E. Genel
+
+- Facebook+OAuth: https://github.com/arsduo/koala
+
+# F. System
 
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
+- 
 # V. Editor Makale
 
 - https://github.com/scholmd/scholmd
