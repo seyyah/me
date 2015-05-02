@@ -7,7 +7,11 @@ Web FundamentalsBest practices for modern web development
 
 # B. Back-end Stuff
 
+## API
+- API Tool/Gem: http://getkong.org/
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
+- Tez: https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf
+
 - Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 
 ## B.1. GEM
