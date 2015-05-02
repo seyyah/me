@@ -12,6 +12,7 @@ Web FundamentalsBest practices for modern web development
 
 ## B.1. GEM
 
+- Credit Card: https://github.com/jessepollak/card
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
 
 # C. Front-end Stuff
@@ -37,6 +38,12 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 
 # D. Mobile
 
+## D1. Platform Bağımsız
+- Ionic: http://ionicframework.com/docs/components/
+- Cordova: https://cordova.apache.org/
+- Electron Atom: https://github.com/atom/electron
+
+## D2. Diğer
 - https://github.com/adamwulf/app-launch-guide
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
 https://getlooseleaf.com
