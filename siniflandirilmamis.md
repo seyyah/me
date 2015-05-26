@@ -74,3 +74,6 @@ sparkle, mega.co.nz, zenhub
 ## Mockup
 
 - Programlama temelli wireframe: https://github.com/tsx/shireframe
+
+# ZZ. Diğer
+A curated list of awesome lists: https://github.com/sindresorhus/awesome
