@@ -14,7 +14,7 @@ A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo
 - API Tool/Gem: http://getkong.org/
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
 - Tez: https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf
-
+- http://ben.vandgrift.com/2011/06/17/secure_communication_rails_3.html
 - Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 
 ## B.1. GEM
