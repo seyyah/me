@@ -10,6 +10,8 @@ A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo
 # B. Back-end Stuff
 
 ## API
+- Top Six Reasons to Use API Keys (and How!): https://stormpath.com/blog/top-six-reasons-use-api-keys-and-how/
+- http://stackoverflow.com/questions/247110/looking-for-suggestions-for-building-a-secure-rest-api-within-ruby-on-rails
 - Doorkeeper+Oauth: https://github.com/doorkeeper-gem/doorkeeper
 - API Tool/Gem: http://getkong.org/
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
