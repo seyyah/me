@@ -26,6 +26,7 @@ A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devo
 
 # C. Front-end Stuff
 
+- https://github.com/zachsoft/Ionic-Material
 - https://github.com/angular/material-start
 - http://www.bootbundle.com/tool
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
@@ -53,6 +54,7 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 - Electron Atom: https://github.com/atom/electron
 
 ## D2. Diğer
+- https://www.firebase.com
 - https://github.com/adamwulf/app-launch-guide
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
 https://getlooseleaf.com
