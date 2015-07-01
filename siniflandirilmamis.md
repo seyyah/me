@@ -1,11 +1,9 @@
 # A. Best Practices
 
-Software Engineering Blogs: <https://github.com/kilimchoi/engineering-blogs>
-
-Web FundamentalsBest practices for modern web development
-<https://developers.google.com/web/fundamentals>
-
-A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: https://github.com/ripienaar/free-for-dev
+- Rails Blog: <http://www.reddit.com/r/rails/comments/3ban4d/can_anyone_recommend_some_good_ror_blogs/>
+- Software Engineering Blogs: <https://github.com/kilimchoi/engineering-blogs>
+- Web FundamentalsBest practices for modern web development: <https://developers.google.com/web/fundamentals>
+- A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
 
 # B. Back-end Stuff
 
