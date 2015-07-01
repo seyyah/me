@@ -21,6 +21,7 @@
 
 - Credit Card: https://github.com/jessepollak/card
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
+- How do I encrypt data in my database?: <http://theartandscienceofruby.com/2015/06/29/how-do-i-encrypt-data-in-my-database/>
 
 # C. Front-end Stuff
 
