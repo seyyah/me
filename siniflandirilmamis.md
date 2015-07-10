@@ -48,6 +48,17 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 
 # D. Mobile
 
+## Ionic
+
+- tutorial: <http://julienrenaux.fr/2015/02/17/creating-an-hybrid-app-in-minutes-with-ionic-framework/>
+- Clean code for ionic project: <https://github.com/previousdeveloper/ionic-best-structure>
+- This is a little demo project to show how to implement a hybrid application with the Ionic Framework: <https://github.com/mastix/Ionic-Weather-Application>
+- Must-have plugins for Ionic Framework: <http://www.gajotres.net/must-have-plugins-for-ionic-framework/>
+
+### Demo
+
+- http://metaware.github.io/angular-invoicing/#
+
 ## D1. Platform Bağımsız
 - Ionic: http://ionicframework.com/docs/components/
 - Cordova: https://cordova.apache.org/
@@ -59,14 +70,23 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
 https://getlooseleaf.com
 
+# AngularJs
+
+- Modules: <https://ngmodules.com/>
+- Style guide: <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>
+- Textangular: <https://github.com/fraywing/textangular>, <http://textangular.com/>
+- Modal: <https://github.com/likeastore/ngDialog>
+- Omniauth: Satellizer is a simple to use, end-to-end, token-based authentication module for AngularJS with built-in support for Google, Facebook, LinkedIn, Twitter, Yahoo, Windows Live authentication providers, as well as Email and Password sign-in. <https://github.com/sahat/satellizer>
+
 # E. Genel
 
 - Facebook+OAuth: https://github.com/arsduo/koala
+- Make a Gif: <http://makeagif.com/>
 
 # F. System
 
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
-- 
+
 # V. Editor Makale
 
 - https://github.com/scholmd/scholmd
@@ -83,4 +103,5 @@ sparkle, mega.co.nz, zenhub
 - Programlama temelli wireframe: https://github.com/tsx/shireframe
 
 # ZZ. Diğer
+
 A curated list of awesome lists: https://github.com/sindresorhus/awesome
