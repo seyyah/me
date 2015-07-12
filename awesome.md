@@ -8,6 +8,14 @@
 # B. Back-end Stuff
 
 ## API
+Yol haritası,
+
+1. Giriş: https://www.youtube.com/watch?v=36M2BSA2LYk
+2. Version: http://railscasts.com/episodes/350-rest-api-versioning
+3. Secure: https://www.youtube.com/watch?v=AiVj2xyTBcw
+4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
+
+### Genel
 - API Basics and Building Your Own: <http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own>
 - Top Six Reasons to Use API Keys (and How!): https://stormpath.com/blog/top-six-reasons-use-api-keys-and-how/
 - http://stackoverflow.com/questions/247110/looking-for-suggestions-for-building-a-secure-rest-api-within-ruby-on-rails
