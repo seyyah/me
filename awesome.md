@@ -29,6 +29,7 @@ Yol haritası,
 
 ## B.1. GEM
 
+- reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
 - wisper: A micro library providing Ruby objects with Publish-Subscribe capabilities: <https://github.com/krisleech/wisper>
 - Credit Card: https://github.com/jessepollak/card
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
