@@ -10,7 +10,7 @@
 ## API
 Yol haritası,
 
-1. Giriş: https://www.youtube.com/watch?v=36M2BSA2LYk
+1. Giriş: http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own, https://www.youtube.com/watch?v=36M2BSA2LYk
 2. Version: http://railscasts.com/episodes/350-rest-api-versioning
 3. Secure: https://www.youtube.com/watch?v=AiVj2xyTBcw
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
