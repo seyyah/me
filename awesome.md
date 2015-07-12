@@ -25,11 +25,11 @@ Yol haritası,
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
 - Tez: https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf
 - http://ben.vandgrift.com/2011/06/17/secure_communication_rails_3.html
-- Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 
 ## B.1. GEM
 
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
+- Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 - wisper: A micro library providing Ruby objects with Publish-Subscribe capabilities: <https://github.com/krisleech/wisper>
 - Credit Card: https://github.com/jessepollak/card
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
