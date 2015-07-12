@@ -8,6 +8,7 @@
 # B. Back-end Stuff
 
 ## API
+- API Basics and Building Your Own: <http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own>
 - Top Six Reasons to Use API Keys (and How!): https://stormpath.com/blog/top-six-reasons-use-api-keys-and-how/
 - http://stackoverflow.com/questions/247110/looking-for-suggestions-for-building-a-secure-rest-api-within-ruby-on-rails
 - Doorkeeper+Oauth: https://github.com/doorkeeper-gem/doorkeeper
