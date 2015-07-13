@@ -87,7 +87,8 @@ https://getlooseleaf.com
 # AngularJs
 
 - Modules: <https://ngmodules.com/>
-- Style guide: <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>
+- Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
+- https://github.com/toddmotto/angularjs-styleguide
 - Textangular: <https://github.com/fraywing/textangular>, <http://textangular.com/>
 - Free Angular JS Themes and Templates: <http://startangular.com/>
 - Modal: <https://github.com/likeastore/ngDialog>
