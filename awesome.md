@@ -64,6 +64,7 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 ## Ionic
 
 - tutorial: <http://julienrenaux.fr/2015/02/17/creating-an-hybrid-app-in-minutes-with-ionic-framework/>
+- The Definitive Ionic Starter Guide: <https://www.airpair.com/ionic-framework/posts/the-definitive-ionic-starter-guide>
 - Clean code for ionic project: <https://github.com/previousdeveloper/ionic-best-structure>
 - This is a little demo project to show how to implement a hybrid application with the Ionic Framework: <https://github.com/mastix/Ionic-Weather-Application>
 - Must-have plugins for Ionic Framework: <http://www.gajotres.net/must-have-plugins-for-ionic-framework/>
