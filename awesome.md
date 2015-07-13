@@ -94,11 +94,12 @@ https://getlooseleaf.com
 
 # AngularJs
 
-- AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - Modules: <https://ngmodules.com/>
 - Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
 - https://github.com/toddmotto/angularjs-styleguide
+- Xeditable: <http://vitalets.github.io/angular-xeditable/>
 - Textangular: <https://github.com/fraywing/textangular>, <http://textangular.com/>
+- AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - Free Angular JS Themes and Templates: <http://startangular.com/>
 - Modal: <https://github.com/likeastore/ngDialog>
 - Omniauth: Satellizer is a simple to use, end-to-end, token-based authentication module for AngularJS with built-in support for Google, Facebook, LinkedIn, Twitter, Yahoo, Windows Live authentication providers, as well as Email and Password sign-in. <https://github.com/sahat/satellizer>
