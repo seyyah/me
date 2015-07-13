@@ -54,11 +54,13 @@ Editor,
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
 
-## C.1. Javascript
+## Bootstrap
 
-Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well …
+- An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features : <http://bootstrap-table.wenzhixin.net.cn/>, demo: <http://issues.wenzhixin.net.cn/bootstrap-table/>
 
-<https://github.com/NativeScript/NativeScript>
+## Javascript
+
+Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
 
 ## iOS UI
 
