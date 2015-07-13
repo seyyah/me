@@ -16,6 +16,7 @@ Yol haritası,
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
 
 ### Genel
+- AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - API Basics and Building Your Own: <http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own>
 - Top Six Reasons to Use API Keys (and How!): https://stormpath.com/blog/top-six-reasons-use-api-keys-and-how/
 - Sonuçta OAuth: http://stackoverflow.com/questions/247110/looking-for-suggestions-for-building-a-secure-rest-api-within-ruby-on-rails
@@ -41,6 +42,8 @@ Yol haritası,
 
 - https://github.com/zachsoft/Ionic-Material
 - https://github.com/angular/material-start
+- http://www.materialup.com/
+- https://www.google.com/design/spec/material-design/introduction.html
 - Echo is a standalone JavaScript lazy-loading image micro-library. <https://github.com/toddmotto/echo>
 - http://www.bootbundle.com/tool
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
@@ -69,6 +72,7 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 - Clean code for ionic project: <https://github.com/previousdeveloper/ionic-best-structure>
 - This is a little demo project to show how to implement a hybrid application with the Ionic Framework: <https://github.com/mastix/Ionic-Weather-Application>
 - Must-have plugins for Ionic Framework: <http://www.gajotres.net/must-have-plugins-for-ionic-framework/>
+- Pour material design into your Ionic hybrid apps for all the sexy and no complexity. Now unlock the depth, motion & ink specs of Google's material design with easy-to-add-on classes.: <http://ionicmaterial.com/>
 
 ### Demo
 
@@ -87,6 +91,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - Modules: <https://ngmodules.com/>
 - Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
 - https://github.com/toddmotto/angularjs-styleguide
@@ -94,6 +99,8 @@ https://getlooseleaf.com
 - Free Angular JS Themes and Templates: <http://startangular.com/>
 - Modal: <https://github.com/likeastore/ngDialog>
 - Omniauth: Satellizer is a simple to use, end-to-end, token-based authentication module for AngularJS with built-in support for Google, Facebook, LinkedIn, Twitter, Yahoo, Windows Live authentication providers, as well as Email and Password sign-in. <https://github.com/sahat/satellizer>
+- https://github.com/angular/angular-phonecat, https://docs.angularjs.org/tutorial
+- https://github.com/angular/material-start
 
 # E. Genel
 
