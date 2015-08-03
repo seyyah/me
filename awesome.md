@@ -116,6 +116,7 @@ https://getlooseleaf.com
 
 # F. System
 
+- **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 
 # V. Editor Makale
