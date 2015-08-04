@@ -49,6 +49,7 @@ Yol haritası,
 - http://www.bootbundle.com/tool
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
 - http://cssguidelin.es/
+- Marksheet: a free guide to HTML and CSS: <http://marksheet.io/>
 
 Editor,
 - html: http://www.bootstrap-switch.org/examples.html
@@ -117,6 +118,7 @@ https://getlooseleaf.com
 # F. System
 
 - **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
+- **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 
 # V. Editor Makale
