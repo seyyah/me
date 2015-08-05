@@ -121,6 +121,12 @@ https://getlooseleaf.com
 - **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 
+## Deploy
+- ngrok
+- pagekite.me
+- heroku
+- digitalocean
+
 # V. Editor Makale
 
 - https://github.com/scholmd/scholmd
