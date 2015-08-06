@@ -131,6 +131,10 @@ https://getlooseleaf.com
 
 - Writing Fast Ruby, Collect Common Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
 
+# Rails ile yazılmış uygulamalar
+
+- Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
+
 # V. Editor Makale
 
 - https://github.com/scholmd/scholmd
