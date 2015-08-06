@@ -128,9 +128,7 @@ https://getlooseleaf.com
 - digitalocean
 
 # Style vs
-
-- Writing Fast Ruby ￼ —— Collect Common Ruby idio<.https://github.com/JuanitoFatas/fast-ruby>
-
+ssssssssssssss
 # V. Editor Makale
 
 - https://github.com/scholmd/scholmd
