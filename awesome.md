@@ -109,6 +109,8 @@ https://getlooseleaf.com
 - Omniauth: Satellizer is a simple to use, end-to-end, token-based authentication module for AngularJS with built-in support for Google, Facebook, LinkedIn, Twitter, Yahoo, Windows Live authentication providers, as well as Email and Password sign-in. <https://github.com/sahat/satellizer>
 - https://github.com/angular/angular-phonecat, https://docs.angularjs.org/tutorial
 - https://github.com/angular/material-start
+- http://www.angularjshub.com/examples/
+- http://curran.github.io/screencasts/introToAngular/exampleViewer/#/
 
 # E. Genel
 
