@@ -128,7 +128,9 @@ https://getlooseleaf.com
 - digitalocean
 
 # Style vs
-ssssssssssssss
+
+- Writing Fast Ruby, Collect Common Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
+
 # V. Editor Makale
 
 - https://github.com/scholmd/scholmd
