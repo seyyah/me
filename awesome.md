@@ -120,6 +120,7 @@ https://getlooseleaf.com
 - **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
 - **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
+- **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
 
 ## Deploy
 - ngrok
