@@ -61,6 +61,8 @@ Editor,
 
 - An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features : <http://bootstrap-table.wenzhixin.net.cn/>, demo: <http://issues.wenzhixin.net.cn/bootstrap-table/>
 
+- Calendar: <http://bootstrap-calendar.azurewebsites.net/>
+
 ## Javascript
 
 Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
