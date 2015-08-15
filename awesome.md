@@ -16,7 +16,7 @@ Yol haritası,
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
 
 ### Genel
-- Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
+- https://github.com/Neson/api_helper
 - AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - API Basics and Building Your Own: <http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own>
 - Top Six Reasons to Use API Keys (and How!): https://stormpath.com/blog/top-six-reasons-use-api-keys-and-how/
@@ -32,6 +32,7 @@ Yol haritası,
 
 ## B.1. GEM
 
+- Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
 - Log Analiz: https://github.com/wvanbergen/request-log-analyzer
 - wisper: A micro library providing Ruby objects with Publish-Subscribe capabilities: <https://github.com/krisleech/wisper>
