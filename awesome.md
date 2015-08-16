@@ -77,6 +77,7 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 
 ## Ionic
 
+- GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
 - tutorial: <http://julienrenaux.fr/2015/02/17/creating-an-hybrid-app-in-minutes-with-ionic-framework/>
 - A Comprehensive List Of Ionic Starter Apps: <http://www.gajotres.net/a-comprehensive-list-of-ionic-starter-apps/>
 - Useful Cordova Plugins For Your Ionic Application & Examples: <http://www.gajotres.net/useful-cordova-plugins-for-your-ionic-application-examples/>
