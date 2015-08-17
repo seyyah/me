@@ -132,6 +132,7 @@ https://getlooseleaf.com
 - **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 - **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
+- **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 
 ## Deploy
 - ngrok
