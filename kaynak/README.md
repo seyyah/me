@@ -76,6 +76,8 @@
 
 ## Eylem Analizi
 
+- weinland11, [A survey of vision-based methods for action representation, segmentation and recognition](http://www.scopus.com/record/display.url?eid=2-s2.0-78751648503&origin=inward&txGid=62490BF0D51F9DE3602B3FF4A5A077B3.N5T5nM1aaTEF8rE6yKCR3A%3a2)
+- 
 - popoola11, [Video-Based Abnormal Human BehaviorRecognition—A Review](https://www.academia.edu/8153063/Video-Based_Abnormal_Human_Behavior_Recognition_A_Review)
 
 - bodor03: [Vision-Based Human Tracking and Activity Recognition][bodor03],
