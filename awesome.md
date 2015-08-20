@@ -148,8 +148,9 @@ https://getlooseleaf.com
 
 - Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
 
-# V. Editor Makale
+# V. Editor Makale vs
 
+- Caffe: a fast open framework for deep learning. <https://github.com/BVLC/caffe>, Berkeley Vision and Learning Center
 - https://github.com/scholmd/scholmd
 
 # Y. LSIM
@@ -157,6 +158,7 @@ https://getlooseleaf.com
 - Sirius: Speech and Vision Based Intelligent Personal Assistant https://github.com/jhauswald/sirius
 
 # Z. Tools
+
 sparkle, mega.co.nz, zenhub
 
 ## Mockup
