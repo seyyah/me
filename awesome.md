@@ -108,6 +108,7 @@ https://getlooseleaf.com
 
 - Modules: <https://ngmodules.com/>
 - Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
+- Text Input Effects from Codrops for Angular directives: <http://cesardeazevedo.github.io/ng-input/>
 - https://coderwall.com/p/y0zkiw/building-large-apps-with-angularjs
 - https://github.com/toddmotto/angularjs-styleguide
 - Xeditable: <http://vitalets.github.io/angular-xeditable/>
