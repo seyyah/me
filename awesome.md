@@ -144,6 +144,7 @@ https://getlooseleaf.com
 # Style vs
 
 - Writing Fast Ruby, Collect Common Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
+- Code quality threshold checking as part of your build: <https://github.com/square/cane>
 
 # Rails ile yazılmış uygulamalar
 
