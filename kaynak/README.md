@@ -109,6 +109,10 @@
 
 - turaga08: [machine recognition of human activities a survey][turaga08]
 
+### Medicine + Gait Analysis
+
+- raheja2015: Jagdish L. Raheja, Ankit Chaudhary , K. Nandhini, S. Maiti, Pre-consultation help necessity detection based on gait recognition, Signal, Image and Video Processing, September 2015, Volume 9, Issue 6, pp 1357-1363
+
 ### fall-detection
 
 - kaluza08-fall-detection: [Fall Detection and Activity Recognition
