@@ -21,3 +21,8 @@ Signal, Image and Video Processing
 May 2015, Volume 9, Issue 4, pp 947-957
 **Comparison of colour** transforms used in lip segmentation algorithms
 Ashley D. Gritzman , David M. Rubin, Adam Pantanowitz
+
+Signal, Image and Video Processing
+First online: 20 March 2015
+Three information set-based feature types for the **recognition of faces**
+Farrukh Sayeed , Madasu Hanmandlu
