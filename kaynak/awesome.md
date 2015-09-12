@@ -1,3 +1,4 @@
+Chiranjeevi, P.; Gopalakrishnan, V.; Moogi, P., "**Neutral Face** Classification Using Personalized Appearance Models for Fast and Robust **Emotion Detection**," in Image Processing, IEEE Transactions on , vol.24, no.9, pp.2701-2711, Sept. 2015, doi: 10.1109/TIP.2015.2421437
 
 Signal, Image and Video Processing
 September 2015, Volume 9, Issue 6, pp 1365-1375
