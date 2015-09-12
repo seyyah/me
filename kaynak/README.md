@@ -42,6 +42,9 @@
 
 ## Gölge Algılama, Uzaklaştırma ve Takip
 
+- zhang2015: Zhang, L.; Zhang, Q.; Xiao, C., "Shadow Remover: Image Shadow Removal Based on Illumination Recovering Optimization," in Image Processing, IEEE Transactions on , vol.24, no.11, pp.4623-4636, Nov. 2015
+doi: 10.1109/TIP.2015.2465159
+
 - Ziraat Bankası reklam filmi: http://www.youtube.com/watch?v=bmCa4R9zsPk
 
 - jiang92: [Shadow Identification][jiang92], IEEE, 1992
