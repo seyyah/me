@@ -146,6 +146,7 @@ https://getlooseleaf.com
 
 - Writing Fast Ruby, Collect Common Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
+- A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
 
 # Rails ile yazılmış uygulamalar
 
@@ -160,6 +161,7 @@ https://getlooseleaf.com
 
 # Y. LSIM
 
+- Tree: <https://github.com/mceachen/closure_tree>
 - Sirius: Speech and Vision Based Intelligent Personal Assistant https://github.com/jhauswald/sirius
 
 # Z. Tools
@@ -172,4 +174,5 @@ sparkle, mega.co.nz, zenhub
 
 # ZZ. Diğer
 
-A curated list of awesome lists: https://github.com/sindresorhus/awesome
+- https://github.com/hothero/rails-gem-list
+- A curated list of awesome lists: https://github.com/sindresorhus/awesome
