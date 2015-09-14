@@ -4,6 +4,7 @@
 - Software Engineering Blogs: <https://github.com/kilimchoi/engineering-blogs>
 - Web FundamentalsBest practices for modern web development: <https://developers.google.com/web/fundamentals>
 - A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
+- <http://rails-bestpractices.com/>
 
 ## Style vs
 
@@ -11,6 +12,8 @@
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
 - A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
 - Rails style: <https://github.com/radar/guides>
+- Metric Fu, Metrical, SimpleCov, Rails Best Practices, and more are covered in this episode on metrics: <http://railscasts.com/episodes/252-metrics-metrics-metrics>
+- <http://rails-bestpractices.com/>
 
 ## Rails ile yazılmış uygulamalar
 
