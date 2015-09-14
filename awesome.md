@@ -32,6 +32,8 @@ Yol haritası,
 
 ## B.1. GEM
 
+- https://github.com/hothero/rails-gem-list
+- Active Record Soft Delete: <https://github.com/radar/paranoia>
 - Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
 - Log Analiz: https://github.com/wvanbergen/request-log-analyzer
@@ -174,5 +176,4 @@ sparkle, mega.co.nz, zenhub
 
 # ZZ. Diğer
 
-- https://github.com/hothero/rails-gem-list
 - A curated list of awesome lists: https://github.com/sindresorhus/awesome
