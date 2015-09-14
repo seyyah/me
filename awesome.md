@@ -12,6 +12,12 @@
 - A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
 - Rails style: <https://github.com/radar/guides>
 
+## Rails ile yazılmış uygulamalar
+
+- Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
+- Kutuphane: <https://github.com/smc/grandham>
+- Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
+
 # B. Back-end Stuff
 
 ## API
@@ -144,18 +150,13 @@ https://getlooseleaf.com
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 - **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
 - **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
+- SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
 
 ## Deploy
 - ngrok
 - pagekite.me
 - heroku
 - digitalocean
-
-# Rails ile yazılmış uygulamalar
-
-- Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
-- Kutuphane: <https://github.com/smc/grandham>
-- Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
 
 # V. Editor Makale vs
 
