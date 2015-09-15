@@ -114,6 +114,7 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 - Cordova: https://cordova.apache.org/
 - Electron Atom: https://github.com/atom/electron
 - http://mobilizer.me/
+- Google Bazel: <http://bazel.io/>
 
 ## D2. Diğer
 - https://www.firebase.com
