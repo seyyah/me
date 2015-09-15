@@ -87,10 +87,6 @@ Editor,
 
 Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
 
-## iOS UI
-
-- https://github.com/cjwirth/awesome-ios-ui
-
 # D. Mobile
 
 ## Ionic
@@ -105,10 +101,13 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 - This is a little demo project to show how to implement a hybrid application with the Ionic Framework: <https://github.com/mastix/Ionic-Weather-Application>
 - Must-have plugins for Ionic Framework: <http://www.gajotres.net/must-have-plugins-for-ionic-framework/>
 - Pour material design into your Ionic hybrid apps for all the sexy and no complexity. Now unlock the depth, motion & ink specs of Google's material design with easy-to-add-on classes.: <http://ionicmaterial.com/>
-
-### Demo
-
 - http://metaware.github.io/angular-invoicing/#
+
+## Diğer
+
+- iOS UI: <https://github.com/cjwirth/awesome-ios-ui>
+- Adroid Tips: <https://github.com/tangqi92/Android-Tips>
+- iOS Reverse Engineering: <https://github.com/iosre/iOSAppReverseEngineering>
 
 ## D1. Platform Bağımsız
 - Ionic: http://ionicframework.com/docs/components/
