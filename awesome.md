@@ -118,6 +118,7 @@ Visualize your data and events with sexy HTML5 and CSS3. Create simple time shee
 
 ## D2. Diğer
 - https://www.firebase.com
+- Google: Lovefield is a relational database written in pure JavaScript: <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - https://github.com/adamwulf/app-launch-guide
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
