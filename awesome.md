@@ -150,6 +150,11 @@ https://getlooseleaf.com
 
 # F. System
 
+- **Stress Test**: <http://stackoverflow.com/questions/311925/best-way-to-stress-test-a-rails-web-app>
+  + http://stackoverflow.com/questions/21005809/stress-testing-in-ruby-on-rails-4
+  + http://stackoverflow.com/questions/7492/performing-a-stress-test-on-web-application?rq=1
+  + http://www.load-testing-tools.com/
+- Page speed: <https://developers.google.com/speed/pagespeed/insights>
 - **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
 - **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
@@ -184,3 +189,9 @@ sparkle, mega.co.nz, zenhub
 # ZZ. Diğer
 
 - A curated list of awesome lists: https://github.com/sindresorhus/awesome
+
+# Küçük programcılar
+
+- code.org
+- https://blockly-games.appspot.com/
+
