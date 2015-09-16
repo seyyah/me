@@ -1,3 +1,4 @@
+# Matlab
 ## DIP
 
 - Interactively measure features in images: <http://blogs.mathworks.com/pick/2013/07/12/interactively-measure-features-in-images/>
@@ -15,7 +16,7 @@
 
 - <http://blogs.mathworks.com/loren/2014/01/15/cool-graphics-and-graphical-user-interfaces/>
 
-# Kurulum Ubuntu
+## Kurulum Ubuntu
 
 - seyyah@bil
 - apt lsb lsb-core
@@ -49,3 +50,6 @@
 - LC_ALL=C matlab
 
 1. http://www.mathworks.com/matlabcentral/answers/97361-why-am-i-unable-to-start-the-flexnet-license-manager-v11-8-or-higher-on-debian-based-linux-distribut
+
+# Diğer
+- Python: camera calibration vs <https://github.com/erget/StereoVision>, <http://erget.github.io/StereoVision/>
