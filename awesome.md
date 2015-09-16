@@ -8,6 +8,7 @@
 
 ## Style vs
 
+- Google: <https://github.com/google/styleguide>
 - Writing Fast Ruby, Collect Common Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
 - A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
