@@ -179,6 +179,7 @@ https://getlooseleaf.com
 
 # Y. LSIM
 
+- Surveyor is a developer tool to deliver surveys in Rails applications: <https://github.com/NUBIC/surveyor>
 - Tree: <https://github.com/mceachen/closure_tree>
 - Sirius: Speech and Vision Based Intelligent Personal Assistant https://github.com/jhauswald/sirius
 
