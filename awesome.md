@@ -186,11 +186,9 @@ https://getlooseleaf.com
 
 # Z. Tools
 
-sparkle, mega.co.nz, zenhub
-
-## Mockup
-
-- Programlama temelli wireframe: https://github.com/tsx/shireframe
+- sparkle, mega.co.nz, zenhub
+- Mockup: Programlama temelli wireframe: https://github.com/tsx/shireframe
+- whatsapp php chat api: <https://github.com/WHAnonymous/Chat-API>
 
 # ZZ. Diğer
 
