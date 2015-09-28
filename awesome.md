@@ -34,6 +34,8 @@ Yol haritası,
 
 ### Genel
 - Postman: Build, test, and document your APIs faster. <http://getpostman.com>
+- rest client: <https://github.com/rest-client/rest-client>, <https://github.com/lostisland/faraday>
+
 - https://github.com/Neson/api_helper
 - AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - API Basics and Building Your Own: <http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own>
@@ -48,6 +50,7 @@ Yol haritası,
 - An opinionated micro-framework for creating REST-like APIs in Ruby: <https://github.com/intridea/grape>
 - API building tools on top of ActionController: <https://github.com/Sutto/rocket_pants>
 - JSON Schema tools and doc generation for HTTP APIs: <https://github.com/interagent/prmd>
+
 
 ## B.1. GEM
 
