@@ -46,6 +46,7 @@ Yol haritası,
 - Tez: https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf
 - http://ben.vandgrift.com/2011/06/17/secure_communication_rails_3.html
 - An opinionated micro-framework for creating REST-like APIs in Ruby: <https://github.com/intridea/grape>
+- API building tools on top of ActionController: <https://github.com/Sutto/rocket_pants>
 - JSON Schema tools and doc generation for HTTP APIs: <https://github.com/interagent/prmd>
 
 ## B.1. GEM
