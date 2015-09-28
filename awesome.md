@@ -24,7 +24,7 @@
 
 # B. Back-end Stuff
 
-## API
+## B.1 API
 Yol haritası,
 
 1. Giriş: http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own, https://www.youtube.com/watch?v=36M2BSA2LYk
@@ -32,7 +32,7 @@ Yol haritası,
 3. Secure: https://www.youtube.com/watch?v=AiVj2xyTBcw
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
 
-### Genel
+### B.1.1 Genel
 - Postman: Build, test, and document your APIs faster. <http://getpostman.com>
 - rest client: <https://github.com/rest-client/rest-client>, <https://github.com/lostisland/faraday>
 
@@ -52,7 +52,7 @@ Yol haritası,
 - JSON Schema tools and doc generation for HTTP APIs: <https://github.com/interagent/prmd>
 
 
-## B.1. GEM
+## B.2 GEM
 
 - https://github.com/hothero/rails-gem-list
 - Active Record Soft Delete: <https://github.com/radar/paranoia>
