@@ -177,6 +177,7 @@ https://getlooseleaf.com
 - pagekite.me
 - heroku
 - digitalocean
+- Building Minimal Docker Image for Rails App: <http://blog.kontena.io/building-minimal-docker-image-for-rails/>
 
 # V. Editor Makale vs
 
