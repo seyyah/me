@@ -91,7 +91,8 @@ Editor,
 
 ## Javascript
 
-Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
+- Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
+- Clipboard: <https://github.com/zenorocha/clipboard.js>
 
 # D. Mobile
 
