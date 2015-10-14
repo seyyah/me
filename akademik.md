@@ -1,5 +1,10 @@
-# Blog
+# Statistics
 
+- https://en.wikipedia.org/wiki/F1_score, http://blog.tryolabs.com/2013/03/25/why-accuracy-alone-bad-measure-classification-tasks-and-what-we-can-do-about-it/
+
+# Blog, Tools
+
+- http://deeplearning.net/
 - ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
 
