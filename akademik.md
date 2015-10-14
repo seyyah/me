@@ -1,6 +1,11 @@
 # Blog
 
+- ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
+
+- <http://www.datascienceweekly.org/data-scientist-interviews>
+- http://www.wired.com/category/science
+- https://medium.com/search?q=science
 
 # Matlab
 ## DIP
