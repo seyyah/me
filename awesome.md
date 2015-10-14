@@ -60,6 +60,7 @@ Yol haritası,
 ## B.2 GEM
 
 - https://github.com/hothero/rails-gem-list
+- Easy external settings for your app: <https://github.com/remiprev/choices>
 - Active Record Soft Delete: <https://github.com/radar/paranoia>
 - Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
