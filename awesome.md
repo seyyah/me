@@ -54,8 +54,9 @@ Yol haritası,
 
 ### B.1.2 Gem: HER
 
-- [Tutorial: emberjs+Rails](https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/), [API/Provider: Rails App](https://github.com/valo/ember_rails_api_example), [Client/Consumer](https://github.com/valo/ember_rails_api_consumer),
-- 
+- Her: <https://github.com/remiprev/her>, Example: Rails+Sinatra: <https://github.com/remiprev/her-example>
+- Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
+
 ## B.2 GEM
 
 - https://github.com/hothero/rails-gem-list
