@@ -1,3 +1,7 @@
+# Blog
+
+- Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
+
 # Matlab
 ## DIP
 
