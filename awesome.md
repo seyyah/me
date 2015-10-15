@@ -19,6 +19,7 @@
 ## Rails ile yazılmış uygulamalar
 
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
+- Advanced email processing solution for Ruby on Rails applications: <https://github.com/Sology/maily_herald>, <http://mailyherald.org>
 - Kutuphane: <https://github.com/smc/grandham>
 - Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
 - https://github.com/valo/maycamp_arena
