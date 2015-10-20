@@ -13,7 +13,11 @@
 - http://www.wired.com/category/science
 - https://medium.com/search?q=science
 
-# Matlab
+# Image Processing & Matlab
+
+## Image Processing
+- Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
+
 ## DIP
 
 - Interactively measure features in images: <http://blogs.mathworks.com/pick/2013/07/12/interactively-measure-features-in-images/>
