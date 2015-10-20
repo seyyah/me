@@ -210,6 +210,7 @@ https://getlooseleaf.com
 
 # ZZ. Diğer
 
+- visualising data structures and algorithms through animation: <http://visualgo.net/>
 - Use your OS X terminal shell to do awesome things: <https://github.com/herrbischoff/awesome-osx-command-line>
 - A curated list of awesome lists: https://github.com/sindresorhus/awesome
 
