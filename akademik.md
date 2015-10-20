@@ -2,6 +2,11 @@
 
 - https://en.wikipedia.org/wiki/F1_score, http://blog.tryolabs.com/2013/03/25/why-accuracy-alone-bad-measure-classification-tasks-and-what-we-can-do-about-it/
 
+# Hardware
+
+- Lily (820$): <https://www.lily.camera/>
+- ArDrone (620$): <http://ardrone2.parrot.com/>
+
 # Blog, Tools
 
 - http://deeplearning.net/
