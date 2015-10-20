@@ -6,6 +6,7 @@
 
 - Lily (820$): <https://www.lily.camera/>
 - ArDrone (620$): <http://ardrone2.parrot.com/>
+- Google CardBoar: <https://www.google.com/intl/tr_ALL/get/cardboard/get-cardboard/>
 
 # Blog, Tools
 
