@@ -87,6 +87,7 @@ Yol haritası,
 - Marksheet: a free guide to HTML and CSS: <http://marksheet.io/>
 
 Editor,
+- A rich text editor for everyday writing: <https://github.com/basecamp/trix>
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
 
