@@ -91,6 +91,9 @@ Editor,
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
 
+Image,
+- Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
+
 ## Bootstrap
 
 - An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features : <http://bootstrap-table.wenzhixin.net.cn/>, demo: <http://issues.wenzhixin.net.cn/bootstrap-table/>
