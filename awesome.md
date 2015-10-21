@@ -23,6 +23,7 @@
 - Kutuphane: <https://github.com/smc/grandham>
 - Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
 - https://github.com/valo/maycamp_arena
+- https://github.com/OWASP/railsgoat
 
 # B. Back-end Stuff
 
