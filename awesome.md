@@ -86,6 +86,7 @@ Yol haritası,
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
 - http://cssguidelin.es/
 - Marksheet: a free guide to HTML and CSS: <http://marksheet.io/>
+- A realistic password strength estimator: <https://github.com/dropbox/zxcvbn>
 
 Editor,
 - A rich text editor for everyday writing: <https://github.com/basecamp/trix>
