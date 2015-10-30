@@ -5,7 +5,7 @@
 - Web FundamentalsBest practices for modern web development: <https://developers.google.com/web/fundamentals>
 - A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
 - <http://rails-bestpractices.com/>
-- Google, Github, Facebook, Twitter, Dropbox
+- Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot
 
 ## Style vs
 
@@ -72,6 +72,8 @@ Yol haritası,
 - Credit Card: https://github.com/jessepollak/card
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
 - How do I encrypt data in my database?: <http://theartandscienceofruby.com/2015/06/29/how-do-i-encrypt-data-in-my-database/>
+- Database multi-tenancy for Rack (and Rails) applications: <https://github.com/influitive/apartment>, <https://github.com/influitive/apartment-sidekiq>
+- Sync your models between applications seamlessly: <https://github.com/influitive/multiple_man>
 - Meteorite enables you to add two-way data binding to your application with minimal effort. For a live demo, please see http://getmeteorite.com/ . Open up the demo in two different browser windows, make changes in the first browser window and they will instantly appear in the second. The source code for the demo application is available at https://github.com/llawlor/meteorite-tasks-example, Depo: https://github.com/llawlor/meteorite, Demo: http://getmeteorite.com/
 
 # C. Front-end Stuff
