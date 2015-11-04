@@ -192,6 +192,7 @@ https://getlooseleaf.com
 - **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
 - **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 - SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
+- A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
 
 ## Deploy
 - ngrok
