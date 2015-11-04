@@ -106,6 +106,9 @@ Image,
 
 - Calendar: <http://bootstrap-calendar.azurewebsites.net/>
 
+## React
+- A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
+
 ## Javascript
 
 - Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
