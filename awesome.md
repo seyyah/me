@@ -55,6 +55,7 @@ Yol haritası,
 - An opinionated micro-framework for creating REST-like APIs in Ruby: <https://github.com/intridea/grape>
 - API building tools on top of ActionController: <https://github.com/Sutto/rocket_pants>
 - JSON Schema tools and doc generation for HTTP APIs: <https://github.com/interagent/prmd>
+- Dredd HTTP API Testing Framework: <http://dredd.rtfd.org/>, <https://github.com/apiaryio/dredd>, <https://github.com/apiaryio/dredd-hooks-ruby>
 
 ### B.1.2 Gem: HER
 
@@ -76,6 +77,7 @@ Yol haritası,
 - Database multi-tenancy for Rack (and Rails) applications: <https://github.com/influitive/apartment>, <https://github.com/influitive/apartment-sidekiq>
 - Sync your models between applications seamlessly: <https://github.com/influitive/multiple_man>
 - Meteorite enables you to add two-way data binding to your application with minimal effort. For a live demo, please see http://getmeteorite.com/ . Open up the demo in two different browser windows, make changes in the first browser window and they will instantly appear in the second. The source code for the demo application is available at https://github.com/llawlor/meteorite-tasks-example, Depo: https://github.com/llawlor/meteorite, Demo: http://getmeteorite.com/
+- Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
 
 ## Database
 - Postgres query logs in the browser: <https://github.com/yaronn/pg.log>
