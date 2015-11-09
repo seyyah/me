@@ -10,6 +10,7 @@
 
 # Blog, Tools
 
+- http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
 - http://deeplearning.net/
 - ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
