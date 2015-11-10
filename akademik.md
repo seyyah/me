@@ -16,6 +16,7 @@
 - https://github.com/Samsung/veles
 - https://github.com/hangtwenty/dive-into-machine-learning
 - https://github.com/Microsoft/DMTK
+- https://github.com/dmlc/mxnet
 - ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
 
