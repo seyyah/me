@@ -7,6 +7,7 @@
 - Lily (820$): <https://www.lily.camera/>
 - ArDrone (620$): <http://ardrone2.parrot.com/>
 - Google CardBoar: <https://www.google.com/intl/tr_ALL/get/cardboard/get-cardboard/>
+- Prijector: Wireless Presentation Device: <https://prijector.com/>
 
 # Blog, Tools
 
@@ -14,6 +15,7 @@
 - http://deeplearning.net/
 - https://github.com/Samsung/veles
 - https://github.com/hangtwenty/dive-into-machine-learning
+- https://github.com/Microsoft/DMTK
 - ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
 
