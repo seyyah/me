@@ -17,6 +17,7 @@
 - https://github.com/hangtwenty/dive-into-machine-learning
 - https://github.com/Microsoft/DMTK
 - https://github.com/dmlc/mxnet
+- Open Machine Intelligence Framework: <https://github.com/autumnai/leaf>, [Examples](https://github.com/autumnai/leaf-examples)
 - ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
 
