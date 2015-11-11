@@ -5,7 +5,7 @@
 - Web FundamentalsBest practices for modern web development: <https://developers.google.com/web/fundamentals>
 - A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
 - <http://rails-bestpractices.com/>
-- Ruby Tricks: <https://github.com/franzejr/ruby-tricks>
+- Ruby Tricks: <https://github.com/franzejr/ruby-tricks>ko
 - Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft
 
 ## Style vs
@@ -47,7 +47,7 @@ Yol haritası,
 - Top Six Reasons to Use API Keys (and How!): https://stormpath.com/blog/top-six-reasons-use-api-keys-and-how/
 - Sonuçta OAuth: http://stackoverflow.com/questions/247110/looking-for-suggestions-for-building-a-secure-rest-api-within-ruby-on-rails
 - Doorkeeper+Oauth: https://github.com/doorkeeper-gem/doorkeeper
-- API Tool/Gem: http://getkong.org/
+- Secure, Manage & Extend your APIs and Microservices. The open-source management layer for APIs, delivering high performance and reliability: <http://getkong.org/>
 - Rails API documentation tool: <https://github.com/Apipie/apipie-rails>
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
 - Tez: https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf
