@@ -82,6 +82,7 @@ Yol haritası,
 
 ## Database
 - http://www.slideshare.net/kigster/12step-program-for-scaling-web-applications-on-postgresql, http://www.slideshare.net/pgconf/five-steps-perform2009
+- Postgres high-availability cluster with auto-failover and automated cluster recovery.<https://github.com/nanopack/yoke>
 - https://github.com/begriffs/postgrest, http://marmelab.com/ng-admin-postgrest
 - https://github.com/julmon/pg_activity
 - Awesome Postgres: <https://github.com/dhamaniasad/awesome-postgres>
@@ -192,7 +193,7 @@ https://getlooseleaf.com
 
 # F. System
 
-- kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust/>
+- [Locust.io](http://locust.io)kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust/>
 - **Stress Test**: <http://stackoverflow.com/questions/311925/best-way-to-stress-test-a-rails-web-app>
   + http://stackoverflow.com/questions/21005809/stress-testing-in-ruby-on-rails-4
   + http://stackoverflow.com/questions/7492/performing-a-stress-test-on-web-application?rq=1
@@ -206,6 +207,9 @@ https://getlooseleaf.com
 - SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
 - A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
 
+## Cache
+- https://github.com/Thibaut/rack-cache, http://rtomayko.github.io/rack-cache/
+
 ## Deploy
 
 - ngrok
@@ -213,7 +217,8 @@ https://getlooseleaf.com
 - heroku
 - digitalocean
 - Building Minimal Docker Image for Rails App: <http://blog.kontena.io/building-minimal-docker-image-for-rails/>
--A Docker container in your browser: <https://github.com/codetainerapp/codetainer>
+- A Docker container in your browser: <https://github.com/codetainerapp/codetainer>
+- https://github.com/nanobox-io/nanobox
 
 # V. Editor Makale vs
 
