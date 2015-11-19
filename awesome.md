@@ -21,6 +21,7 @@
 ## Rails ile yazılmış uygulamalar
 
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
+- https://github.com/Thibaut/devdocs
 - Advanced email processing solution for Ruby on Rails applications: <https://github.com/Sology/maily_herald>, <http://mailyherald.org>
 - Kutuphane: <https://github.com/smc/grandham>
 - Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
@@ -80,6 +81,10 @@ Yol haritası,
 - Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
 
 ## Database
+- http://www.slideshare.net/kigster/12step-program-for-scaling-web-applications-on-postgresql, http://www.slideshare.net/pgconf/five-steps-perform2009
+- https://github.com/begriffs/postgrest, http://marmelab.com/ng-admin-postgrest
+- https://github.com/julmon/pg_activity
+- Awesome Postgres: <https://github.com/dhamaniasad/awesome-postgres>
 - Postgres query logs in the browser: <https://github.com/yaronn/pg.log>
 - Squeel lets you write your Active Record queries with fewer strings, and more Ruby, by making the Arel awesomeness that lies beneath Active Record more accessible: <https://github.com/activerecord-hackery/squeel>
 
