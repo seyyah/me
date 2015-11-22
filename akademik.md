@@ -26,6 +26,9 @@
 - http://www.wired.com/category/science
 - https://medium.com/search?q=science
 
+# Etc
+- OCR: https://github.com/madmaze/pytesseract
+
 # Image Processing & Matlab
 
 ## Image Processing
