@@ -11,6 +11,7 @@
 
 # Blog, Tools
 
+- https://github.com/google/skflow
 - http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
 - http://deeplearning.net/
 - https://github.com/Samsung/veles
