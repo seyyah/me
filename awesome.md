@@ -204,9 +204,13 @@ https://getlooseleaf.com
 - **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 - **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
-- **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 - SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
 - A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
+
+## Security
+
+- Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
+- **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 
 ## Cache
 - https://github.com/Thibaut/rack-cache, http://rtomayko.github.io/rack-cache/
