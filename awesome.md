@@ -163,6 +163,7 @@ Image,
 
 ## D2. Diğer
 - https://www.firebase.com
+- A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
 - Google: Lovefield is a relational database written in pure JavaScript: <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - https://github.com/adamwulf/app-launch-guide
