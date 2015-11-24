@@ -85,7 +85,7 @@ Yol haritası,
 ### PG
 - http://www.slideshare.net/kigster/12step-program-for-scaling-web-applications-on-postgresql, http://www.slideshare.net/pgconf/five-steps-perform2009
 - Postgres high-availability cluster with auto-failover and automated cluster recovery.<https://github.com/nanopack/yoke>
-- https://github.com/begriffs/postgrest, http://marmelab.com/ng-admin-postgrest
+- https://github.com/begriffs/postgrest, http://marmelab.com/ng-admin-postgrest, http://www.slideshare.net/begriffs/postgrest-design-philosophy
 - https://github.com/julmon/pg_activity
 - Awesome Postgres: <https://github.com/dhamaniasad/awesome-postgres>
 - Postgres query logs in the browser: <https://github.com/yaronn/pg.log>
