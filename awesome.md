@@ -81,12 +81,19 @@ Yol haritası,
 - Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
 
 ## Database
+
+### PG
 - http://www.slideshare.net/kigster/12step-program-for-scaling-web-applications-on-postgresql, http://www.slideshare.net/pgconf/five-steps-perform2009
 - Postgres high-availability cluster with auto-failover and automated cluster recovery.<https://github.com/nanopack/yoke>
 - https://github.com/begriffs/postgrest, http://marmelab.com/ng-admin-postgrest
 - https://github.com/julmon/pg_activity
 - Awesome Postgres: <https://github.com/dhamaniasad/awesome-postgres>
 - Postgres query logs in the browser: <https://github.com/yaronn/pg.log>
+
+### Realtime
+- https://www.firebase.com
+- A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
+- Google: Lovefield is a relational database written in pure JavaScript: <https://github.com/google/lovefield>, <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - Squeel lets you write your Active Record queries with fewer strings, and more Ruby, by making the Arel awesomeness that lies beneath Active Record more accessible: <https://github.com/activerecord-hackery/squeel>
 
 # C. Front-end Stuff
@@ -162,9 +169,6 @@ Image,
 - Google Bazel: <http://bazel.io/>
 
 ## D2. Diğer
-- https://www.firebase.com
-- A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
-- Google: Lovefield is a relational database written in pure JavaScript: <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - https://github.com/adamwulf/app-launch-guide
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
