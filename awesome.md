@@ -28,6 +28,13 @@
 - https://github.com/valo/maycamp_arena
 - https://github.com/OWASP/railsgoat
 
+## Moqups
+
+- Full redesign of the app using Material Design: <https://aerolab.co/taringa>
+- Designing for the Apple Watch, before it even ships: <https://aerolab.co/simpleradio>
+- Icons work together as an outline of the corporate identity: <https://aerolab.co/kaspersky>
+- Sharing a startup road, from start to acquisition: <https://aerolab.co/lemon>
+
 # B. Back-end Stuff
 
 ## B.1 API
@@ -98,6 +105,7 @@ Yol haritası,
 
 # C. Front-end Stuff
 
+- Full redesign of the app using Material Design: <https://aerolab.co/taringa>
 - Material Lite: <http://www.getmdl.io/started/>
 - http://www.materialdoc.com/
 - https://github.com/zachsoft/Ionic-Material
