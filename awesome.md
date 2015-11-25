@@ -92,6 +92,7 @@ Yol haritası,
 
 ### PG
 - Would you recommend PostgreSQL over MySQL:  <http://stackoverflow.com/questions/110927/would-you-recommend-postgresql-over-mysql>
+- Why 10 reasons: <http://www.slideshare.net/anandology/ten-reasons-to-prefer-postgresql-to-mysql>
 - http://www.slideshare.net/kigster/12step-program-for-scaling-web-applications-on-postgresql, http://www.slideshare.net/pgconf/five-steps-perform2009
 - Postgres high-availability cluster with auto-failover and automated cluster recovery.<https://github.com/nanopack/yoke>
 - https://github.com/begriffs/postgrest, http://marmelab.com/ng-admin-postgrest, http://www.slideshare.net/begriffs/postgrest-design-philosophy
