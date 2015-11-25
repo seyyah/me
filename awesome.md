@@ -21,6 +21,7 @@
 ## Rails ile yazılmış uygulamalar
 
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
+- Guardian frontend: <https://github.com/guardian/frontend>
 - https://github.com/Thibaut/devdocs
 - Advanced email processing solution for Ruby on Rails applications: <https://github.com/Sology/maily_herald>, <http://mailyherald.org>
 - Kutuphane: <https://github.com/smc/grandham>
@@ -220,6 +221,7 @@ https://getlooseleaf.com
 - **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
 - SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
 - A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
+- Alerta monitoring system: <https://github.com/guardian/alerta>
 
 ## Security
 
