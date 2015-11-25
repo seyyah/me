@@ -114,6 +114,7 @@ Yol haritası,
 - http://www.materialup.com/
 - Material Design for Bootstrap: <https://fezvrasta.github.io/bootstrap-material-design/>
 - https://www.google.com/design/spec/material-design/introduction.html
+- Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input <http://PapaParse.com>: <https://github.com/mholt/PapaParse>
 - http://aerolab.github.io/midnight.js/
 - Echo is a standalone JavaScript lazy-loading image micro-library. <https://github.com/toddmotto/echo>, demo: <http://toddmotto.com/labs/echo/>
 - http://www.bootbundle.com/tool
