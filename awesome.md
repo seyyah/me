@@ -193,7 +193,6 @@ https://getlooseleaf.com
 
 # AngularJs
 
-- Token based authentication module for angular.js: <https://github.com/lynndylanhurley/ng-token-auth>
 - AngularJs Awesome Liste: <https://github.com/gianarb/awesome-angularjs>
 - CodeSchool Learn AngularJs: <http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents>
 - AngularJs ile yazilmis uygulamalar: <https://builtwith.angularjs.org/>
@@ -209,11 +208,13 @@ https://getlooseleaf.com
 - AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - Free Angular JS Themes and Templates: <http://startangular.com/>
 - Modal: <https://github.com/likeastore/ngDialog>
+- Token based authentication module for angular.js: <https://github.com/lynndylanhurley/ng-token-auth>
 - Omniauth: Satellizer is a simple to use, end-to-end, token-based authentication module for AngularJS with built-in support for Google, Facebook, LinkedIn, Twitter, Yahoo, Windows Live authentication providers, as well as Email and Password sign-in. <https://github.com/sahat/satellizer>
 - https://github.com/angular/angular-phonecat, https://docs.angularjs.org/tutorial
 - https://github.com/angular/material-start
 - http://www.angularjshub.com/examples/
 - http://curran.github.io/screencasts/introToAngular/exampleViewer/#/
+- https://github.com/lynndylanhurley/angular-file-upload
 
 # E. Genel
 
