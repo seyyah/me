@@ -6,7 +6,7 @@
 - A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
 - <http://rails-bestpractices.com/>
 - Ruby Tricks: <https://github.com/franzejr/ruby-tricks>
-- Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft
+- Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft, https://porter.io/
 
 ## Style vs
 
@@ -153,6 +153,8 @@ Image,
 - Clipboard: <https://github.com/zenorocha/clipboard.js>
 - Databound provides Javascript a simple API to the Ruby on Rails CRUD: <http://databound.me/>
 - Elegant automated typing, for your text rotation needs https://positionly.com: <https://github.com/positionly/Typist>
+- Give your pages some headroom. Hide your header until you need it http://wicky.nillia.ms/headroom.js/: <https://github.com/WickyNilliams/headroom.js>
+- Infinite Scroll, Lazily Loading An Element, Dependent Select, typeahead, <http://intercoolerjs.org/examples/index.html>
 
 # D. Mobile
 
@@ -206,11 +208,14 @@ https://getlooseleaf.com
 - Rails+AngularJs+Devise: <https://github.com/jesalg/RADD>
 - Modules: <https://ngmodules.com/>
 - Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
+
 - Text Input Effects from Codrops for Angular directives: <http://cesardeazevedo.github.io/ng-input/>
 - https://coderwall.com/p/y0zkiw/building-large-apps-with-angularjs
 - https://github.com/toddmotto/angularjs-styleguide
 - Xeditable: <http://vitalets.github.io/angular-xeditable/>
+- A tasty collection of reusable UI components for Angular, like grandma used to make. Like Table directive, WebSocket / Debounce / Throttle service, Range / Camelize / Slugify filters http://zizzamia.com/ng-tasty/: <http://zizzamia.com/ng-tasty/>
 - Textangular: <https://github.com/fraywing/textangular>, <http://textangular.com/>
+- Rails inspired REST-API ORM for Angular http://platanus.github.io/angular-restmod/: <https://github.com/platanus/angular-restmod>
 - AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - Free Angular JS Themes and Templates: <http://startangular.com/>
 - Modal: <https://github.com/likeastore/ngDialog>
@@ -221,6 +226,13 @@ https://getlooseleaf.com
 - http://www.angularjshub.com/examples/
 - http://curran.github.io/screencasts/introToAngular/exampleViewer/#/
 - https://github.com/lynndylanhurley/angular-file-upload
+- http://siddii.github.io/angular-timer/index.html#
+- https://github.com/hrajchert/angular-screenfull
+- https://github.com/esvit/ng-table
+- https://github.com/formly-js/angular-formly
+- Schema Form is a set of AngularJS directives (and a couple of services) to generate Bootstrap 3 ready forms from a JSON Schema.: <http://schemaform.io/>
+- https://github.com/lorenzofox3/Smart-Table
+- https://github.com/MoonStorm/trNgGrid
 
 # E. Genel
 
