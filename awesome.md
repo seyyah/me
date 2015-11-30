@@ -193,7 +193,10 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- AngularJs Awesome Liste: <https://github.com/gianarb/awesome-angularjs>
 - CodeSchool Learn AngularJs: <http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents>
+- AngularJs ile yazilmis uygulamalar: <https://builtwith.angularjs.org/>
+- AngularJs Recipes: <http://fdietz.github.io/recipes-with-angular-js/index.html>
 - Modules: <https://ngmodules.com/>
 - Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
 - Text Input Effects from Codrops for Angular directives: <http://cesardeazevedo.github.io/ng-input/>
