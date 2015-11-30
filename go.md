@@ -6,6 +6,7 @@ Go go
 - uilive is a go library for updating terminal output in realtime: <https://github.com/gosuri/uilive>
 - Render is a package that provides functionality for easily rendering JSON, XML, text, binary data, and HTML templates: <https://github.com/unrolled/render>
 - golang build tool in the spirt of rake, gulp: <https://github.com/go-godo/godo>
+- A command-line fuzzy finder written in Go: <https://github.com/jondot/fzf>
 
 # Books
 - Kitaplar: <https://github.com/adonovan/GoBooks>
