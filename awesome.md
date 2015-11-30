@@ -168,6 +168,8 @@ Image,
 - Pour material design into your Ionic hybrid apps for all the sexy and no complexity. Now unlock the depth, motion & ink specs of Google's material design with easy-to-add-on classes.: <http://ionicmaterial.com/>
 - http://metaware.github.io/angular-invoicing/#
 
+- Mobile Bav: <https://github.com/ajoslin/angular-mobile-nav>
+
 # Mail
 
 - Print and Mail Custom Postcards using HTML, CSS, and Ruby on Rails: <https://lob.com/blog/print-mail-custom-postcards-using-html-css-ruby-on-rails/#old>, <https://github.com/lob/lob-rails-example>
@@ -193,7 +195,8 @@ https://getlooseleaf.com
 
 # AngularJs
 
-- AngularJs Awesome Liste: <https://github.com/gianarb/awesome-angularjs>
+- AngularJs Awesome List: <https://github.com/gianarb/awesome-angularjs>
+- Declarative ajax requests for angularjs: <https://github.com/chinmaymk/angular-cog>
 - CodeSchool Learn AngularJs: <http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents>
 - AngularJs ile yazilmis uygulamalar: <https://builtwith.angularjs.org/>
 - AngularJs Recipes: <http://fdietz.github.io/recipes-with-angular-js/index.html>
