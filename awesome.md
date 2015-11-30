@@ -5,7 +5,7 @@
 - Web FundamentalsBest practices for modern web development: <https://developers.google.com/web/fundamentals>
 - A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
 - <http://rails-bestpractices.com/>
-- Ruby Tricks: <https://github.com/franzejr/ruby-tricks>ko
+- Ruby Tricks: <https://github.com/franzejr/ruby-tricks>
 - Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft
 
 ## Style vs
@@ -197,6 +197,7 @@ https://getlooseleaf.com
 - CodeSchool Learn AngularJs: <http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents>
 - AngularJs ile yazilmis uygulamalar: <https://builtwith.angularjs.org/>
 - AngularJs Recipes: <http://fdietz.github.io/recipes-with-angular-js/index.html>
+- Rails+AngularJs+Devise: <https://github.com/jesalg/RADD>
 - Modules: <https://ngmodules.com/>
 - Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
 - Text Input Effects from Codrops for Angular directives: <http://cesardeazevedo.github.io/ng-input/>
