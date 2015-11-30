@@ -151,6 +151,8 @@ Image,
 
 - Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
 - Clipboard: <https://github.com/zenorocha/clipboard.js>
+- Databound provides Javascript a simple API to the Ruby on Rails CRUD: <http://databound.me/>
+- Elegant automated typing, for your text rotation needs https://positionly.com: <https://github.com/positionly/Typist>
 
 # D. Mobile
 
@@ -195,6 +197,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- Daily AngularJs: <http://dailyjs.com/tag/angularjs/>
 - AngularJs Awesome List: <https://github.com/gianarb/awesome-angularjs>
 - Declarative ajax requests for angularjs: <https://github.com/chinmaymk/angular-cog>
 - CodeSchool Learn AngularJs: <http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents>
