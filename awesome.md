@@ -109,6 +109,7 @@ Yol haritası,
 # C. Front-end Stuff
 
 - Full redesign of the app using Material Design: <https://aerolab.co/taringa>
+- Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
 - Material Lite: <http://www.getmdl.io/started/>
 - http://www.materialdoc.com/
 - https://github.com/zachsoft/Ionic-Material
