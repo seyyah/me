@@ -15,7 +15,7 @@
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
 - A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
 - Application template for Rails 4.2 projects; preloaded with best practices for TDD, security, deployment, and developer productivity: <https://github.com/mattbrictson/rails-template>
-- Rails style: <https://github.com/radar/guides>
+- Rails style: <https://github.com/aradar/guides>
 - A code metric tool for rails projects: <https://github.com/railsbp/rails_best_practices>, <http://railsbp.com/>
 - Metric Fu, Metrical, SimpleCov, Rails Best Practices, and more are covered in this episode on metrics: <http://railscasts.com/episodes/252-metrics-metrics-metrics>
 - <http://rails-bestpractices.com/>
@@ -193,6 +193,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- Token based authentication module for angular.js: <https://github.com/lynndylanhurley/ng-token-auth>
 - AngularJs Awesome Liste: <https://github.com/gianarb/awesome-angularjs>
 - CodeSchool Learn AngularJs: <http://campus.codeschool.com/courses/shaping-up-with-angular-js/contents>
 - AngularJs ile yazilmis uygulamalar: <https://builtwith.angularjs.org/>
