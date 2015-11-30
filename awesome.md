@@ -11,7 +11,7 @@
 ## Style vs
 
 - Google: <https://github.com/google/styleguide>
-- Writing Fast Ruby, Collect Common Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
+- Writing Fast Ruby, Collect Commson Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
 - A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
 - Rails style: <https://github.com/radar/guides>
@@ -229,6 +229,7 @@ https://getlooseleaf.com
 ## Security
 
 - Devise limit one session per user at a time: <http://stackoverflow.com/questions/7068919/devise-limit-one-session-per-user-at-a-time>
+- Security related headers all in one gem: <https://github.com/twitter/secureheaders>
 - Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
 - **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 
