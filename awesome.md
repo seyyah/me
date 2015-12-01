@@ -6,7 +6,7 @@
 - A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
 - <http://rails-bestpractices.com/>
 - Ruby Tricks: <https://github.com/franzejr/ruby-tricks>
-- Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft, https://porter.io/
+- Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft, https://porter.io/, framgia
 
 ## Style vs
 
