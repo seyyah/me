@@ -239,6 +239,7 @@ https://getlooseleaf.com
 - Facebook+OAuth: https://github.com/arsduo/koala
 - Make a Gif: <http://makeagif.com/>
 - Roo provides an interface to spreadsheets of several sorts: <https://github.com/roo-rb/roo>
+- LDAP: <https://github.com/sethvargo/cmu_person>
 
 # F. System
 
