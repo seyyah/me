@@ -24,6 +24,7 @@
 
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
 - Ruby on Rails Ecommerce platform, perfect for your small business solution: <https://github.com/drhenner/ror_ecommerce>, <http://www.ror-e.com/>
+- The Ruby community's gem hosting service: <https://github.com/rubygems/rubygems.org>
 - Guardian frontend: <https://github.com/guardian/frontend>
 - https://github.com/Thibaut/devdocs
 - Advanced email processing solution for Ruby on Rails applications: <https://github.com/Sology/maily_herald>, <http://mailyherald.org>
