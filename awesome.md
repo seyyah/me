@@ -23,6 +23,7 @@
 ## Rails ile yazılmış uygulamalar
 
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
+- Ruby on Rails Ecommerce platform, perfect for your small business solution: <https://github.com/drhenner/ror_ecommerce>, <http://www.ror-e.com/>
 - Guardian frontend: <https://github.com/guardian/frontend>
 - https://github.com/Thibaut/devdocs
 - Advanced email processing solution for Ruby on Rails applications: <https://github.com/Sology/maily_herald>, <http://mailyherald.org>
@@ -263,6 +264,7 @@ https://getlooseleaf.com
 - Security related headers all in one gem: <https://github.com/twitter/secureheaders>
 - Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
 - **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
+- Demo materials for Vault secret backends: <https://github.com/sethvargo/vault-demo>
 
 ## Cache
 - https://github.com/Thibaut/rack-cache, http://rtomayko.github.io/rack-cache/
