@@ -133,6 +133,7 @@ Yol haritası,
 
 Editor,
 - A rich text editor for everyday writing: <https://github.com/basecamp/trix>
+- https://github.com/spohlenz/tinymce-rails
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
 
