@@ -303,8 +303,9 @@ https://getlooseleaf.com
 - Use your OS X terminal shell to do awesome things: <https://github.com/herrbischoff/awesome-osx-command-line>
 - A curated list of awesome lists: https://github.com/sindresorhus/awesome
 
-# Küçük programcılar
+# Küçük programcılar vs
 
 - code.org
 - https://blockly-games.appspot.com/
+- windyty.com
 
