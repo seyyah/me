@@ -247,6 +247,7 @@ https://getlooseleaf.com
 # F. System
 
 - [Locust.io](http://locust.io)kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust/>
+- PySpider: <https://github.com/binux/pyspider>
 - **Stress Test**: <http://stackoverflow.com/questions/311925/best-way-to-stress-test-a-rails-web-app>
   + http://stackoverflow.com/questions/21005809/stress-testing-in-ruby-on-rails-4
   + http://stackoverflow.com/questions/7492/performing-a-stress-test-on-web-application?rq=1
