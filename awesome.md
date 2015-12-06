@@ -139,6 +139,7 @@ Editor,
 
 Image,
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
+- Image upload plugin for TinyMCE and Rails with the asset pipeline: <https://github.com/PerfectlyNormal/tinymce-rails-imageupload>
 
 File Manager,
 - Web File Manager For The Rails Integrated in ckeditor and TinyMCE with File Explorer you can use as a quick and simple way: <https://github.com/furkancelik/fcfinder>
