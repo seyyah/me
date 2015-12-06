@@ -140,6 +140,10 @@ Editor,
 Image,
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 
+Table-Excel-like editing,
+- AngularJS directive for Handsontable, Handsontable is an Excel-like data grid / spreadsheet for HTML & JavaScript: <https://github.com/handsontable/ngHandsontable>, <https://github.com/handsontable/handsontable>
+- Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input <http://PapaParse.com>
+
 ## Bootstrap
 
 - An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features : <http://bootstrap-table.wenzhixin.net.cn/>, demo: <http://issues.wenzhixin.net.cn/bootstrap-table/>
