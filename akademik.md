@@ -35,6 +35,7 @@
 
 ## Image Processing
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
+- Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>
 
 ## DIP
 
