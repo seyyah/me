@@ -279,6 +279,7 @@ https://getlooseleaf.com
 - Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
 - **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 - Demo materials for Vault secret backends: <https://github.com/sethvargo/vault-demo>
+- The Docker Bench for Security is a script that checks for dozens of common best-practices around deploying Docker containers in production: <https://github.com/docker/docker-bench-security>
 
 ## Cache
 - https://github.com/Thibaut/rack-cache, http://rtomayko.github.io/rack-cache/
