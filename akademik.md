@@ -28,6 +28,9 @@
 - http://www.wired.com/category/science
 - https://medium.com/search?q=science
 
+# Kinect
+- Object Detection: <https://github.com/marceljuenemann/kinect-object-detection>
+
 # Etc
 - OCR: https://github.com/madmaze/pytesseract
 
