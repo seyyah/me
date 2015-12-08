@@ -134,6 +134,7 @@ Material Design,
 - http://www.materialup.com/
 - Material Design for Bootstrap: <https://fezvrasta.github.io/bootstrap-material-design/>
 - https://www.google.com/design/spec/material-design/introduction.html
+- The first responsive front-end framework based on AngularJS & Google Material Design specifications: <https://github.com/lumapps/lumX>
 
 Editor,
 - A rich text editor for everyday writing: <https://github.com/basecamp/trix>
@@ -227,7 +228,7 @@ https://getlooseleaf.com
 - Rails+AngularJs+Devise: <https://github.com/jesalg/RADD>
 - Modules: <https://ngmodules.com/>
 - Style guide: Türkçe, <https://github.com/mgechev/angularjs-style-guide/blob/master/README-tr-tr.md>, diğer: <https://github.com/toddmotto/angularjs-styleguide>
-
+- Angular drag & drop with HTML5: <https://github.com/marceljuenemann/angular-drag-and-drop-lists>, <http://marceljuenemann.github.io/angular-drag-and-drop-lists/demo>
 - Text Input Effects from Codrops for Angular directives: <http://cesardeazevedo.github.io/ng-input/>
 - https://coderwall.com/p/y0zkiw/building-large-apps-with-angularjs
 - https://github.com/toddmotto/angularjs-styleguide
