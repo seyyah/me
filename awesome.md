@@ -169,6 +169,7 @@ API,
 
 ## React
 - A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
+- JavaScript Testing utilities for React: <https://github.com/airbnb/enzyme>, <http://airbnb.io/enzyme/>
 - Awesome React: <https://github.com/jondot/awesome-react-native>
 
 ## Javascript
@@ -294,7 +295,7 @@ UI+Bootstrap,
 - Devise limit one session per user at a time: <http://stackoverflow.com/questions/7068919/devise-limit-one-session-per-user-at-a-time>
 - Security related headers all in one gem: <https://github.com/twitter/secureheaders>
 - Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
-- **Security**: <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
+- **Security**: <https://github.com/airbnb/brakeman>, <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 - Demo materials for Vault secret backends: <https://github.com/sethvargo/vault-demo>
 - The Docker Bench for Security is a script that checks for dozens of common best-practices around deploying Docker containers in production: <https://github.com/docker/docker-bench-security>
 
