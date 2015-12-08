@@ -213,6 +213,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- Angular.js Mobile UI Framework with Bootstrap 3: <https://github.com/mcasimir/mobile-angular-ui>, <http://mobileangularui.com/>
 - Daily AngularJs: <http://dailyjs.com/tag/angularjs/>
 - AngularJs Awesome List: <https://github.com/gianarb/awesome-angularjs>
 - Declarative ajax requests for angularjs: <https://github.com/chinmaymk/angular-cog>
@@ -247,6 +248,9 @@ https://getlooseleaf.com
 - Schema Form is a set of AngularJS directives (and a couple of services) to generate Bootstrap 3 ready forms from a JSON Schema.: <http://schemaform.io/>
 - https://github.com/lorenzofox3/Smart-Table
 - https://github.com/MoonStorm/trNgGrid
+
+## React
+- User interface builder for React: <https://github.com/ipselon/structor>
 
 # E. Genel
 
