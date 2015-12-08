@@ -163,8 +163,8 @@ API,
 ## Bootstrap
 
 - An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features : <http://bootstrap-table.wenzhixin.net.cn/>, demo: <http://issues.wenzhixin.net.cn/bootstrap-table/>
-
 - Calendar: <http://bootstrap-calendar.azurewebsites.net/>
+- angularjs+ui: <https://angular-ui.github.io/bootstrap/>
 
 ## React
 - A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
@@ -257,6 +257,9 @@ https://getlooseleaf.com
 - Schema Form is a set of AngularJS directives (and a couple of services) to generate Bootstrap 3 ready forms from a JSON Schema.: <http://schemaform.io/>
 - https://github.com/lorenzofox3/Smart-Table
 - https://github.com/MoonStorm/trNgGrid
+
+UI+Bootstrap,
+- https://angular-ui.github.io/bootstrap/
 
 ## React
 - User interface builder for React: <https://github.com/ipselon/structor>
