@@ -11,6 +11,7 @@
 
 # Blog, Tools
 
+- http://blogs.mathworks.com/steve/
 - http://colah.github.io/
 - https://github.com/google/skflow
 - http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
@@ -22,6 +23,7 @@
 - Open Machine Intelligence Framework: <https://github.com/autumnai/leaf>, [Examples](https://github.com/autumnai/leaf-examples)
 - ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
+- A machine learning package built for humans: <https://github.com/airbnb/airflow>, <http://airbnb.github.io/aerosolve/>
 
 - https://www.reddit.com/r/MachineLearning/
 - <http://www.datascienceweekly.org/data-scientist-interviews>
