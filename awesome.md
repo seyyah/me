@@ -110,9 +110,10 @@ Yol haritası,
 - Google: Lovefield is a relational database written in pure JavaScript: <https://github.com/google/lovefield>, <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - Squeel lets you write your Active Record queries with fewer strings, and more Ruby, by making the Arel awesomeness that lies beneath Active Record more accessible: <https://github.com/activerecord-hackery/squeel>
 
-# C. Front-end Stuff
+# Front-end Stuff
 
 - Full redesign of the app using Material Design: <https://aerolab.co/taringa>
+- Google+ goes completely responsive: <https://developers.google.com/web/showcase/case-study/googleplus>
 - Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
 - Material Lite: <http://www.getmdl.io/started/>
 - http://www.materialdoc.com/
