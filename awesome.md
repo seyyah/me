@@ -1,4 +1,4 @@
-# A. Best Practices
+# Best Practices
 
 - Rails Blog: <http://www.reddit.com/r/rails/comments/3ban4d/can_anyone_recommend_some_good_ror_blogs/>
 - Software Engineering Blogs: <https://github.com/kilimchoi/engineering-blogs>
@@ -42,7 +42,7 @@
 
 # B. Back-end Stuff
 
-## B.1 API
+## API
 Yol haritası,
 
 1. Giriş: http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own, https://www.youtube.com/watch?v=36M2BSA2LYk
@@ -50,7 +50,7 @@ Yol haritası,
 3. Secure: https://www.youtube.com/watch?v=AiVj2xyTBcw
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
 
-### B.1.1 Genel
+### Genel
 - Postman: Build, test, and document your APIs faster. <http://getpostman.com>
 - rest client: <https://github.com/rest-client/rest-client>, <https://github.com/lostisland/faraday>
 
@@ -70,12 +70,12 @@ Yol haritası,
 - JSON Schema tools and doc generation for HTTP APIs: <https://github.com/interagent/prmd>
 - Dredd HTTP API Testing Framework: <http://dredd.rtfd.org/>, <https://github.com/apiaryio/dredd>, <https://github.com/apiaryio/dredd-hooks-ruby>
 
-### B.1.2 Gem: HER
+### Gem: HER
 
 - Her: <https://github.com/remiprev/her>, Example: Rails+Sinatra: <https://github.com/remiprev/her-example>
 - Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
 
-## B.2 GEM
+## GEM
 
 - https://github.com/hothero/rails-gem-list
 - Easy external settings for your app: <https://github.com/remiprev/choices>
@@ -112,16 +112,7 @@ Yol haritası,
 
 # Front-end Stuff
 
-- Full redesign of the app using Material Design: <https://aerolab.co/taringa>
-- Google+ goes completely responsive: <https://developers.google.com/web/showcase/case-study/googleplus>
 - Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
-- Material Lite: <http://www.getmdl.io/started/>
-- http://www.materialdoc.com/
-- https://github.com/zachsoft/Ionic-Material
-- https://github.com/angular/material-start
-- http://www.materialup.com/
-- Material Design for Bootstrap: <https://fezvrasta.github.io/bootstrap-material-design/>
-- https://www.google.com/design/spec/material-design/introduction.html
 - Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input <http://PapaParse.com>: <https://github.com/mholt/PapaParse>
 - http://aerolab.github.io/midnight.js/
 - Echo is a standalone JavaScript lazy-loading image micro-library. <https://github.com/toddmotto/echo>, demo: <http://toddmotto.com/labs/echo/>
@@ -131,6 +122,18 @@ Yol haritası,
 - Marksheet: a free guide to HTML and CSS: <http://marksheet.io/>
 - A realistic password strength estimator: <https://github.com/dropbox/zxcvbn>
 - Async Responsive Html Grids: <https://github.com/nix23/gridifier>
+
+Material Design,
+- Google I/O is for developers - the creative coders who are building what's next. Each year, we explore the latest in tech, mobile & beyond:<https://events.google.com/io2015/>
+- Full redesign of the app using Material Design: <https://aerolab.co/taringa>
+- Google+ goes completely responsive: <https://developers.google.com/web/showcase/case-study/googleplus>
+- Material Lite: <http://www.getmdl.io/started/>
+- http://www.materialdoc.com/
+- https://github.com/zachsoft/Ionic-Material
+- https://github.com/angular/material-start
+- http://www.materialup.com/
+- Material Design for Bootstrap: <https://fezvrasta.github.io/bootstrap-material-design/>
+- https://www.google.com/design/spec/material-design/introduction.html
 
 Editor,
 - A rich text editor for everyday writing: <https://github.com/basecamp/trix>
@@ -171,7 +174,7 @@ API,
 - Give your pages some headroom. Hide your header until you need it http://wicky.nillia.ms/headroom.js/: <https://github.com/WickyNilliams/headroom.js>
 - Infinite Scroll, Lazily Loading An Element, Dependent Select, typeahead, <http://intercoolerjs.org/examples/index.html>
 
-# D. Mobile
+# Mobile
 
 ## Ionic
 
@@ -199,14 +202,14 @@ API,
 - Adroid Tips: <https://github.com/tangqi92/Android-Tips>
 - iOS Reverse Engineering: <https://github.com/iosre/iOSAppReverseEngineering>
 
-## D1. Platform Bağımsız
+## Platform Bağımsız
 - Ionic: http://ionicframework.com/docs/components/
 - Cordova: https://cordova.apache.org/
 - Electron Atom: https://github.com/atom/electron
 - http://mobilizer.me/
 - Google Bazel: <http://bazel.io/>
 
-## D2. Diğer
+## Diğer
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - https://github.com/adamwulf/app-launch-guide
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
@@ -253,14 +256,14 @@ https://getlooseleaf.com
 ## React
 - User interface builder for React: <https://github.com/ipselon/structor>
 
-# E. Genel
+# Genel
 
 - Facebook+OAuth: https://github.com/arsduo/koala
 - Make a Gif: <http://makeagif.com/>
 - Roo provides an interface to spreadsheets of several sorts: <https://github.com/roo-rb/roo>
 - LDAP: <https://github.com/sethvargo/cmu_person>
 
-# F. System
+# System
 
 - [Locust.io](http://locust.io)kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust/>
 - PySpider: <https://github.com/binux/pyspider>
@@ -297,25 +300,25 @@ https://getlooseleaf.com
 - https://github.com/nanobox-io/nanobox
 - https://github.com/rails/rails-dev-box
 
-# V. Editor Makale vs
+# Editor Makale vs
 
 - Caffe: a fast open framework for deep learning. <https://github.com/BVLC/caffe>, Berkeley Vision and Learning Center
 - https://github.com/scholmd/scholmd
 
-# Y. LSIM
+# LSIM
 
 - Surveyor is a developer tool to deliver surveys in Rails applications: <https://github.com/NUBIC/surveyor>
 - Tree: <https://github.com/mceachen/closure_tree>
 - Sirius: Speech and Vision Based Intelligent Personal Assistant https://github.com/jhauswald/sirius
 - Simple application for storing interview questions: <https://github.com/dropbox/questions>
 
-# Z. Tools
+# Tools
 
 - sparkle, mega.co.nz, zenhub
 - Mockup: Programlama temelli wireframe: https://github.com/tsx/shireframe
 - whatsapp php chat api: <https://github.com/WHAnonymous/Chat-API>
 
-# ZZ. Diğer
+# Diğer
 
 - visualising data structures and algorithms through animation: <http://visualgo.net/>
 - Use your OS X terminal shell to do awesome things: <https://github.com/herrbischoff/awesome-osx-command-line>
