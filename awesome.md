@@ -334,6 +334,8 @@ UI+Bootstrap,
 - Use your OS X terminal shell to do awesome things: <https://github.com/herrbischoff/awesome-osx-command-line>
 - A curated list of awesome lists: https://github.com/sindresorhus/awesome
 - http://goldsource.de/toolchain/
+- https://www.sinavadogru.net
+- sinavo
 
 # Küçük programcılar vs
 
