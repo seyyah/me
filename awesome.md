@@ -336,6 +336,8 @@ UI+Bootstrap,
 - http://goldsource.de/toolchain/
 - https://www.sinavadogru.net
 - sinavo
+- Apple tech uses Wi-Fi access points for indoor navigation, 3D positioning
+By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi-fi-access-points-for-indoor-navigation-3d-positioning>
 
 # Küçük programcılar vs
 
