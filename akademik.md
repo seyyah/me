@@ -13,6 +13,7 @@
 
 - http://blogs.mathworks.com/steve/
 - http://colah.github.io/
+- http://vision.princeton.edu/research.html
 
 Deep Learning,
 - Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
