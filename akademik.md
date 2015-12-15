@@ -15,6 +15,9 @@
 - http://colah.github.io/
 
 Deep Learning,
+- Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
+![](http://i.imgur.com/kmdJJRH.png)
+
 - Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
 ![](https://camo.githubusercontent.com/684a313b08ebab8d1d0aec023e84ba59d57e8cdc/68747470733a2f2f7261772e6769746875622e636f6d2f6b617270617468792f6e657572616c74616c6b322f6d61737465722f7669732f7465617365722e6a706567)
 
