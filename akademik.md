@@ -42,6 +42,7 @@ Deep Learning,
 
 # Etc
 - OCR: https://github.com/madmaze/pytesseract
+- Computer “Vision” for the Visually Impaired: I have a dream: <https://medium.com/@karim_ouda/computer-vision-for-the-visually-impaired-i-have-a-dream-7eaee112aeb9#.6pew7gu41>
 
 # Image Processing & Matlab
 
