@@ -346,6 +346,7 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - Geoawesome Team Apps: <http://geoawesomeness.com/topics/apps/>
 - PHP: a personal music streaming server: <http://koel.phanan.net/>
 - An exhaustive reference to problems seen in real-world data along with suggestions on how to resolve them: <https://github.com/Quartz/bad-data-guide>
+- JavaScript with Batteries Included for Google Glass <http://wearscript.com>, <https://github.com/wearscript/wearscript-android>
 
 # Küçük programcılar vs
 
