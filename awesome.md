@@ -288,6 +288,7 @@ UI+Bootstrap,
 - SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
 - A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
 - Alerta monitoring system: <https://github.com/guardian/alerta>
+- A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap: <https://github.com/phanan/uptime>, <http://fzaninotto.github.com/uptime/>
 
 ## Security
 
