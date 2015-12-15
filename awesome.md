@@ -338,6 +338,7 @@ UI+Bootstrap,
 - Apple tech uses Wi-Fi access points for indoor navigation, 3D positioning
 By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi-fi-access-points-for-indoor-navigation-3d-positioning>
 - Geoawesome Team Apps: <http://geoawesomeness.com/topics/apps/>
+- PHP: a personal music streaming server: <http://koel.phanan.net/>
 
 # Küçük programcılar vs
 
