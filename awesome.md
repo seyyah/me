@@ -91,6 +91,8 @@ Yol haritası,
 - Sync your models between applications seamlessly: <https://github.com/influitive/multiple_man>
 - Meteorite enables you to add two-way data binding to your application with minimal effort. For a live demo, please see http://getmeteorite.com/ . Open up the demo in two different browser windows, make changes in the first browser window and they will instantly appear in the second. The source code for the demo application is available at https://github.com/llawlor/meteorite-tasks-example, Depo: https://github.com/llawlor/meteorite, Demo: http://getmeteorite.com/
 - Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
+- scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
+- A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org/>
 
 ## Database
 
@@ -183,10 +185,10 @@ API,
 - Give your pages some headroom. Hide your header until you need it http://wicky.nillia.ms/headroom.js/: <https://github.com/WickyNilliams/headroom.js>
 - Infinite Scroll, Lazily Loading An Element, Dependent Select, typeahead, <http://intercoolerjs.org/examples/index.html>
 - Javascript library to create physics-based animations: <http://dynamicsjs.com>
+- Examples of how to do query, style, dom, ajax, event etc like jQuery with plain javascript: <https://github.com/oneuijs/You-Dont-Need-jQuery>
 
 # Mobile
 ## Ionic
-
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
 - Rails and Ionic Make Love: <http://www.dovetaildigital.io/blog/2015/8/26/rails-and-ionic-make-love-part-two>
 - tutorial: <http://julienrenaux.fr/2015/02/17/creating-an-hybrid-app-in-minutes-with-ionic-framework/>
@@ -198,8 +200,11 @@ API,
 - Must-have plugins for Ionic Framework: <http://www.gajotres.net/must-have-plugins-for-ionic-framework/>
 - Pour material design into your Ionic hybrid apps for all the sexy and no complexity. Now unlock the depth, motion & ink specs of Google's material design with easy-to-add-on classes.: <http://ionicmaterial.com/>
 - http://metaware.github.io/angular-invoicing/#
+- Mobile Nav: <https://github.com/ajoslin/angular-mobile-nav>
 
-- Mobile Bav: <https://github.com/ajoslin/angular-mobile-nav>
+## Diğer: Cordova, React Native
+
+- A cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices http://microsoft.github.io/code-push
 
 # Mail
 
@@ -340,6 +345,7 @@ UI+Bootstrap,
 By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi-fi-access-points-for-indoor-navigation-3d-positioning>
 - Geoawesome Team Apps: <http://geoawesomeness.com/topics/apps/>
 - PHP: a personal music streaming server: <http://koel.phanan.net/>
+- An exhaustive reference to problems seen in real-world data along with suggestions on how to resolve them: <https://github.com/Quartz/bad-data-guide>
 
 # Küçük programcılar vs
 
