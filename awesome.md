@@ -171,6 +171,8 @@ API,
 - A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
 - JavaScript Testing utilities for React: <https://github.com/airbnb/enzyme>, <http://airbnb.io/enzyme/>
 - Awesome React: <https://github.com/jondot/awesome-react-native>
+- Reactive Components for Modern Web Interfaces: <http://vuejs.org/
+- User interface builder for React: <https://github.com/ipselon/structor>
 
 ## Javascript
 
@@ -180,9 +182,9 @@ API,
 - Elegant automated typing, for your text rotation needs https://positionly.com: <https://github.com/positionly/Typist>
 - Give your pages some headroom. Hide your header until you need it http://wicky.nillia.ms/headroom.js/: <https://github.com/WickyNilliams/headroom.js>
 - Infinite Scroll, Lazily Loading An Element, Dependent Select, typeahead, <http://intercoolerjs.org/examples/index.html>
+- Javascript library to create physics-based animations: <http://dynamicsjs.com>
 
 # Mobile
-
 ## Ionic
 
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
@@ -262,9 +264,6 @@ https://getlooseleaf.com
 
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
-
-## React
-- User interface builder for React: <https://github.com/ipselon/structor>
 
 # Genel
 
