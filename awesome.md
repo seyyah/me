@@ -347,6 +347,7 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - PHP: a personal music streaming server: <http://koel.phanan.net/>
 - An exhaustive reference to problems seen in real-world data along with suggestions on how to resolve them: <https://github.com/Quartz/bad-data-guide>
 - JavaScript with Batteries Included for Google Glass <http://wearscript.com>, <https://github.com/wearscript/wearscript-android>
+- Build a Jekyll blog in minutes, without touching the command line: <https://github.com/barryclark/jekyll-now>
 
 # Küçük programcılar vs
 
