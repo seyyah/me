@@ -188,6 +188,9 @@ API,
 - Javascript library to create physics-based animations: <http://dynamicsjs.com>
 - Examples of how to do query, style, dom, ajax, event etc like jQuery with plain javascript: <https://github.com/oneuijs/You-Dont-Need-jQuery>
 
+## NodeJs
+- Async utilities for node and the browser: <https://github.com/caolan/async>
+
 # Mobile
 ## Ionic
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
@@ -338,6 +341,7 @@ UI+Bootstrap,
 
 # Diğer
 
+- Smart and Simple Project Management for Teams on GitHub (A repo for tracking the Waffle.io team's public-facing work.):  <http://waffle.io/waffleio/waffle.io>, <https://github.com/waffleio/waffle.io>
 - visualising data structures and algorithms through animation: <http://visualgo.net/>
 - Use your OS X terminal shell to do awesome things: <https://github.com/herrbischoff/awesome-osx-command-line>
 - A curated list of awesome lists: https://github.com/sindresorhus/awesome
