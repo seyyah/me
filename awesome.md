@@ -178,6 +178,7 @@ API,
 
 ## Javascript
 
+- Easy scroll animations for web and mobile browsers: <https://github.com/jlmakes/scrollreveal.js>, <https://scrollrevealjs.org/>
 - Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
 - Clipboard: <https://github.com/zenorocha/clipboard.js>
 - Databound provides Javascript a simple API to the Ruby on Rails CRUD: <http://databound.me/>
@@ -190,6 +191,7 @@ API,
 # Mobile
 ## Ionic
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
+- aIonic Framework: A definitive 10,000 word guide: <http://tutorials.pluralsight.com/review/ionic-framework-a-definitive-10-000-word-guide/>
 - Rails and Ionic Make Love: <http://www.dovetaildigital.io/blog/2015/8/26/rails-and-ionic-make-love-part-two>
 - tutorial: <http://julienrenaux.fr/2015/02/17/creating-an-hybrid-app-in-minutes-with-ionic-framework/>
 - A Comprehensive List Of Ionic Starter Apps: <http://www.gajotres.net/a-comprehensive-list-of-ionic-starter-apps/>
@@ -231,6 +233,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- Angular 2 Beta: <http://angularjs.blogspot.com.tr/>
 - Angular.js Mobile UI Framework with Bootstrap 3: <https://github.com/mcasimir/mobile-angular-ui>, <http://mobileangularui.com/>
 - Daily AngularJs: <http://dailyjs.com/tag/angularjs/>
 - AngularJs Awesome List: <https://github.com/gianarb/awesome-angularjs>
