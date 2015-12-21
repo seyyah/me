@@ -272,6 +272,7 @@ https://getlooseleaf.com
 - Schema Form is a set of AngularJS directives (and a couple of services) to generate Bootstrap 3 ready forms from a JSON Schema.: <http://schemaform.io/>
 - https://github.com/lorenzofox3/Smart-Table
 - https://github.com/MoonStorm/trNgGrid
+- AngularJS alert drawer: <https://github.com/waffleio/alert-drawer>
 
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
