@@ -19,10 +19,8 @@ Deep Learning,
 - [ ] Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
 - Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
 ![](http://i.imgur.com/kmdJJRH.png)
-
 - Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
 ![](https://camo.githubusercontent.com/684a313b08ebab8d1d0aec023e84ba59d57e8cdc/68747470733a2f2f7261772e6769746875622e636f6d2f6b617270617468792f6e657572616c74616c6b322f6d61737465722f7669732f7465617365722e6a706567)
-
 - https://github.com/google/skflow
 - http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
 - http://deeplearning.net/
@@ -38,6 +36,9 @@ Deep Learning,
 - <http://www.datascienceweekly.org/data-scientist-interviews>
 - http://www.wired.com/category/science
 - https://medium.com/search?q=science
+
+General learning,
+- Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
 
 # Kinect
 - Object Detection: <https://github.com/marceljuenemann/kinect-object-detection>
