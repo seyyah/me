@@ -208,9 +208,10 @@ API,
 - http://metaware.github.io/angular-invoicing/#
 - Mobile Nav: <https://github.com/ajoslin/angular-mobile-nav>
 
-## Diğer: Cordova, React Native
+## Diğer: Cordova, React Native, Swift
 
 - A cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices http://microsoft.github.io/code-push
+- All the resources for Learning About Swift: <https://github.com/hsavit1/Awesome-Swift-Education>
 
 # Mail
 
