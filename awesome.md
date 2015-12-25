@@ -109,6 +109,7 @@ Yol haritası,
 
 ### MongoDB
 - MongoDB object modeling designed to work in an asynchronous environment: <https://github.com/Automattic/mongoose>, <http://mongoosejs.com/>
+- Mongo query API component: <https://github.com/Automattic/mongo-query>
 
 ### Realtime
 - https://www.firebase.com
