@@ -107,6 +107,9 @@ Yol haritası,
 - Awesome Postgres: <https://github.com/dhamaniasad/awesome-postgres>
 - Postgres query logs in the browser: <https://github.com/yaronn/pg.log>
 
+### MongoDB
+- MongoDB object modeling designed to work in an asynchronous environment: <https://github.com/Automattic/mongoose>, <http://mongoosejs.com/>
+
 ### Realtime
 - https://www.firebase.com
 - A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
