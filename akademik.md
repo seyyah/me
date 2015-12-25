@@ -52,6 +52,7 @@ General learning,
 ## Image Processing
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>
+- A utility class for working with colors in JavaScript: <https://github.com/Automattic/Color.js>
 
 ## DIP
 
