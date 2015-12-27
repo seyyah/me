@@ -308,6 +308,9 @@ UI+Bootstrap,
 - Alerta monitoring system: <https://github.com/guardian/alerta>
 - A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap: <https://github.com/phanan/uptime>, <http://fzaninotto.github.com/uptime/>
 
+Console,
+- Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
+
 ## Security
 
 - Devise limit one session per user at a time: <http://stackoverflow.com/questions/7068919/devise-limit-one-session-per-user-at-a-time>
