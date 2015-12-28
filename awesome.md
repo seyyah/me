@@ -92,8 +92,13 @@ Yol haritası,
 - Sync your models between applications seamlessly: <https://github.com/influitive/multiple_man>
 - Meteorite enables you to add two-way data binding to your application with minimal effort. For a live demo, please see http://getmeteorite.com/ . Open up the demo in two different browser windows, make changes in the first browser window and they will instantly appear in the second. The source code for the demo application is available at https://github.com/llawlor/meteorite-tasks-example, Depo: https://github.com/llawlor/meteorite, Demo: http://getmeteorite.com/
 - Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
-- scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
 - A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org/>
+
+Zamanlanmış görevler, delayed job,
+- scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
+- Modern concurrency tools including agents, futures, promises, thread pools, supervisors, and more. Inspired by Erlang, Clojure, Scala, Go, Java, JavaScript, and classic concurrency patterns: <https://github.com/ruby-concurrency/concurrent-ruby>, <http://www.concurrent-ruby.com>
+
+- scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
 
 Machine learning,
 - Flexible and Extensible Machine Learning in Ruby, <https://github.com/danielsdeleo/Decider>
