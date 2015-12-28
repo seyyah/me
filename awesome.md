@@ -183,6 +183,7 @@ API,
 - Awesome React: <https://github.com/jondot/awesome-react-native>
 - Reactive Components for Modern Web Interfaces: <http://vuejs.org/
 - User interface builder for React: <https://github.com/ipselon/structor>
+- Developer Tools: <https://github.com/facebook/react-devtools>
 
 ## Javascript
 
