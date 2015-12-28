@@ -95,6 +95,9 @@ Yol haritası,
 - scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
 - A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org/>
 
+Machine learning,
+- Flexible and Extensible Machine Learning in Ruby, <https://github.com/danielsdeleo/Decider>
+
 ## Database
 
 ### PG
