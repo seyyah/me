@@ -184,6 +184,8 @@ API,
 
 ## React
 - A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
+- Code from the React tutorial: <https://github.com/reactjs/react-tutorial>, <http://facebook.github.io/react/docs/tutorial.html>
+- Ruby gem for automatically transforming JSX and using React in **Rails**: <https://github.com/reactjs/react-rails>
 - JavaScript Testing utilities for React: <https://github.com/airbnb/enzyme>, <http://airbnb.io/enzyme/>
 - Awesome React: <https://github.com/jondot/awesome-react-native>
 - Reactive Components for Modern Web Interfaces: <http://vuejs.org/
