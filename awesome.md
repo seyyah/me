@@ -321,6 +321,7 @@ Console,
 - The Docker Bench for Security is a script that checks for dozens of common best-practices around deploying Docker containers in production: <https://github.com/docker/docker-bench-security>
 
 ## Cache
+- IdentityCache is a blob level caching solution to plug into ActiveRecord. Don't #find, #fetch! <https://github.com/Shopify/identity_cache>, <http://shopify.github.io/identity_cache>
 - https://github.com/Thibaut/rack-cache, http://rtomayko.github.io/rack-cache/
 
 ## Deploy
