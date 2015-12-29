@@ -191,6 +191,7 @@ API,
 - Reactive Components for Modern Web Interfaces: <http://vuejs.org/
 - User interface builder for React: <https://github.com/ipselon/structor>
 - Developer Tools: <https://github.com/facebook/react-devtools>
+- Offline: Quick setup for performance orientated, offline-first React.js applications featuring Redux, hot-reloading, PostCSS, react-router, ServiceWorker, AppCache, FontFaceObserver and Mocha.: <https://github.com/mxstbr/react-boilerplate>
 
 ## Javascript
 
@@ -290,6 +291,7 @@ https://getlooseleaf.com
 - https://github.com/lorenzofox3/Smart-Table
 - https://github.com/MoonStorm/trNgGrid
 - AngularJS alert drawer: <https://github.com/waffleio/alert-drawer>
+- Offline support for AngularJS applications: <https://github.com/neoziro/angular-offline>
 
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
@@ -378,6 +380,7 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - An exhaustive reference to problems seen in real-world data along with suggestions on how to resolve them: <https://github.com/Quartz/bad-data-guide>
 - JavaScript with Batteries Included for Google Glass <http://wearscript.com>, <https://github.com/wearscript/wearscript-android>
 - Build a Jekyll blog in minutes, without touching the command line: <https://github.com/barryclark/jekyll-now>
+- Json cv/resume: <http://jsonresume.org/>
 
 # Küçük programcılar vs
 
