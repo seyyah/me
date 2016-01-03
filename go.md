@@ -7,6 +7,8 @@ Go go
 - Render is a package that provides functionality for easily rendering JSON, XML, text, binary data, and HTML templates: <https://github.com/unrolled/render>
 - golang build tool in the spirt of rake, gulp: <https://github.com/go-godo/godo>
 - A command-line fuzzy finder written in Go: <https://github.com/jondot/fzf>
+- A visual interface to work with runtime profiling data for Go: <https://github.com/rakyll/gom>
+- Minimalist Go library aimed at creating Console User Interfaces: <https://github.com/jroimartin/gocui>
 
 # Books
 - Kitaplar: <https://github.com/adonovan/GoBooks>
