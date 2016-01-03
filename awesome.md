@@ -92,7 +92,8 @@ Yol haritası,
 - Sync your models between applications seamlessly: <https://github.com/influitive/multiple_man>
 - Meteorite enables you to add two-way data binding to your application with minimal effort. For a live demo, please see http://getmeteorite.com/ . Open up the demo in two different browser windows, make changes in the first browser window and they will instantly appear in the second. The source code for the demo application is available at https://github.com/llawlor/meteorite-tasks-example, Depo: https://github.com/llawlor/meteorite, Demo: http://getmeteorite.com/
 - Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
-- A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org/>
+- A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org
+- Ruby file uploads, take 3: <https://github.com/refile/refile>
 
 Zamanlanmış görevler, delayed job,
 - scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
@@ -141,6 +142,7 @@ Machine learning,
 - Marksheet: a free guide to HTML and CSS: <http://marksheet.io/>
 - A realistic password strength estimator: <https://github.com/dropbox/zxcvbn>
 - Async Responsive Html Grids: <https://github.com/nix23/gridifier>
+- A collection of loading indicators animated with CSS: <https://github.com/tobiasahlin/SpinKit>, <http://tobiasahlin.com/spinkit/>
 
 Material Design,
 - Google I/O is for developers - the creative coders who are building what's next. Each year, we explore the latest in tech, mobile & beyond:<https://events.google.com/io2015/>
@@ -192,6 +194,8 @@ API,
 - User interface builder for React: <https://github.com/ipselon/structor>
 - Developer Tools: <https://github.com/facebook/react-devtools>
 - Offline: Quick setup for performance orientated, offline-first React.js applications featuring Redux, hot-reloading, PostCSS, react-router, ServiceWorker, AppCache, FontFaceObserver and Mocha.: <https://github.com/mxstbr/react-boilerplate>
+- A filterable React.js reference site: <https://github.com/chantastic/react-cheat-sheet>, <http://reactcheatsheet.com>
+- This is the companion git repository for the course Build Web Apps with React JS and Flux: <https://github.com/StephenGrider/ReactCasts>
 
 ## Javascript
 
@@ -331,7 +335,8 @@ Console,
 - Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
 - **Security**: <https://github.com/airbnb/brakeman>, <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
 - Demo materials for Vault secret backends: <https://github.com/sethvargo/vault-demo>
-- The Docker Bench for Security is a script that checks for dozens of common best-practices around deploying Docker containers in production: <https://github.com/docker/docker-bench-security>
+- The Docker Bench for Security is a script that checks for dozens of common best-practices around deploying Docker containers in production: <https://github.com/docker/docker-bench-security
+- Automated Pentest Recon Scanner <https://github.com/1N3/Sn1per>, <https://crowdshield.com>
 
 ## Cache
 - IdentityCache is a blob level caching solution to plug into ActiveRecord. Don't #find, #fetch! <https://github.com/Shopify/identity_cache>, <http://shopify.github.io/identity_cache>
