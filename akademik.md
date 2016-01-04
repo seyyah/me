@@ -16,7 +16,7 @@
 - http://vision.princeton.edu/research.html
 
 Deep Learning,
-- [ ] Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
+- Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
 - Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
 ![](http://i.imgur.com/kmdJJRH.png)
 - Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
@@ -30,6 +30,9 @@ Deep Learning,
 - https://github.com/dmlc/mxnet
 - Open Machine Intelligence Framework: <https://github.com/autumnai/leaf>, [Examples](https://github.com/autumnai/leaf-examples)
 - ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
+- Deep Visual-Semantic Alignments for Generating Image Descriptions: <http://cs.stanford.edu/people/karpathy/deepimagesent/>
+![](http://i.imgur.com/zQp4zvF.png)
+
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
 - A machine learning package built for humans: <https://github.com/airbnb/airflow>, <http://airbnb.github.io/aerosolve/>
 - https://www.reddit.com/r/MachineLearning/
@@ -39,6 +42,7 @@ Deep Learning,
 
 General learning,
 - Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
+- Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch: <https://github.com/karpathy/char-rnn>, <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>
 
 # Kinect
 - Object Detection: <https://github.com/marceljuenemann/kinect-object-detection>
