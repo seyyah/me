@@ -185,6 +185,7 @@ API,
 - angularjs+ui: <https://angular-ui.github.io/bootstrap/>
 
 ## React
+- Angular 2 versus React: There Will Be Blood: <https://medium.com/@housecor/angular-2-versus-react-there-will-be-blood-66595faafd51#.o5u4f5k82>
 - A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
 - Code from the React tutorial: <https://github.com/reactjs/react-tutorial>, <http://facebook.github.io/react/docs/tutorial.html>
 - Ruby gem for automatically transforming JSX and using React in **Rails**: <https://github.com/reactjs/react-rails>
@@ -199,6 +200,9 @@ API,
 
 ## Javascript
 
+- 10 Most Popular Javascript Library in 2015: <http://blog.apcelent.com/10-most-popular-javascript-library-2015.html>
+- JavaScript Cloud/Web Desktop Platform: <http://os.js.org/>
+- JavaScript Regular expressions made easy: <https://github.com/VerbalExpressions/JSVerbalExpressions>
 - Easy scroll animations for web and mobile browsers: <https://github.com/jlmakes/scrollreveal.js>, <https://scrollrevealjs.org/>
 - Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
 - Clipboard: <https://github.com/zenorocha/clipboard.js>
