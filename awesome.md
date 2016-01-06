@@ -238,7 +238,7 @@ API,
 - All the resources for Learning About Swift: <https://github.com/hsavit1/Awesome-Swift-Education>
 
 # Mail
-
+- Official Ruby Gem for the SendGrid email Web API: <https://github.com/sendgrid/sendgrid-ruby>, <http://sendgrid.com>
 - Print and Mail Custom Postcards using HTML, CSS, and Ruby on Rails: <https://lob.com/blog/print-mail-custom-postcards-using-html-css-ruby-on-rails/#old>, <https://github.com/lob/lob-rails-example>
 
 ## Diğer
