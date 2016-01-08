@@ -40,13 +40,15 @@ Deep Learning,
 - http://www.wired.com/category/science
 - https://medium.com/search?q=science
 
-General learning,
-- Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
-- Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch: <https://github.com/karpathy/char-rnn>, <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>
 
 Görsel  | Ayrıntı
 ------------- | -------------
+**General learning** | ...
+Yok | Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
+Yok | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch: <https://github.com/karpathy/char-rnn>, <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>
 ![](http://i.imgur.com/KvOF1vc.png)  | Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks: <https://github.com/ShaoqingRen/faster_rcnn>, [Sunum](https://www.dropbox.com/s/xtr4yd4i5e0vw8g/iccv15_tutorial_training_rbg.pdf?dl=0), [Makale](http://arxiv.org/pdf/1506.01497v3.pdf)
+![](http://i.imgur.com/IqECpSY.png) | **Facebook AI Research**: DeepFace: Closing the Gap to Human-Level Performance in Face Verification, [Makale](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf)
+
 
 # Kinect
 - Object Detection: <https://github.com/marceljuenemann/kinect-object-detection>
