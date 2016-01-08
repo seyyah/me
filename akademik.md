@@ -1,3 +1,27 @@
+# Deep Learning, General Learning
+
+Görsel  | Ayrıntı
+------------- | -------------
+**Deep Learning**  | ...
+YOK | Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
+![](http://i.imgur.com/kmdJJRH.png) | Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
+YOK | Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
+![](https://camo.githubusercontent.com/684a313b08ebab8d1d0aec023e84ba59d57e8cdc/68747470733a2f2f7261772e6769746875622e636f6d2f6b617270617468792f6e657572616c74616c6b322f6d61737465722f7669732f7465617365722e6a706567)
+YOK | https://github.com/google/skflow, http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
+YOK | http://deeplearning.net/
+YOK | https://github.com/Samsung/veles
+YOK | https://github.com/hangtwenty/dive-into-machine-learning
+YOK | https://github.com/Microsoft/DMTK
+YOK | https://github.com/dmlc/mxnet
+YOK | Open Machine Intelligence Framework: <https://github.com/autumnai/leaf>, [Examples](https://github.com/autumnai/leaf-examples)
+YOK | ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
+![](http://i.imgur.com/zQp4zvF.png) | Deep Visual-Semantic Alignments for Generating Image Descriptions: <http://cs.stanford.edu/people/karpathy/deepimagesent/>
+**General learning** | ...
+![](http://i.imgur.com/KvOF1vc.png)  | Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks: <https://github.com/ShaoqingRen/faster_rcnn>, [Sunum](https://www.dropbox.com/s/xtr4yd4i5e0vw8g/iccv15_tutorial_training_rbg.pdf?dl=0), [Makale](http://arxiv.org/pdf/1506.01497v3.pdf)
+![](http://i.imgur.com/IqECpSY.png) | **Facebook AI Research**: DeepFace: Closing the Gap to Human-Level Performance in Face Verification, [Makale](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf)
+Yok | Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
+Yok | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch: <https://github.com/karpathy/char-rnn>, <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>
+
 # Statistics
 
 - https://en.wikipedia.org/wiki/F1_score, http://blog.tryolabs.com/2013/03/25/why-accuracy-alone-bad-measure-classification-tasks-and-what-we-can-do-about-it/
@@ -9,30 +33,14 @@
 - Google CardBoar: <https://www.google.com/intl/tr_ALL/get/cardboard/get-cardboard/>
 - Prijector: Wireless Presentation Device: <https://prijector.com/>
 
+Kinect,
+- Object Detection: <https://github.com/marceljuenemann/kinect-object-detection>
+
 # Blog, Tools
 
 - http://blogs.mathworks.com/steve/
 - http://colah.github.io/
 - http://vision.princeton.edu/research.html
-
-Deep Learning,
-- Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
-- Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
-![](http://i.imgur.com/kmdJJRH.png)
-- Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
-![](https://camo.githubusercontent.com/684a313b08ebab8d1d0aec023e84ba59d57e8cdc/68747470733a2f2f7261772e6769746875622e636f6d2f6b617270617468792f6e657572616c74616c6b322f6d61737465722f7669732f7465617365722e6a706567)
-- https://github.com/google/skflow
-- http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
-- http://deeplearning.net/
-- https://github.com/Samsung/veles
-- https://github.com/hangtwenty/dive-into-machine-learning
-- https://github.com/Microsoft/DMTK
-- https://github.com/dmlc/mxnet
-- Open Machine Intelligence Framework: <https://github.com/autumnai/leaf>, [Examples](https://github.com/autumnai/leaf-examples)
-- ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
-- Deep Visual-Semantic Alignments for Generating Image Descriptions: <http://cs.stanford.edu/people/karpathy/deepimagesent/>
-![](http://i.imgur.com/zQp4zvF.png)
-
 - Image processing, Neural Network, ImageNet: <http://karpathy.github.io/>
 - A machine learning package built for humans: <https://github.com/airbnb/airflow>, <http://airbnb.github.io/aerosolve/>
 - https://www.reddit.com/r/MachineLearning/
@@ -40,25 +48,11 @@ Deep Learning,
 - http://www.wired.com/category/science
 - https://medium.com/search?q=science
 
-
-Görsel  | Ayrıntı
-------------- | -------------
-**General learning** | ...
-Yok | Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
-Yok | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch: <https://github.com/karpathy/char-rnn>, <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>
-![](http://i.imgur.com/KvOF1vc.png)  | Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks: <https://github.com/ShaoqingRen/faster_rcnn>, [Sunum](https://www.dropbox.com/s/xtr4yd4i5e0vw8g/iccv15_tutorial_training_rbg.pdf?dl=0), [Makale](http://arxiv.org/pdf/1506.01497v3.pdf)
-![](http://i.imgur.com/IqECpSY.png) | **Facebook AI Research**: DeepFace: Closing the Gap to Human-Level Performance in Face Verification, [Makale](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf)
-
-
-# Kinect
-- Object Detection: <https://github.com/marceljuenemann/kinect-object-detection>
-
 # Etc
 - OCR: https://github.com/madmaze/pytesseract
 - Computer “Vision” for the Visually Impaired: I have a dream: <https://medium.com/@karim_ouda/computer-vision-for-the-visually-impaired-i-have-a-dream-7eaee112aeb9#.6pew7gu41>
 
 # Image Processing & Matlab
-
 ## Image Processing
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>, <convert afis_800x600.png  -liquid-rescale 800x200\!  temp1.jpg>, <http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing--gui-implementation-demo>
