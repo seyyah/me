@@ -3,6 +3,9 @@
 Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
+Magazin | [10 Breakthrough Technologies- 2013](http://www.technologyreview.com/lists/breakthrough-technologies/2013/)
+Magazin | [Google Puts Its Virtual Brain Technology to Work](http://www.technologyreview.com/news/429442/google-puts-its-virtual-brain-technology-to-work/), A powerful new approach to artificial intelligence is ready to improve many Google products.
+Magazin | []()
 YOK | Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
 ![](http://i.imgur.com/kmdJJRH.png) | Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
 ![](https://camo.githubusercontent.com/684a313b08ebab8d1d0aec023e84ba59d57e8cdc/68747470733a2f2f7261772e6769746875622e636f6d2f6b617270617468792f6e657572616c74616c6b322f6d61737465722f7669732f7465617365722e6a706567) | Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
@@ -17,7 +20,7 @@ YOK | ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/k
 ![](http://i.imgur.com/zQp4zvF.png) | Deep Visual-Semantic Alignments for Generating Image Descriptions: <http://cs.stanford.edu/people/karpathy/deepimagesent/>
 **General learning** | ...
 ![](http://i.imgur.com/KvOF1vc.png)  | Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks: <https://github.com/ShaoqingRen/faster_rcnn>, [Sunum](https://www.dropbox.com/s/xtr4yd4i5e0vw8g/iccv15_tutorial_training_rbg.pdf?dl=0), [Makale](http://arxiv.org/pdf/1506.01497v3.pdf)
-![](http://i.imgur.com/IqECpSY.png) | **Facebook AI Research**: DeepFace: Closing the Gap to Human-Level Performance in Face Verification, [Makale](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf)
+![](http://i.imgur.com/IqECpSY.png) | **Facebook AI Research**: DeepFace: Closing the Gap to Human-Level Performance in Face Verification, [Makale](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf), [Facebook Launches Advanced AI Effort to Find Meaning in Your Posts](http://www.technologyreview.com/news/519411/facebook-launches-advanced-ai-effort-to-find-meaning-in-your-posts/)
 Yok | Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
 Yok | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch: <https://github.com/karpathy/char-rnn>, <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>
 
