@@ -5,7 +5,7 @@ Görsel  | Ayrıntı
 **Deep Learning**  | ...
 Magazin | [10 Breakthrough Technologies- 2013](http://www.technologyreview.com/lists/breakthrough-technologies/2013/)
 Magazin | [Google Puts Its Virtual Brain Technology to Work](http://www.technologyreview.com/news/429442/google-puts-its-virtual-brain-technology-to-work/), A powerful new approach to artificial intelligence is ready to improve many Google products.
-Magazin | []()
+![](https://github.com/deepcoord/question-answering/raw/master/images/QA-arch.png) | [Sequence to Sequence Learning Model](http://musio.coord.org), [Demo: MUSICO Chat Bot](http://ec2-204-236-149-143.us-west-1.compute.amazonaws.com:9000/), [A Simple Question-Answering System](https://www.youtube.com/watch?v=JzJn1kjeZPA)
 YOK | Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
 ![](http://i.imgur.com/kmdJJRH.png) | Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
 ![](https://camo.githubusercontent.com/684a313b08ebab8d1d0aec023e84ba59d57e8cdc/68747470733a2f2f7261772e6769746875622e636f6d2f6b617270617468792f6e657572616c74616c6b322f6d61737465722f7669732f7465617365722e6a706567) | Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
