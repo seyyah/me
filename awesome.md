@@ -212,6 +212,7 @@ API,
 - Infinite Scroll, Lazily Loading An Element, Dependent Select, typeahead, <http://intercoolerjs.org/examples/index.html>
 - Javascript library to create physics-based animations: <http://dynamicsjs.com>
 - Examples of how to do query, style, dom, ajax, event etc like jQuery with plain javascript: <https://github.com/oneuijs/You-Dont-Need-jQuery>
+- A Fast, simple and lightweight browser feature detection library written in plain JavaScript: <http://featurejs.com/>
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
