@@ -39,6 +39,7 @@
 - Designing for the Apple Watch, before it even ships: <https://aerolab.co/simpleradio>
 - Icons work together as an outline of the corporate identity: <https://aerolab.co/kaspersky>
 - Sharing a startup road, from start to acquisition: <https://aerolab.co/lemon>
+- The 3 Most Impactful Design Tools: ZEPLIN, SKETCH APP, INVISION: <http://www.developertown.com/3-impactful-design-tools/>
 
 # B. Back-end Stuff
 
