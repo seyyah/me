@@ -42,6 +42,8 @@
 - The 3 Most Impactful Design Tools: ZEPLIN, SKETCH APP, INVISION: <http://www.developertown.com/3-impactful-design-tools/>
 - Vertical Fixed Navigation #2: <https://codyhouse.co/gem/vertical-fixed-navigation-2/>
 <img src='https://0bf196087c14ed19d1f11cf1-ambercreativelab.netdna-ssl.com/wp-content/uploads/2016/01/v-nav-animation.gif' width='100'>
+- Reading Progress Indicator: <https://codyhouse.co/gem/reading-progress-indicator/>
+<img src='https://0bf196087c14ed19d1f11cf1-ambercreativelab.netdna-ssl.com/wp-content/uploads/2015/12/reading-progress-indicator-thumb.jpg' width='100'>
 
 # B. Back-end Stuff
 
