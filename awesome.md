@@ -88,7 +88,8 @@ Yol haritası,
 - Active Record Soft Delete: <https://github.com/radar/paranoia>
 - Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
-- Log Analiz: https://github.com/wvanbergen/request-log-analyzer
+- Log Analiz: <https://github.com/wvanbergen/request-log-analyzer>
+- Log file navigator: <https://github.com/tstack/lnav>, <http://lnav.org>
 - wisper: A micro library providing Ruby objects with Publish-Subscribe capabilities: <https://github.com/krisleech/wisper>
 - Credit Card: https://github.com/jessepollak/card
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
@@ -208,6 +209,7 @@ API,
 
 ## Javascript
 
+- This is about one JS tip every day: <https://github.com/loverajoel/jstips>
 - 10 Most Popular Javascript Library in 2015: <http://blog.apcelent.com/10-most-popular-javascript-library-2015.html>
 - JavaScript Cloud/Web Desktop Platform: <http://os.js.org/>
 - JavaScript Regular expressions made easy: <https://github.com/VerbalExpressions/JSVerbalExpressions>
