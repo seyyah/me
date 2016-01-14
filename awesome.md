@@ -128,6 +128,7 @@ Machine learning,
 ### Realtime
 - https://www.firebase.com
 - A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
+- Distributed Graph Database: <https://github.com/thinkaurelius/titan>, <http://titandb.io>
 - Google: Lovefield is a relational database written in pure JavaScript: <https://github.com/google/lovefield>, <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - Squeel lets you write your Active Record queries with fewer strings, and more Ruby, by making the Arel awesomeness that lies beneath Active Record more accessible: <https://github.com/activerecord-hackery/squeel>
 
@@ -169,6 +170,8 @@ Editor,
 - markdown: https://github.com/vmg/redcarpet
 
 Image,
+- Image And Video Management In The Cloud: <http://cloudinary.com/>, 
+- Thumbor is an open-source photo thumbnail service by globo.com: <http://thumbor.org>, <https://github.com/thumbor/thumbor>
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Image upload plugin for TinyMCE and Rails with the asset pipeline: <https://github.com/PerfectlyNormal/tinymce-rails-imageupload>
 - JavaScript image cropper: <https://github.com/fengyuanchen/cropperjs>, <http://cropperjs.com>
