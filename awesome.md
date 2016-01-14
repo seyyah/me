@@ -126,8 +126,10 @@ Machine learning,
 - MongoDB object modeling designed to work in an asynchronous environment: <https://github.com/Automattic/mongoose>, <http://mongoosejs.com/>
 - Mongo query API component: <https://github.com/Automattic/mongo-query>
 
-### Realtime
+### Realtime, Graph
 - https://www.firebase.com
+- An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
+- Cayley is an open-source graph inspired by the graph database behind Freebase and Google's Knowledge Graph: <https://github.com/google/cayley>
 - A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
 - Distributed Graph Database: <https://github.com/thinkaurelius/titan>, <http://titandb.io>
 - Google: Lovefield is a relational database written in pure JavaScript: <https://github.com/google/lovefield>, <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
@@ -140,7 +142,6 @@ Machine learning,
 # Front-end Stuff
 
 - Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
-- Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input <http://PapaParse.com>: <https://github.com/mholt/PapaParse>
 - http://aerolab.github.io/midnight.js/
 - Echo is a standalone JavaScript lazy-loading image micro-library. <https://github.com/toddmotto/echo>, demo: <http://toddmotto.com/labs/echo/>
 - http://www.bootbundle.com/tool
@@ -183,6 +184,7 @@ File Manager,
 Table-Excel-like editing,
 - AngularJS directive for Handsontable, Handsontable is an Excel-like data grid / spreadsheet for HTML & JavaScript: <https://github.com/handsontable/ngHandsontable>, <https://github.com/handsontable/handsontable>
 - Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input <http://PapaParse.com>
+- Roo provides an interface to spreadsheets of several sorts: <https://github.com/roo-rb/roo>
 
 API,
 - The API to Address It All,  Verify Addresses, City, State, ZIP, Autocomplete, Extract: <https://smartystreets.com/features>
@@ -266,7 +268,6 @@ API,
 - Google Bazel: <http://bazel.io/>
 
 ## Diğer
-- An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - https://github.com/adamwulf/app-launch-guide
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
 https://getlooseleaf.com
