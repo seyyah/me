@@ -347,6 +347,7 @@ Console,
 ## Security
 
 - Devise limit one session per user at a time: <http://stackoverflow.com/questions/7068919/devise-limit-one-session-per-user-at-a-time>
+- [Penetration Testing/Security Cheatsheets](https://github.com/jshaw87/Cheatsheets), [Scripts that are useful for me on penetration tests.](https://github.com/jshaw87/Scripts)
 - Security related headers all in one gem: <https://github.com/twitter/secureheaders>
 - Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
 - **Security**: <https://github.com/airbnb/brakeman>, <https://github.com/presidentbeef/brakeman>, <http://www.serhatdundar.com/ruby-on-rails-ve-guvenlik-csrf-ve-api-talepleri>, <http://guides.rubyonrails.org/security.html>
