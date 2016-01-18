@@ -23,6 +23,7 @@ YOK | ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/k
 ![](http://i.imgur.com/IqECpSY.png) | **Facebook AI Research**: DeepFace: Closing the Gap to Human-Level Performance in Face Verification, [Makale](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf), [Facebook Launches Advanced AI Effort to Find Meaning in Your Posts](http://www.technologyreview.com/news/519411/facebook-launches-advanced-ai-effort-to-find-meaning-in-your-posts/)
 Yok | Anthelion is a plugin for Apache Nutch to crawl semantic annotations within HTML pages: <https://labs.yahoo.com/publications/6702/focused-crawling-structured-data>, <https://github.com/yahoo/anthelion>
 Yok | Multi-layer Recurrent Neural Networks (LSTM, GRU, RNN) for character-level language models in Torch: <https://github.com/karpathy/char-rnn>, <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>
+Yok | Bayesian classifier for medical diagnosis on the Cleveland heart disease set.<https://github.com/Sirupsen/medical-diagnosis>
 
 # Statistics
 
