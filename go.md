@@ -1,5 +1,6 @@
 Go go
 
+- Minimal AWS Lambda function manager with Go support: <https://github.com/apex/apex>
 - Go Relational Persistence - an ORM-ish library for Go: <https://github.com/go-gorp/gorp>
 - A lightweight MVC framework for Go(Golang): <https://github.com/gernest/utron>
 - Echo is a fast ￼ and unfancy micro web framework for Go. <https://github.com/labstack/echo>
@@ -10,6 +11,10 @@ Go go
 - A command-line fuzzy finder written in Go: <https://github.com/jondot/fzf>
 - A visual interface to work with runtime profiling data for Go: <https://github.com/rakyll/gom>
 - Minimalist Go library aimed at creating Console User Interfaces: <https://github.com/jroimartin/gocui>
+
+Log,
+- Structured, pluggable logging for Go: <https://github.com/Sirupsen/logrus>
+- Package log implements a simple structured logging API inspired by Logrus, designed with centralization in mind. Read more on Medium: <https://github.com/apex/log>, [Medium: tanıtım](https://medium.com/@tjholowaychuk/apex-log-e8d9627f4a9a#.4bpbq5hko)
 
 # Books
 - Kitaplar: <https://github.com/adonovan/GoBooks>
