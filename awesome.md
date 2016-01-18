@@ -171,6 +171,7 @@ Editor,
 - https://github.com/spohlenz/tinymce-rails
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
+- Everything you need to know about Vim: <https://github.com/mhinz/vim-galore>
 
 Image,
 - Image And Video Management In The Cloud: <http://cloudinary.com/>, 
@@ -394,6 +395,7 @@ Console,
 
 # Diğer
 
+- A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! :gift: <https://github.com/anishathalye/git-remote-dropbox>, <https://git.io/dropbox>
 - Smart and Simple Project Management for Teams on GitHub (A repo for tracking the Waffle.io team's public-facing work.):  <http://waffle.io/waffleio/waffle.io>, <https://github.com/waffleio/waffle.io>
 - visualising data structures and algorithms through animation: <http://visualgo.net/>
 - Use your OS X terminal shell to do awesome things: <https://github.com/herrbischoff/awesome-osx-command-line>
