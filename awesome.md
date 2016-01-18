@@ -58,7 +58,7 @@ Yol haritası,
 ### Genel
 - Postman: Build, test, and document your APIs faster. <http://getpostman.com>
 - rest client: <https://github.com/rest-client/rest-client>, <https://github.com/lostisland/faraday>
-
+- IMPROVEMENTS TO ERROR RESPONSES IN RAILS 5 API MODE: <https://wyeworks.com/blog/2016/1/12/improvements-to-error-responses-in-rails-5-api-mode/>
 - https://github.com/Neson/api_helper
 - AngularJS service to handle Rest API Restful Resources properly and easily: <https://github.com/mgonto/restangular>
 - API Basics and Building Your Own: <http://www.theodinproject.com/ruby-on-rails/apis-and-building-your-own>
@@ -225,6 +225,7 @@ API,
 - Javascript library to create physics-based animations: <http://dynamicsjs.com>
 - Examples of how to do query, style, dom, ajax, event etc like jQuery with plain javascript: <https://github.com/oneuijs/You-Dont-Need-jQuery>
 - A Fast, simple and lightweight browser feature detection library written in plain JavaScript: <http://featurejs.com/>
+- ChakraCore is the core part of the Chakra Javascript engine that powers Microsoft Edge: <https://github.com/Microsoft/ChakraCore>
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
@@ -250,7 +251,9 @@ API,
 - A cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices http://microsoft.github.io/code-push
 - All the resources for Learning About Swift: <https://github.com/hsavit1/Awesome-Swift-Education>
 
-# Mail
+# Mail, Sms
+- Sending & Receiving SMS on Linux: <https://www.20papercups.net/programming/sending-receiving-sms-on-linux/>
+- Build an ‘SMS center’ with Python , Kannel and a GSM modem: <https://medium.com/@iMitwe/build-an-sms-center-with-python-kannel-and-a-gsm-modem-9c0d29560d82#.6ntvqvwjs>
 - Official Ruby Gem for the SendGrid email Web API: <https://github.com/sendgrid/sendgrid-ruby>, <http://sendgrid.com>
 - Print and Mail Custom Postcards using HTML, CSS, and Ruby on Rails: <https://lob.com/blog/print-mail-custom-postcards-using-html-css-ruby-on-rails/#old>, <https://github.com/lob/lob-rails-example>
 
@@ -347,6 +350,7 @@ Console,
 ## Security
 
 - Devise limit one session per user at a time: <http://stackoverflow.com/questions/7068919/devise-limit-one-session-per-user-at-a-time>
+- A week with a Rails Security Strategy: <https://medium.com/@bauland42/a-week-with-a-rails-security-strategy-e847836481b0#.k9skeqygh>
 - [Penetration Testing/Security Cheatsheets](https://github.com/jshaw87/Cheatsheets), [Scripts that are useful for me on penetration tests.](https://github.com/jshaw87/Scripts)
 - Security related headers all in one gem: <https://github.com/twitter/secureheaders>
 - Container Vulnerability Analysis Service: <https://github.com/coreos/clair>
