@@ -60,12 +60,14 @@ Kinect,
 - OCR: https://github.com/madmaze/pytesseract
 - Computer “Vision” for the Visually Impaired: I have a dream: <https://medium.com/@karim_ouda/computer-vision-for-the-visually-impaired-i-have-a-dream-7eaee112aeb9#.6pew7gu41>
 
-# Image Processing & Matlab
+# Image Processing & Matlab | OpenCV | Python
 ## Image Processing
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>, <convert afis_800x600.png  -liquid-rescale 800x200\!  temp1.jpg>, <http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing--gui-implementation-demo>
 - [Efficient subpixel image registration by cross-correlation on Matlab](http://www.mathworks.com/matlabcentral/fileexchange/18401-efficient-subpixel-image-registration-by-cross-correlation/content/html/efficient_subpixel_registration.html), [Image Registration for Astronomy](https://github.com/keflavich/image_registration)
 - A utility class for working with colors in JavaScript: <https://github.com/Automattic/Color.js>
+- Finding pools in a map with OpenCV: <https://github.com/thiagopradi/Pool-Finder>
+![](https://raw.githubusercontent.com/thiagopradi/Pool-Finder/master/pool_vegas.png)
 
 ## DIP
 
