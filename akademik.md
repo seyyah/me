@@ -22,6 +22,7 @@ YOK | https://github.com/dmlc/mxnet
 YOK | Open Machine Intelligence Framework: <https://github.com/autumnai/leaf>, [Examples](https://github.com/autumnai/leaf-examples)
 YOK | ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/karpathy/convnetjs/>
 ![](http://i.imgur.com/zQp4zvF.png) | Deep Visual-Semantic Alignments for Generating Image Descriptions: <http://cs.stanford.edu/people/karpathy/deepimagesent/>
+![](http://i.imgur.com/GZQQmXE.png) | Implementation of "Action-Conditional Video Prediction using Deep Networks in Atari Games": <https://github.com/junhyukoh/nips2015-action-conditional-video-prediction>, <https://sites.google.com/a/umich.edu/junhyuk-oh/action-conditional-video-prediction>
 **General learning** | ...
 ![](http://i.imgur.com/KvOF1vc.png)  | Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks: <https://github.com/ShaoqingRen/faster_rcnn>, [Sunum](https://www.dropbox.com/s/xtr4yd4i5e0vw8g/iccv15_tutorial_training_rbg.pdf?dl=0), [Makale](http://arxiv.org/pdf/1506.01497v3.pdf)
 ![](http://i.imgur.com/IqECpSY.png) | **Facebook AI Research**: DeepFace: Closing the Gap to Human-Level Performance in Face Verification, [Makale](https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf), [Facebook Launches Advanced AI Effort to Find Meaning in Your Posts](http://www.technologyreview.com/news/519411/facebook-launches-advanced-ai-effort-to-find-meaning-in-your-posts/)
