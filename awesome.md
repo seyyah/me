@@ -112,6 +112,8 @@ Machine learning,
 
 ## Database
 
+- Versioned database views for Rails: <https://github.com/thoughtbot/scenic>
+
 ### PG
 - Would you recommend PostgreSQL over MySQL:  <http://stackoverflow.com/questions/110927/would-you-recommend-postgresql-over-mysql>
 - Why 10 reasons: <http://www.slideshare.net/anandology/ten-reasons-to-prefer-postgresql-to-mysql>
