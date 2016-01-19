@@ -128,7 +128,7 @@ Machine learning,
 - Mongo query API component: <https://github.com/Automattic/mongo-query>
 
 ### Realtime, Graph
-- https://www.firebase.com
+- https://www.firebase.com, [INTRO TO FIREBASE Presentation](https://intro-to-firebase.firebaseapp.com/#/)
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - Cayley is an open-source graph inspired by the graph database behind Freebase and Google's Knowledge Graph: <https://github.com/google/cayley>
 - A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
@@ -280,6 +280,14 @@ https://getlooseleaf.com
 # AngularJs
 
 - Angular 2 Beta: <http://angularjs.blogspot.com.tr/>
+- Angular directive/filter/service for formatting date so that it displays how long ago the given time was compared to now: <https://github.com/yaru22/angular-timeago>, [Moment.JS directives for Angular.JS timeago and more](https://github.com/urish/angular-moment)
+- Dynamically load scripts and css stylesheets in your Angular.JS app: <https://github.com/urish/angular-load>
+- Angular directive to show an animated spinner (using spin.js): <https://github.com/urish/angular-spinner>
+- A showcase of web apps built with AngularJS: <https://github.com/madewithangular/madewithangular.github.io>, [Demo-app](https://www.madewithangular.com/#/)
+- i18n in your Angular apps, made easy: <https://github.com/angular-translate/angular-translate>, <https://angular-translate.github.io/>
+- Hovercard is a very lightweight Angular directive that is written purely in AngularJS. It is a card that is displayed when you hover over a label. The card can contain any html element. <https://github.com/yaru22/angular-hovercard>, [Demo](http://brianpark.ca/projects/angular_hovercard/demo/)
+- Angular Json Formatting for Human Beings <https://github.com/yaru22/angular-json-human>, [Demo](http://brianpark.ca/projects/angular_json_human/demo/)
+- Angular directive to render Markdown text. It's built on blazingly fast markdown parser 'marked'.: <https://github.com/yaru22/angular-md>, [Demo](http://brianpark.ca/projects/angular_md/demo/)
 - Angular.js Mobile UI Framework with Bootstrap 3: <https://github.com/mcasimir/mobile-angular-ui>, <http://mobileangularui.com/>
 - Daily AngularJs: <http://dailyjs.com/tag/angularjs/>
 - AngularJs Awesome List: <https://github.com/gianarb/awesome-angularjs>
