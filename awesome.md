@@ -112,6 +112,7 @@ Machine learning,
 
 ## Database
 
+- Database Sharding for ActiveRecord: <https://github.com/thiagopradi/octopus>
 - Versioned database views for Rails: <https://github.com/thoughtbot/scenic>
 
 ### PG
