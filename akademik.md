@@ -4,6 +4,7 @@ Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
 Magazin | [10 Breakthrough Technologies- 2013](http://www.technologyreview.com/lists/breakthrough-technologies/2013/)
+Derleme | https://github.com/19/engiz/issues/4
 Magazin | [Google Puts Its Virtual Brain Technology to Work](http://www.technologyreview.com/news/429442/google-puts-its-virtual-brain-technology-to-work/), A powerful new approach to artificial intelligence is ready to improve many Google products.
 ![](https://github.com/deepcoord/question-answering/raw/master/images/QA-arch.png) | [Sequence to Sequence Learning Model](http://musio.coord.org), [Demo: MUSICO Chat Bot](http://ec2-204-236-149-143.us-west-1.compute.amazonaws.com:9000/), [A Simple Question-Answering System](https://www.youtube.com/watch?v=JzJn1kjeZPA)
 YOK | Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
@@ -11,6 +12,8 @@ YOK | Face recognition with deep neural networks: <http://cmusatyalab.github.io/
 ![](https://camo.githubusercontent.com/684a313b08ebab8d1d0aec023e84ba59d57e8cdc/68747470733a2f2f7261772e6769746875622e636f6d2f6b617270617468792f6e657572616c74616c6b322f6d61737465722f7669732f7465617365722e6a706567) | Recurrent Neural Network captions your images: <https://github.com/karpathy/neuraltalk2>
 YOK | [Github](https://github.com/tensorflow/tensorflow), https://github.com/google/skflow, http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
 ![](https://github.com/anishathalye/neural-style/raw/master/examples/1-output.jpg) ![](https://github.com/anishathalye/neural-style/raw/master/examples/1-content.jpg) | Neural style in TensorFlow <https://github.com/anishathalye/neural-style>, <http://www.anishathalye.com/2015/12/19/an-ai-that-can-mimic-any-artist/>
+YOK | [Adversarial networks in TensorFlow](https://github.com/nivwusquorum/tf-adversarial)
+![](https://github.com/nivwusquorum/tensorflow-deepq/raw/master/data/example.gif) | [A deep Q learning demonstration using Google Tensorflow](https://github.com/nivwusquorum/tensorflow-deepq)
 YOK | http://deeplearning.net/
 YOK | https://github.com/Samsung/veles
 YOK | https://github.com/hangtwenty/dive-into-machine-learning
@@ -60,6 +63,7 @@ Kinect,
 ## Image Processing
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>, <convert afis_800x600.png  -liquid-rescale 800x200\!  temp1.jpg>, <http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing--gui-implementation-demo>
+- [Efficient subpixel image registration by cross-correlation on Matlab](http://www.mathworks.com/matlabcentral/fileexchange/18401-efficient-subpixel-image-registration-by-cross-correlation/content/html/efficient_subpixel_registration.html), [Image Registration for Astronomy](https://github.com/keflavich/image_registration)
 - A utility class for working with colors in JavaScript: <https://github.com/Automattic/Color.js>
 
 ## DIP
