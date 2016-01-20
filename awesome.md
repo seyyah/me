@@ -330,6 +330,7 @@ https://getlooseleaf.com
 - https://github.com/MoonStorm/trNgGrid
 - AngularJS alert drawer: <https://github.com/waffleio/alert-drawer>
 - Offline support for AngularJS applications: <https://github.com/neoziro/angular-offline>
+- Angular Directive to Paginate Anything: <https://github.com/begriffs/angular-paginate-anything>, [Demo](http://begriffs.com/angular-paginate-anything/)
 
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
@@ -373,6 +374,7 @@ Console,
 - Demo materials for Vault secret backends: <https://github.com/sethvargo/vault-demo>
 - The Docker Bench for Security is a script that checks for dozens of common best-practices around deploying Docker containers in production: <https://github.com/docker/docker-bench-security
 - Automated Pentest Recon Scanner <https://github.com/1N3/Sn1per>, <https://crowdshield.com>
+- This Let's Encrypt repo is an ACME client that can obtain certs and extensibly update server configurations (currently supports Apache on .deb based systems, nginx support coming soon): <https://github.com/letsencrypt/letsencrypt>
 
 ## Cache
 - IdentityCache is a blob level caching solution to plug into ActiveRecord. Don't #find, #fetch! <https://github.com/Shopify/identity_cache>, <http://shopify.github.io/identity_cache>
