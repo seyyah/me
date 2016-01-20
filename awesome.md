@@ -283,6 +283,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- A directive for AngularJS providing a advanced visual search box, <http://ngmodules.org/modules/angular-advanced-searchbox>, [Demo](http://dnauck.github.io/angular-advanced-searchbox/)
 - Angular 2 Beta: <http://angularjs.blogspot.com.tr/>
 - Angular directive/filter/service for formatting date so that it displays how long ago the given time was compared to now: <https://github.com/yaru22/angular-timeago>, [Moment.JS directives for Angular.JS timeago and more](https://github.com/urish/angular-moment)
 - Dynamically load scripts and css stylesheets in your Angular.JS app: <https://github.com/urish/angular-load>
