@@ -85,7 +85,7 @@ Yol haritası,
 - https://github.com/hothero/rails-gem-list
 - Rails simple helper for Tawk.to live chat script: <https://github.com/luizpicolo/tawk-rails>
 - Easy external settings for your app: <https://github.com/remiprev/choices>
-- Active Record Soft Delete: <https://github.com/radar/paranoia>
+- Rails Plugin - soft-delete your ActiveRecord records. It's like an explicit version of ActsAsParanoid: <https://github.com/begriffs/permanent_records>, Active Record Soft Delete: <https://github.com/radar/paranoia>
 - Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
 - Log Analiz: <https://github.com/wvanbergen/request-log-analyzer>
