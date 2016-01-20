@@ -146,6 +146,7 @@ Machine learning,
 
 # Front-end Stuff
 
+- Front-end Style Guides: <https://24ways.org/2011/front-end-style-guides/>, [Building a Global Experience Language for the BBC](http://static.bbci.co.uk/gel/0.6.6/downloads/GEL_web_styleguide.pdf),[Designing for Yosemite, MAC](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html)
 - Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
 - http://aerolab.github.io/midnight.js/
 - Echo is a standalone JavaScript lazy-loading image micro-library. <https://github.com/toddmotto/echo>, demo: <http://toddmotto.com/labs/echo/>
