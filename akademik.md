@@ -3,6 +3,7 @@
 Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
+Tartışma | [What is the difference between the classical artificial neural network and the new deep learning generation?](https://www.researchgate.net/post/What_is_the_difference_between_the_classical_artificial_neural_network_and_the_new_deep_learning_generation)
 Magazin | [10 Breakthrough Technologies- 2013](http://www.technologyreview.com/lists/breakthrough-technologies/2013/)
 Derleme | https://github.com/19/engiz/issues/4
 Magazin | [Google Puts Its Virtual Brain Technology to Work](http://www.technologyreview.com/news/429442/google-puts-its-virtual-brain-technology-to-work/), A powerful new approach to artificial intelligence is ready to improve many Google products.
