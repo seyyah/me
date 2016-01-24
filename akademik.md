@@ -7,6 +7,7 @@ Tartışma | [What is the difference between the classical artificial neural net
 Magazin | [10 Breakthrough Technologies- 2013](http://www.technologyreview.com/lists/breakthrough-technologies/2013/)
 Derleme | https://github.com/19/engiz/issues/4
 Magazin | [Google Puts Its Virtual Brain Technology to Work](http://www.technologyreview.com/news/429442/google-puts-its-virtual-brain-technology-to-work/), A powerful new approach to artificial intelligence is ready to improve many Google products.
+YOK | A flexible framework of neural networks for deep learning <http://chainer.org>, <https://github.com/pfnet/chainer>
 ![](https://github.com/deepcoord/question-answering/raw/master/images/QA-arch.png) | [Sequence to Sequence Learning Model](http://musio.coord.org), [Demo: MUSICO Chat Bot](http://ec2-204-236-149-143.us-west-1.compute.amazonaws.com:9000/), [A Simple Question-Answering System](https://www.youtube.com/watch?v=JzJn1kjeZPA)
 YOK | Face recognition with deep neural networks: <http://cmusatyalab.github.io/openface/>, <https://github.com/cmusatyalab/openface>
 ![](http://i.imgur.com/kmdJJRH.png) | Caffe: a fast open framework for deep learning: <https://github.com/BVLC/caffe>, <http://caffe.berkeleyvision.org>, [Demo](http://demo.caffe.berkeleyvision.org/classify_url?imageurl=http%3A%2F%2Fi.telegraph.co.uk%2Fmultimedia%2Farchive%2F02351%2Fcross-eyed-cat_2351472k.jpg>
