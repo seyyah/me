@@ -1,5 +1,6 @@
 # Best Practices
 
+- Upgrading to Rails 5 Beta - The Hard Way: <https://blog.heroku.com/archives/2016/1/22/rails-5-beta-upgrade?>
 - Rails Blog: <http://www.reddit.com/r/rails/comments/3ban4d/can_anyone_recommend_some_good_ror_blogs/>
 - Software Engineering Blogs: <https://github.com/kilimchoi/engineering-blogs>, <http://www.slicedham.co/>
 - Web FundamentalsBest practices for modern web development: <https://developers.google.com/web/fundamentals>
@@ -219,6 +220,7 @@ API,
 
 ## Javascript
 
+- Make use of your favicon with badges, images or videos: <http://lab.ejci.net/favico.js/>, [AngularJS-Demo](http://lab.ejci.net/favico.js/example-angular/#/)
 - This is about one JS tip every day: <https://github.com/loverajoel/jstips>
 - 10 Most Popular Javascript Library in 2015: <http://blog.apcelent.com/10-most-popular-javascript-library-2015.html>
 - JavaScript Cloud/Web Desktop Platform: <http://os.js.org/>
@@ -408,10 +410,12 @@ Console,
 - sparkle, mega.co.nz, zenhub
 - Mockup: Programlama temelli wireframe: https://github.com/tsx/shireframe
 - whatsapp php chat api: <https://github.com/WHAnonymous/Chat-API>
+- Curated List of Chatbot Links: <https://medium.com/@stephenkeep/maintained-list-of-chatbot-links-8898189facbb#.t63m7jnib>
 - http://htmlpreview.github.io/
 
 # Diğer
 
+- Pair Programming: A (Semi-) Definitive Guide: <https://medium.com/@robisenberg/pair-programming-a-semi-definitive-guide-44bab1c9c1de#.uelkf15jl>
 - A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! :gift: <https://github.com/anishathalye/git-remote-dropbox>, <https://git.io/dropbox>
 - Smart and Simple Project Management for Teams on GitHub (A repo for tracking the Waffle.io team's public-facing work.):  <http://waffle.io/waffleio/waffle.io>, <https://github.com/waffleio/waffle.io>
 - visualising data structures and algorithms through animation: <http://visualgo.net/>
