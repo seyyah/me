@@ -16,6 +16,7 @@
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
 - A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
 - Application template for Rails 4.2 projects; preloaded with best practices for TDD, security, deployment, and developer productivity: <https://github.com/mattbrictson/rails-template>
+- The Rails Doctrine: <http://rubyonrails.org/doctrine/>
 - Rails style: <https://github.com/aradar/guides>
 - A code metric tool for rails projects: <https://github.com/railsbp/rails_best_practices>, <http://railsbp.com/>
 - Metric Fu, Metrical, SimpleCov, Rails Best Practices, and more are covered in this episode on metrics: <http://railscasts.com/episodes/252-metrics-metrics-metrics>
@@ -206,6 +207,7 @@ API,
 
 ## React
 - Angular 2 versus React: There Will Be Blood: <https://medium.com/@housecor/angular-2-versus-react-there-will-be-blood-66595faafd51#.o5u4f5k82>
+- Thoughts on the future of mobile app development: A look at the history of cross-platform mobile apps and why we're betting on React Native: <https://getsiphon.com/blog/2016/01/20/future-of-app-development/>
 - A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
 - Code from the React tutorial: <https://github.com/reactjs/react-tutorial>, <http://facebook.github.io/react/docs/tutorial.html>
 - Ruby gem for automatically transforming JSX and using React in **Rails**: <https://github.com/reactjs/react-rails>
