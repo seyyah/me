@@ -4,7 +4,7 @@ Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
 **Matlab** | Matlab/Octave toolbox for deep learning. Includes Deep Belief Nets, Stacked Autoencoders, Convolutional Neural Nets, Convolutional Autoencoders and vanilla Neural Nets. Each method has examples to get you started: <https://github.com/rasmusbergpalm/DeepLearnToolbox>
-Tecrübe | https://github.com/andreykurenkov/emailinsight, http://www.andreykurenkov.com/writing/organizing-my-emails-with-a-neural-net/
+Tecrübe |  Organizing My Emails With A Neural Net: https://github.com/andreykurenkov/emailinsight, http://www.andreykurenkov.com/writing/organizing-my-emails-with-a-neural-net/
 Tartışma | [What is the difference between the classical artificial neural network and the new deep learning generation?](https://www.researchgate.net/post/What_is_the_difference_between_the_classical_artificial_neural_network_and_the_new_deep_learning_generation)
 Magazin | [10 Breakthrough Technologies- 2013](http://www.technologyreview.com/lists/breakthrough-technologies/2013/)
 Derleme | https://github.com/19/engiz/issues/4
