@@ -114,6 +114,7 @@ Machine learning,
 
 ## Database
 
+- Docker image to run an out-of-the-box MySQL server <https://github.com/tutumcloud/mysql>, <http://www.tutum.co/>
 - `lol_dba` is a small package of rake tasks that scan your application models and displays a list of columns that probably should be indexed. Also, it can generate .sql migration scripts: <https://github.com/plentz/lol_dba>, <http://plentz.github.com/lol_dba/>
 - Database Sharding for ActiveRecord: <https://github.com/thiagopradi/octopus>, [example app](https://github.com/thiagopradi/octopus_sharding_example)
 - Versioned database views for Rails: <https://github.com/thoughtbot/scenic>
