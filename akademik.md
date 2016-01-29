@@ -67,6 +67,8 @@ Kinect,
 
 # Image Processing & Matlab | OpenCV | Python
 ## Image Processing
+- <http://opencv.org/>
+- Open Intelligent Multimedia Analysis for Java (OpenIMAJ): <http://www.openimaj.org/>
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>, <convert afis_800x600.png  -liquid-rescale 800x200\!  temp1.jpg>, <http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing--gui-implementation-demo>
 - [Efficient subpixel image registration by cross-correlation on Matlab](http://www.mathworks.com/matlabcentral/fileexchange/18401-efficient-subpixel-image-registration-by-cross-correlation/content/html/efficient_subpixel_registration.html), [Image Registration for Astronomy](https://github.com/keflavich/image_registration)
