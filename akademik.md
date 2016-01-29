@@ -71,10 +71,9 @@ Kinect,
 # Image Processing & Matlab | OpenCV | Python
 ## Image Processing
 - Open Computer Vision: <http://opencv.org/>, Ruby/GEM/RoR: <https://github.com/ruby-opencv/ruby-opencv>, [Youtube:OpenCV Ruby Tutorial 1 - Hello Contours](https://www.youtube.com/watch?v=taIKWi2Dnx4)
-- 
 - Open Source Biometric Recognition: <http://openbiometrics.org/>
 - Open Intelligent Multimedia Analysis for Java (OpenIMAJ): <http://www.openimaj.org/>
-- mage recognition open source index and search engine <http://pastec.io>, <https://github.com/ryanfb/pastec>
+- Image recognition open source index and search engine <http://pastec.io>, <https://github.com/ryanfb/pastec>
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>, <convert afis_800x600.png  -liquid-rescale 800x200\!  temp1.jpg>, <http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing--gui-implementation-demo>
 - [Efficient subpixel image registration by cross-correlation on Matlab](http://www.mathworks.com/matlabcentral/fileexchange/18401-efficient-subpixel-image-registration-by-cross-correlation/content/html/efficient_subpixel_registration.html), [Image Registration for Astronomy](https://github.com/keflavich/image_registration)
