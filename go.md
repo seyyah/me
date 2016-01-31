@@ -1,6 +1,7 @@
 Go go
 
 - https://github.com/Sirupsen/awesome-go
+- Based on "How to Write a Spelling Corrector": <https://github.com/montanaflynn/toy-spelling-corrector>, <http://norvig.com/spell-correct.html>
 - Minimal AWS Lambda function manager with Go support: <https://github.com/apex/apex>
 - Go Relational Persistence - an ORM-ish library for Go: <https://github.com/go-gorp/gorp>
 - A lightweight MVC framework for Go(Golang): <https://github.com/gernest/utron>
