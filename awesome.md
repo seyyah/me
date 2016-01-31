@@ -137,6 +137,7 @@ Machine learning,
 
 ### Realtime, Graph
 - https://www.firebase.com, [INTRO TO FIREBASE Presentation](https://intro-to-firebase.firebaseapp.com/#/)
+- A lightweight JSON storage service with synchronisation and sharing abilities: <https://github.com/Kinto/kinto>, <http://kinto.readthedocs.org/>
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - Cayley is an open-source graph inspired by the graph database behind Freebase and Google's Knowledge Graph: <https://github.com/google/cayley>
 - A realtime, decentralized, offline-first, graph database engine: <http://gunDB.io/>, <https://github.com/amark/gun>
