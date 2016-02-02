@@ -4,6 +4,7 @@ Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
 **Matlab** | Matlab/Octave toolbox for deep learning. Includes Deep Belief Nets, Stacked Autoencoders, Convolutional Neural Nets, Convolutional Autoencoders and vanilla Neural Nets. Each method has examples to get you started: <https://github.com/rasmusbergpalm/DeepLearnToolbox>
+Database | An awesome list of high-quality open datasets in public domains (on-going): <https://github.com/caesar0301/awesome-public-datasets>
 Tecrübe |  Organizing My Emails With A Neural Net: https://github.com/andreykurenkov/emailinsight, http://www.andreykurenkov.com/writing/organizing-my-emails-with-a-neural-net/
 Keras Tool | Deep Learning library for Python. Convnets, recurrent neural networks, and more. Runs on Theano and TensorFlow. <https://github.com/fchollet/keras>, <http://keras.io/>
 Theano Tool | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It can use GPUs and perform efficient symbolic differentiation: <http://github.com/Theano/Theano>, <http://www.deeplearning.net/software/theano>
