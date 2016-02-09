@@ -226,6 +226,7 @@ API,
 ## Javascript
 
 - Make use of your favicon with badges, images or videos: <http://lab.ejci.net/favico.js/>, [AngularJS-Demo](http://lab.ejci.net/favico.js/example-angular/#/)
+- A super awesome, customizable text input supporting tags, autocomplete, ajax and other goodness in a crazy cool a-la cart way. <https://github.com/alexgorbatchev/jquery-textext>, <http://textextjs.com/>
 - This is about one JS tip every day: <https://github.com/loverajoel/jstips>
 - 10 Most Popular Javascript Library in 2015: <http://blog.apcelent.com/10-most-popular-javascript-library-2015.html>
 - JavaScript Cloud/Web Desktop Platform: <http://os.js.org/>
