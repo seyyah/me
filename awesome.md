@@ -420,7 +420,7 @@ Console,
 - http://htmlpreview.github.io/
 
 # Diğer
-
+- Python: Records: SQL for Humans <https://github.com/kennethreitz/records>
 - Pair Programming: A (Semi-) Definitive Guide: <https://medium.com/@robisenberg/pair-programming-a-semi-definitive-guide-44bab1c9c1de#.uelkf15jl>
 - A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! :gift: <https://github.com/anishathalye/git-remote-dropbox>, <https://git.io/dropbox>
 - Smart and Simple Project Management for Teams on GitHub (A repo for tracking the Waffle.io team's public-facing work.):  <http://waffle.io/waffleio/waffle.io>, <https://github.com/waffleio/waffle.io>
@@ -444,4 +444,3 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - code.org
 - https://blockly-games.appspot.com/
 - windyty.com
-
