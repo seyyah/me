@@ -21,6 +21,7 @@
 - A code metric tool for rails projects: <https://github.com/railsbp/rails_best_practices>, <http://railsbp.com/>
 - Metric Fu, Metrical, SimpleCov, Rails Best Practices, and more are covered in this episode on metrics: <http://railscasts.com/episodes/252-metrics-metrics-metrics>
 - <http://rails-bestpractices.com/>
+- A pure-ruby code highlighter that is compatible with pygments <http://rouge.jneen.net/>, <https://github.com/jneen/rouge>
 
 ## Rails ile yazılmış uygulamalar
 
