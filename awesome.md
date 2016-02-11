@@ -422,6 +422,7 @@ Console,
 - http://htmlpreview.github.io/
 
 # Diğer
+- Markdown to png diagram: http://shaky.github.bushong.net/, https://casual-effects.com/markdeep/features.md.html
 - Python: Records: SQL for Humans <https://github.com/kennethreitz/records>
 - Pair Programming: A (Semi-) Definitive Guide: <https://medium.com/@robisenberg/pair-programming-a-semi-definitive-guide-44bab1c9c1de#.uelkf15jl>
 - A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! :gift: <https://github.com/anishathalye/git-remote-dropbox>, <https://git.io/dropbox>
