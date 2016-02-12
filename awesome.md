@@ -86,6 +86,7 @@ Yol haritası,
 ## GEM
 
 - https://github.com/hothero/rails-gem-list
+- Parse, validate, and format phone numbers in Ruby using Google's libphonenumber database: <https://github.com/flyerhzm/global_phone>
 - Rails simple helper for Tawk.to live chat script: <https://github.com/luizpicolo/tawk-rails>
 - Easy external settings for your app: <https://github.com/remiprev/choices>
 - Rails Plugin - soft-delete your ActiveRecord records. It's like an explicit version of ActsAsParanoid: <https://github.com/begriffs/permanent_records>, Active Record Soft Delete: <https://github.com/radar/paranoia>
@@ -103,6 +104,10 @@ Yol haritası,
 - Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
 - A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org
 - Ruby file uploads, take 3: <https://github.com/refile/refile>
+
+Farklı kullanıcı olarak davran (act as)
+- Easily switch current user: <https://github.com/flyerhzm/switch_user>
+- How To: Sign in as another user if you are an admin: <https://github.com/plataformatec/devise/wiki/How-To:-Sign-in-as-another-user-if-you-are-an-admin>
 
 Zamanlanmış görevler, delayed job,
 - scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
@@ -268,6 +273,7 @@ API,
 - All the resources for Learning About Swift: <https://github.com/hsavit1/Awesome-Swift-Education>
 
 # Mail, Sms
+- extend actionmailer to allow one smtp account per mailer class: <https://github.com/flyerhzm/multiple_mailers>
 - Sending & Receiving SMS on Linux: <https://www.20papercups.net/programming/sending-receiving-sms-on-linux/>
 - Build an ‘SMS center’ with Python , Kannel and a GSM modem: <https://medium.com/@iMitwe/build-an-sms-center-with-python-kannel-and-a-gsm-modem-9c0d29560d82#.6ntvqvwjs>
 - Official Ruby Gem for the SendGrid email Web API: <https://github.com/sendgrid/sendgrid-ruby>, <http://sendgrid.com>
@@ -376,6 +382,7 @@ Console,
 
 ## Security
 
+- Authy Devise plugin to add Two-Factor Authentication: <https://github.com/flyerhzm/authy-devise>, [Demo app](https://github.com/authy/authy-devise/tree/master/authy-devise-demo)
 - Devise limit one session per user at a time: <http://stackoverflow.com/questions/7068919/devise-limit-one-session-per-user-at-a-time>
 - A week with a Rails Security Strategy: <https://medium.com/@bauland42/a-week-with-a-rails-security-strategy-e847836481b0#.k9skeqygh>
 - [Penetration Testing/Security Cheatsheets](https://github.com/jshaw87/Cheatsheets), [Scripts that are useful for me on penetration tests.](https://github.com/jshaw87/Scripts)
