@@ -170,6 +170,7 @@ Machine learning,
 - A collection of loading indicators animated with CSS: <https://github.com/tobiasahlin/SpinKit>, <http://tobiasahlin.com/spinkit/>
 
 Material Design,
+- Blog: <http://materialdesignblog.com/>
 - Google I/O is for developers - the creative coders who are building what's next. Each year, we explore the latest in tech, mobile & beyond:<https://events.google.com/io2015/>
 - Full redesign of the app using Material Design: <https://aerolab.co/taringa>
 - Google+ goes completely responsive: <https://developers.google.com/web/showcase/case-study/googleplus>
