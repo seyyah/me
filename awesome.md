@@ -254,6 +254,7 @@ API,
 
 # Mobile
 ## Ionic
+- Kod deposu: <https://github.com/driftyco>, [demos](http://codepen.io/ionic/pens/public/?grid_type=list)
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
 - aIonic Framework: A definitive 10,000 word guide: <http://tutorials.pluralsight.com/review/ionic-framework-a-definitive-10-000-word-guide/>
 - Rails and Ionic Make Love: <http://www.dovetaildigital.io/blog/2015/8/26/rails-and-ionic-make-love-part-two>
