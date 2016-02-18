@@ -14,6 +14,7 @@ Go go
 - A command-line fuzzy finder written in Go: <https://github.com/jondot/fzf>
 - A visual interface to work with runtime profiling data for Go: <https://github.com/rakyll/gom>
 - Minimalist Go library aimed at creating Console User Interfaces: <https://github.com/jroimartin/gocui>
+- HTTP(S) load generator, ApacheBench (ab) replacement, written in Go: <https://github.com/rakyll/boom>
 
 Log,
 - Structured, pluggable logging for Go: <https://github.com/Sirupsen/logrus>
