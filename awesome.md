@@ -405,7 +405,11 @@ Console,
 
 ## Deploy
 
-- ngrok, pagekite.me, heroku, digitalocean, docker, mesos, vagrant, chef-cookbooks, kontena, coreos, http://weave.works/
+- ngrok, pagekite.me, heroku, digitalocean, docker, kontena, coreos, http://weave.works/
+
+Docker,
+- Chef, Puppet, Ansible, mesos, vagrant, chef-cookbooks
+- Docker container orchestration platform: <https://github.com/spotify/helios>
 - Terminal User Interface for docker engine: <https://github.com/TomasTomecek/sen>
 - Building Minimal Docker Image for Rails App: <http://blog.kontena.io/building-minimal-docker-image-for-rails/>
 - A Docker container in your browser: <https://github.com/codetainerapp/codetainer>
