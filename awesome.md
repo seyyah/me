@@ -136,6 +136,7 @@ Machine learning,
 - https://github.com/julmon/pg_activity
 - Awesome Postgres: <https://github.com/dhamaniasad/awesome-postgres>
 - Postgres query logs in the browser: <https://github.com/yaronn/pg.log>
+- Tool that extracts and provides metrics on your PostgreSQL database: <https://github.com/spotify/postgresql-metrics
 
 ### MongoDB
 - MongoDB object modeling designed to work in an asynchronous environment: <https://github.com/Automattic/mongoose>, <http://mongoosejs.com/>
