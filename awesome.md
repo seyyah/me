@@ -19,6 +19,7 @@
 - The Rails Doctrine: <http://rubyonrails.org/doctrine/>
 - Rails style: <https://github.com/aradar/guides>
 - A code metric tool for rails projects: <https://github.com/railsbp/rails_best_practices>, <http://railsbp.com/>
+- Code smell detector for Ruby: <https://github.com/necolt/reek>, <https://github.com/troessner/reek/wiki>
 - Metric Fu, Metrical, SimpleCov, Rails Best Practices, and more are covered in this episode on metrics: <http://railscasts.com/episodes/252-metrics-metrics-metrics>
 - <http://rails-bestpractices.com/>
 - A pure-ruby code highlighter that is compatible with pygments <http://rouge.jneen.net/>, <https://github.com/jneen/rouge>
@@ -125,6 +126,7 @@ Machine learning,
 - Database Sharding for ActiveRecord: <https://github.com/thiagopradi/octopus>, [example app](https://github.com/thiagopradi/octopus_sharding_example)
 - Versioned database views for Rails: <https://github.com/thoughtbot/scenic>
 - Sequel: The Database Toolkit for Ruby: <https://github.com/jeremyevans/sequel>, <http://sequel.jeremyevans.net>
+- Distributed SQL query engine for running interactive analytic queries against big data sources. <https://github.com/facebook/presto>, <https://prestodb.io>
 
 ### PG
 - Would you recommend PostgreSQL over MySQL:  <http://stackoverflow.com/questions/110927/would-you-recommend-postgresql-over-mysql>
@@ -229,6 +231,7 @@ API,
 - Offline: Quick setup for performance orientated, offline-first React.js applications featuring Redux, hot-reloading, PostCSS, react-router, ServiceWorker, AppCache, FontFaceObserver and Mocha.: <https://github.com/mxstbr/react-boilerplate>
 - A filterable React.js reference site: <https://github.com/chantastic/react-cheat-sheet>, <http://reactcheatsheet.com>
 - This is the companion git repository for the course Build Web Apps with React JS and Flux: <https://github.com/StephenGrider/ReactCasts>
+- A React framework for building text editors. <https://facebook.github.io/draft-js/>, <https://github.com/facebook/draft-js>
 
 ## Javascript
 
@@ -249,6 +252,7 @@ API,
 - Examples of how to do query, style, dom, ajax, event etc like jQuery with plain javascript: <https://github.com/oneuijs/You-Dont-Need-jQuery>
 - A Fast, simple and lightweight browser feature detection library written in plain JavaScript: <http://featurejs.com/>
 - ChakraCore is the core part of the Chakra Javascript engine that powers Microsoft Edge: <https://github.com/Microsoft/ChakraCore>
+- PDF Reader in JavaScript: <https://github.com/mozilla/pdf.js>, <https://github.com/mozilla/pdf.js>
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
@@ -274,6 +278,7 @@ API,
 
 - A cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices http://microsoft.github.io/code-push
 - All the resources for Learning About Swift: <https://github.com/hsavit1/Awesome-Swift-Education>
+- A Ruby on Rails inspired Web Framework for Swift that runs on Linux and OS X: <https://github.com/necolt/Swifton>, [Todo App](https://github.com/necolt/Swifton-TodoApp)
 
 # Mail, Sms
 - extend actionmailer to allow one smtp account per mailer class: <https://github.com/flyerhzm/multiple_mailers>
@@ -365,6 +370,7 @@ UI+Bootstrap,
 
 - [Locust.io](http://locust.io)kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust
 - HTTP load testing tool and library. It's over 9000! <http://godoc.org/github.com/tsenart/vegeta/lib>, <https://github.com/tsenart/vegeta>
+- Runs a load test on the selected URL. Easy to extend minimally for your own ends.: <https://github.com/alexfernandez/loadtest>
 - Seesaw v2 is a Linux Virtual Server (LVS) based load balancing platform: <https://github.com/google/seesaw>
 - HTTP(S) load generator, ApacheBench (ab) replacement, written in Go: <https://github.com/rakyll/boom>
 - PySpider: <https://github.com/binux/pyspider>
