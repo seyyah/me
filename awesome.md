@@ -253,6 +253,8 @@ API,
 - A Fast, simple and lightweight browser feature detection library written in plain JavaScript: <http://featurejs.com/>
 - ChakraCore is the core part of the Chakra Javascript engine that powers Microsoft Edge: <https://github.com/Microsoft/ChakraCore>
 - PDF Reader in JavaScript: <https://github.com/mozilla/pdf.js>, <https://github.com/mozilla/pdf.js>
+- The world's okayest responsive navigation: <https://github.com/VPenkov/okayNav>
+- Minimalistic but perfect custom scrollbar plugin: <https://github.com/noraesae/perfect-scrollbar>, <http://noraesae.github.io/perfect-scrollbar/>
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
