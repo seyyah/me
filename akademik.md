@@ -72,7 +72,7 @@ Kinect,
 
 # Image Processing & Matlab | OpenCV | Python
 ## Image Processing
-- Open Computer Vision: <http://opencv.org/>, Ruby/GEM/RoR: <https://github.com/ruby-opencv/ruby-opencv>, [Youtube:OpenCV Ruby Tutorial 1 - Hello Contours](https://www.youtube.com/watch?v=taIKWi2Dnx4), [kitap+code](https://github.com/MasteringOpenCV/code)
+- Open Computer Vision: <http://opencv.org/>, Ruby/GEM/RoR: <https://github.com/ruby-opencv/ruby-opencv>, [Youtube:OpenCV Ruby Tutorial 1 - Hello Contours](https://www.youtube.com/watch?v=taIKWi2Dnx4), [kitap+code](https://github.com/MasteringOpenCV/code), https://www.reddit.com/domain/pyimagesearch.com
 - Open Source Biometric Recognition: <http://openbiometrics.org/>
 - Open Intelligent Multimedia Analysis for Java (OpenIMAJ): <http://www.openimaj.org/>
 - Image recognition open source index and search engine <http://pastec.io>, <https://github.com/ryanfb/pastec>
