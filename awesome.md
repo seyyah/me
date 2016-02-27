@@ -471,3 +471,4 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - code.org
 - https://blockly-games.appspot.com/
 - windyty.com
+- A little word cloud generator in Python: <https://github.com/amueller/word_cloud>
