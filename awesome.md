@@ -260,6 +260,8 @@ API,
 - Async utilities for node and the browser: <https://github.com/caolan/async>
 
 # Mobile
+- List of open source mobile applications: http://www.mobilegap.net/
+
 ## Ionic
 - Kod deposu: <https://github.com/driftyco>, [demos](http://codepen.io/ionic/pens/public/?grid_type=list)
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
