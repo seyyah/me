@@ -146,6 +146,7 @@ Machine learning,
 
 ### Realtime, Graph
 - https://www.firebase.com, [INTRO TO FIREBASE Presentation](https://intro-to-firebase.firebaseapp.com/#/)
+- GraphQL: A DATA QUERY LANGUAGE AND RUNTIME: <http://graphql.org/>, <https://github.com/graphql>
 - A lightweight JSON storage service with synchronisation and sharing abilities: <https://github.com/Kinto/kinto>, <http://kinto.readthedocs.org/>
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - Cayley is an open-source graph inspired by the graph database behind Freebase and Google's Knowledge Graph: <https://github.com/google/cayley>
@@ -192,6 +193,7 @@ Editor,
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
 - Everything you need to know about Vim: <https://github.com/mhinz/vim-galore>
+- Super simple WYSIWYG editor: <http://summernote.org/>, <https://github.com/summernote/summernote/>
 
 Image,
 - Image And Video Management In The Cloud: <http://cloudinary.com/>, 
