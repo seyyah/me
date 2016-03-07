@@ -161,6 +161,7 @@ Machine learning,
 
 # Front-end Stuff
 
+- A collection of best front-end frameworks for faster and easier web development. <https://github.com/usablica/front-end-frameworks>, <http://usablica.github.com/front-end-frameworks/compare.html>
 - Front-end Style Guides: <https://24ways.org/2011/front-end-style-guides/>, [Building a Global Experience Language for the BBC](http://static.bbci.co.uk/gel/0.6.6/downloads/GEL_web_styleguide.pdf),[Designing for Yosemite, MAC](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html)
 - Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
 - http://aerolab.github.io/midnight.js/
@@ -257,12 +258,19 @@ API,
 - PDF Reader in JavaScript: <https://github.com/mozilla/pdf.js>, <https://github.com/mozilla/pdf.js>
 - The world's okayest responsive navigation: <https://github.com/VPenkov/okayNav>
 - Minimalistic but perfect custom scrollbar plugin: <https://github.com/noraesae/perfect-scrollbar>, <http://noraesae.github.io/perfect-scrollbar/>
+- A better way for new feature introduction and step-by-step users guide for your website and project: <https://github.com/usablica/intro.js>, <http://introjs.com>
+- ProgressJs is a JavaScript and CSS3 library which help developers to create and manage progress bar for every objects on the page: <https://github.com/usablica/progress.js>, <http://usablica.github.io/progress.js/>
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
 
 # Mobile
 - List of open source mobile applications: http://www.mobilegap.net/
+- 10 Best Hybrid Mobile App UI Frameworks: HTML5, CSS and JS: <http://noeticforce.com/best-hybrid-mobile-app-ui-frameworks-html5-js-css>
+  + OnsenUI: <http://onsen.io/>, Monaco: <https://monaca.io/>
+  + Framework7: <http://framework7.io/>
+  + Mobile Angular UI: <http://mobileangularui.com/>
+- A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
 
 ## Ionic
 - Kod deposu: <https://github.com/driftyco>, [demos](http://codepen.io/ionic/pens/public/?grid_type=list)
