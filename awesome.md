@@ -127,6 +127,7 @@ Machine learning,
 - Versioned database views for Rails: <https://github.com/thoughtbot/scenic>
 - Sequel: The Database Toolkit for Ruby: <https://github.com/jeremyevans/sequel>, <http://sequel.jeremyevans.net>
 - Distributed SQL query engine for running interactive analytic queries against big data sources. <https://github.com/facebook/presto>, <https://prestodb.io>
+- Attach comments to ActiveRecord's SQL queries: <https://github.com/basecamp/marginalia>
 
 ### PG
 - Would you recommend PostgreSQL over MySQL:  <http://stackoverflow.com/questions/110927/would-you-recommend-postgresql-over-mysql>
