@@ -419,6 +419,7 @@ Console,
 - Automated Pentest Recon Scanner <https://github.com/1N3/Sn1per>, <https://crowdshield.com>
 - This Let's Encrypt repo is an ACME client that can obtain certs and extensibly update server configurations (currently supports Apache on .deb based systems, nginx support coming soon): <https://github.com/letsencrypt/letsencrypt>
 - ANALYSIS AND EXPLOITATION OF A LINUX KERNEL VULNERABILITY (CVE-2016-0728): <http://perception-point.io/2016/01/14/analysis-and-exploitation-of-a-linux-kernel-vulnerability-cve-2016-0728/>
+- E-mail, subdomain and people names harvester <https://github.com/laramies/theHarvester>, <http://www.edge-security.com/theharvester.php>
 
 ## Cache
 - IdentityCache is a blob level caching solution to plug into ActiveRecord. Don't #find, #fetch! <https://github.com/Shopify/identity_cache>, <http://shopify.github.io/identity_cache>
