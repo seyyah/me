@@ -487,3 +487,4 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - https://blockly-games.appspot.com/
 - windyty.com
 - A little word cloud generator in Python: <https://github.com/amueller/word_cloud>
+- A linter for prose. <http://proselint.com>, <https://github.com/amperser/proselint>
