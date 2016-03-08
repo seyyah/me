@@ -84,6 +84,9 @@ Kinect,
 - Finding pools in a map with OpenCV: <https://github.com/thiagopradi/Pool-Finder>
 ![](https://raw.githubusercontent.com/thiagopradi/Pool-Finder/master/pool_vegas.png)
 
+- neural image analogies: <https://github.com/awentzonline/image-analogies>
+![](https://raw.githubusercontent.com/awentzonline/image-analogies/master/images/sugarskull-analogy.jpg)
+
 ## DIP
 
 - Interactively measure features in images: <http://blogs.mathworks.com/pick/2013/07/12/interactively-measure-features-in-images/>
