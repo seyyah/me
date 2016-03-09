@@ -162,6 +162,7 @@ Machine learning,
 
 # Front-end Stuff
 
+- Emmet Re:view A browser extension for displaying responsive web-pages in a side-by-side views to quickly test how it looks at different resolutions and devices: <http://re-view.emmet.io/>, <https://github.com/emmetio/re-view>
 - A collection of best front-end frameworks for faster and easier web development. <https://github.com/usablica/front-end-frameworks>, <http://usablica.github.com/front-end-frameworks/compare.html>
 - Front-end Style Guides: <https://24ways.org/2011/front-end-style-guides/>, [Building a Global Experience Language for the BBC](http://static.bbci.co.uk/gel/0.6.6/downloads/GEL_web_styleguide.pdf),[Designing for Yosemite, MAC](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html)
 - Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
@@ -266,6 +267,8 @@ API,
 - Async utilities for node and the browser: <https://github.com/caolan/async>
 
 # Mobile
+- MOBIRISE WEBSITE BUILDER: Create awesome mobile-friendly websites. No coding and free: <https://mobirise.com/>
+  + http://froont.com/, https://www.livecontrol.net/, https://webflow.com/, https://www.genymotion.com/
 - List of open source mobile applications: http://www.mobilegap.net/
 - 10 Best Hybrid Mobile App UI Frameworks: HTML5, CSS and JS: <http://noeticforce.com/best-hybrid-mobile-app-ui-frameworks-html5-js-css>
   + OnsenUI: <http://onsen.io/>, Monaco: <https://monaca.io/>
@@ -384,6 +387,16 @@ UI+Bootstrap,
 # System
 
 - A statuspage generator that lets you host your statuspage for free on Github: <https://github.com/pyupio/statuspage>
+- A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
+- SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
+- A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
+
+## Console, Terminal
+- Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
+- Instant terminal sharing: <https://tmate.io/>
+- Record and share your terminal sessions, the right way: <https://asciinema.org/>
+
+## Stress Test, Load Balance, Page Speed, Performance
 - [Locust.io](http://locust.io)kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust
 - HTTP load testing tool and library. It's over 9000! <http://godoc.org/github.com/tsenart/vegeta/lib>, <https://github.com/tsenart/vegeta>
 - Runs a load test on the selected URL. Easy to extend minimally for your own ends.: <https://github.com/alexfernandez/loadtest>
@@ -395,20 +408,14 @@ UI+Bootstrap,
   + http://stackoverflow.com/questions/7492/performing-a-stress-test-on-web-application?rq=1
   + http://www.load-testing-tools.com/
 - Page speed: <https://developers.google.com/speed/pagespeed/insights>
-- **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
 - **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
-- A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 - **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
-- SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
-- A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
+- **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
+
+## Security, Monitoring
+
 - Alerta monitoring system: <https://github.com/guardian/alerta>
 - A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap: <https://github.com/phanan/uptime>, <http://fzaninotto.github.com/uptime/>
-
-Console,
-- Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
-
-## Security
-
 - Authy Devise plugin to add Two-Factor Authentication: <https://github.com/flyerhzm/authy-devise>, [Demo app](https://github.com/authy/authy-devise/tree/master/authy-devise-demo)
 - Devise limit one session per user at a time: <http://stackoverflow.com/questions/7068919/devise-limit-one-session-per-user-at-a-time>
 - A week with a Rails Security Strategy: <https://medium.com/@bauland42/a-week-with-a-rails-security-strategy-e847836481b0#.k9skeqygh>
