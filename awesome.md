@@ -105,6 +105,7 @@ Yol haritası,
 - Admin: <https://github.com/thoughtbot/administrate>, <https://github.com/sferik/rails_admin>, <http://activeadmin.info/>
 - A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org
 - Ruby file uploads, take 3: <https://github.com/refile/refile>
+- Chrome extension for Rails development: <https://github.com/dejan/rails_panel>
 
 Farklı kullanıcı olarak davran (act as)
 - Easily switch current user: <https://github.com/flyerhzm/switch_user>
