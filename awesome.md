@@ -492,6 +492,7 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 # Küçük programcılar vs
 
 - code.org
+   + http://www.edutopia.org/blog/15-ways-teaching-students-coding-vicki-davis
 - https://blockly-games.appspot.com/
 - windyty.com
 - A little word cloud generator in Python: <https://github.com/amueller/word_cloud>
