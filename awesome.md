@@ -203,6 +203,7 @@ Image,
 - Image And Video Management In The Cloud: <http://cloudinary.com/>, 
 - Thumbor is an open-source photo thumbnail service by globo.com: <http://thumbor.org>, <https://github.com/thumbor/thumbor>
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
+- HTTP server libraries for generating webpage preview thumbnails: <https://github.com/agschwender/python-web2image-server>
 - Image upload plugin for TinyMCE and Rails with the asset pipeline: <https://github.com/PerfectlyNormal/tinymce-rails-imageupload>
 - JavaScript image cropper: <https://github.com/fengyuanchen/cropperjs>, <http://cropperjs.com>
 
