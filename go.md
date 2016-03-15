@@ -15,6 +15,7 @@ Go go
 - A visual interface to work with runtime profiling data for Go: <https://github.com/rakyll/gom>
 - Minimalist Go library aimed at creating Console User Interfaces: <https://github.com/jroimartin/gocui>
 - HTTP(S) load generator, ApacheBench (ab) replacement, written in Go: <https://github.com/rakyll/boom>
+- https://github.com/gillesdemey/go-dicom
 
 Log,
 - Structured, pluggable logging for Go: <https://github.com/Sirupsen/logrus>
