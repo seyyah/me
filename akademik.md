@@ -91,6 +91,7 @@ Kinect,
 - neural image analogies: <https://github.com/awentzonline/image-analogies>
 ![](https://raw.githubusercontent.com/awentzonline/image-analogies/master/images/sugarskull-analogy.jpg)
 - See also: <https://github.com/alexjc/neural-doodle>
+- Generate unique 2D textures from example images and a specification with this command-line tool: <https://github.com/alexjc/imgscaper>
 - HTML5 Image Glitcher App http://fatiherikli.github.io/image-glitcher/ https://github.com/fatiherikli/image-glitcher
 ## DIP
 
