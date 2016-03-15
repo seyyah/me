@@ -79,6 +79,7 @@ Kinect,
 - Image recognition open source index and search engine <http://pastec.io>, <https://github.com/ryanfb/pastec>
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>, <convert afis_800x600.png  -liquid-rescale 800x200\!  temp1.jpg>, <http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing--gui-implementation-demo>
+- HTTP server libraries for generating webpage preview thumbnails: <https://github.com/agschwender/python-web2image-server>
 - [Efficient subpixel image registration by cross-correlation on Matlab](http://www.mathworks.com/matlabcentral/fileexchange/18401-efficient-subpixel-image-registration-by-cross-correlation/content/html/efficient_subpixel_registration.html), [Image Registration for Astronomy](https://github.com/keflavich/image_registration)
 - A utility class for working with colors in JavaScript: <https://github.com/Automattic/Color.js>
 - Finding pools in a map with OpenCV: <https://github.com/thiagopradi/Pool-Finder>
