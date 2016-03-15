@@ -7,8 +7,10 @@ Görsel  | Ayrıntı
 ![](http://content.screencast.com/users/seyyah/folders/Jing/media/e70df90f-b592-49d1-b3ad-7cc71ffb83b0/00000095.png) | Visual Search at Pinterest: http://www.kevinjing.com/visual_search_at_pinterest.pdf
 Database | An awesome list of high-quality open datasets in public domains (on-going): <https://github.com/caesar0301/awesome-public-datasets>
 Tecrübe |  Organizing My Emails With A Neural Net: https://github.com/andreykurenkov/emailinsight, http://www.andreykurenkov.com/writing/organizing-my-emails-with-a-neural-net/
+Tecrübe: text classify | Text classification service based on Redis. Built on top of Tornado and React.js: <https://github.com/fatiherikli/klassify>, 
 Torch | Torch is the main package in Torch7 where data structures for multi-dimensional tensors and mathematical operations over these are defined. Additionally, it provides many utilities for accessing files, serializing objects of arbitrary types and other useful utilities: <https://github.com/torch/torch7/>
 Keras Tool | Deep Learning library for Python. Convnets, recurrent neural networks, and more. Runs on Theano and TensorFlow. <https://github.com/fchollet/keras>, <http://keras.io/>
+Lasagne | Lightweight library to build and train neural networks in Theano: <https://github.com/Lasagne/Lasagne>, <http://lasagne.readthedocs.org/>, [Recipes, Examples, Demos](https://github.com/Lasagne/Recipes)
 Theano Tool | Theano is a Python library that allows you to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. It can use GPUs and perform efficient symbolic differentiation: <http://github.com/Theano/Theano>, <http://www.deeplearning.net/software/theano>
 Tartışma | [What is the difference between the classical artificial neural network and the new deep learning generation?](https://www.researchgate.net/post/What_is_the_difference_between_the_classical_artificial_neural_network_and_the_new_deep_learning_generation)
 Magazin | [10 Breakthrough Technologies- 2013](http://www.technologyreview.com/lists/breakthrough-technologies/2013/)
@@ -87,7 +89,7 @@ Kinect,
 
 - neural image analogies: <https://github.com/awentzonline/image-analogies>
 ![](https://raw.githubusercontent.com/awentzonline/image-analogies/master/images/sugarskull-analogy.jpg)
-
+- HTML5 Image Glitcher App http://fatiherikli.github.io/image-glitcher/ https://github.com/fatiherikli/image-glitcher
 ## DIP
 
 - Interactively measure features in images: <http://blogs.mathworks.com/pick/2013/07/12/interactively-measure-features-in-images/>
