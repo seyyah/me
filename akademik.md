@@ -24,6 +24,7 @@ YOK | Face recognition with deep neural networks: <http://cmusatyalab.github.io/
 YOK | [Github](https://github.com/tensorflow/tensorflow), https://github.com/google/skflow, http://www.tensorflow.org/, [manuscript](http://download.tensorflow.org/paper/whitepaper2015.pdf), [blog girdisi](http://googleresearch.blogspot.com.tr/2015/11/tensorflow-googles-latest-machine_9.html)
 ![](https://github.com/anishathalye/neural-style/raw/master/examples/1-output.jpg) ![](https://github.com/anishathalye/neural-style/raw/master/examples/1-content.jpg) | Neural style in TensorFlow <https://github.com/anishathalye/neural-style>, <http://www.anishathalye.com/2015/12/19/an-ai-that-can-mimic-any-artist/>
 YOK | [Adversarial networks in TensorFlow](https://github.com/nivwusquorum/tf-adversarial)
+![](https://github.com/alexjc/neural-doodle/raw/master/docs/Workflow.gif), ![](https://github.com/alexjc/neural-doodle/raw/master/docs/Landscape_example.png) | Turn your two-bit doodles into fine artworks with deep neural networks! An implementation of Semantic Style Transfer: <https://github.com/alexjc/neural-doodle>
 ![](https://github.com/nivwusquorum/tensorflow-deepq/raw/master/data/example.gif) | [A deep Q learning demonstration using Google Tensorflow](https://github.com/nivwusquorum/tensorflow-deepq)
 YOK | http://deeplearning.net/
 YOK | https://github.com/Samsung/veles
@@ -89,6 +90,7 @@ Kinect,
 
 - neural image analogies: <https://github.com/awentzonline/image-analogies>
 ![](https://raw.githubusercontent.com/awentzonline/image-analogies/master/images/sugarskull-analogy.jpg)
+- See also: <https://github.com/alexjc/neural-doodle>
 - HTML5 Image Glitcher App http://fatiherikli.github.io/image-glitcher/ https://github.com/fatiherikli/image-glitcher
 ## DIP
 
