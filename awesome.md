@@ -60,6 +60,7 @@ Yol haritası,
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
 
 ### Genel
+- A development tool to quickly & dynamically mock API endpoints: <https://github.com/iridakos/duckrails>
 - Postman: Build, test, and document your APIs faster. <http://getpostman.com>
 - rest client: <https://github.com/rest-client/rest-client>, <https://github.com/lostisland/faraday>
 - IMPROVEMENTS TO ERROR RESPONSES IN RAILS 5 API MODE: <https://wyeworks.com/blog/2016/1/12/improvements-to-error-responses-in-rails-5-api-mode/>
@@ -417,6 +418,7 @@ UI+Bootstrap,
 
 ## Security, Monitoring
 
+- Checks for vulnerable versions of gems in Gemfile.lock, Checks for insecure gem sources (http://), Allows ignoring certain advisories that have been manually worked around: <https://github.com/rubysec/bundler-audit>
 - Alerta monitoring system: <https://github.com/guardian/alerta>
 - A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap: <https://github.com/phanan/uptime>, <http://fzaninotto.github.com/uptime/>
 - Authy Devise plugin to add Two-Factor Authentication: <https://github.com/flyerhzm/authy-devise>, [Demo app](https://github.com/authy/authy-devise/tree/master/authy-devise-demo)
