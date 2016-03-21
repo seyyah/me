@@ -94,6 +94,7 @@ Yol haritası,
 - Rails Plugin - soft-delete your ActiveRecord records. It's like an explicit version of ActsAsParanoid: <https://github.com/begriffs/permanent_records>, Active Record Soft Delete: <https://github.com/radar/paranoia>
 - Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
+- An attempt to tame Rails' default policy to log everything: <https://github.com/roidrage/lograge>
 - Log Analiz: <https://github.com/wvanbergen/request-log-analyzer>
 - Log file navigator: <https://github.com/tstack/lnav>, <http://lnav.org>
 - wisper: A micro library providing Ruby objects with Publish-Subscribe capabilities: <https://github.com/krisleech/wisper>
@@ -473,6 +474,7 @@ Docker,
 - http://htmlpreview.github.io/
 
 # Diğer
+- The next web scraper. See through the `<html>` noise: <https://github.com/lapwinglabs/x-ray>
 - Markdown to png diagram: http://shaky.github.bushong.net/, https://casual-effects.com/markdeep/features.md.html
 - Python: Records: SQL for Humans <https://github.com/kennethreitz/records>
 - Pair Programming: A (Semi-) Definitive Guide: <https://medium.com/@robisenberg/pair-programming-a-semi-definitive-guide-44bab1c9c1de#.uelkf15jl>
