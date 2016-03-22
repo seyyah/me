@@ -455,6 +455,13 @@ Docker,
 - https://github.com/nanobox-io/nanobox
 - https://github.com/rails/rails-dev-box
 
+# Elasticsearch
+
+- AngularJS directives for Elasticsearch http://www.elasticui.com, https://github.com/YousefED/ElasticUI
+- Search UI for Elasticsearch: https://github.com/romansanchez/Calaca
+- React UI components / widgets. The easiest way to build a great search experience with Elasticsearch. https://github.com/searchkit/searchkit, http://www.searchkit.co
+
+
 # Editor Makale vs
 
 - Caffe: a fast open framework for deep learning. <https://github.com/BVLC/caffe>, Berkeley Vision and Learning Center
