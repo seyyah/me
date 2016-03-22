@@ -178,6 +178,7 @@ Machine learning,
 - A realistic password strength estimator: <https://github.com/dropbox/zxcvbn>
 - Async Responsive Html Grids: <https://github.com/nix23/gridifier>
 - A collection of loading indicators animated with CSS: <https://github.com/tobiasahlin/SpinKit>, <http://tobiasahlin.com/spinkit/>
+- Stellar.js - Parallax scrolling made easy <http://markdalgleish.com/projects/stellar.js/>, <https://github.com/dutchcoders/stellar.js>
 
 Material Design,
 - Blog: <http://materialdesignblog.com/>
