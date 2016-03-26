@@ -439,6 +439,7 @@ UI+Bootstrap,
 - E-mail, subdomain and people names harvester <https://github.com/laramies/theHarvester>, <http://www.edge-security.com/theharvester.php>
 - bettercap is a complete, modular, portable and easily extensible MITM tool and framework with every kind of diagnostic and offensive feature you could need in order to perform a man in the middle attack: <https://github.com/evilsocket/bettercap>
 - PacketFu, a mid-level packet manipulation library for Ruby: <https://github.com/packetfu/packetfu>
+- You should use protection! <https://github.com/digitalocean/rack-protection>, <http://rkh.github.com/rack-protection/>
 
 ## Cache
 - IdentityCache is a blob level caching solution to plug into ActiveRecord. Don't #find, #fetch! <https://github.com/Shopify/identity_cache>, <http://shopify.github.io/identity_cache>
