@@ -131,6 +131,7 @@ Machine learning,
 - Sequel: The Database Toolkit for Ruby: <https://github.com/jeremyevans/sequel>, <http://sequel.jeremyevans.net>
 - Distributed SQL query engine for running interactive analytic queries against big data sources. <https://github.com/facebook/presto>, <https://prestodb.io>
 - Attach comments to ActiveRecord's SQL queries: <https://github.com/basecamp/marginalia>
+- Sequelize is an easy-to-use multi sql dialect ORM for Node.js & io.js. It currently supports MySQL, MariaDB, SQLite, PostgreSQL and MSSQL: <https://github.com/sequelize/sequelize>, <http://sequelizejs.com>
 
 ### PG
 - Would you recommend PostgreSQL over MySQL:  <http://stackoverflow.com/questions/110927/would-you-recommend-postgresql-over-mysql>
@@ -268,6 +269,7 @@ API,
 - Minimalistic but perfect custom scrollbar plugin: <https://github.com/noraesae/perfect-scrollbar>, <http://noraesae.github.io/perfect-scrollbar/>
 - A better way for new feature introduction and step-by-step users guide for your website and project: <https://github.com/usablica/intro.js>, <http://introjs.com>
 - ProgressJs is a JavaScript and CSS3 library which help developers to create and manage progress bar for every objects on the page: <https://github.com/usablica/progress.js>, <http://usablica.github.io/progress.js/>
+- Sequelize is an easy-to-use multi sql dialect ORM for Node.js & io.js. It currently supports MySQL, MariaDB, SQLite, PostgreSQL and MSSQL: <https://github.com/sequelize/sequelize>, <http://sequelizejs.com>
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
