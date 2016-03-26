@@ -437,6 +437,8 @@ UI+Bootstrap,
 - This Let's Encrypt repo is an ACME client that can obtain certs and extensibly update server configurations (currently supports Apache on .deb based systems, nginx support coming soon): <https://github.com/letsencrypt/letsencrypt>
 - ANALYSIS AND EXPLOITATION OF A LINUX KERNEL VULNERABILITY (CVE-2016-0728): <http://perception-point.io/2016/01/14/analysis-and-exploitation-of-a-linux-kernel-vulnerability-cve-2016-0728/>
 - E-mail, subdomain and people names harvester <https://github.com/laramies/theHarvester>, <http://www.edge-security.com/theharvester.php>
+- bettercap is a complete, modular, portable and easily extensible MITM tool and framework with every kind of diagnostic and offensive feature you could need in order to perform a man in the middle attack: <https://github.com/evilsocket/bettercap>
+- PacketFu, a mid-level packet manipulation library for Ruby: <https://github.com/packetfu/packetfu>
 
 ## Cache
 - IdentityCache is a blob level caching solution to plug into ActiveRecord. Don't #find, #fetch! <https://github.com/Shopify/identity_cache>, <http://shopify.github.io/identity_cache>
@@ -450,6 +452,10 @@ UI+Bootstrap,
   + TERRAFORM VS. CLOUDFORMATION, HEAT, ETC.: <https://www.terraform.io/intro/vs/cloudformation.html>
   + TERRAFORM VS. BOTO, FOG, ETC.: <https://www.terraform.io/intro/vs/boto.html>
 - It is to bring beauty, peace of mind and simplicity to the private and hybrid enterprise cloud: <http://opennebula.org/>
+
+DigitalOcean,
+- A command line tool for DigitalOcean services: <https://github.com/digitalocean/doctl>
+- DropletKit is the official Digital Ocean API client for Ruby: <https://github.com/digitalocean/droplet_kit>
 
 Docker,
 - Chef, Puppet, Ansible, mesos, vagrant, chef-cookbooks
@@ -486,6 +492,9 @@ Docker,
 - whatsapp php chat api: <https://github.com/WHAnonymous/Chat-API>
 - Curated List of Chatbot Links: <https://medium.com/@stephenkeep/maintained-list-of-chatbot-links-8898189facbb#.t63m7jnib>
 - http://htmlpreview.github.io/
+
+Chatbot,
+- Hubot is your company's robot. Install him in your company to dramatically improve and reduce employee efficiency: <https://hubot.github.com/>, [scripts](http://hubot-script-catalog.herokuapp.com/)
 
 # Diğer
 - The next web scraper. See through the `<html>` noise: <https://github.com/lapwinglabs/x-ray>
