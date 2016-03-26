@@ -445,6 +445,11 @@ UI+Bootstrap,
 ## Deploy
 
 - ngrok, pagekite.me, heroku, digitalocean, docker, kontena, coreos, http://weave.works/
+- Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions: <https://www.terraform.io/>
+  + TERRAFORM VS. CHEF, PUPPET, ETC.: <https://www.terraform.io/intro/vs/chef-puppet.html>
+  + TERRAFORM VS. CLOUDFORMATION, HEAT, ETC.: <https://www.terraform.io/intro/vs/cloudformation.html>
+  + TERRAFORM VS. BOTO, FOG, ETC.: <https://www.terraform.io/intro/vs/boto.html>
+- It is to bring beauty, peace of mind and simplicity to the private and hybrid enterprise cloud: <http://opennebula.org/>
 
 Docker,
 - Chef, Puppet, Ansible, mesos, vagrant, chef-cookbooks
