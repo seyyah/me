@@ -27,6 +27,7 @@
 ## Rails ile yazılmış uygulamalar
 
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
+- Quadbase.org - Question Banking Made Easy: <https://github.com/lml/quadbase>, http://quadbase.org
 - Ruby on Rails Ecommerce platform, perfect for your small business solution: <https://github.com/drhenner/ror_ecommerce>, <http://www.ror-e.com/>
 - The Ruby community's gem hosting service: <https://github.com/rubygems/rubygems.org>
 - Guardian frontend: <https://github.com/guardian/frontend>
@@ -87,6 +88,7 @@ Yol haritası,
 
 ## GEM
 
+- Settings for ActiveRecord models: <https://github.com/ledermann/rails-settings>
 - https://github.com/hothero/rails-gem-list
 - Parse, validate, and format phone numbers in Ruby using Google's libphonenumber database: <https://github.com/flyerhzm/global_phone>
 - Rails simple helper for Tawk.to live chat script: <https://github.com/luizpicolo/tawk-rails>
@@ -117,13 +119,19 @@ Zamanlanmış görevler, delayed job,
 - scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
 - Modern concurrency tools including agents, futures, promises, thread pools, supervisors, and more. Inspired by Erlang, Clojure, Scala, Go, Java, JavaScript, and classic concurrency patterns: <https://github.com/ruby-concurrency/concurrent-ruby>, <http://www.concurrent-ruby.com>
 
-- scheduler for Ruby (at, in, cron and every jobs; whenever, clockwork, crono): <https://github.com/jmettraux/rufus-scheduler>
+Activity,
+- Easy activity tracking for models - similar to Github's Public Activity: <https://github.com/chaps-io/public_activity>
+- Analytics for Rails: <https://github.com/ankane/ahoy>
+- Mark as read - for ActiveRecord models: <https://github.com/ledermann/unread>
+- A Rails engine for comments: <https://github.com/lml/commontator>
+- The best way to add rating capabilities to your rails application and your activerecord models: <https://github.com/muratguzel/letsrate>, <http://letsrate.herokuapp.com>
 
 Machine learning,
 - Flexible and Extensible Machine Learning in Ruby, <https://github.com/danielsdeleo/Decider>
 
 ## Database
 
+- The simplest way to group temporal data: <https://github.com/ankane/groupdate>
 - Docker image to run an out-of-the-box MySQL server <https://github.com/tutumcloud/mysql>, <http://www.tutum.co/>
 - `lol_dba` is a small package of rake tasks that scan your application models and displays a list of columns that probably should be indexed. Also, it can generate .sql migration scripts: <https://github.com/plentz/lol_dba>, <http://plentz.github.com/lol_dba/>
 - Database Sharding for ActiveRecord: <https://github.com/thiagopradi/octopus>, [example app](https://github.com/thiagopradi/octopus_sharding_example)
@@ -144,6 +152,7 @@ Machine learning,
 - Awesome Postgres: <https://github.com/dhamaniasad/awesome-postgres>
 - Postgres query logs in the browser: <https://github.com/yaronn/pg.log>
 - Tool that extracts and provides metrics on your PostgreSQL database: <https://github.com/spotify/postgresql-metrics
+- PostgreSQL extensions for ActiveRecord: <https://github.com/chaps-io/surus>
 
 ### MongoDB
 - MongoDB object modeling designed to work in an asynchronous environment: <https://github.com/Automattic/mongoose>, <http://mongoosejs.com/>
@@ -159,7 +168,7 @@ Machine learning,
 - Distributed Graph Database: <https://github.com/thinkaurelius/titan>, <http://titandb.io>
 - Google: Lovefield is a relational database written in pure JavaScript: <https://github.com/google/lovefield>, <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - Squeel lets you write your Active Record queries with fewer strings, and more Ruby, by making the Arel awesomeness that lies beneath Active Record more accessible: <https://github.com/activerecord-hackery/squeel>
-
+- A database frontend for concurrent editing systems: <https://github.com/share/sharedb>
 ## Hackathon
 
 - Proje üretmekten zevk alan yazılımcı, tasarımcı ve girişimcilere sınırlı süre içerisinde fikirlerini ürüne dönüştürme imkanı veren Garanti Bankası’nın HACKATHON etkinliğidir: <https://github.com/TGarantiBank/Hackathon/>
@@ -202,6 +211,7 @@ Editor,
 - markdown: https://github.com/vmg/redcarpet
 - Everything you need to know about Vim: <https://github.com/mhinz/vim-galore>
 - Super simple WYSIWYG editor: <http://summernote.org/>, <https://github.com/summernote/summernote/>
+- Autosize is a small, stand-alone script to automatically adjust textarea height to fit text: <http://www.jacklmoore.com/autosize/>, <https://github.com/jackmoore/autosize>
 
 Image,
 - Image And Video Management In The Cloud: <http://cloudinary.com/>, 
@@ -255,6 +265,7 @@ API,
 - JavaScript Regular expressions made easy: <https://github.com/VerbalExpressions/JSVerbalExpressions>
 - Easy scroll animations for web and mobile browsers: <https://github.com/jlmakes/scrollreveal.js>, <https://scrollrevealjs.org/>
 - Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
+- A Ruby Gem for the Google Chart Tools. Write Ruby code. Generate Javascript. Display a Google Chart: <http://googlevisualr.herokuapp.com/>
 - Clipboard: <https://github.com/zenorocha/clipboard.js>
 - Databound provides Javascript a simple API to the Ruby on Rails CRUD: <http://databound.me/>
 - Elegant automated typing, for your text rotation needs https://positionly.com: <https://github.com/positionly/Typist>
@@ -474,7 +485,7 @@ Docker,
 - AngularJS directives for Elasticsearch http://www.elasticui.com, https://github.com/YousefED/ElasticUI
 - Search UI for Elasticsearch: https://github.com/romansanchez/Calaca
 - React UI components / widgets. The easiest way to build a great search experience with Elasticsearch. https://github.com/searchkit/searchkit, http://www.searchkit.co
-
+- Intelligent search made easy for Rails: <https://github.com/ankane/searchkick>
 
 # Editor Makale vs
 
