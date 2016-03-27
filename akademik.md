@@ -78,6 +78,7 @@ Kinect,
 ## Image Processing
 - Open Computer Vision: <http://opencv.org/>, Ruby/GEM/RoR: <https://github.com/ruby-opencv/ruby-opencv>, [Youtube:OpenCV Ruby Tutorial 1 - Hello Contours](https://www.youtube.com/watch?v=taIKWi2Dnx4), [kitap+code](https://github.com/MasteringOpenCV/code), https://www.reddit.com/domain/pyimagesearch.com
   + Repository for OpenCV's extra modules: <https://github.com/Itseez/opencv_contrib>
+  + https://codewords.recurse.com/issues/six/image-processing-101
 - Open Source Biometric Recognition: <http://openbiometrics.org/>
 - Open Intelligent Multimedia Analysis for Java (OpenIMAJ): <http://www.openimaj.org/>
 - Image recognition open source index and search engine <http://pastec.io>, <https://github.com/ryanfb/pastec>
