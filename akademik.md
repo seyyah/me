@@ -82,6 +82,7 @@ Kinect,
 - Open Source Biometric Recognition: <http://openbiometrics.org/>
 - Open Intelligent Multimedia Analysis for Java (OpenIMAJ): <http://www.openimaj.org/>
 - Image recognition open source index and search engine <http://pastec.io>, <https://github.com/ryanfb/pastec>
+- [What are the recommended courses should I take in my graduate studies to become a Machine Learning Engineer?](https://www.quora.com/What-are-the-recommended-courses-should-I-take-in-my-graduate-studies-to-become-a-Machine-Learning-Engineer)
 - Content aware image cropping: <https://github.com/jwagner/smartcrop.js>
 - Seam carving: <https://www.youtube.com/watch?v=vIFCV2spKtg>, <convert afis_800x600.png  -liquid-rescale 800x200\!  temp1.jpg>, <http://www.mathworks.com/matlabcentral/fileexchange/18089-seam-carving-for-content-aware-image-resizing--gui-implementation-demo>
 - HTTP server libraries for generating webpage preview thumbnails: <https://github.com/agschwender/python-web2image-server>
