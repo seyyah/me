@@ -467,6 +467,7 @@ UI+Bootstrap,
   + TERRAFORM VS. CLOUDFORMATION, HEAT, ETC.: <https://www.terraform.io/intro/vs/cloudformation.html>
   + TERRAFORM VS. BOTO, FOG, ETC.: <https://www.terraform.io/intro/vs/boto.html>
 - It is to bring beauty, peace of mind and simplicity to the private and hybrid enterprise cloud: <http://opennebula.org/>
+- Local Development Done Right https://desktop.nanobox.io, https://nanobox.io/open-source/
 
 DigitalOcean,
 - A command line tool for DigitalOcean services: <https://github.com/digitalocean/doctl>
