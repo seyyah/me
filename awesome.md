@@ -513,6 +513,7 @@ Chatbot,
 - Hubot is your company's robot. Install him in your company to dramatically improve and reduce employee efficiency: <https://hubot.github.com/>, [scripts](http://hubot-script-catalog.herokuapp.com/)
 
 # Diğer
+- Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage http://rclone.org https://github.com/ncw/rclone
 - The next web scraper. See through the `<html>` noise: <https://github.com/lapwinglabs/x-ray>
 - Markdown to png diagram: http://shaky.github.bushong.net/, https://casual-effects.com/markdeep/features.md.html
 - Python: Records: SQL for Humans <https://github.com/kennethreitz/records>
