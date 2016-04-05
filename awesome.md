@@ -285,6 +285,11 @@ API,
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
+- A stream that emits multiple other streams one after another.: <https://github.com/felixge/node-combined-stream>
+- A pure node.js JavaScript Client implementing the MySql protocol.: <https://github.com/felixge/node-mysql>
+- A node.js client for controlling Parrot AR Drone 2.0 quad-copters. http://nodecopter.com/ https://github.com/felixge/node-ar-drone
+- A node.js module for parsing form data, especially file uploads: <https://github.com/felixge/node-formidable>
+- GraphicsMagick for node http://aheckmann.github.com/gm/ https://github.com/aheckmann/gm
 
 # Mobile
 - MOBIRISE WEBSITE BUILDER: Create awesome mobile-friendly websites. No coding and free: <https://mobirise.com/>
@@ -297,6 +302,7 @@ API,
 - A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
 
 ## Ionic
+- http://ionic.io/
 - Kod deposu: <https://github.com/driftyco>, [demos](http://codepen.io/ionic/pens/public/?grid_type=list)
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
 - aIonic Framework: A definitive 10,000 word guide: <http://tutorials.pluralsight.com/review/ionic-framework-a-definitive-10-000-word-guide/>
