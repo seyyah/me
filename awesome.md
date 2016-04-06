@@ -254,6 +254,7 @@ API,
 - This is the companion git repository for the course Build Web Apps with React JS and Flux: <https://github.com/StephenGrider/ReactCasts>
 - A React framework for building text editors. <https://facebook.github.io/draft-js/>, <https://github.com/facebook/draft-js>
 - React Howto: <https://github.com/petehunt/react-howto>
+- Isolate your React UI Component development from the main app: <https://github.com/kadirahq/react-storybook>
 
 ## Javascript
 
