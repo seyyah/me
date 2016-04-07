@@ -443,6 +443,7 @@ UI+Bootstrap,
 
 ## Security, Monitoring
 
+- Vulnerability scanner for Linux, agentless, written in golang. https://github.com/future-architect/vuls
 - Checks for vulnerable versions of gems in Gemfile.lock, Checks for insecure gem sources (http://), Allows ignoring certain advisories that have been manually worked around: <https://github.com/rubysec/bundler-audit>
 - Alerta monitoring system: <https://github.com/guardian/alerta>
 - A remote monitoring application using Node.js, MongoDB, and Twitter Bootstrap: <https://github.com/phanan/uptime>, <http://fzaninotto.github.com/uptime/>
