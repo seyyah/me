@@ -400,6 +400,7 @@ https://getlooseleaf.com
 - AngularJS alert drawer: <https://github.com/waffleio/alert-drawer>
 - Offline support for AngularJS applications: <https://github.com/neoziro/angular-offline>
 - Angular Directive to Paginate Anything: <https://github.com/begriffs/angular-paginate-anything>, [Demo](http://begriffs.com/angular-paginate-anything/)
+- Reactive, responsive, beautiful charts for AngularJS using Chart.js: http://jtblin.github.io/angular-chart.js https://github.com/jtblin/angular-chart.js
 
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
