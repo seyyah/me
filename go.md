@@ -16,6 +16,7 @@ Go go
 - Minimalist Go library aimed at creating Console User Interfaces: <https://github.com/jroimartin/gocui>
 - HTTP(S) load generator, ApacheBench (ab) replacement, written in Go: <https://github.com/rakyll/boom>
 - https://github.com/gillesdemey/go-dicom
+- Vulnerability scanner for Linux, agentless, written in golang. https://github.com/future-architect/vuls
 
 Log,
 - Structured, pluggable logging for Go: <https://github.com/Sirupsen/logrus>
