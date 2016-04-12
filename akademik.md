@@ -3,6 +3,7 @@
 Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
+Google Visioner CLI | Automatically rename your pictures using Google Vision API and metadata: <https://github.com/berpj/visioner-cli>
 **Matlab** | **Deprecate**: Matlab/Octave toolbox for deep learning. Includes Deep Belief Nets, Stacked Autoencoders, Convolutional Neural Nets, Convolutional Autoencoders and vanilla Neural Nets. Each method has examples to get you started: <https://github.com/rasmusbergpalm/DeepLearnToolbox>
 ![](http://content.screencast.com/users/seyyah/folders/Jing/media/e70df90f-b592-49d1-b3ad-7cc71ffb83b0/00000095.png) | Visual Search at Pinterest: http://www.kevinjing.com/visual_search_at_pinterest.pdf
 Database | An awesome list of high-quality open datasets in public domains (on-going): <https://github.com/caesar0301/awesome-public-datasets>
