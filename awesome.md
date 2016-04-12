@@ -490,6 +490,8 @@ Docker,
 - A Docker container in your browser: <https://github.com/codetainerapp/codetainer>
 - https://github.com/nanobox-io/nanobox
 - https://github.com/rails/rails-dev-box
+- Docker architecture demo: <https://github.com/berpj/docker-architecture-demo>, [A simple 3-tier web architecture with Docker](https://blog.bergeron.io/simple-web-architecture-with-docker/)
+- Swarm: a Docker-native clustering system: <https://github.com/docker/swarm>
 
 # Elasticsearch
 
