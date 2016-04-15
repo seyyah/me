@@ -258,6 +258,7 @@ API,
 
 ## Javascript
 
+- Incus.js front-end JavaScript bindings to Incus websocket and long-polling server: <https://github.com/Imgur/incusjs>
 - Make use of your favicon with badges, images or videos: <http://lab.ejci.net/favico.js/>, [AngularJS-Demo](http://lab.ejci.net/favico.js/example-angular/#/)
   + http://www.favicon-generator.org/
 - A super awesome, customizable text input supporting tags, autocomplete, ajax and other goodness in a crazy cool a-la cart way. <https://github.com/alexgorbatchev/jquery-textext>, <http://textextjs.com/>
@@ -525,6 +526,11 @@ Chatbot,
 - Hubot is your company's robot. Install him in your company to dramatically improve and reduce employee efficiency: <https://hubot.github.com/>, [scripts](http://hubot-script-catalog.herokuapp.com/)
 
 # Diğer
+Search arama çalışmayınca doğru yere taşınması gerekenler,
+- An all-in-one image-uploader: https://github.com/Imgur/mandible
+- A Javascript client for the Imgur API. https://github.com/Imgur/imgur.js
+- Devise Security Extension https://github.com/phatworx/devise_security_extension
+
 - Let's learn a new technology every week. A new technology blog every Sunday in 2016. https://github.com/shekhargulati/52-technologies-in-2016
 - Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage http://rclone.org https://github.com/ncw/rclone
 - The next web scraper. See through the `<html>` noise: <https://github.com/lapwinglabs/x-ray>
