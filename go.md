@@ -1,5 +1,6 @@
 Go go
 
+- A Fast and Flexible Static Site Generator built with love in GoLang http://gohugo.io https://github.com/spf13/hugo
 - https://github.com/Sirupsen/awesome-go
 - Seesaw v2 is a Linux Virtual Server (LVS) based load balancing platform: <https://github.com/google/seesaw>
 - Based on "How to Write a Spelling Corrector": <https://github.com/montanaflynn/toy-spelling-corrector>, <http://norvig.com/spell-correct.html>
