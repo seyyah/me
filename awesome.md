@@ -291,6 +291,7 @@ API,
 - A node.js client for controlling Parrot AR Drone 2.0 quad-copters. http://nodecopter.com/ https://github.com/felixge/node-ar-drone
 - A node.js module for parsing form data, especially file uploads: <https://github.com/felixge/node-formidable>
 - GraphicsMagick for node http://aheckmann.github.com/gm/ https://github.com/aheckmann/gm
+- A collection of common interactive command line user interfaces. https://github.com/SBoudrias/Inquirer.js
 
 # Mobile
 - MOBIRISE WEBSITE BUILDER: Create awesome mobile-friendly websites. No coding and free: <https://mobirise.com/>
@@ -524,6 +525,7 @@ Chatbot,
 - Hubot is your company's robot. Install him in your company to dramatically improve and reduce employee efficiency: <https://hubot.github.com/>, [scripts](http://hubot-script-catalog.herokuapp.com/)
 
 # Diğer
+- Let's learn a new technology every week. A new technology blog every Sunday in 2016. https://github.com/shekhargulati/52-technologies-in-2016
 - Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage http://rclone.org https://github.com/ncw/rclone
 - The next web scraper. See through the `<html>` noise: <https://github.com/lapwinglabs/x-ray>
 - Markdown to png diagram: http://shaky.github.bushong.net/, https://casual-effects.com/markdeep/features.md.html
