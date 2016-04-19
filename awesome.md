@@ -37,6 +37,7 @@
 - Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
 - https://github.com/valo/maycamp_arena
 - https://github.com/OWASP/railsgoat
+- Large Scale Payments Systems and Ruby on Rails: https://medium.com/airbnb-engineering/large-scale-payments-systems-and-ruby-on-rails-bfe5b89f6f4#.ctgaukwb8
 
 ## Moqups
 
@@ -258,6 +259,7 @@ API,
 
 ## Javascript
 
+- A kickass library to manage your poppers https://popper.js.org https://github.com/FezVrasta/popper.js
 - Incus.js front-end JavaScript bindings to Incus websocket and long-polling server: <https://github.com/Imgur/incusjs>
 - Make use of your favicon with badges, images or videos: <http://lab.ejci.net/favico.js/>, [AngularJS-Demo](http://lab.ejci.net/favico.js/example-angular/#/)
   + http://www.favicon-generator.org/
@@ -532,6 +534,10 @@ Search arama çalışmayınca doğru yere taşınması gerekenler,
 - An all-in-one image-uploader: https://github.com/Imgur/mandible
 - A Javascript client for the Imgur API. https://github.com/Imgur/imgur.js
 - Devise Security Extension https://github.com/phatworx/devise_security_extension
+- A free Open Source CDN for webmasters and developers http://www.jsdelivr.com https://github.com/jsdelivr/jsdelivr
+- Free and short JS.ORG domains for GitHub Pages https://dns.js.org https://github.com/js-org/dns.js.org
+- Self hosted newsletter app https://mailtrain.org/ https://github.com/andris9/mailtrain
+- Free Bootstrap 3 Admin Template https://colorlib.com/polygon/gentelella/index.html https://github.com/puikinsh/gentelella
 
 - Let's learn a new technology every week. A new technology blog every Sunday in 2016. https://github.com/shekhargulati/52-technologies-in-2016
 - Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage http://rclone.org https://github.com/ncw/rclone
