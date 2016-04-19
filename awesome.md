@@ -261,6 +261,7 @@ API,
 - Incus.js front-end JavaScript bindings to Incus websocket and long-polling server: <https://github.com/Imgur/incusjs>
 - Make use of your favicon with badges, images or videos: <http://lab.ejci.net/favico.js/>, [AngularJS-Demo](http://lab.ejci.net/favico.js/example-angular/#/)
   + http://www.favicon-generator.org/
+- Transform your icons with trendy animations: https://bitshadow.github.io/iconate/
 - A super awesome, customizable text input supporting tags, autocomplete, ajax and other goodness in a crazy cool a-la cart way. <https://github.com/alexgorbatchev/jquery-textext>, <http://textextjs.com/>
 - This is about one JS tip every day: <https://github.com/loverajoel/jstips>
 - 10 Most Popular Javascript Library in 2015: <http://blog.apcelent.com/10-most-popular-javascript-library-2015.html>
@@ -284,6 +285,7 @@ API,
 - A better way for new feature introduction and step-by-step users guide for your website and project: <https://github.com/usablica/intro.js>, <http://introjs.com>
 - ProgressJs is a JavaScript and CSS3 library which help developers to create and manage progress bar for every objects on the page: <https://github.com/usablica/progress.js>, <http://usablica.github.io/progress.js/>
 - Sequelize is an easy-to-use multi sql dialect ORM for Node.js & io.js. It currently supports MySQL, MariaDB, SQLite, PostgreSQL and MSSQL: <https://github.com/sequelize/sequelize>, <http://sequelizejs.com>
+- A text only meme generator https://bitshadow.github.io/slate https://github.com/bitshadow/slate
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
