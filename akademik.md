@@ -77,6 +77,7 @@ Kinect,
 # Etc
 - OCR: https://github.com/madmaze/pytesseract
 - Computer “Vision” for the Visually Impaired: I have a dream: <https://medium.com/@karim_ouda/computer-vision-for-the-visually-impaired-i-have-a-dream-7eaee112aeb9#.6pew7gu41>
+- An open source iOS framework for GPU-based image and video processing http://www.sunsetlakesoftware.com/2012/02/12/introducing-gpuimage-framework https://github.com/BradLarson/GPUImage, GPUImage 2 is a BSD-licensed Swift framework for GPU-accelerated video and image processing. https://github.com/BradLarson/GPUImage2
 
 # Image Processing & Matlab | OpenCV | Python
 ## Image Processing
