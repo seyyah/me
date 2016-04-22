@@ -89,6 +89,7 @@ Yol haritası,
 
 ## GEM
 
+- Rack google analytics etc. tracker: https://github.com/railslove/rack-tracker
 - Settings for ActiveRecord models: <https://github.com/ledermann/rails-settings>
 - https://github.com/hothero/rails-gem-list
 - Parse, validate, and format phone numbers in Ruby using Google's libphonenumber database: <https://github.com/flyerhzm/global_phone>
