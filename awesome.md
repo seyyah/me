@@ -260,6 +260,7 @@ API,
 
 ## Javascript
 
+- A javascript text differencing implementation: https://github.com/kpdecker/jsdiff
 - A kickass library to manage your poppers https://popper.js.org https://github.com/FezVrasta/popper.js
 - Incus.js front-end JavaScript bindings to Incus websocket and long-polling server: <https://github.com/Imgur/incusjs>
 - Make use of your favicon with badges, images or videos: <http://lab.ejci.net/favico.js/>, [AngularJS-Demo](http://lab.ejci.net/favico.js/example-angular/#/)
@@ -539,6 +540,9 @@ Search arama çalışmayınca doğru yere taşınması gerekenler,
 - Free and short JS.ORG domains for GitHub Pages https://dns.js.org https://github.com/js-org/dns.js.org
 - Self hosted newsletter app https://mailtrain.org/ https://github.com/andris9/mailtrain
 - Free Bootstrap 3 Admin Template https://colorlib.com/polygon/gentelella/index.html https://github.com/puikinsh/gentelella
+- Full-stack Web Framework for Cloud-Native Applications and Platforms using Microservices Architecture http://docs.deep.mg https://github.com/MitocGroup/deep-framework
+- JavaScript Cloud/Web Desktop Platform https://os.js.org/  https://github.com/os-js/OS.js
+- A small ANSI C gui toolkit https://github.com/vurtun/nuklear
 
 - Let's learn a new technology every week. A new technology blog every Sunday in 2016. https://github.com/shekhargulati/52-technologies-in-2016
 - Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage http://rclone.org https://github.com/ncw/rclone
