@@ -41,6 +41,7 @@ YOK | ConvNetJS: Deep Learning in your browser: <http://cs.stanford.edu/people/k
 ![](http://i.imgur.com/GZQQmXE.png) | Implementation of "Action-Conditional Video Prediction using Deep Networks in Atari Games": <https://github.com/junhyukoh/nips2015-action-conditional-video-prediction>, <https://sites.google.com/a/umich.edu/junhyuk-oh/action-conditional-video-prediction>
 ![](https://avatars2.githubusercontent.com/u/4984562?v=3&s=200) | Open, Networked Machine Learning: <http://www.openml.org/>, [Python API](https://github.com/openml/python)
 **General learning** | ...
+YOK | [Resources for Machine Learning in Ruby)(https://gist.github.com/gbuesing/865b814d312f46775cda)
 YOK | Sentiment Analysis in Python with TextBlob https://github.com/shekhargulati/52-technologies-in-2016/blob/master/11-textblob/README.md
 YOK | Official github repository for Fast Artificial Neural Network Library (FANN): <https://github.com/libfann/fann>
 ![](http://i.imgur.com/KvOF1vc.png)  | Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks: <https://github.com/ShaoqingRen/faster_rcnn>, [Sunum](https://www.dropbox.com/s/xtr4yd4i5e0vw8g/iccv15_tutorial_training_rbg.pdf?dl=0), [Makale](http://arxiv.org/pdf/1506.01497v3.pdf)
