@@ -543,6 +543,7 @@ Search arama çalışmayınca doğru yere taşınması gerekenler,
 - Full-stack Web Framework for Cloud-Native Applications and Platforms using Microservices Architecture http://docs.deep.mg https://github.com/MitocGroup/deep-framework
 - JavaScript Cloud/Web Desktop Platform https://os.js.org/  https://github.com/os-js/OS.js
 - A small ANSI C gui toolkit https://github.com/vurtun/nuklear
+- A list of command line tools for manipulating structured text data: https://github.com/dbohdan/structured-text-tools
 
 - Let's learn a new technology every week. A new technology blog every Sunday in 2016. https://github.com/shekhargulati/52-technologies-in-2016
 - Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage http://rclone.org https://github.com/ncw/rclone
