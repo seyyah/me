@@ -312,6 +312,7 @@ API,
 
 ## Ionic
 - Angular and Cordova / Phonegap powered hybrid mobile application (puzzle game) https://github.com/akveo/digitsquare http://digitsquare.akveo.com/
+- React Ionic http://reactionic.github.io/ https://github.com/reactionic/reactionic
 - http://ionic.io/
 - Kod deposu: <https://github.com/driftyco>, [demos](http://codepen.io/ionic/pens/public/?grid_type=list)
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
