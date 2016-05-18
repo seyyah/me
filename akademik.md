@@ -3,6 +3,7 @@
 Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
+dl-setup | Instructions for setting up the software on your deep learning machine https://github.com/saiprashanths/dl-setup
 ![](https://camo.githubusercontent.com/6555462d934e3d565000000fedd65b8ee4910f2e/68747470733a2f2f6a6973756e676b2e6769746875622e696f2f646565706a617a7a2f696d672f6865616465725f6769746875622e706e67) | Deep learning driven jazz generation using Keras & Theano! http://deepjazz.io https://github.com/jisungk/deepjazz
 Google Visioner CLI | Automatically rename your pictures using Google Vision API and metadata: <https://github.com/berpj/visioner-cli>, [CLOUD VISION API BETA Derive insight from images with our powerful Cloud Vision API](https://cloud.google.com/vision/), [Realtime People Counter with Google's Cloud Vision API and RxJava](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/09-cloudvision/README.md)
 **Matlab** | **Deprecate**: Matlab/Octave toolbox for deep learning. Includes Deep Belief Nets, Stacked Autoencoders, Convolutional Neural Nets, Convolutional Autoencoders and vanilla Neural Nets. Each method has examples to get you started: <https://github.com/rasmusbergpalm/DeepLearnToolbox>
