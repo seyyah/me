@@ -430,6 +430,7 @@ UI+Bootstrap,
 - SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
 - A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
 - Easy and fast file sharing from the command-line: <https://github.com/dutchcoders/transfer.sh>, <https://transfer.sh/>
+- Where to store sensitive data in public rails app? Use environment variables! http://stackoverflow.com/questions/6113042/where-to-store-sensitive-data-in-public-rails-app
 
 ## Console, Terminal
 - Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
