@@ -311,6 +311,7 @@ API,
 - A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
 
 ## Ionic
+- Angular and Cordova / Phonegap powered hybrid mobile application (puzzle game) https://github.com/akveo/digitsquare http://digitsquare.akveo.com/
 - http://ionic.io/
 - Kod deposu: <https://github.com/driftyco>, [demos](http://codepen.io/ionic/pens/public/?grid_type=list)
 - GUI Designer: <http://lab.ionic.io/>, <http://blog.ionic.io/announcing-ionic-lab-mix-it-up-with-our-new-gui-tool/>
@@ -360,6 +361,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
 - A directive for AngularJS providing a advanced visual search box, <http://ngmodules.org/modules/angular-advanced-searchbox>, [Demo](http://dnauck.github.io/angular-advanced-searchbox/)
 - Angular 2 Beta: <http://angularjs.blogspot.com.tr/>
 - Angular directive/filter/service for formatting date so that it displays how long ago the given time was compared to now: <https://github.com/yaru22/angular-timeago>, [Moment.JS directives for Angular.JS timeago and more](https://github.com/urish/angular-moment)
