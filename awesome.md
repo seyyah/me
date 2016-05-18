@@ -163,6 +163,7 @@ Machine learning,
 ### Realtime, Graph
 - https://www.firebase.com, [INTRO TO FIREBASE Presentation](https://intro-to-firebase.firebaseapp.com/#/)
 - GraphQL: A DATA QUERY LANGUAGE AND RUNTIME: <http://graphql.org/>, <https://github.com/graphql>
+- Generate GraphQL Types and Mutations For Rails Apps https://github.com/movielala/rails-graphql-generator
 - A lightweight JSON storage service with synchronisation and sharing abilities: <https://github.com/Kinto/kinto>, <http://kinto.readthedocs.org/>
 - An active model wrapper for the Neo4j Graph Database for Ruby.: <https://github.com/neo4jrb/neo4j>
 - Cayley is an open-source graph inspired by the graph database behind Freebase and Google's Knowledge Graph: <https://github.com/google/cayley>
@@ -307,7 +308,7 @@ API,
 - 10 Best Hybrid Mobile App UI Frameworks: HTML5, CSS and JS: <http://noeticforce.com/best-hybrid-mobile-app-ui-frameworks-html5-js-css>
   + OnsenUI: <http://onsen.io/>, Monaco: <https://monaca.io/>
   + Framework7: <http://framework7.io/>
-  + Mobile Angular UI: <http://mobileangularui.com/>
+  + Mobile Angular UI: <http://mobileangularui.com/> https://github.com/mcasimir/mobile-angular-ui
 - A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
 
 ## Ionic
@@ -412,6 +413,7 @@ https://getlooseleaf.com
 - Offline support for AngularJS applications: <https://github.com/neoziro/angular-offline>
 - Angular Directive to Paginate Anything: <https://github.com/begriffs/angular-paginate-anything>, [Demo](http://begriffs.com/angular-paginate-anything/)
 - Reactive, responsive, beautiful charts for AngularJS using Chart.js: http://jtblin.github.io/angular-chart.js https://github.com/jtblin/angular-chart.js
+- AngularJS directive for NVD3 reusable charting library (based on D3). Easily customize your charts via JSON API. http://krispo.github.io/angular-nvd3 https://github.com/krispo/angular-nvd3
 
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
@@ -431,6 +433,7 @@ UI+Bootstrap,
 - A simple markup language for creating rich terminal reports, presentations and infographics: <https://github.com/yaronn/wopr>
 - Easy and fast file sharing from the command-line: <https://github.com/dutchcoders/transfer.sh>, <https://transfer.sh/>
 - Where to store sensitive data in public rails app? Use environment variables! http://stackoverflow.com/questions/6113042/where-to-store-sensitive-data-in-public-rails-app
+- Convert terminal recordings to animated gifs https://github.com/icholy/ttygif
 
 ## Console, Terminal
 - Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
@@ -454,7 +457,7 @@ UI+Bootstrap,
 - **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
 
 ## Security, Monitoring
-
+- Automatic SQL injection and database takeover tool http://sqlmap.org https://github.com/sqlmapproject/sqlmap
 - Vulnerability scanner for Linux, agentless, written in golang. https://github.com/future-architect/vuls
 - Checks for vulnerable versions of gems in Gemfile.lock, Checks for insecure gem sources (http://), Allows ignoring certain advisories that have been manually worked around: <https://github.com/rubysec/bundler-audit>
 - Alerta monitoring system: <https://github.com/guardian/alerta>
