@@ -226,6 +226,7 @@ Image,
 
 File Manager,
 - Web File Manager For The Rails Integrated in ckeditor and TinyMCE with File Explorer you can use as a quick and simple way: <https://github.com/furkancelik/fcfinder>
+- JavaScript HTML5 File Management Material Design Folder Explorer Navigator Browser Manager in AngularJS with CSS3 Responsive (with FTP in PHP / Java / Node) http://angular-filemanager.zendelsolutions.com/ https://github.com/joni2back/angular-filemanager
 
 Table-Excel-like editing,
 - AngularJS directive for Handsontable, Handsontable is an Excel-like data grid / spreadsheet for HTML & JavaScript: <https://github.com/handsontable/ngHandsontable>, <https://github.com/handsontable/handsontable>
