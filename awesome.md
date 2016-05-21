@@ -232,6 +232,7 @@ Table-Excel-like editing,
 - AngularJS directive for Handsontable, Handsontable is an Excel-like data grid / spreadsheet for HTML & JavaScript: <https://github.com/handsontable/ngHandsontable>, <https://github.com/handsontable/handsontable>
 - Fast and powerful CSV (delimited text) parser that gracefully handles large files and malformed input <http://PapaParse.com>
 - Roo provides an interface to spreadsheets of several sorts: <https://github.com/roo-rb/roo>
+- Advanced Data Grid / Data Table supporting Javascript / React / AngularJS / Web Components http://www.ag-grid.com https://github.com/ceolter/ag-grid/
 
 API,
 - The API to Address It All,  Verify Addresses, City, State, ZIP, Autocomplete, Extract: <https://smartystreets.com/features>
