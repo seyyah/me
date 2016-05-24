@@ -224,6 +224,7 @@ Image,
 - HTTP server libraries for generating webpage preview thumbnails: <https://github.com/agschwender/python-web2image-server>
 - Image upload plugin for TinyMCE and Rails with the asset pipeline: <https://github.com/PerfectlyNormal/tinymce-rails-imageupload>
 - JavaScript image cropper: <https://github.com/fengyuanchen/cropperjs>, <http://cropperjs.com>
+- JavaScript image viewer. https://fengyuanchen.github.io/viewerjs https://github.com/fengyuanchen/viewerjs
 
 File Manager,
 - Web File Manager For The Rails Integrated in ckeditor and TinyMCE with File Explorer you can use as a quick and simple way: <https://github.com/furkancelik/fcfinder>
