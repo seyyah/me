@@ -302,6 +302,7 @@ API,
 - ProgressJs is a JavaScript and CSS3 library which help developers to create and manage progress bar for every objects on the page: <https://github.com/usablica/progress.js>, <http://usablica.github.io/progress.js/>
 - Sequelize is an easy-to-use multi sql dialect ORM for Node.js & io.js. It currently supports MySQL, MariaDB, SQLite, PostgreSQL and MSSQL: <https://github.com/sequelize/sequelize>, <http://sequelizejs.com>
 - A text only meme generator https://bitshadow.github.io/slate https://github.com/bitshadow/slate
+- A compact, cross-browser solution for using the JavaScript Notifications API http://nickersoft.github.io/push.js https://github.com/Nickersoft/push.js
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
