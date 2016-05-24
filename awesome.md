@@ -198,6 +198,7 @@ Machine learning,
 - A collection of loading indicators animated with CSS: <https://github.com/tobiasahlin/SpinKit>, <http://tobiasahlin.com/spinkit/>
 - Stellar.js - Parallax scrolling made easy <http://markdalgleish.com/projects/stellar.js/>, <https://github.com/dutchcoders/stellar.js>
 - A list of everything that goes in the <head> of your document https://github.com/joshbuchea/HEAD
+- Family.scss is a set of 20 smart Sass mixins which will help you to manage the style of :nth-child'ified elements, in an easy and classy way. http://lukyvj.github.io/family.scss/ https://github.com/LukyVj/family.scss
 
 Material Design,
 - Blog: <http://materialdesignblog.com/>
