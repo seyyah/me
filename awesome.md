@@ -437,6 +437,7 @@ UI+Bootstrap,
 - Easy and fast file sharing from the command-line: <https://github.com/dutchcoders/transfer.sh>, <https://transfer.sh/>
 - Where to store sensitive data in public rails app? Use environment variables! http://stackoverflow.com/questions/6113042/where-to-store-sensitive-data-in-public-rails-app
 - Convert terminal recordings to animated gifs https://github.com/icholy/ttygif
+- A terminal emulator for the 21st century. https://github.com/shockone/black-screen
 
 ## Console, Terminal
 - Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
