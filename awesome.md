@@ -467,6 +467,7 @@ UI+Bootstrap,
 - **Speed** Up Your Rails App by 66% - The Complete Guide to Rails Caching: <http://www.nateberkopec.com/2015/07/15/the-complete-guide-to-rails-caching.html>
 - **Performance** tools: <https://github.com/JuanitoFatas/ruby-performance-tools>
 - **Scaling** Ruby Apps to 1000 Requests per Minute - A Beginner's Guide: <http://www.nateberkopec.com/2015/07/29/scaling-ruby-apps-to-1000-rpm.html>
+- auditing and performance metrics for Progressive Web Apps https://github.com/GoogleChrome/lighthouse
 
 ## Security, Monitoring
 - Automatic SQL injection and database takeover tool http://sqlmap.org https://github.com/sqlmapproject/sqlmap
