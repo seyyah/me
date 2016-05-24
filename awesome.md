@@ -8,6 +8,7 @@
 - <http://rails-bestpractices.com/>
 - Ruby Tricks: <https://github.com/franzejr/ruby-tricks>
 - Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft, https://porter.io/, framgia
+- https://github.com/HackathonHackers/personal-sites
 
 ## Style vs
 
@@ -567,6 +568,7 @@ Search arama çalışmayınca doğru yere taşınması gerekenler,
 - A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! :gift: <https://github.com/anishathalye/git-remote-dropbox>, <https://git.io/dropbox>
 - Smart and Simple Project Management for Teams on GitHub (A repo for tracking the Waffle.io team's public-facing work.):  <http://waffle.io/waffleio/waffle.io>, <https://github.com/waffleio/waffle.io>
 - visualising data structures and algorithms through animation: <http://visualgo.net/>
+- Algorithm Visualizer: https://github.com/parkjs814/AlgorithmVisualizer http://jasonpark.me/AlgorithmVisualizer/
 - Use your OS X terminal shell to do awesome things: <https://github.com/herrbischoff/awesome-osx-command-line>
 - A curated list of awesome lists: https://github.com/sindresorhus/awesome
 - http://goldsource.de/toolchain/
