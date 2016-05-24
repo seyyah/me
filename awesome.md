@@ -173,6 +173,7 @@ Machine learning,
 - Google: Lovefield is a relational database written in pure JavaScript: <https://github.com/google/lovefield>, <https://io2015codelabs.appspot.com/codelabs/lovefield#1>, <Lovefield is a relational database written in pure JavaScript>
 - Squeel lets you write your Active Record queries with fewer strings, and more Ruby, by making the Arel awesomeness that lies beneath Active Record more accessible: <https://github.com/activerecord-hackery/squeel>
 - A database frontend for concurrent editing systems: <https://github.com/share/sharedb>
+
 ## Hackathon
 
 - Proje üretmekten zevk alan yazılımcı, tasarımcı ve girişimcilere sınırlı süre içerisinde fikirlerini ürüne dönüştürme imkanı veren Garanti Bankası’nın HACKATHON etkinliğidir: <https://github.com/TGarantiBank/Hackathon/>
@@ -193,6 +194,7 @@ Machine learning,
 - Async Responsive Html Grids: <https://github.com/nix23/gridifier>
 - A collection of loading indicators animated with CSS: <https://github.com/tobiasahlin/SpinKit>, <http://tobiasahlin.com/spinkit/>
 - Stellar.js - Parallax scrolling made easy <http://markdalgleish.com/projects/stellar.js/>, <https://github.com/dutchcoders/stellar.js>
+- A list of everything that goes in the <head> of your document https://github.com/joshbuchea/HEAD
 
 Material Design,
 - Blog: <http://materialdesignblog.com/>
