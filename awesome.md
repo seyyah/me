@@ -264,6 +264,7 @@ API,
 
 ## Javascript
 
+- Fullscreen HTML5 Background Video for the Web. https://rishabhp.github.io/bideo.js/ https://rishabhp.github.io/bideo.js/
 - A javascript text differencing implementation: https://github.com/kpdecker/jsdiff
 - A kickass library to manage your poppers https://popper.js.org https://github.com/FezVrasta/popper.js
 - Incus.js front-end JavaScript bindings to Incus websocket and long-polling server: <https://github.com/Imgur/incusjs>
