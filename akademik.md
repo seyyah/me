@@ -3,6 +3,7 @@
 Görsel  | Ayrıntı
 ------------- | -------------
 **Deep Learning**  | ...
+![](http://matthewearl.github.io/assets/cnn-anpr/window-scan.gif) | Using neural networks to build an automatic number plate recognition system https://github.com/matthewearl/deep-anpr http://matthewearl.github.io/2016/05/06/cnn-anpr/
 ![](https://www.clarifai.com/static/img_ours/logo-dark-RGB.png) | Real Solutions, Artificial Intelligence https://www.clarifai.com/
 dl-setup | Instructions for setting up the software on your deep learning machine https://github.com/saiprashanths/dl-setup
 ![](https://camo.githubusercontent.com/6555462d934e3d565000000fedd65b8ee4910f2e/68747470733a2f2f6a6973756e676b2e6769746875622e696f2f646565706a617a7a2f696d672f6865616465725f6769746875622e706e67) | Deep learning driven jazz generation using Keras & Theano! http://deepjazz.io https://github.com/jisungk/deepjazz
