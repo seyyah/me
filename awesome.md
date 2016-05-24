@@ -63,6 +63,9 @@ Yol haritası,
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
 
 ### Genel
+- A collaborative list of great resources about RESTful API architecture, development, test, and performance https://github.com/marmelab/awesome-rest
+- Interact with REST services in an ActiveRecord-like manner https://github.com/balvig/spyke
+- Usable, fast, simple HTTP 1.1 for Ruby http://excon.io https://github.com/excon/excon
 - A development tool to quickly & dynamically mock API endpoints: <https://github.com/iridakos/duckrails>
 - Postman: Build, test, and document your APIs faster. <http://getpostman.com>
 - rest client: <https://github.com/rest-client/rest-client>, <https://github.com/lostisland/faraday>
