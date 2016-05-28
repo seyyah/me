@@ -1,3 +1,7 @@
+# Video Surveillance
+
+- A full-featured, **open source**, state-of-the-art video surveillance software system: https://www.zoneminder.com/
+
 # Deep Learning, ML, General Learning
 
 Görsel  | Ayrıntı
