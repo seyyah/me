@@ -93,6 +93,7 @@ Yol haritası,
 
 ## GEM
 
+- A High-level Architecture For The Web: http://trailblazer.to/
 - Rack google analytics etc. tracker: https://github.com/railslove/rack-tracker
 - Settings for ActiveRecord models: <https://github.com/ledermann/rails-settings>
 - https://github.com/hothero/rails-gem-list
