@@ -344,6 +344,7 @@ API,
 
 ## Diğer: Cordova, React Native, Swift
 
+- Native Android apps, without the installation: https://developer.android.com/topic/instant-apps/index.html
 - A cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices http://microsoft.github.io/code-push
 - All the resources for Learning About Swift: <https://github.com/hsavit1/Awesome-Swift-Education>
 - A Ruby on Rails inspired Web Framework for Swift that runs on Linux and OS X: <https://github.com/necolt/Swifton>, [Todo App](https://github.com/necolt/Swifton-TodoApp)
