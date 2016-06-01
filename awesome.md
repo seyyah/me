@@ -609,3 +609,4 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - windyty.com
 - A little word cloud generator in Python: <https://github.com/amueller/word_cloud>
 - A linter for prose. <http://proselint.com>, <https://github.com/amperser/proselint>
+- Exploring a Wearable for Safer Swimming: http://tomorrow-lab.com/product35
