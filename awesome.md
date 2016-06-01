@@ -43,6 +43,10 @@
 UBS,
 - acmX real-time campus parking information: https://github.com/ColoradoSchoolOfMines/parking
 - An interactive map app for new students and visitors to navigate the Colorado School of Mines campus: (Ionic) https://github.com/ColoradoSchoolOfMines/MinesMap
+- ScheduleMiner: A web application for choosing classes at Colorado School of Mines. Web: https://miner.mines.edu
+Github: https://github.com/ColoradoSchoolOfMines/schedule_miner, https://github.com/bvargo/schedule_miner 
+- Comprehensive University Timetabling System http://www.unitime.org/, Github: https://github.com/UniTime/unitime , Doc: http://www.unitime.org/present/woebegon.pdf
+
 
 ## Moqups
 
