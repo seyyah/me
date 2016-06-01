@@ -441,6 +441,8 @@ UI+Bootstrap,
 
 # System
 
+- Installs Ruby, JRuby, Rubinius, MagLev or MRuby: https://github.com/postmodern/ruby-install
+  + Changes the current Ruby: https://github.com/postmodern/chruby
 - A statuspage generator that lets you host your statuspage for free on Github: <https://github.com/pyupio/statuspage>
 - A curated list of amazingly awesome open source sysadmin resources: https://github.com/n1trux/awesome-sysadmin
 - SKYLIGHT IS A SMART PROFILER CODE WHISPERER DATA DETECTIVE TRENDSPOTTER FLAG RAISER FOR RAILS APPS: <https://www.skylight.io/>
@@ -451,6 +453,7 @@ UI+Bootstrap,
 - A terminal emulator for the 21st century. https://github.com/shockone/black-screen
 
 ## Console, Terminal
+- HTTPie + prompt_toolkit = an interactive command-line HTTP client featuring autocomplete and syntax highlighting: https://github.com/eliangcs/http-prompt
 - Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
 - Instant terminal sharing: <https://tmate.io/>
 - Record and share your terminal sessions, the right way: <https://asciinema.org/>
