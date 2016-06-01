@@ -40,6 +40,9 @@
 - https://github.com/OWASP/railsgoat
 - Large Scale Payments Systems and Ruby on Rails: https://medium.com/airbnb-engineering/large-scale-payments-systems-and-ruby-on-rails-bfe5b89f6f4#.ctgaukwb8
 
+UBS,
+- acmX real-time campus parking information: https://github.com/ColoradoSchoolOfMines/parking
+
 ## Moqups
 
 - Full redesign of the app using Material Design: <https://aerolab.co/taringa>
