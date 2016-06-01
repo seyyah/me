@@ -1,3 +1,5 @@
+GÜNCEL: https://docs.google.com/document/d/1mOC-L8aW6JB9itMVPX7W_QMVFshZ97_2Ffq6bPb-SBE/edit#
+
 # Video Surveillance
 
 - A full-featured, **open source**, state-of-the-art video surveillance software system: https://www.zoneminder.com/
