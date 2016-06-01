@@ -42,6 +42,7 @@
 
 UBS,
 - acmX real-time campus parking information: https://github.com/ColoradoSchoolOfMines/parking
+- An interactive map app for new students and visitors to navigate the Colorado School of Mines campus: (Ionic) https://github.com/ColoradoSchoolOfMines/MinesMap
 
 ## Moqups
 
