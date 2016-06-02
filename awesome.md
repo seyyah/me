@@ -111,9 +111,6 @@ Yol haritası,
 - Rails Plugin - soft-delete your ActiveRecord records. It's like an explicit version of ActsAsParanoid: <https://github.com/begriffs/permanent_records>, Active Record Soft Delete: <https://github.com/radar/paranoia>
 - Rack middleware for blocking & throttling: <https://github.com/kickstarter/rack-attack>
 - reform: Form objects decoupled from models. <https://github.com/apotonick/reform>
-- An attempt to tame Rails' default policy to log everything: <https://github.com/roidrage/lograge>
-- Log Analiz: <https://github.com/wvanbergen/request-log-analyzer>
-- Log file navigator: <https://github.com/tstack/lnav>, <http://lnav.org>
 - wisper: A micro library providing Ruby objects with Publish-Subscribe capabilities: <https://github.com/krisleech/wisper>
 - Credit Card: https://github.com/jessepollak/card
 - Exam final ortalama/mean not hesapla formül/formul/formula: https://github.com/rubysolo/dentaku
@@ -125,6 +122,12 @@ Yol haritası,
 - A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org
 - Ruby file uploads, take 3: <https://github.com/refile/refile>
 - Chrome extension for Rails development: <https://github.com/dejan/rails_panel>
+
+Log Analiz,
+- An attempt to tame Rails' default policy to log everything: <https://github.com/roidrage/lograge>
+- Log Analiz: <https://github.com/wvanbergen/request-log-analyzer>
+- Log file navigator: <https://github.com/tstack/lnav>, <http://lnav.org>
+- Logs for humans to read: https://github.com/aybabtme/humanlog
 
 Farklı kullanıcı olarak davran (act as)
 - Easily switch current user: <https://github.com/flyerhzm/switch_user>
