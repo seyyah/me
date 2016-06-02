@@ -613,6 +613,10 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - Build a Jekyll blog in minutes, without touching the command line: <https://github.com/barryclark/jekyll-now>
 - Json cv/resume: <http://jsonresume.org/>
 
+# C Programming
+
+- C package manager-ish. Package manager for the C programming language: https://github.com/clibs/clib
+
 # Küçük programcılar vs
 
 - code.org
