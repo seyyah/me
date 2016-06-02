@@ -46,7 +46,7 @@ UBS,
 - ScheduleMiner: A web application for choosing classes at Colorado School of Mines. Web: https://miner.mines.edu
 Github: https://github.com/ColoradoSchoolOfMines/schedule_miner, https://github.com/bvargo/schedule_miner 
 - Comprehensive University Timetabling System http://www.unitime.org/, Github: https://github.com/UniTime/unitime , Doc: http://www.unitime.org/present/woebegon.pdf
-
+- School administration app for Mendicant University http://mendicantuniversity.org https://github.com/mendicant-original/university-web
 
 ## Moqups
 
