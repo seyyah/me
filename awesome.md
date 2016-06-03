@@ -585,10 +585,8 @@ Search arama çalışmayınca doğru yere taşınması gerekenler,
 - JavaScript Cloud/Web Desktop Platform https://os.js.org/  https://github.com/os-js/OS.js
 - A small ANSI C gui toolkit https://github.com/vurtun/nuklear
 - A list of command line tools for manipulating structured text data: https://github.com/dbohdan/structured-text-tools
-- NLP: a cool way to use natural language in javascript <https://github.com/nlp-compromise/nlp_compromise>, <http://nlpcompromise.com>
 - https://github.com/buunguyen/octotree
 - Angular binding to the Screenfull library to allow fullscreen in your app. http://hrajchert.github.io/angular-screenfull/ https://github.com/hrajchert/angular-screenfull
-
 - Let's learn a new technology every week. A new technology blog every Sunday in 2016. https://github.com/shekhargulati/52-technologies-in-2016
 - Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage http://rclone.org https://github.com/ncw/rclone
 - The next web scraper. See through the `<html>` noise: <https://github.com/lapwinglabs/x-ray>
@@ -612,6 +610,13 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - JavaScript with Batteries Included for Google Glass <http://wearscript.com>, <https://github.com/wearscript/wearscript-android>
 - Build a Jekyll blog in minutes, without touching the command line: <https://github.com/barryclark/jekyll-now>
 - Json cv/resume: <http://jsonresume.org/>
+
+NLP (Natural Language Processing),
+- NLP: a cool way to use natural language in javascript <https://github.com/nlp-compromise/nlp_compromise>, <http://nlpcompromise.com>
+- SyntaxNet: The World’s Most Accurate Parser Goes Open Source http://googleresearch.blogspot.com.tr/2016/05/announcing-syntaxnet-worlds-most.html
+- Industrial-strength Natural Language Processing with Python and Cython https://spacy.io https://github.com/spacy-io/spaCy
+   + Use spaCy to go beyond vanilla word2vec; text similarity: https://github.com/spacy-io/sense2vec https://spacy.io/demos/sense2vec
+- Stanford CoreNLP – a suite of core NLP tools: http://stanfordnlp.github.io/CoreNLP/
 
 # C Programming
 
