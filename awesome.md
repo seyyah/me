@@ -285,6 +285,10 @@ API,
 ## Javascript
 
 - Validate your forms, frontend, without writing a single line of javascript: https://github.com/guillaumepotier/Parsley.js/ http://parsleyjs.org/
+- Automatically persist your forms' text and select field values locally, until the form is submitted. http://garlicjs.org/ https://github.com/guillaumepotier/Garlic.js
+- Botkit is a toolkit for making bot applications: https://github.com/howdyai/botkit
+- The missing Javascript smart persistent layer http://wisembly.github.io/basil.js https://github.com/Wisembly/basil.js
+- A javascript library for retrieving geolocation information via HTML5 and IP look-ups: https://github.com/onury/geolocator
 - Fullscreen HTML5 Background Video for the Web. https://rishabhp.github.io/bideo.js/ https://rishabhp.github.io/bideo.js/
 - A javascript text differencing implementation: https://github.com/kpdecker/jsdiff
 - A kickass library to manage your poppers https://popper.js.org https://github.com/FezVrasta/popper.js
