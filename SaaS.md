@@ -7,6 +7,7 @@
 ## Example
 
 - http://cloudtaxonomy.opencrowd.com/taxonomy/software-as-a-service/
+- Rails Software as a Service Application for time tracking: https://github.com/appcasts/saas-timetracker
 - An example Rails 4.2 app with Stripe and the Payola gem for a membership or subscription site. http://railsapps.github.io/rails-stripe-membership-saas https://github.com/RailsApps/rails-stripe-membership-saas
 - Eski bir uygulama: SaaS+SSO: https://github.com/maccman/saasy
 
