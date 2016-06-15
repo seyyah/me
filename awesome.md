@@ -284,6 +284,7 @@ API,
 
 ## Javascript
 
+- Fast and easy searching inside a page https://haroen.me/holmes/ https://github.com/Haroenv/holmes
 - Validate your forms, frontend, without writing a single line of javascript: https://github.com/guillaumepotier/Parsley.js/ http://parsleyjs.org/
 - Automatically persist your forms' text and select field values locally, until the form is submitted. http://garlicjs.org/ https://github.com/guillaumepotier/Garlic.js
 - Botkit is a toolkit for making bot applications: https://github.com/howdyai/botkit
