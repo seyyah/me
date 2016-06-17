@@ -343,6 +343,7 @@ API,
 - A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
 
 ## Ionic
+- Moodle Mobile: https://github.com/moodlehq/moodlemobile2
 - Angular and Cordova / Phonegap powered hybrid mobile application (puzzle game) https://github.com/akveo/digitsquare http://digitsquare.akveo.com/
 - React Ionic http://reactionic.github.io/ https://github.com/reactionic/reactionic
 - http://ionic.io/
@@ -638,3 +639,6 @@ NLP (Natural Language Processing),
 - A little word cloud generator in Python: <https://github.com/amueller/word_cloud>
 - A linter for prose. <http://proselint.com>, <https://github.com/amperser/proselint>
 - Exploring a Wearable for Safer Swimming: http://tomorrow-lab.com/product35
+
+# Hardware
+- prijector
