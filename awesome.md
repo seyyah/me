@@ -361,13 +361,15 @@ API,
 - Pour material design into your Ionic hybrid apps for all the sexy and no complexity. Now unlock the depth, motion & ink specs of Google's material design with easy-to-add-on classes.: <http://ionicmaterial.com/>
 - http://metaware.github.io/angular-invoicing/#
 - Mobile Nav: <https://github.com/ajoslin/angular-mobile-nav>
+- electron - cordova - ionic mix https://github.com/callodacity/electonic
 
-## Diğer: Cordova, React Native, Swift
+## Diğer: Cordova, React Native, Swift, Electron
 
 - Native Android apps, without the installation: https://developer.android.com/topic/instant-apps/index.html
 - A cloud service that enables Cordova and React Native developers to deploy mobile app updates directly to their users’ devices http://microsoft.github.io/code-push
 - All the resources for Learning About Swift: <https://github.com/hsavit1/Awesome-Swift-Education>
 - A Ruby on Rails inspired Web Framework for Swift that runs on Linux and OS X: <https://github.com/necolt/Swifton>, [Todo App](https://github.com/necolt/Swifton-TodoApp)
+- Build cross platform desktop apps with JavaScript, HTML, and CSS http://electron.atom.io/
 
 # Mail, Sms
 - extend actionmailer to allow one smtp account per mailer class: <https://github.com/flyerhzm/multiple_mailers>
