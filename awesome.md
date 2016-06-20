@@ -16,6 +16,7 @@
 - Writing Fast Ruby, Collect Commson Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
 - A Ruby static code analyzer, based on the community Ruby style guide: <https://github.com/bbatsov/rubocop>
+- A Ruby code quality reporter https://github.com/whitesmith/rubycritic
 - Application template for Rails 4.2 projects; preloaded with best practices for TDD, security, deployment, and developer productivity: <https://github.com/mattbrictson/rails-template>
 - The Rails Doctrine: <http://rubyonrails.org/doctrine/>
 - Rails style: <https://github.com/aradar/guides>
