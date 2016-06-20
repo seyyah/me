@@ -285,6 +285,7 @@ API,
 
 ## Javascript
 
+- Turn any <input> into an address autocomplete https://community.algolia.com/places/ https://github.com/algolia/places
 - Fast and easy searching inside a page https://haroen.me/holmes/ https://github.com/Haroenv/holmes
 - Validate your forms, frontend, without writing a single line of javascript: https://github.com/guillaumepotier/Parsley.js/ http://parsleyjs.org/
 - Automatically persist your forms' text and select field values locally, until the form is submitted. http://garlicjs.org/ https://github.com/guillaumepotier/Garlic.js
