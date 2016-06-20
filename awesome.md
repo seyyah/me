@@ -463,6 +463,7 @@ UI+Bootstrap,
 
 # System
 
+- Your First 10 Minutes on a Server https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md
 - Installs Ruby, JRuby, Rubinius, MagLev or MRuby: https://github.com/postmodern/ruby-install
   + Changes the current Ruby: https://github.com/postmodern/chruby
 - A statuspage generator that lets you host your statuspage for free on Github: <https://github.com/pyupio/statuspage>
