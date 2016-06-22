@@ -575,7 +575,7 @@ Docker,
 
 # Tools
 
-- sparkle, mega.co.nz, zenhub
+- sparkle, mega.co.nz, zenhub, https://waffle.io/
 - Mockup: Programlama temelli wireframe: https://github.com/tsx/shireframe
 - whatsapp php chat api: <https://github.com/WHAnonymous/Chat-API>
 - Curated List of Chatbot Links: <https://medium.com/@stephenkeep/maintained-list-of-chatbot-links-8898189facbb#.t63m7jnib>
