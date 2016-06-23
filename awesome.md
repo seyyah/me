@@ -324,6 +324,7 @@ API,
 - Sequelize is an easy-to-use multi sql dialect ORM for Node.js & io.js. It currently supports MySQL, MariaDB, SQLite, PostgreSQL and MSSQL: <https://github.com/sequelize/sequelize>, <http://sequelizejs.com>
 - A text only meme generator https://bitshadow.github.io/slate https://github.com/bitshadow/slate
 - A compact, cross-browser solution for using the JavaScript Notifications API http://nickersoft.github.io/push.js https://github.com/Nickersoft/push.js
+- lightweight, powerful datetimepicker. zero dependencies https://chmln.github.io/flatpickr https://github.com/chmln/flatpickr
 
 ## NodeJs
 - Async utilities for node and the browser: <https://github.com/caolan/async>
@@ -575,7 +576,8 @@ Docker,
 
 # Tools
 
-- sparkle, mega.co.nz, zenhub, https://waffle.io/
+- sparkle, zenhub, https://waffle.io/
+- mega.co.nz, https://github.com/meganz/webclient
 - Mockup: Programlama temelli wireframe: https://github.com/tsx/shireframe
 - whatsapp php chat api: <https://github.com/WHAnonymous/Chat-API>
 - Curated List of Chatbot Links: <https://medium.com/@stephenkeep/maintained-list-of-chatbot-links-8898189facbb#.t63m7jnib>
