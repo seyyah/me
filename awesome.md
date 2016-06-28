@@ -652,3 +652,6 @@ NLP (Natural Language Processing),
 
 # Hardware
 - prijector
+
+# MAC
+- OS X command line tools for developers – The ultimate tool to manage your Mac. It provides a huge set of command line commands that automatize the usage of your OS X system. https://github.com/guarinogabriel/mac-cli
