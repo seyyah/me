@@ -636,6 +636,10 @@ NLP (Natural Language Processing),
    + Use spaCy to go beyond vanilla word2vec; text similarity: https://github.com/spacy-io/sense2vec https://spacy.io/demos/sense2vec
 - Stanford CoreNLP – a suite of core NLP tools: http://stanfordnlp.github.io/CoreNLP/
 
+Connect Your Apps and Automate Workflows
+- https://ifttt.com/
+- https://zapier.com/
+
 # C Programming
 
 - C package manager-ish. Package manager for the C programming language: https://github.com/clibs/clib
