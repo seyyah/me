@@ -589,6 +589,9 @@ Chatbot,
 - Hubot is your company's robot. Install him in your company to dramatically improve and reduce employee efficiency: <https://hubot.github.com/>, [scripts](http://hubot-script-catalog.herokuapp.com/)
 
 # Diğer
+
+- Brief Intro to LaTeX for beginners that helps you use LaTeX with ease. Comments and Contributions are welcome https://github.com/VoLuong/Begin-Latex-in-minutes
+
 Search arama çalışmayınca doğru yere taşınması gerekenler,
 - An all-in-one image-uploader: https://github.com/Imgur/mandible
 - A Javascript client for the Imgur API. https://github.com/Imgur/imgur.js
@@ -645,7 +648,7 @@ Connect Your Apps and Automate Workflows
 
 - C package manager-ish. Package manager for the C programming language: https://github.com/clibs/clib
 
-# Küçük programcılar vs
+# Küçük/Yeni programcılar vs
 
 - code.org
    + http://www.edutopia.org/blog/15-ways-teaching-students-coding-vicki-davis
