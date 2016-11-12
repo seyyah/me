@@ -590,6 +590,9 @@ Chatbot,
 
 # Diğer
 
+- https://calismamasam.com/
+- stuff, webrazzi
+
 - Brief Intro to LaTeX for beginners that helps you use LaTeX with ease. Comments and Contributions are welcome https://github.com/VoLuong/Begin-Latex-in-minutes
 
 Search arama çalışmayınca doğru yere taşınması gerekenler,
