@@ -28,6 +28,7 @@
 
 ## Rails ile yazılmış uygulamalar
 
+- Real World Rails applications and their open source codebases for developers to learn from https://github.com/eliotsykes/real-world-rails
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
 - Quadbase.org - Question Banking Made Easy: <https://github.com/lml/quadbase>, http://quadbase.org
 - Ruby on Rails Ecommerce platform, perfect for your small business solution: <https://github.com/drhenner/ror_ecommerce>, <http://www.ror-e.com/>
