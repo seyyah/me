@@ -340,6 +340,7 @@ API,
 - A collection of common interactive command line user interfaces. https://github.com/SBoudrias/Inquirer.js
 
 # Mobile
+- Submitting Your App (Apple and Google Play)(ionic): http://docs.usecreator.com/docs/submitting-your-app-apple-and-google-play
 - MOBIRISE WEBSITE BUILDER: Create awesome mobile-friendly websites. No coding and free: <https://mobirise.com/>
   + http://froont.com/, https://www.livecontrol.net/, https://webflow.com/, https://www.genymotion.com/
 - List of open source mobile applications: http://www.mobilegap.net/
