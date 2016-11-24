@@ -594,6 +594,7 @@ Chatbot,
 # Diğer
 
 - https://calismamasam.com/
+- Google Drive for Ubuntu: http://techsansar.com/how-to/install-google-drive-grive2-on-ubuntu/
 - stuff, webrazzi
 
 - Brief Intro to LaTeX for beginners that helps you use LaTeX with ease. Comments and Contributions are welcome https://github.com/VoLuong/Begin-Latex-in-minutes
