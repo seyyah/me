@@ -290,6 +290,7 @@ API,
 ## Javascript
 
 - Javascript Animation Engine https://github.com/juliangarnier/anime, [DEMO](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
+- 30 Day Vanilla JS Challenge: https://github.com/wesbos/JavaScript30
 - Turn any <input> into an address autocomplete https://community.algolia.com/places/ https://github.com/algolia/places
 - Fast and easy searching inside a page https://haroen.me/holmes/ https://github.com/Haroenv/holmes
 - Validate your forms, frontend, without writing a single line of javascript: https://github.com/guillaumepotier/Parsley.js/ http://parsleyjs.org/
