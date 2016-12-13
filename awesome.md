@@ -29,6 +29,7 @@
 
 ## Rails ile yazılmış uygulamalar
 
+- Zammad is a web based open source helpdesk/customer support system https://github.com/zammad/zammad https://zammad.org
 - Real World Rails applications and their open source codebases for developers to learn from https://github.com/eliotsykes/real-world-rails
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
 - Quadbase.org - Question Banking Made Easy: <https://github.com/lml/quadbase>, http://quadbase.org
