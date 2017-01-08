@@ -660,6 +660,7 @@ Connect Your Apps and Automate Workflows
 # Küçük/Yeni programcılar vs
 
 - Animation http://animagraffs.com
+- JavaScript library to make drawing animation on SVG: https://github.com/maxwellito/vivus
 - code.org
    + http://www.edutopia.org/blog/15-ways-teaching-students-coding-vicki-davis
 - https://blockly-games.appspot.com/
