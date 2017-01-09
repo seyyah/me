@@ -201,6 +201,12 @@ Machine learning,
 
 # Front-end Stuff
 
+- Visualize Sass HSL color functions in real-time without compiling: <http://jim-nielsen.com/sassme/>
+- Visualize The CSS Color Function <https://colorme.io/>
+- <http://flatuicolors.com/>
+
+<img src='https://cloud.githubusercontent.com/assets/263237/21768595/6ca73cb0-d68b-11e6-8583-addabeb70085.png'>
+
 - Emmet Re:view A browser extension for displaying responsive web-pages in a side-by-side views to quickly test how it looks at different resolutions and devices: <http://re-view.emmet.io/>, <https://github.com/emmetio/re-view>
 - A collection of best front-end frameworks for faster and easier web development. <https://github.com/usablica/front-end-frameworks>, <http://usablica.github.com/front-end-frameworks/compare.html>
 - Front-end Style Guides: <https://24ways.org/2011/front-end-style-guides/>, [Building a Global Experience Language for the BBC](http://static.bbci.co.uk/gel/0.6.6/downloads/GEL_web_styleguide.pdf),[Designing for Yosemite, MAC](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html)
