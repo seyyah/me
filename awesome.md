@@ -90,6 +90,8 @@ Yol haritası,
 - Sonuçta OAuth: http://stackoverflow.com/questions/247110/looking-for-suggestions-for-building-a-secure-rest-api-within-ruby-on-rails
 - Doorkeeper+Oauth: https://github.com/doorkeeper-gem/doorkeeper
 - Secure, Manage & Extend your APIs and Microservices. The open-source management layer for APIs, delivering high performance and reliability: <http://getkong.org/>
+- Open-Source Microservice Hosting Platform http://hook.io
+- SDK and CLI for spawning streaming stateless HTTP microservices in multiple programming languages https://github.com/stackvana/microcule
 - Rails API documentation tool: <https://github.com/Apipie/apipie-rails>
 - HTTP API Tasarım Kılavuzu+heroku: <https://github.com/hkulekci/http-api-design/tree/master/tr>
 - Tez: https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf
@@ -201,6 +203,7 @@ Machine learning,
 
 # Front-end Stuff
 
+- SDK and CLI for spawning streaming stateless HTTP microservices in multiple programming languages https://github.com/evil-icons/evil-icons
 - Visualize Sass HSL color functions in real-time without compiling: <http://jim-nielsen.com/sassme/>
 - Visualize The CSS Color Function <https://colorme.io/>
 - <http://flatuicolors.com/>
@@ -359,6 +362,7 @@ API,
 - A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
 
 ## Ionic
+- https://github.com/HansUXdev/IonicFramework-Templates
 - Moodle Mobile: https://github.com/moodlehq/moodlemobile2
 - Angular and Cordova / Phonegap powered hybrid mobile application (puzzle game) https://github.com/akveo/digitsquare http://digitsquare.akveo.com/
 - React Ionic http://reactionic.github.io/ https://github.com/reactionic/reactionic
