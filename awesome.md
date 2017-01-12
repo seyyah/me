@@ -33,7 +33,6 @@
 - Real World Rails applications and their open source codebases for developers to learn from https://github.com/eliotsykes/real-world-rails
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
 - Quadbase.org - Question Banking Made Easy: <https://github.com/lml/quadbase>, http://quadbase.org
-- Ruby on Rails Ecommerce platform, perfect for your small business solution: <https://github.com/drhenner/ror_ecommerce>, <http://www.ror-e.com/>
 - The Ruby community's gem hosting service: <https://github.com/rubygems/rubygems.org>
 - Guardian frontend: <https://github.com/guardian/frontend>
 - https://github.com/Thibaut/devdocs
@@ -44,7 +43,12 @@
 - https://github.com/OWASP/railsgoat
 - Large Scale Payments Systems and Ruby on Rails: https://medium.com/airbnb-engineering/large-scale-payments-systems-and-ruby-on-rails-bfe5b89f6f4#.ctgaukwb8
 
-UBS,
+### E-commerce
+- Shoppe. The open source e-commerce platform for Ruby on Rails <https://tryshoppe.com/>, <https://github.com/tryshoppe/shoppe>
+- Spree is a complete open source e-commerce solution for Ruby on Rails: <https://spreecommerce.com/>, <https://github.com/spree/spree>
+- Ruby on Rails Ecommerce platform, perfect for your small business solution: <https://github.com/drhenner/ror_ecommerce>, <http://www.ror-e.com/>
+
+### UBS
 - acmX real-time campus parking information: https://github.com/ColoradoSchoolOfMines/parking
 - An interactive map app for new students and visitors to navigate the Colorado School of Mines campus: (Ionic) https://github.com/ColoradoSchoolOfMines/MinesMap
 - ScheduleMiner: A web application for choosing classes at Colorado School of Mines. Web: https://miner.mines.edu
