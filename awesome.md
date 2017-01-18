@@ -552,7 +552,8 @@ UI+Bootstrap,
 
 ## Deploy
 
-- ngrok, pagekite.me, heroku, digitalocean, docker, kontena, coreos, http://weave.works/
+- ngrok, pagekite.me, heroku, digitalocean, docker, kontena, coreos, http://weave.works/, pow.cx
+- [Web server for chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/related)
 - Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions: <https://www.terraform.io/>
   + TERRAFORM VS. CHEF, PUPPET, ETC.: <https://www.terraform.io/intro/vs/chef-puppet.html>
   + TERRAFORM VS. CLOUDFORMATION, HEAT, ETC.: <https://www.terraform.io/intro/vs/cloudformation.html>
