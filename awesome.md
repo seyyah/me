@@ -29,6 +29,7 @@
 
 ## Rails ile yazılmış uygulamalar
 
+- Ruby on Rails CRM platform: [Demo](http://www.fatfreecrm.com), [Github](https://github.com/fatfreecrm/fat_free_crm)
 - Zammad is a web based open source helpdesk/customer support system https://github.com/zammad/zammad https://zammad.org
 - Real World Rails applications and their open source codebases for developers to learn from https://github.com/eliotsykes/real-world-rails
 - Tonlarca uygulama: <https://github.com/eliotsykes/real-world-rails/tree/master/apps>
