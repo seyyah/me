@@ -423,6 +423,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
 - Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
 - A directive for AngularJS providing a advanced visual search box, <http://ngmodules.org/modules/angular-advanced-searchbox>, [Demo](http://dnauck.github.io/angular-advanced-searchbox/)
 - Angular 2 Beta: <http://angularjs.blogspot.com.tr/>
