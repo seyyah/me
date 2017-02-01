@@ -172,6 +172,9 @@ Machine learning,
 - Attach comments to ActiveRecord's SQL queries: <https://github.com/basecamp/marginalia>
 - Sequelize is an easy-to-use multi sql dialect ORM for Node.js & io.js. It currently supports MySQL, MariaDB, SQLite, PostgreSQL and MSSQL: <https://github.com/sequelize/sequelize>, <http://sequelizejs.com>
 
+### SQLlite
+- Official home of the DB Browser for SQLite (DB4S) project. Previously known as "SQLite Database Browser" and "Database Browser for SQLite": [Website at](http://sqlitebrowser.org), [Github](https://github.com/sqlitebrowser/sqlitebrowser)
+
 ### PG
 - Would you recommend PostgreSQL over MySQL:  <http://stackoverflow.com/questions/110927/would-you-recommend-postgresql-over-mysql>
 - Why 10 reasons: <http://www.slideshare.net/anandology/ten-reasons-to-prefer-postgresql-to-mysql>
