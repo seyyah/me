@@ -194,6 +194,7 @@ Machine learning,
 
 ### Realtime, Graph
 - https://www.firebase.com, [INTRO TO FIREBASE Presentation](https://intro-to-firebase.firebaseapp.com/#/)
+  + https://github.com/afonsopacifer/awesome-firebase
 - GraphQL: A DATA QUERY LANGUAGE AND RUNTIME: <http://graphql.org/>, <https://github.com/graphql>
 - Generate GraphQL Types and Mutations For Rails Apps https://github.com/movielala/rails-graphql-generator
 - A lightweight JSON storage service with synchronisation and sharing abilities: <https://github.com/Kinto/kinto>, <http://kinto.readthedocs.org/>
