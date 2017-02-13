@@ -432,6 +432,7 @@ https://getlooseleaf.com
 # AngularJs
 
 - [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
+- [AngularJS module : Simple scheduler on a timeline](https://github.com/polosson/Plantt), [Demo](http://www.code.polosson.com/Plantt/)
 - Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
 - A directive for AngularJS providing a advanced visual search box, <http://ngmodules.org/modules/angular-advanced-searchbox>, [Demo](http://dnauck.github.io/angular-advanced-searchbox/)
 - Angular 2 Beta: <http://angularjs.blogspot.com.tr/>
@@ -508,6 +509,8 @@ UI+Bootstrap,
 - Convert terminal recordings to animated gifs https://github.com/icholy/ttygif
 - A terminal emulator for the 21st century. https://github.com/shockone/black-screen
 
+## Docker
+- Make containers, run, done. A collaboration between Stanford University and Lawrence Berkeley National Laboratory <https://singularity-hub.org/>, [Github](https://github.com/singularityware)
 ## Console, Terminal
 - HTTPie + prompt_toolkit = an interactive command-line HTTP client featuring autocomplete and syntax highlighting: https://github.com/eliangcs/http-prompt
 - Simplified and community-driven man pages <http://tldr-pages.github.io/>, <https://github.com/tldr-pages/tldr>
@@ -516,7 +519,7 @@ UI+Bootstrap,
 
 ## Stress Test, Load Balance, Page Speed, Performance
 - [Locust.io](http://locust.io)kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust
-- HTTP load testing tool and library. It's over 9000! <http://godoc.org/github.com/tsenart/vegeta/lib>, <https://github.com/tsenart/vegeta>
+- HTTP load testing tool and library. It s over 9000! <http://godoc.org/github.com/tsenart/vegeta/lib>, <https://github.com/tsenart/vegeta>
 - Runs a load test on the selected URL. Easy to extend minimally for your own ends.: <https://github.com/alexfernandez/loadtest>
 - Seesaw v2 is a Linux Virtual Server (LVS) based load balancing platform: <https://github.com/google/seesaw>
 - HTTP(S) load generator, ApacheBench (ab) replacement, written in Go: <https://github.com/rakyll/boom>
