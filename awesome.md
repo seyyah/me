@@ -307,6 +307,8 @@ API,
 
 ## Javascript
 
+- Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms http://github.com/nathanvda/cocoon
+   + A jQuery plugin that allows you to easily create repeatable groups of form fields. [github](https://github.com/jenwachter/jquery.repeatable), [demo](http://jenwachter.com/jquery.repeatable/)
 - A service for your website that makes it surprisingly easy to collaborate in real-time: [Web](https://togetherjs.com), [Github](https://github.com/mozilla/togetherjs)
 - [Best components to build amazing web applications](http://bestof.js.org/)
 - Javascript Animation Engine https://github.com/juliangarnier/anime, [DEMO](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
