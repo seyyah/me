@@ -489,6 +489,10 @@ https://getlooseleaf.com
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
 
+# DevOps
+
+- A wiki of Devops Tools, Tutorials and Scripts http://techarena51.com https://github.com/Leo-G/DevopsWiki
+
 # Genel
 
 - Facebook+OAuth: https://github.com/arsduo/koala
@@ -624,7 +628,7 @@ Chatbot,
 - Hubot is your company's robot. Install him in your company to dramatically improve and reduce employee efficiency: <https://hubot.github.com/>, [scripts](http://hubot-script-catalog.herokuapp.com/)
 
 # Diğer
-
+- A curated list of movies every hacker cyberpunk must watch. https://github.com/k4m4/movies-for-hackers
 - https://calismamasam.com/
 - Google Drive for Ubuntu: http://techsansar.com/how-to/install-google-drive-grive2-on-ubuntu/
 - stuff, webrazzi, timedoctor
