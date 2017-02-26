@@ -29,6 +29,8 @@
 
 ## Rails ile yazılmış uygulamalar
 
+- https://standardnotes.org website https://github.com/standardnotes/website
+> Grouping of notes Auto-save Markdown editor Easy publishing/sharing of groups or individual notes. Local encryption. Quick filtering Full screen writing Simple UI
 - Ruby on Rails CRM platform: [Demo](http://www.fatfreecrm.com), [Github](https://github.com/fatfreecrm/fat_free_crm)
 - Zammad is a web based open source helpdesk/customer support system https://github.com/zammad/zammad https://zammad.org
 - Real World Rails applications and their open source codebases for developers to learn from https://github.com/eliotsykes/real-world-rails
@@ -489,6 +491,9 @@ https://getlooseleaf.com
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
 
+Angular2
+- Angular 2 development tools for Chrome https://github.com/rangle/augury, [Chrome plugin page](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd)
+
 # DevOps
 
 - A wiki of Devops Tools, Tutorials and Scripts http://techarena51.com https://github.com/Leo-G/DevopsWiki
@@ -523,6 +528,7 @@ UI+Bootstrap,
 - Record and share your terminal sessions, the right way: <https://asciinema.org/>
 
 ## Stress Test, Load Balance, Page Speed, Performance
+- Auditing, performance metrics, and best practices for Progressive Web Apps https://github.com/GoogleChrome/lighthouse https://developers.google.com/web/tools/lighthouse/
 - [Locust.io](http://locust.io)kullanici yük testi: <http://blog.pivot.us/articles/kullanici-yuk-testi-araci-locust
 - HTTP load testing tool and library. It s over 9000! <http://godoc.org/github.com/tsenart/vegeta/lib>, <https://github.com/tsenart/vegeta>
 - Runs a load test on the selected URL. Easy to extend minimally for your own ends.: <https://github.com/alexfernandez/loadtest>
