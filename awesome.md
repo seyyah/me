@@ -30,6 +30,7 @@
 ## Rails ile yazılmış uygulamalar
 
 - Smart Email Marketing, Runing with Docker, docker-compose run web rake db:migrate https://github.com/mojilala/smart-emailing
+- Quran.com api http://www.quran.com https://github.com/quran/quran.com-api
 - https://standardnotes.org website https://github.com/standardnotes/website
 > Grouping of notes Auto-save Markdown editor Easy publishing/sharing of groups or individual notes. Local encryption. Quick filtering Full screen writing Simple UI
 - Ruby on Rails CRM platform: [Demo](http://www.fatfreecrm.com), [Github](https://github.com/fatfreecrm/fat_free_crm)
@@ -455,6 +456,7 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- ROCKET SCIENCE for JAVASCRIPT SEO - Allows your Javascript website to be crawled perfectly by search engines https://prerender.io/
 - [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
 - [AngularJS module : Simple scheduler on a timeline](https://github.com/polosson/Plantt), [Demo](http://www.code.polosson.com/Plantt/)
 - Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
