@@ -456,14 +456,6 @@ https://getlooseleaf.com
 
 # AngularJs
 
-- ROCKET SCIENCE for JAVASCRIPT SEO - Allows your Javascript website to be crawled perfectly by search engines https://prerender.io/
-
-```ruby
-# free: < 250 pages
-gem 'prerender_rails'
-config.middleware.use Rack::Prerender
-```
-
 - [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
 - [AngularJS module : Simple scheduler on a timeline](https://github.com/polosson/Plantt), [Demo](http://www.code.polosson.com/Plantt/)
 - Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
@@ -523,6 +515,45 @@ UI+Bootstrap,
 
 Angular2
 - Angular 2 development tools for Chrome https://github.com/rangle/augury, [Chrome plugin page](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd)
+
+
+## SEO
+- https://www.yearofmoo.com/2012/11/angularjs-and-seo.html
+
+```sh
+/#!/some/page/with/ajax/content
+/?_escaped_fragment_=/some/page/with/ajax/content
+
+# nginx
+server {
+  # ... your config for your server daemon
+  # listen 80;
+  # server_name  localhost;
+  # root   /path/to/root/
+  # index  index.html;
+  if ($args ~ "_escaped_fragment_=/?(.+)") {
+    set $path $1;
+    rewrite ^ /snapshots/$path;
+  }
+}
+
+# AngularJs
+var App = angular.module('App', ['HashBangURLs']); // OR
+var App = angular.module('App', ['HTML5ModeURLs']);
+
+$ ./make-snapshot.sh http://your-website/#!/home
+# https://github.com/yearofmoo-articles/AngularJS-SEO-Article/blob/master/.phantomjs-runner.js
+```
+
+- The Basics of JavaScript Framework SEO in AngularJS https://builtvisible.com/javascript-framework-seo/
+- ROCKET SCIENCE for JAVASCRIPT SEO - Allows your Javascript website to be crawled perfectly by search engines https://prerender.io/
+
+```ruby
+# free: < 250 pages
+gem 'prerender_rails'
+config.middleware.use Rack::Prerender
+```
+- Stackoverflow: http://stackoverflow.com/questions/13499040/how-do-search-engines-deal-with-angularjs-applications
 
 # DevOps
 
