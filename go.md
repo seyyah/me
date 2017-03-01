@@ -1,5 +1,8 @@
 Go go
 
+- IRC, Slack and Telegram bot written in go: https://github.com/go-chat-bot/bot
+![](https://cloud.githubusercontent.com/assets/1084729/12377689/5bf7d5f2-bd0d-11e5-87d9-525481f01c3a.gif)
+- Curated list of Go design patterns, recipes and idioms http://tmrts.com/go-patterns https://github.com/tmrts/go-patterns
 - A Commander for modern Go CLI interactions https://github.com/spf13/cobra
 - A Fast and Flexible Static Site Generator built with love in GoLang http://gohugo.io https://github.com/spf13/hugo
 - https://github.com/Sirupsen/awesome-go
