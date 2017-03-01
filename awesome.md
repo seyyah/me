@@ -29,6 +29,7 @@
 
 ## Rails ile yazılmış uygulamalar
 
+- Smart Email Marketing, Runing with Docker, docker-compose run web rake db:migrate https://github.com/mojilala/smart-emailing
 - https://standardnotes.org website https://github.com/standardnotes/website
 > Grouping of notes Auto-save Markdown editor Easy publishing/sharing of groups or individual notes. Local encryption. Quick filtering Full screen writing Simple UI
 - Ruby on Rails CRM platform: [Demo](http://www.fatfreecrm.com), [Github](https://github.com/fatfreecrm/fat_free_crm)
