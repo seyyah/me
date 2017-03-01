@@ -457,6 +457,13 @@ https://getlooseleaf.com
 # AngularJs
 
 - ROCKET SCIENCE for JAVASCRIPT SEO - Allows your Javascript website to be crawled perfectly by search engines https://prerender.io/
+
+```ruby
+# free: < 250 pages
+gem 'prerender_rails'
+config.middleware.use Rack::Prerender
+```
+
 - [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
 - [AngularJS module : Simple scheduler on a timeline](https://github.com/polosson/Plantt), [Demo](http://www.code.polosson.com/Plantt/)
 - Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
