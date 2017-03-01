@@ -112,6 +112,26 @@ Yol haritası,
 ### Gem: HER
 
 - Her: <https://github.com/remiprev/her>, Example: Rails+Sinatra: <https://github.com/remiprev/her-example>
+```rub
+User.all
+# GET "https://api.example.com/users" and return an array of User objects
+
+User.find(1)
+# GET "https://api.example.com/users/1" and return a User object
+
+@user = User.create(fullname: "Tobias Fünke")
+# POST "https://api.example.com/users" with `fullname=Tobias+Fünke` and return the saved User object
+
+@user = User.new(fullname: "Tobias Fünke")
+@user.occupation = "actor"
+@user.save
+# POST "https://api.example.com/users" with `fullname=Tobias+Fünke&occupation=actor` and return the saved User object
+
+@user = User.find(1)
+@user.fullname = "Lindsay Fünke"
+@user.save
+# PUT "https://api.example.com/users/1" with `fullname=Lindsay+Fünke` and return the updated User object
+```
 - Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
 
 ## GEM
