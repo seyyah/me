@@ -456,6 +456,8 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- The HTML5 video player for AngularJS http://www.videogular.com/demo https://github.com/videogular/videogular
+  + Quiz plugin by NamPNQ
 - [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
 - [AngularJS module : Simple scheduler on a timeline](https://github.com/polosson/Plantt), [Demo](http://www.code.polosson.com/Plantt/)
 - Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
