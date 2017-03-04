@@ -276,11 +276,12 @@ Material Design,
 - The first responsive front-end framework based on AngularJS & Google Material Design specifications: <https://github.com/lumapps/lumX>
 
 Editor,
+- The ultimate Vim configuration: vimrc https://github.com/amix/vimrc
+- Everything you need to know about Vim: <https://github.com/mhinz/vim-galore>
 - A rich text editor for everyday writing: <https://github.com/basecamp/trix>
 - https://github.com/spohlenz/tinymce-rails
 - html: http://www.bootstrap-switch.org/examples.html
 - markdown: https://github.com/vmg/redcarpet
-- Everything you need to know about Vim: <https://github.com/mhinz/vim-galore>
 - Super simple WYSIWYG editor: <http://summernote.org/>, <https://github.com/summernote/summernote/>
 - Autosize is a small, stand-alone script to automatically adjust textarea height to fit text: <http://www.jacklmoore.com/autosize/>, <https://github.com/jackmoore/autosize>
 
