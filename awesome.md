@@ -677,14 +677,6 @@ Docker,
 - Caffe: a fast open framework for deep learning. <https://github.com/BVLC/caffe>, Berkeley Vision and Learning Center
 - https://github.com/scholmd/scholmd
 
-# LSIM
-
-- Flowchart: https://github.com/codecapers/AngularJS-FlowChart
-- Surveyor is a developer tool to deliver surveys in Rails applications: <https://github.com/NUBIC/surveyor>
-- Tree: <https://github.com/mceachen/closure_tree>
-- Sirius: Speech and Vision Based Intelligent Personal Assistant https://github.com/jhauswald/sirius
-- Simple application for storing interview questions: <https://github.com/dropbox/questions>
-
 # Tools
 
 - sparkle, zenhub, https://waffle.io/
