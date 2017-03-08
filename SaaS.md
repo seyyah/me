@@ -11,6 +11,9 @@
 - An example Rails 4.2 app with Stripe and the Payola gem for a membership or subscription site. http://railsapps.github.io/rails-stripe-membership-saas https://github.com/RailsApps/rails-stripe-membership-saas
 - Eski bir uygulama: SaaS+SSO: https://github.com/maccman/saasy
 
+## Security
+- Security 101 for SaaS startups: https://github.com/forter/security-101-for-saas-startups
+
 ## What, How, Why
 
 - https://en.wikipedia.org/wiki/Software_as_a_service
