@@ -1,5 +1,20 @@
 # LSIM
 
+- Easily and efficiently make your ActiveRecord models support hierarchies: https://github.com/mceachen/closure_tree
+
+```ruby
+grandparent = Tag.create(name: 'Grandparent')
+parent = grandparent.children.create(name: 'Parent')
+child2 = Tag.new(name: 'Second Child')
+parent.children << child2
+d = Tag.find_or_create_by_path %w[a b c d]
+h = Tag.find_or_create_by_path %w[e f g h]
+e = h.root
+d.add_child(e) # "d.children << e" would work too, of course
+h.ancestry_path
+=> ["a", "b", "c", "d", "e", "f", "g", "h"]
+```
+
 - Editing, New, Drag-drop: https://github.com/dabeng/OrgChart
 
 ```html
