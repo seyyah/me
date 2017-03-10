@@ -136,7 +136,7 @@ User.find(1)
 - Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
 
 ## GEM
-
+- Easily and efficiently make your ActiveRecord models support hierarchies: https://github.com/mceachen/closure_tree
 - A High-level Architecture For The Web: http://trailblazer.to/
 - Rack google analytics etc. tracker: https://github.com/railslove/rack-tracker
 - Settings for ActiveRecord models: <https://github.com/ledermann/rails-settings>
