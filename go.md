@@ -1,5 +1,9 @@
 Go go
 
+- Top-like interface for container metrics https://bcicen.github.io/ctop/
+> ctop provides a concise and condensed overview of real-time metrics for multiple containers:
+![](https://github.com/bcicen/ctop/raw/master/_docs/img/grid.gif)
+
 - IRC, Slack and Telegram bot written in go: https://github.com/go-chat-bot/bot
 ![](https://cloud.githubusercontent.com/assets/1084729/12377689/5bf7d5f2-bd0d-11e5-87d9-525481f01c3a.gif)
 - Curated list of Go design patterns, recipes and idioms http://tmrts.com/go-patterns https://github.com/tmrts/go-patterns
