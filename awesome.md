@@ -571,6 +571,8 @@ config.middleware.use Rack::Prerender
 
 # System
 
+- Learn how to design large scale systems. Prep for the system design interview. 
+![image](https://cloud.githubusercontent.com/assets/263237/23796671/d4014cbe-05a4-11e7-88d3-12e2d3bac5b9.png)
 - Your First 10 Minutes on a Server https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md
 - Installs Ruby, JRuby, Rubinius, MagLev or MRuby: https://github.com/postmodern/ruby-install
   + Changes the current Ruby: https://github.com/postmodern/chruby
