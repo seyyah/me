@@ -261,6 +261,15 @@ Machine learning,
 - A list of everything that goes in the <head> of your document https://github.com/joshbuchea/HEAD
 - Family.scss is a set of 20 smart Sass mixins which will help you to manage the style of :nth-child'ified elements, in an easy and classy way. http://lukyvj.github.io/family.scss/ https://github.com/LukyVj/family.scss
 
+UI/UX
+- https://pttrns.com/
+- http://uiohmy.com
+- http://nicelydone.club/patterns/sign-in/
+- http://www.calltoidea.com/register/
+- http://reallygoodemails.com/
+- http://www.goodui.org/
+- https://muz.li/
+
 Material Design,
 - Blog: <http://materialdesignblog.com/>
 - Google I/O is for developers - the creative coders who are building what's next. Each year, we explore the latest in tech, mobile & beyond:<https://events.google.com/io2015/>
