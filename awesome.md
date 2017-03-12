@@ -571,6 +571,7 @@ config.middleware.use Rack::Prerender
 
 # System
 
+- HTTPie + prompt_toolkit = an interactive command-line HTTP client featuring autocomplete and syntax highlighting  https://github.com/eliangcs/http-prompt http://http-prompt.com/
 - Learn how to design large scale systems. Prep for the system design interview. 
 ![image](https://cloud.githubusercontent.com/assets/263237/23796671/d4014cbe-05a4-11e7-88d3-12e2d3bac5b9.png)
 - Your First 10 Minutes on a Server https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md
