@@ -46,6 +46,9 @@
 - The best Rails forums engine ever. https://thredded.org https://github.com/thredded/thredded
 <img width=150 src=https://cloud.githubusercontent.com/assets/216339/20338432/090e9c5c-abcf-11e6-8e7e-e287d31f6a54.png>
 
+- A platform for community discussion. Free, open, simple. http://www.discourse.org https://github.com/discourse/discourse
+<img width=150 src=https://camo.githubusercontent.com/33b753cac3cdec17a2e483661fbb844856ea7f71/68747470733a2f2f7777772e646973636f757273652e6f72672f6661712f31372f6e657875732d372d323031332d6d6f62696c652d646973636f757273652e706e67>
+
 - Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
 - https://github.com/valo/maycamp_arena
 - https://github.com/OWASP/railsgoat
