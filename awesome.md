@@ -136,6 +136,9 @@ User.find(1)
 - Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
 
 ## GEM
+- Manage translation and localization with static analysis, for Ruby i18n https://github.com/glebm/i18n-tasks
+![](https://camo.githubusercontent.com/ab503c96ea4deebbfbc403333592a8b2670b23cb/68747470733a2f2f692e696d6775722e636f6d2f585a4264386c372e706e67)
+
 - Easily and efficiently make your ActiveRecord models support hierarchies: https://github.com/mceachen/closure_tree
 - A High-level Architecture For The Web: http://trailblazer.to/
 - Rack google analytics etc. tracker: https://github.com/railslove/rack-tracker
