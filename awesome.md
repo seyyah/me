@@ -43,6 +43,9 @@
 - https://github.com/Thibaut/devdocs
 - Advanced email processing solution for Ruby on Rails applications: <https://github.com/Sology/maily_herald>, <http://mailyherald.org>
 - Kutuphane: <https://github.com/smc/grandham>
+- The best Rails forums engine ever. https://thredded.org https://github.com/thredded/thredded
+<img width=150 src=https://cloud.githubusercontent.com/assets/216339/20338432/090e9c5c-abcf-11e6-8e7e-e287d31f6a54.png>
+
 - Discourse is the 100% open source **discussion** platform built for the next decade of the Internet: <https://github.com/JuanitoFatas/diskourse>
 - https://github.com/valo/maycamp_arena
 - https://github.com/OWASP/railsgoat
