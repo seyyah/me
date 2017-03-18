@@ -711,6 +711,9 @@ Chatbot,
 - Hubot is your company's robot. Install him in your company to dramatically improve and reduce employee efficiency: <https://hubot.github.com/>, [scripts](http://hubot-script-catalog.herokuapp.com/)
 
 # Diğer
+- A flexible tool for creating, organizing, and sharing visualizations of live, rich data. Supports Torch and Numpy. https://github.com/facebookresearch/visdom
+![](https://camo.githubusercontent.com/d69475a01f9f327fc42931a21df8134d1fbdfc19/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d62714839555843772d42452f574c3255736472726241492f41414141414141416e59632f656d727877436d6e7257345f434c54797955747442305359524a2d693443436951434c63422f73302f53637265656e2b53686f742b323031372d30332d30362b61742b31302e35312e30322b414d2e706e67253232766973646f6d5f626967253232)
+
 - A curated list of movies every hacker cyberpunk must watch. https://github.com/k4m4/movies-for-hackers
 - https://calismamasam.com/
 - Google Drive for Ubuntu: http://techsansar.com/how-to/install-google-drive-grive2-on-ubuntu/
