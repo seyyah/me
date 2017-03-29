@@ -420,6 +420,7 @@ API,
 - A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
 
 ## Ionic
+- Bootcards: A cards-based UI framework with dual-pane capability for mobile and desktop, built on top of Bootstrap https://github.com/bootcards/bootcards
 - https://github.com/HansUXdev/IonicFramework-Templates
 - Moodle Mobile: https://github.com/moodlehq/moodlemobile2
 - Angular and Cordova / Phonegap powered hybrid mobile application (puzzle game) https://github.com/akveo/digitsquare http://digitsquare.akveo.com/
