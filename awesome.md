@@ -780,6 +780,10 @@ Connect Your Apps and Automate Workflows
 - C package manager-ish. Package manager for the C programming language: https://github.com/clibs/clib
 
 # Küçük/Yeni programcılar vs
+- Duvarın sanal gerçeklikle boyama: http://string.co/casestudies/paintvisualizer
+> Youtube Video: https://www.youtube.com/watch?v=1O2KnnQmCqE
+> The Visualizer app from AkzoNobel, is a free Augmented Reality tool for iOS and Android, which enables consumers to re-colour their walls while viewing the result
+![image](https://cloud.githubusercontent.com/assets/263237/24438366/9b1d40d8-144f-11e7-8c5f-020cba8353a7.png)
 
 - Open source simulator based on Unreal Engine for autonomous vehicles from Microsoft AI - Research: https://github.com/Microsoft/AirSim
 - Real-time multi-physics simulation with an emphasis on medical simulation. https://github.com/sofa-framework/sofa, https://www.sofa-framework.org
