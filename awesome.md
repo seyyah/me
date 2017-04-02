@@ -168,6 +168,7 @@ User.find(1)
 - A toolkit to convert your script to a controllable daemon: <https://github.com/ghazel/daemons>, <http://daemons.rubyforge.org
 - Ruby file uploads, take 3: <https://github.com/refile/refile>
 - Chrome extension for Rails development: <https://github.com/dejan/rails_panel>
+- Tree oriented routing http://toro.cr https://github.com/soveran/toro
 
 Log Analiz,
 - An attempt to tame Rails' default policy to log everything: <https://github.com/roidrage/lograge>
