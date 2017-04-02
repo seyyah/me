@@ -361,6 +361,7 @@ API,
 
 ## Javascript
 
+- Create badass, fluid and smooth transition between your website's pages. http://barbajs.org https://github.com/luruke/barba.js
 - Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms http://github.com/nathanvda/cocoon
    + A jQuery plugin that allows you to easily create repeatable groups of form fields. [github](https://github.com/jenwachter/jquery.repeatable), [demo](http://jenwachter.com/jquery.repeatable/)
 - A service for your website that makes it surprisingly easy to collaborate in real-time: [Web](https://togetherjs.com), [Github](https://github.com/mozilla/togetherjs)
