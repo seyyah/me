@@ -169,6 +169,14 @@ User.find(1)
 - Ruby file uploads, take 3: <https://github.com/refile/refile>
 - Chrome extension for Rails development: <https://github.com/dejan/rails_panel>
 - Tree oriented routing http://toro.cr https://github.com/soveran/toro
+- Parsing HTML at the command line https://github.com/ericchiang/pup
+
+```ruby
+$ cat robots.html | pup 'span#See_also'
+<span class="mw-headline" id="See_also">
+ See also
+</span>
+```
 
 Log Analiz,
 - An attempt to tame Rails' default policy to log everything: <https://github.com/roidrage/lograge>
