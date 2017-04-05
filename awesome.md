@@ -488,6 +488,16 @@ https://getlooseleaf.com
 
 # AngularJs
 
+- CLI tool for Angular https://github.com/angular/angular-cli
+```sh
+ng new PROJECT_NAME
+cd PROJECT_NAME
+ng serve
+ng serve --host 0.0.0.0 --port 4201
+
+ng generate component my-new-component
+```
+
 - The HTML5 video player for AngularJS http://www.videogular.com/demo https://github.com/videogular/videogular
   + Quiz plugin by NamPNQ
 - [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
