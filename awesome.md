@@ -29,6 +29,7 @@
 
 ## Rails ile yazılmış uygulamalar
 
+-  **Rails is used by companies**: Airbnb, Basecamp, Disney, GitHub, Hulu, Kickstarter, Shopify, Twitter, and the Yellow Pages
 - Smart Email Marketing, Runing with Docker, docker-compose run web rake db:migrate https://github.com/mojilala/smart-emailing
 - Quran.com api http://www.quran.com https://github.com/quran/quran.com-api
 - https://standardnotes.org website https://github.com/standardnotes/website
