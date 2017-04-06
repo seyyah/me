@@ -12,7 +12,7 @@
 - https://github.com/HackathonHackers/personal-sites
 
 ## Style vs
-
+https://crystal-lang.org/docs/overview/http_server.html
 - Google: <https://github.com/google/styleguide>
 - Writing Fast Ruby, Collect Commson Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
 - Code quality threshold checking as part of your build: <https://github.com/square/cane>
@@ -418,6 +418,25 @@ API,
 - A node.js module for parsing form data, especially file uploads: <https://github.com/felixge/node-formidable>
 - GraphicsMagick for node http://aheckmann.github.com/gm/ https://github.com/aheckmann/gm
 - A collection of common interactive command line user interfaces. https://github.com/SBoudrias/Inquirer.js
+
+## Testing
+
+- Painless JavaScript Testing. http://facebook.github.io/jest/
+
+```javascript
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
+
+// Then, create a file named sum.test.js. This will contain our actual test:
+
+const sum = require('./sum');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+```
 
 # Mobile
 - Submitting Your App (Apple and Google Play)(ionic): http://docs.usecreator.com/docs/submitting-your-app-apple-and-google-play
