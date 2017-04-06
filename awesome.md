@@ -343,6 +343,10 @@ API,
 - angularjs+ui: <https://angular-ui.github.io/bootstrap/>
 
 ## React
+- Reactide is the first dedicated IDE for React web application development. http://reactide.io
+
+![](https://camo.githubusercontent.com/ee9fc228ccb85a549f3b80b939cea810a20b0770/687474703a2f2f72656163746964652e696f2e73332d776562736974652d75732d776573742d312e616d617a6f6e6177732e636f6d2f696d616765732f72656163746964652d73637265656e73686f74322e706e67)
+
 - Angular 2 versus React: There Will Be Blood: <https://medium.com/@housecor/angular-2-versus-react-there-will-be-blood-66595faafd51#.o5u4f5k82>
 - Thoughts on the future of mobile app development: A look at the history of cross-platform mobile apps and why we're betting on React Native: <https://getsiphon.com/blog/2016/01/20/future-of-app-development/>
 - A set of React components implementing Google's Material Design specification with the power of CSS Modules: <http://react-toolbox.com/>
@@ -727,6 +731,10 @@ Docker,
 - Docker architecture demo: <https://github.com/berpj/docker-architecture-demo>, [A simple 3-tier web architecture with Docker](https://blog.bergeron.io/simple-web-architecture-with-docker/)
 - Swarm: a Docker-native clustering system: <https://github.com/docker/swarm>
 - Dokku Alternative: Docker powered mini-Heroku https://github.com/dokku-alt/dokku-alt
+
+## Server
+
+- Fast, cross-platform HTTP/2 web server with automatic HTTPS https://caddyserver.com https://github.com/mholt/caddy
 
 # Elasticsearch
 
