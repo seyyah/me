@@ -1,5 +1,7 @@
 Go go
 
+- https://awesome-go.com/
+
 - http://www.cihanozhan.com/go-programlama-diline-genel-bakis/
 
 - Go build system with file watchers, live reload and output streams. Run, build and watch file changes with custom paths https://github.com/tockins/realize
