@@ -1,5 +1,39 @@
 Go go
 
+- Go build system with file watchers, live reload and output streams. Run, build and watch file changes with custom paths https://github.com/tockins/realize
+
+- Questions/answers and multiple choice by command line in Go https://github.com/tockins/interact
+
+```go
+package main
+
+import (
+	i "github.com/tockins/interact"
+)
+
+func main() {
+	i.Run(&i.Interact{
+		Questions: []*i.Question{
+			{
+				Quest: i.Quest{
+					Msg:      "Would you like some coffee?",
+				},
+				Action: func(c i.Context) interface{} {
+					val, err := c.Ans().Bool()
+					if err != nil{
+					    return err
+					}
+					fmt.Println(val)
+					return nil
+				},
+			},
+		},
+	})
+}
+```
+
+- Golang library for fuzzing matching within a set of strings https://github.com/schollz/closestmatch
+
 - Golang package that generates clean, responsive HTML e-mails for sending transactional mail https://github.com/matcornic/hermes
 ![image](https://cloud.githubusercontent.com/assets/263237/24771475/65a7766c-1b16-11e7-9a9f-7e6e70aad960.png)
 
