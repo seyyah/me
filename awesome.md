@@ -338,11 +338,15 @@ API,
 
 ## Bootstrap
 
+- Alternatives: https://github.com/Semantic-Org/Semantic-UI
+
 - An extended Bootstrap table with radio, checkbox, sort, pagination, and other added features : <http://bootstrap-table.wenzhixin.net.cn/>, demo: <http://issues.wenzhixin.net.cn/bootstrap-table/>
 - Calendar: <http://bootstrap-calendar.azurewebsites.net/>
 - angularjs+ui: <https://angular-ui.github.io/bootstrap/>
 
 ## React
+- Library for cross-platform app development. https://microsoft.github.io/reactxp/  https://github.com/Microsoft/reactxp
+
 - Reactide is the first dedicated IDE for React web application development. http://reactide.io
 
 ![](https://camo.githubusercontent.com/ee9fc228ccb85a549f3b80b939cea810a20b0770/687474703a2f2f72656163746964652e696f2e73332d776562736974652d75732d776573742d312e616d617a6f6e6177732e636f6d2f696d616765732f72656163746964652d73637265656e73686f74322e706e67)
