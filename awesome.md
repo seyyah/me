@@ -760,6 +760,40 @@ Docker,
 
 # Tools
 
+- Startup Tools and Hints (Startup Araçları ve İpuçları) https://github.com/selahattinunlu/startup-tools-and-hints
+  + Project Management (Proje Yönetim Araçları)
+  + Customer Service / Live Chat (Müşteri Destek Servisleri)
+  + Server & Hosting (Sunucu Çözümleri)
+  + Communication (Takım İçi İletişim)
+  + Dashboard / Analytics (Ölçümleme & Analytics)
+  + Prototype Tools (Prototip Araçları)
+  + User Interface (Arayüz Servisleri)
+  + Tools to Grow Your Website’s Traffic (Web Sitenizin trafiğini büyütmek için araçlar)
+  + Marketing (Pazarlama): email
+  + SEO
+  + Santral Çözümler
+  + Sanal Pos & Ödeme Entegrasyonları
+  + Free Icon, Template, PSD (Ücretsiz İcon Template PSD)
+  + Growth Hacking
+  + Hızlandırma Programları
+  + Tools to create API (API Oluşturma Araçları)
+  + A/B Test (A/B Test Araçları)
+  + Server Management (Sunucu Yönetimi)
+  + Security (Güvenlik Araçları)
+  + Medya Takip Araçları
+  + Big Data
+  + Web Site Analiz Araçları
+  + Survey (Anket Araçları)
+  + Web Site Browser Test
+  + Muhasebe ve Faturalama Araçları
+  + Ürünü Yayına Alma
+  + İnsan Kaynakları
+  + Entegrasyon Sürekliliği/Kod Kalitesi
+  + Log İzleme
+  + Trafik Kaynakları/Reklam Platformları
+  + Arama
+  + Sistem İzleme
+
 - sparkle, zenhub, https://waffle.io/
 - mega.co.nz, https://github.com/meganz/webclient
 - Mockup: Programlama temelli wireframe: https://github.com/tsx/shireframe
