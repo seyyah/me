@@ -424,6 +424,7 @@ API,
 - lightweight, powerful datetimepicker. zero dependencies https://chmln.github.io/flatpickr https://github.com/chmln/flatpickr
 
 ## NodeJs
+- Chrome Debugging Protocol interface for Node.js https://github.com/cyrus-and/chrome-remote-interface
 - Async utilities for node and the browser: <https://github.com/caolan/async>
 - A stream that emits multiple other streams one after another.: <https://github.com/felixge/node-combined-stream>
 - A pure node.js JavaScript Client implementing the MySql protocol.: <https://github.com/felixge/node-mysql>
