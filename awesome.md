@@ -760,6 +760,7 @@ Docker,
 
 # Tools
 
+- 15k :star:  This is a list of Free Software network services and web applications which can be hosted locally. Selfhosting is the process of locally hosting and managing applications instead of renting from SaaS providers. https://reddit.com/r/selfhosted https://github.com/Kickball/awesome-selfhosted
 - Startup Tools and Hints (Startup Araçları ve İpuçları) https://github.com/selahattinunlu/startup-tools-and-hints
   + Project Management (Proje Yönetim Araçları)
   + Customer Service / Live Chat (Müşteri Destek Servisleri)
