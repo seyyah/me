@@ -375,6 +375,25 @@ API,
 
 ## Javascript
 
+- Experiment to alter the cursor behavior. Proof of concept. http://javier.xyz/control-user-cursor/ https://github.com/javierbyte/control-user-cursor
+
+![](https://github.com/javierbyte/control-user-cursor/raw/master/docs-assets/screenshot.png)
+
+```javascript
+ControlUserCursor({
+  el: {
+    buttonToPrevent: {
+      behavior: 'REPEL',
+      el: document.querySelector('.element-to-repel')
+    },
+    buttonToAttract: {
+      behavior: 'ATTRACT',
+      el: document.querySelector('.element-to-attract')
+    }
+  }
+});
+```
+
 - Create badass, fluid and smooth transition between your website's pages. http://barbajs.org https://github.com/luruke/barba.js
 - Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms http://github.com/nathanvda/cocoon
    + A jQuery plugin that allows you to easily create repeatable groups of form fields. [github](https://github.com/jenwachter/jquery.repeatable), [demo](http://jenwachter.com/jquery.repeatable/)
