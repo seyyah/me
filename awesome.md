@@ -375,6 +375,10 @@ API,
 
 ## Javascript
 
+- Convert any image to pure CSS. http://javier.xyz/img2css/ https://github.com/javierbyte/img2css
+
+![](https://github.com/javierbyte/img2css/raw/gh-pages/docs-assets/screenshot.jpg)
+
 - Experiment to alter the cursor behavior. Proof of concept. http://javier.xyz/control-user-cursor/ https://github.com/javierbyte/control-user-cursor
 
 ![](https://github.com/javierbyte/control-user-cursor/raw/master/docs-assets/screenshot.png)
