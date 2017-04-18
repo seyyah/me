@@ -310,6 +310,10 @@ Material Design,
 - The first responsive front-end framework based on AngularJS & Google Material Design specifications: <https://github.com/lumapps/lumX>
 
 Editor,
+- A completely customizable framework for building rich text editors. https://github.com/ianstormtaylor/slate http://slatejs.org
+
+![](https://github.com/ianstormtaylor/slate/raw/master/docs/images/preview.png)
+
 - The ultimate Vim configuration: vimrc https://github.com/amix/vimrc
 - Everything you need to know about Vim: <https://github.com/mhinz/vim-galore>
 - A rich text editor for everyday writing: <https://github.com/basecamp/trix>
