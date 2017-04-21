@@ -1,17 +1,43 @@
 # Best Practices
 
-- Upgrading to Rails 5 Beta - The Hard Way: <https://blog.heroku.com/archives/2016/1/22/rails-5-beta-upgrade?>
-- Rails Blog: <http://www.reddit.com/r/rails/comments/3ban4d/can_anyone_recommend_some_good_ror_blogs/>
-- Software Engineering Blogs: <https://github.com/kilimchoi/engineering-blogs>, <http://www.slicedham.co/>
-- Web FundamentalsBest practices for modern web development: <https://developers.google.com/web/fundamentals>
-- A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev: <https://github.com/ripienaar/free-for-dev>
-- <http://rails-bestpractices.com/>
-- Ruby Tricks: <https://github.com/franzejr/ruby-tricks>
-- Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft, https://porter.io/, framgia, 
-- http://www.pazarlamasyon.com/social-influencers-30/?utm_content=buffer5d7c7&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
-- https://github.com/HackathonHackers/personal-sites
+## Blog
+
+| Bilgi | Görsel |
+|-------|--------|
+| [Hackathon Hackers' Personal Websites](https://github.com/HackathonHackers/personal-sites) | <img height=250 src=https://cloud.githubusercontent.com/assets/263237/25287468/2051da34-26ca-11e7-8831-ff5732b08f75.png> |
+| [Social Influencers 30: Dijital Dünyayı Etkin kullanan, 2017 Yılında Mutlaka Takip Edilmesi Gereken Dijital Liderler](http://www.pazarlamasyon.com/social-influencers-30/?utm_content=buffer5d7c7&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer) | <img height=250 src=https://cloud.githubusercontent.com/assets/263237/25287778/65c70228-26cb-11e7-923f-ebe36ae76ac5.png |
+| Takip edilesi github organizasyonları | Google, Github, Facebook, Twitter, Dropbox, lab2023, thoughtbot, Microsoft, https://porter.io/, framgia |
+
+## Ruby, Rails
+Rails 5
+
+| Bilgi | Görsel |
+|-------|--------|
+| [Upgrading to Rails 5 Beta - The Hard Way](https://blog.heroku.com/archives/2016/1/22/rails-5-beta-upgrade)
+
+Rails Blog
+
+| Bilgi | Görsel |
+|-------|--------|
+| [Reddit öneriler](http://www.reddit.com/r/rails/comments/3ban4d/can_anyone_recommend_some_good_ror_blogs/) |
+| [Rails Best Practices](http://rails-bestpractices.com/) | <img height=250 src=https://cloud.githubusercontent.com/assets/263237/25287303/881338a8-26c9-11e7-845d-325ad5574857.png> |
+| [Ruby Best Tricks](https://github.com/franzejr/ruby-tricks) | <img height=250 src=https://cloud.githubusercontent.com/assets/263237/25287348/b08cb0e8-26c9-11e7-886e-ee940ad0e931.png> |
+
+## Software Engineering
+
+| Bilgi | Görsel |
+|-------|--------|
+|[A curated list of engineering blogs](https://github.com/kilimchoi/engineering-blogs) | <img height=250 src=https://cloud.githubusercontent.com/assets/263237/25286933/1a3f9c14-26c8-11e7-88fa-3f6a51b2037f.png> |
+| [A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev](https://github.com/ripienaar/free-for-dev) | <img height=150 src=https://cloud.githubusercontent.com/assets/263237/25287201/2ec68958-26c9-11e7-9a5a-5493bb23266d.png> <img height=150 src=https://cloud.githubusercontent.com/assets/263237/25287215/3806395a-26c9-11e7-997a-13e6c390fd92.png> |
+
+## Web Fundamentals
+
+| Bilgi | Görsel |
+|-------|--------|
+| [Google Best practices for modern web development](https://developers.google.com/web/fundamentals) | <img height=250 src=https://cloud.githubusercontent.com/assets/263237/25287131/e88555fa-26c8-11e7-8031-2043adfdde7b.png> |
 
 ## Style vs
+
 https://crystal-lang.org/docs/overview/http_server.html
 - Google: <https://github.com/google/styleguide>
 - Writing Fast Ruby, Collect Commson Ruby idioms: <https://github.com/JuanitoFatas/fast-ruby>
