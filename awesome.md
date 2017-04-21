@@ -149,6 +149,9 @@ User.find(1)
 - Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
 
 ## GEM
+- A small library for doing (command) lines. https://robots.thoughtbot.com https://github.com/thoughtbot/cocaine
+![image](https://cloud.githubusercontent.com/assets/263237/25283703/4cc6acfa-26bd-11e7-9dba-2bd304cb2f02.png)
+
 - Manage translation and localization with static analysis, for Ruby i18n https://github.com/glebm/i18n-tasks
 ![](https://camo.githubusercontent.com/ab503c96ea4deebbfbc403333592a8b2670b23cb/68747470733a2f2f692e696d6775722e636f6d2f585a4264386c372e706e67)
 
