@@ -511,6 +511,13 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 
+## CSS
+
+- http://marksheet.io/why-css-exists.html
+
+> - 04 CSS Basics
+> - 05 CSS Text 
+
 # Mobile
 - Submitting Your App (Apple and Google Play)(ionic): http://docs.usecreator.com/docs/submitting-your-app-apple-and-google-play
 - MOBIRISE WEBSITE BUILDER: Create awesome mobile-friendly websites. No coding and free: <https://mobirise.com/>
