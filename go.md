@@ -1,5 +1,37 @@
 Go go
 
+- A new object oriented language written in Go aim at developing microservice efficiently.  https://github.com/rooby-lang/rooby
+
+```ruby
+class User
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  def name
+    @name
+  end
+
+  def age
+    @age
+  end
+
+  def say_hi(user)
+    puts(@name + " says hi to " + user.name)
+  end
+
+  def self.sum_age(user1, user2)
+    user1.age + user2.age
+  end
+end
+
+stan = User.new("Stan", 22)
+john = User.new("John", 40)
+puts(User.sum_age(stan, john)) #=> 62
+stan.say_hi(john) #=> Stan says hi to John
+```
+
 - https://awesome-go.com/
 
 - http://www.cihanozhan.com/go-programlama-diline-genel-bakis/
