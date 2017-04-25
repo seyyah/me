@@ -408,6 +408,9 @@ API,
 
 ## Javascript
 
+- A Complete Guide To Learn RxJava
+> What is RxJava? RxJava is used for reactive programming. In reactive programming, the consumer reacts to the data as it comes in. Reactive programming allows for event changes to propagate to registered observers.
+
 - Convert any image to pure CSS. http://javier.xyz/img2css/ https://github.com/javierbyte/img2css
 
 ![](https://github.com/javierbyte/img2css/raw/gh-pages/docs-assets/screenshot.jpg)
