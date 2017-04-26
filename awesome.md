@@ -55,6 +55,7 @@ https://crystal-lang.org/docs/overview/http_server.html
 
 ## Rails ile yazılmış uygulamalar
 
+- A fully featured open source mail delivery platform for incoming & outgoing e-mail https://github.com/atech/postal
 - GitHub Developer site https://developer.github.com https://github.com/github-archive/developer.github.com
 - Rails 5+ Docker : A GNU Social-compatible microblogging server https://mastodon.social
 
@@ -565,6 +566,7 @@ test('adds 1 + 2 to equal 3', () => {
 - Build cross platform desktop apps with JavaScript, HTML, and CSS http://electron.atom.io/
 
 # Mail, Sms
+- A fully featured open source mail delivery platform for incoming & outgoing e-mail https://github.com/atech/postal
 - extend actionmailer to allow one smtp account per mailer class: <https://github.com/flyerhzm/multiple_mailers>
 - Sending & Receiving SMS on Linux: <https://www.20papercups.net/programming/sending-receiving-sms-on-linux/>
 - Build an ‘SMS center’ with Python , Kannel and a GSM modem: <https://medium.com/@iMitwe/build-an-sms-center-with-python-kannel-and-a-gsm-modem-9c0d29560d82#.6ntvqvwjs>
@@ -728,7 +730,11 @@ config.middleware.use Rack::Prerender
 
 # System
 
-- HTTPie + prompt_toolkit = an interactive command-line HTTP client featuring autocomplete and syntax highlighting  https://github.com/eliangcs/http-prompt http://http-prompt.com/
+- Get control of your servers. Simple. Effective. Awesome. https://my-netdata.io/  https://github.com/firehol/netdata
+
+![image](https://cloud.githubusercontent.com/assets/263237/25436234/5d484200-2a9b-11e7-830c-8ddc8c6d3119.png)
+
+- HTTPie + prompt_toolkit = an interactive command-line HTTP client featuring autocomplete and syntax highlighting  https://github.com/eliangcs/http-prompt http://http-prompt.com/
 - Learn how to design large scale systems. Prep for the system design interview. 
 ![image](https://cloud.githubusercontent.com/assets/263237/23796671/d4014cbe-05a4-11e7-88d3-12e2d3bac5b9.png)
 - Your First 10 Minutes on a Server https://github.com/codelittinc/incubator-resources/blob/master/best_practices/servers.md
