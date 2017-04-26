@@ -408,6 +408,10 @@ API,
 
 ## Javascript
 
+- Meteor.js X MEAN: https://wiki.dandascalescu.com/essays/meteor_js_vs_the_mean_stack
+
+- :star: 10.000+ MEAN (Mongo, Express, Angular, Node) - A Simple, Scalable and Easy starting point for full stack javascript web development - utilizing many of the best practices we've found on the way http://mean.io https://github.com/linnovate/mean
+
 - A Complete Guide To Learn RxJava
 > What is RxJava? RxJava is used for reactive programming. In reactive programming, the consumer reacts to the data as it comes in. Reactive programming allows for event changes to propagate to registered observers.
 
@@ -601,7 +605,6 @@ ng generate component my-new-component
   + Quiz plugin by NamPNQ
 - [50 Angular.js Examples](https://curran.github.io/screencasts/introToAngular/exampleViewer/)
 - [AngularJS module : Simple scheduler on a timeline](https://github.com/polosson/Plantt), [Demo](http://www.code.polosson.com/Plantt/)
-- Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
 - A directive for AngularJS providing a advanced visual search box, <http://ngmodules.org/modules/angular-advanced-searchbox>, [Demo](http://dnauck.github.io/angular-advanced-searchbox/)
 - Angular 2 Beta: <http://angularjs.blogspot.com.tr/>
 - Angular directive/filter/service for formatting date so that it displays how long ago the given time was compared to now: <https://github.com/yaru22/angular-timeago>, [Moment.JS directives for Angular.JS timeago and more](https://github.com/urish/angular-moment)
@@ -652,6 +655,20 @@ ng generate component my-new-component
 - Angular Directive to Paginate Anything: <https://github.com/begriffs/angular-paginate-anything>, [Demo](http://begriffs.com/angular-paginate-anything/)
 - Reactive, responsive, beautiful charts for AngularJS using Chart.js: http://jtblin.github.io/angular-chart.js https://github.com/jtblin/angular-chart.js
 - AngularJS directive for NVD3 reusable charting library (based on D3). Easily customize your charts via JSON API. http://krispo.github.io/angular-nvd3 https://github.com/krispo/angular-nvd3
+
+Admin / Dashboard,
+
+- :star2: 6.600+ Free Angular Bootstrap Admin Panel Framework <https://github.com/akveo/blur-admin/>, http://akveo.github.io/blur-admin/
+
+![image](https://cloud.githubusercontent.com/assets/263237/25421000/679f05f0-2a63-11e7-919b-55c907e9d0bf.png)
+
+- :star: 5.800+ Angular admin dashboard framework http://akveo.com/ng2-admin/ https://github.com/akveo/ng2-admin
+
+![image](https://cloud.githubusercontent.com/assets/263237/25421142/209717d2-2a64-11e7-9cdd-c251cced65e6.png)
+
+- Ücretliler https://agileui.com/ ve diğerleri https://colorlib.com/wp/angularjs-admin-templates/
+
+![](https://agileui.com/wp-content/themes/aui-theme/assets/img/dashboard.png)
 
 UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
