@@ -292,6 +292,9 @@ Machine learning,
 # Front-end Stuff
 
 - Tool for non-developers and business users to automate web apps http://tebel.org https://github.com/tebelorg/TA.Gui
+- Functional css for humans http://tachyons.io https://github.com/tachyons-css/tachyons [components](http://tachyons.io/components/)
+- Marksheet: a free guide to HTML and CSS: <http://marksheet.io/>
+
 - SDK and CLI for spawning streaming stateless HTTP microservices in multiple programming languages https://github.com/evil-icons/evil-icons
 - Visualize Sass HSL color functions in real-time without compiling: <http://jim-nielsen.com/sassme/>
 - Visualize The CSS Color Function <https://colorme.io/>
@@ -305,10 +308,9 @@ Machine learning,
 - Placing labels on a timeline without overlap: <https://github.com/twitter/labella.js>
 - http://aerolab.github.io/midnight.js/
 - Echo is a standalone JavaScript lazy-loading image micro-library. <https://github.com/toddmotto/echo>, demo: <http://toddmotto.com/labs/echo/>
-- http://www.bootbundle.com/tool
+- Bootstrap bundle: http://www.bootbundle.com/tool
 - A continuously expanded list of framework/libraries and tools I used/want to use when building things on the web. Mostly Javascript stuff: <https://github.com/moklick/frontend-stuff>
 - http://cssguidelin.es/
-- Marksheet: a free guide to HTML and CSS: <http://marksheet.io/>
 - A realistic password strength estimator: <https://github.com/dropbox/zxcvbn>
 - Async Responsive Html Grids: <https://github.com/nix23/gridifier>
 - A collection of loading indicators animated with CSS: <https://github.com/tobiasahlin/SpinKit>, <http://tobiasahlin.com/spinkit/>
@@ -985,3 +987,7 @@ Connect Your Apps and Automate Workflows
 
 # MAC
 - OS X command line tools for developers – The ultimate tool to manage your Mac. It provides a huge set of command line commands that automatize the usage of your OS X system. https://github.com/guarinogabriel/mac-cli
+
+# Video / Animation
+
+- https://www.animatron.com/wave/my-templates
