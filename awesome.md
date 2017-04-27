@@ -328,13 +328,13 @@ UI/UX
 - https://muz.li/
 
 Material Design,
+- https://github.com/zachsoft/Ionic-Material
 - Blog: <http://materialdesignblog.com/>
 - Google I/O is for developers - the creative coders who are building what's next. Each year, we explore the latest in tech, mobile & beyond:<https://events.google.com/io2015/>
 - Full redesign of the app using Material Design: <https://aerolab.co/taringa>
 - Google+ goes completely responsive: <https://developers.google.com/web/showcase/case-study/googleplus>
 - Material Lite: <http://www.getmdl.io/started/>
 - http://www.materialdoc.com/
-- https://github.com/zachsoft/Ionic-Material
 - https://github.com/angular/material-start
 - http://www.materialup.com/
 - Material Design for Bootstrap: <https://fezvrasta.github.io/bootstrap-material-design/>
@@ -411,6 +411,9 @@ API,
 
 ## Javascript
 
+- [Best components to build amazing web applications](http://bestof.js.org/)
+- A service for your website that makes it surprisingly easy to collaborate in real-time: [Web](https://togetherjs.com), [Github](https://github.com/mozilla/togetherjs)
+
 - Meteor.js X MEAN: https://wiki.dandascalescu.com/essays/meteor_js_vs_the_mean_stack
 
 - :star: 10.000+ MEAN (Mongo, Express, Angular, Node) - A Simple, Scalable and Easy starting point for full stack javascript web development - utilizing many of the best practices we've found on the way http://mean.io https://github.com/linnovate/mean
@@ -448,8 +451,6 @@ ControlUserCursor({
 - Create badass, fluid and smooth transition between your website's pages. http://barbajs.org https://github.com/luruke/barba.js
 - Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms http://github.com/nathanvda/cocoon
    + A jQuery plugin that allows you to easily create repeatable groups of form fields. [github](https://github.com/jenwachter/jquery.repeatable), [demo](http://jenwachter.com/jquery.repeatable/)
-- A service for your website that makes it surprisingly easy to collaborate in real-time: [Web](https://togetherjs.com), [Github](https://github.com/mozilla/togetherjs)
-- [Best components to build amazing web applications](http://bestof.js.org/)
 - Javascript Animation Engine https://github.com/juliangarnier/anime, [DEMO](http://codepen.io/collection/b392d3a52d6abf5b8d9fda4e4cab61ab/)
 - 30 Day Vanilla JS Challenge: https://github.com/wesbos/JavaScript30
 - Turn any <input> into an address autocomplete https://community.algolia.com/places/ https://github.com/algolia/places
@@ -472,7 +473,6 @@ ControlUserCursor({
 - JavaScript Cloud/Web Desktop Platform: <http://os.js.org/>
 - JavaScript Regular expressions made easy: <https://github.com/VerbalExpressions/JSVerbalExpressions>
 - Easy scroll animations for web and mobile browsers: <https://github.com/jlmakes/scrollreveal.js>, <https://scrollrevealjs.org/>
-- Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well <https://github.com/NativeScript/NativeScript>
 - A Ruby Gem for the Google Chart Tools. Write Ruby code. Generate Javascript. Display a Google Chart: <http://googlevisualr.herokuapp.com/>
 - Clipboard: <https://github.com/zenorocha/clipboard.js>
 - Databound provides Javascript a simple API to the Ruby on Rails CRUD: <http://databound.me/>
@@ -492,6 +492,10 @@ ControlUserCursor({
 - A text only meme generator https://bitshadow.github.io/slate https://github.com/bitshadow/slate
 - A compact, cross-browser solution for using the JavaScript Notifications API http://nickersoft.github.io/push.js https://github.com/Nickersoft/push.js
 - lightweight, powerful datetimepicker. zero dependencies https://chmln.github.io/flatpickr https://github.com/chmln/flatpickr
+
+## Graphic
+
+- Visualize your data and events with sexy HTML5 and CSS3. Create simple time sheets with sneaky JavaScript. Style them with CSS and have mobile fun as well https://sbstjn.com/timesheet.js/
 
 ## NodeJs
 - Chrome Debugging Protocol interface for Node.js https://github.com/cyrus-and/chrome-remote-interface
@@ -522,13 +526,6 @@ test('adds 1 + 2 to equal 3', () => {
 });
 ```
 
-## CSS
-
-- http://marksheet.io/why-css-exists.html
-
-> - 04 CSS Basics
-> - 05 CSS Text 
-
 # Mobile
 - Submitting Your App (Apple and Google Play)(ionic): http://docs.usecreator.com/docs/submitting-your-app-apple-and-google-play
 - MOBIRISE WEBSITE BUILDER: Create awesome mobile-friendly websites. No coding and free: <https://mobirise.com/>
@@ -539,6 +536,7 @@ test('adds 1 + 2 to equal 3', () => {
   + Framework7: <http://framework7.io/>
   + Mobile Angular UI: <http://mobileangularui.com/> https://github.com/mcasimir/mobile-angular-ui
 - A Cross-end HTML5 Game development solution developed by Alibaba Group: <https://github.com/hiloteam/Hilo>, <http://hiloteam.github.io/> 
+- NativeScript is an open source framework for building truly native mobile apps with JavaScript. Use web skills, like Angular, FlexBox and CSS, and get native UI and performance on iOS and Android. http://www.nativescript.org <https://github.com/NativeScript/NativeScript>
 
 ## Ionic
 - Bootcards: A cards-based UI framework with dual-pane capability for mobile and desktop, built on top of Bootstrap https://github.com/bootcards/bootcards
@@ -563,6 +561,13 @@ test('adds 1 + 2 to equal 3', () => {
 - Mobile Nav: <https://github.com/ajoslin/angular-mobile-nav>
 - electron - cordova - ionic mix https://github.com/callodacity/electonic
 
+## Platform Bağımsız
+- Ionic: http://ionicframework.com/docs/components/
+- Cordova: https://cordova.apache.org/
+- Electron Atom: https://github.com/atom/electron
+- http://mobilizer.me/
+- Google Bazel: <http://bazel.io/>
+
 ## Diğer: Cordova, React Native, Swift, Electron
 
 - Native Android apps, without the installation: https://developer.android.com/topic/instant-apps/index.html
@@ -572,9 +577,9 @@ test('adds 1 + 2 to equal 3', () => {
 - Build cross platform desktop apps with JavaScript, HTML, and CSS http://electron.atom.io/
 
 # Mail, Sms
-- A fully featured open source mail delivery platform for incoming & outgoing e-mail https://github.com/atech/postal
+- A fully featured open source mail delivery platform for incoming  outgoing e-mail https://github.com/atech/postal
 - extend actionmailer to allow one smtp account per mailer class: <https://github.com/flyerhzm/multiple_mailers>
-- Sending & Receiving SMS on Linux: <https://www.20papercups.net/programming/sending-receiving-sms-on-linux/>
+- Sending  Receiving SMS on Linux: <https://www.20papercups.net/programming/sending-receiving-sms-on-linux/>
 - Build an ‘SMS center’ with Python , Kannel and a GSM modem: <https://medium.com/@iMitwe/build-an-sms-center-with-python-kannel-and-a-gsm-modem-9c0d29560d82#.6ntvqvwjs>
 - Official Ruby Gem for the SendGrid email Web API: <https://github.com/sendgrid/sendgrid-ruby>, <http://sendgrid.com>
 - Print and Mail Custom Postcards using HTML, CSS, and Ruby on Rails: <https://lob.com/blog/print-mail-custom-postcards-using-html-css-ruby-on-rails/#old>, <https://github.com/lob/lob-rails-example>
@@ -585,14 +590,6 @@ test('adds 1 + 2 to equal 3', () => {
 - Adroid Tips: <https://github.com/tangqi92/Android-Tips>
 - iOS Reverse Engineering: <https://github.com/iosre/iOSAppReverseEngineering>
 
-## Platform Bağımsız
-- Ionic: http://ionicframework.com/docs/components/
-- Cordova: https://cordova.apache.org/
-- Electron Atom: https://github.com/atom/electron
-- http://mobilizer.me/
-- Google Bazel: <http://bazel.io/>
-
-## Diğer
 - https://github.com/adamwulf/app-launch-guide
 > This aims to be an indie dev's definitive guide to building and launching your app, including pre-launch, marketing, building, QA, buzz building, and launch, and is supported by: 
 https://getlooseleaf.com
@@ -682,6 +679,7 @@ UI+Bootstrap,
 - https://angular-ui.github.io/bootstrap/
 
 Angular2
+
 - Angular 2 development tools for Chrome https://github.com/rangle/augury, [Chrome plugin page](https://chrome.google.com/webstore/detail/augury/elgalmkoelokbchhkhacckoklkejnhcd)
 
 
@@ -920,7 +918,6 @@ Search arama çalışmayınca doğru yere taşınması gerekenler,
 - Self hosted newsletter app https://mailtrain.org/ https://github.com/andris9/mailtrain
 - Free Bootstrap 3 Admin Template https://colorlib.com/polygon/gentelella/index.html https://github.com/puikinsh/gentelella
 - Full-stack Web Framework for Cloud-Native Applications and Platforms using Microservices Architecture http://docs.deep.mg https://github.com/MitocGroup/deep-framework
-- JavaScript Cloud/Web Desktop Platform https://os.js.org/  https://github.com/os-js/OS.js
 - A small ANSI C gui toolkit https://github.com/vurtun/nuklear
 - A list of command line tools for manipulating structured text data: https://github.com/dbohdan/structured-text-tools
 - https://github.com/buunguyen/octotree
@@ -948,12 +945,14 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - Json cv/resume: <http://jsonresume.org/>
 
 Algorithms,
+
 - **6k** Minimal examples of data structures and algorithms in Python https://github.com/keon/algorithms
 - A curated list of awesome places to learn and/or practice algorithms. https://github.com/tayllan/awesome-algorithms
 - visualising data structures and algorithms through animation: <http://visualgo.net/>
 - Algorithm Visualizer: https://github.com/parkjs814/AlgorithmVisualizer http://jasonpark.me/AlgorithmVisualizer/
 
 NLP (Natural Language Processing),
+
 - NLP: a cool way to use natural language in javascript <https://github.com/nlp-compromise/nlp_compromise>, <http://nlpcompromise.com>
 - SyntaxNet: The World’s Most Accurate Parser Goes Open Source http://googleresearch.blogspot.com.tr/2016/05/announcing-syntaxnet-worlds-most.html
 - Industrial-strength Natural Language Processing with Python and Cython https://spacy.io https://github.com/spacy-io/spaCy
