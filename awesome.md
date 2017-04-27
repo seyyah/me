@@ -415,6 +415,10 @@ API,
 
 - :star: 10.000+ MEAN (Mongo, Express, Angular, Node) - A Simple, Scalable and Easy starting point for full stack javascript web development - utilizing many of the best practices we've found on the way http://mean.io https://github.com/linnovate/mean
 
+- Choose your next stack! Exemplary fullstack blog apps powered by React, Angular, Node, Django, and many more :medal_sports: https://realworld.io/ https://github.com/gothinkster/realworld
+
+> Choose your next stack! Exemplary fullstack blog apps powered by React, Angular, Node, Django, and many more :medal_sports:
+
 - A Complete Guide To Learn RxJava
 > What is RxJava? RxJava is used for reactive programming. In reactive programming, the consumer reacts to the data as it comes in. Reactive programming allows for event changes to propagate to registered observers.
 
@@ -944,6 +948,7 @@ By Mikey Campbell: <http://appleinsider.com/articles/14/04/15/apple-tech-uses-wi
 - Json cv/resume: <http://jsonresume.org/>
 
 Algorithms,
+- **6k** Minimal examples of data structures and algorithms in Python https://github.com/keon/algorithms
 - A curated list of awesome places to learn and/or practice algorithms. https://github.com/tayllan/awesome-algorithms
 - visualising data structures and algorithms through animation: <http://visualgo.net/>
 - Algorithm Visualizer: https://github.com/parkjs814/AlgorithmVisualizer http://jasonpark.me/AlgorithmVisualizer/
@@ -991,3 +996,7 @@ Connect Your Apps and Automate Workflows
 # Video / Animation
 
 - https://www.animatron.com/wave/my-templates
+
+# GIT / GITHUB
+
+- The most popular Git GUI for Windows, Mac AND Linux https://www.gitkraken.com/
