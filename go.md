@@ -1,5 +1,10 @@
 Go go
 
+- kr | SSH using a key stored in Kryptonite. https://krypt.co https://github.com/KryptCo/kr
+
+Demo: https://krypt.co/static/demo_final.mp4
+![image](https://cloud.githubusercontent.com/assets/263237/25692258/dffc7b58-30a9-11e7-8afa-72079e386498.png)
+
 - A lightweight, open source, tracking-free comment engine alternative to Disqus https://github.com/adtac/commento
 
 ![](https://cloud.githubusercontent.com/assets/7521600/25356132/d00013e0-2956-11e7-8dba-772a8040ae0c.png)
