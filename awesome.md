@@ -176,7 +176,25 @@ User.find(1)
 - Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
 
 ## GEM
-- Audited (formerly acts_as_audited) is an ORM extension that logs all changes to your Rails models. https://github.com/collectiveidea/audited
+- 4.6k :star: Track changes to your models' data. Good for auditing or versioning. https://github.com/airblade/paper_trail
+
+```ruby
+class Widget < ActiveRecord::Base
+  has_paper_trail
+end
+
+widget = Widget.find 153
+widget.name                                 # 'Doobly'
+
+# Add has_paper_trail to Widget model.
+
+widget.versions                             # []
+widget.update_attributes :name => 'Wotsit'
+widget.versions.last.reify.name             # 'Doobly'
+widget.versions.last.event                  # 'update'
+```
+
+- 1.8k :star: Audited (formerly acts_as_audited) is an ORM extension that logs all changes to your Rails models. https://github.com/collectiveidea/audited
 
 ```ruby
 class User < ActiveRecord::Base
