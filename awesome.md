@@ -197,6 +197,8 @@ user.revisions
 user.revision(1)
 user.revision_at(Date.parse("2016-01-01"))
 ```
+ 
+- Interactor provides a common interface for performing complex user interactions. https://github.com/collectiveidea/interactor
 
 - A small library for doing (command) lines. https://robots.thoughtbot.com https://github.com/thoughtbot/cocaine
 ![image](https://cloud.githubusercontent.com/assets/263237/25283703/4cc6acfa-26bd-11e7-9dba-2bd304cb2f02.png)
