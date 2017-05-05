@@ -176,6 +176,28 @@ User.find(1)
 - Tutorial: emberjs+Rails: <https://www.valentinmihov.com/2015/01/17/rails-plus-emberjs-plus-active-model-serializers-plus-her/>, API/Provider: Rails App: <https://github.com/valo/ember_rails_api_example>, Client/Consumer: <https://github.com/valo/ember_rails_api_consumer>
 
 ## GEM
+- Audited (formerly acts_as_audited) is an ORM extension that logs all changes to your Rails models. https://github.com/collectiveidea/audited
+
+```ruby
+class User < ActiveRecord::Base
+  audited
+end
+
+user = User.create!(name: "Steve")
+user.audits.count # => 1
+user.update_attributes!(name: "Ryan")
+audit = user.audits.last
+audit.action # => "update"
+audit.audited_changes # => {"name"=>["Steve", "Ryan"]}
+user.audits.count # => 2
+user.destroy
+user.audits.count # => 3
+
+user.revisions
+user.revision(1)
+user.revision_at(Date.parse("2016-01-01"))
+```
+
 - A small library for doing (command) lines. https://robots.thoughtbot.com https://github.com/thoughtbot/cocaine
 ![image](https://cloud.githubusercontent.com/assets/263237/25283703/4cc6acfa-26bd-11e7-9dba-2bd304cb2f02.png)
 
