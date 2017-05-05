@@ -1,5 +1,11 @@
 Go go
 
+- kurly is an alternative to the widely popular curl program, written in Golang. https://github.com/davidjpeacock/kurly https://github.com/davidjpeacock/kurly
+
+```sh
+$ kurly -R -O -L http://../debian-8.7.1-amd64-netinst.iso
+```
+
 - kr | SSH using a key stored in Kryptonite. https://krypt.co https://github.com/KryptCo/kr
 
 Demo: https://krypt.co/static/demo_final.mp4
