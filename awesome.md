@@ -551,6 +551,8 @@ ControlUserCursor({
 
 ## Testing
 
+- Test suites for Web-platform specs — including WHATWG, W3C, and others http://irc.w3.org/?channels=testing https://github.com/w3c/web-platform-tests
+
 - Painless JavaScript Testing. http://facebook.github.io/jest/
 
 ```javascript
@@ -637,6 +639,10 @@ test('adds 1 + 2 to equal 3', () => {
 https://getlooseleaf.com
 
 # AngularJs
+
+- A list of awesome AngularJs services, directives, utilities and resources. https://github.com/gianarb/awesome-angularjs
+
+![image](https://cloud.githubusercontent.com/assets/263237/25944713/fd48b4a8-364c-11e7-8780-6a2d359dc078.png)
 
 - CLI tool for Angular https://github.com/angular/angular-cli
 ```sh
