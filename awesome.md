@@ -55,6 +55,9 @@ https://crystal-lang.org/docs/overview/http_server.html
 
 ## Rails ile yazılmış uygulamalar
 
+- A collection / list of awesome projects, sites made with Rails. http://awesomerails.com https://github.com/ekremkaraca/awesome-rails
+![image](https://cloud.githubusercontent.com/assets/263237/25997064/17ed9f86-3723-11e7-9f30-948c10c45152.png)
+
 - A fully featured open source mail delivery platform for incoming & outgoing e-mail https://github.com/atech/postal
 - GitHub Developer site https://developer.github.com https://github.com/github-archive/developer.github.com
 - Rails 5+ Docker : A GNU Social-compatible microblogging server https://mastodon.social
