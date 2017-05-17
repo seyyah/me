@@ -9,3 +9,18 @@
 - A guide to learn bash: https://github.com/Idnan/bash-guide
 
 ![image](https://cloud.githubusercontent.com/assets/263237/25607925/7fdc5b00-2f21-11e7-9eb1-e11c7412fbf9.png)
+
+## TIPS
+
+### DDRESCUE
+```bash
+ddrescue -D --force debian-8.8.0-amd64-i386-netinst.iso /dev/mmcblk0
+```
+
+### MBR Sil
+> After burning the kiosk on usb stick the Windows operating system shows only XX MB as available size. How can i recover my usb key?
+> Kiosk uses hybrid ISO images which installs isolinux bootloader to the Master Boot Record of the drive. Its enough to delete MBR content and partition table to make the drive fully usable again. Windows users should follow this guide. Linux users can use 'dd' command to wipe the MBR of the usb stick:
+
+```bash
+dd if=/dev/zero of=/dev/sdX bs=1M count=10
+```
