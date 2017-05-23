@@ -12,9 +12,23 @@
 
 ## TIPS
 
+### Network
+
+```sh
+$ inxi -SNxz
+$ ifconfig -a
+$ sudo uname -a -r
+```
+
 ### DDRESCUE
 ```bash
 ddrescue -D --force debian-8.8.0-amd64-i386-netinst.iso /dev/mmcblk0
+```
+
+### DMESG
+
+```sh
+$ dmesg -wH # ~ tail -f 
 ```
 
 ### MBR Sil
