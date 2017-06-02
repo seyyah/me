@@ -14,6 +14,13 @@
 
 ## TIPS
 
+### WGET
+
+```sh
+$ wget --limit-rate=200k --no-clobber --convert-links --random-wait
+  -r -p -E -e robots=off -U mozilla http://www.kossboss.com
+```
+
 ### Network
 
 ```sh
