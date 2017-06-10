@@ -1,5 +1,11 @@
 ## TIPS
 
+### WATCH
+
+```sh
+$ watch -n1 -c "ps -ax | grep raspivid"
+```
+
 ### WGET
 
 ```sh
