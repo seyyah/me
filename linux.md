@@ -1,6 +1,9 @@
 Ayrıca bakınız: Linux etc. tips #27
 
 # Programlar
+- https://github.com/jp9000/obs-studio
+> OBS - Free and open source software for live streaming and screen recording https://obsproject.com/mantis/
+
 - Blender
 - Image Processing - krita https://krita.org/en/download/krita-desktop/
 
