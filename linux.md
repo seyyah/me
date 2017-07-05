@@ -1,4 +1,4 @@
-Ayrıca bakınız: Linux etc. tips #27
+Ayrıca bakınız: Linux etc. tips <https://github.com/seyyah/me/issues/27>
 
 # Programlar
 - https://github.com/jp9000/obs-studio
