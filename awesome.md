@@ -128,6 +128,7 @@ Yol haritası,
 4. Doorkeeper: https://www.youtube.com/watch?v=zN9BylV81rw
 
 ### Genel
+- Checklist of the most important security countermeasures when designing, testing, and releasing your API https://github.com/shieldfy/API-Security-Checklist
 - Learn how to build a modern API on Michael Hartl's Rails 5 tutorial https://github.com/vasilakisfil/rails5_api_tutorial
 - A collaborative list of great resources about RESTful API architecture, development, test, and performance https://github.com/marmelab/awesome-rest
 - Interact with REST services in an ActiveRecord-like manner https://github.com/balvig/spyke
