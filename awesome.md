@@ -1030,7 +1030,7 @@ Connect Your Apps and Automate Workflows
 - Real-time multi-physics simulation with an emphasis on medical simulation. https://github.com/sofa-framework/sofa, https://www.sofa-framework.org
 - Animation http://animagraffs.com, [blender4web](https://www.blend4web.com/en/demo/supercharger_vs_turbo/)
 - JavaScript library to make drawing animation on SVG: https://github.com/maxwellito/vivus
-- code.org
+- code.org, https://developers.google.com/blockly/
    + http://www.edutopia.org/blog/15-ways-teaching-students-coding-vicki-davis
 - https://blockly-games.appspot.com/
 - http://www.apple.com/swift/playgrounds/
