@@ -1034,7 +1034,7 @@ Connect Your Apps and Automate Workflows
    + http://www.edutopia.org/blog/15-ways-teaching-students-coding-vicki-davis
 - https://blockly-games.appspot.com/
 - http://www.apple.com/swift/playgrounds/
-- windyty.com
+- windyty.com, https://mapbox.github.io/webgl-wind/demo/
 - A little word cloud generator in Python: <https://github.com/amueller/word_cloud>
 - A linter for prose. <http://proselint.com>, <https://github.com/amperser/proselint>
 - Exploring a Wearable for Safer Swimming: http://tomorrow-lab.com/product35
