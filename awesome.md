@@ -1056,3 +1056,6 @@ Connect Your Apps and Automate Workflows
 # GIT / GITHUB
 
 - The most popular Git GUI for Windows, Mac AND Linux https://www.gitkraken.com/
+
+# Remote Access
+- TeamViewer, AnyDesk
