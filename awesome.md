@@ -1032,6 +1032,8 @@ Connect Your Apps and Automate Workflows
 - Open source simulator based on Unreal Engine for autonomous vehicles from Microsoft AI - Research: https://github.com/Microsoft/AirSim
 - Real-time multi-physics simulation with an emphasis on medical simulation. https://github.com/sofa-framework/sofa, https://www.sofa-framework.org
 - Animation http://animagraffs.com, [blender4web](https://www.blend4web.com/en/demo/supercharger_vs_turbo/)
+  + https://storytelling.design/stories.html
+  
 - JavaScript library to make drawing animation on SVG: https://github.com/maxwellito/vivus
 - code.org, https://developers.google.com/blockly/
    + http://www.edutopia.org/blog/15-ways-teaching-students-coding-vicki-davis
